@@ -1,0 +1,110 @@
+{% load i18n %} {% load bootstrap3 %} {% load staticfiles %} {% spaceless %}
+{% url 'cat' cat.slug as url_cat %}
+{% url 'contact' as url_contact%}
+{% url 'create_topic' cat.slug as url_create_topic %}
+{% url 'edit_post' cat.slug topic.slug post as url_edit_post %}
+{% url 'edit_topic' cat.slug topic.slug as url_edit_topic %}
+{% url 'forum' as url_forum %}
+{% url 'list_issue' as url_issue %}
+{% url 'new_issue' as url_new_issue %}
+{% url 'login' as url_login_classic %}
+{% url 'login_ldap' as url_login_ldap %}
+{% url 'register' as url_register %}
+{% url 'respond_issue' issue.slug as url_respond_issue %}
+{% url 'send_reply' cat.slug topic.slug as url_send_reply %}
+{% url 'topic_cat' cat.slug topic.slug as url_topic_cat %}
+{% url 'view_issue' issue.slug as url_view_issue %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Anthony Greau</title>
+    {% bootstrap_css %}
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'home' %}">{% trans 'home'|capfirst %}</a>
+                </div>
+                {% url 'cat' cat as url_cat %}
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    {% if user.is_authenticated %}
+                        <ul class="nav navbar-nav">
+                            <li
+                                {% if request.path == url_forum or request.path == url_cat or request.path == url_create_topic or request.path == url_edit_topic or request.path == url_edit_post or request.path == url_send_reply or request.path == url_topic_cat %}
+                                    class="active"
+                                {% endif %}
+                            ><a href="{{ url_forum }}">{% trans 'forum'|capfirst %}</a></li>
+                            <li
+                                {% if request.path == url_issue or request.path == url_new_issue or request.path == url_view_issue  or request.path == url_respond_issue %}
+                                    class="active"
+                                {% endif %}
+                            ><a href="{{ url_issue }}">{% trans 'issue'|capfirst %}</a></li>
+                        </ul>
+                    {% endif %}
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if user.is_authenticated %}
+                          <li><a>{{ user }}</a></li>
+                          <li><a href="{% url 'logout' %}">{% trans 'logout'|capfirst %}</a></li>
+                        {% else %}
+                            <li {% if request.path == url_register %} class="active" {% endif %}><a href="{{ url_register }}">{% trans 'register'|capfirst %}</a></li>
+                            <li role="presentation" {% if request.path == url_login_classic or request.path == url_login_ldap %} class="dropdown active" {% else %}class="dropdown"{% endif %}>
+                                <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                  {% trans 'login'|capfirst %}
+                                  <span class="caret"></span>
+                                </a>
+                                <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+                                  <li><a href="{{ url_login_classic }}">{% trans 'login_classic'|capfirst %}</a></li>
+                                  <li role="separator" class="divider"></li>
+                                  <li><a href="{{ url_login_ldap }}">{% trans 'login_ldap'|capfirst %}</a></li>
+                                </ul>
+                            </li>
+                        {% endif %}
+                        <li {% if request.path == url_contact %} class="active" {% endif %}><a href="{{ url_contact }}">{% trans "contact" %}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% block content %}{% endblock %}
+        <footer class="bs-docs-footer" role="contentinfo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_current_language as LANGUAGE_CODE %}
+                        <form action="u" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ request.path }}" />
+                            <select name="language">
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}" {% ifequal language.code LANGUAGE_CODE %}selected="selected"{% endifequal %}>{{ language.name_local|capfirst }}</option>
+                                {% endfor %}
+                            </select>
+                            <input type="submit" value="{% trans 'change_lang' %}" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}" ></script>
+    {% bootstrap_javascript %}
+</body>
+
+</html>
+{% endspaceless %}

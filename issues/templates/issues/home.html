@@ -1,0 +1,9 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% block content %}
+    {%  if request.user.is_superuser %}
+        {%  include 'issues/issue_admin.html' with issues=issues %}
+    {%  else %}
+        {%  include 'issues/issue_user.html' with issues=issues %}
+    {%  endif  %}
+{% endblock %}

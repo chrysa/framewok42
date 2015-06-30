@@ -1,0 +1,26 @@
+{%  extends 'core/base.html' %}
+{% load i18n %}
+{% block content %}
+    <ol class="breadcrumb">
+      <li class="active">{% trans 'forum' %}</li>
+    </ol>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row">
+                        {% for c in cat %}
+                            <div class="col-md-3">
+                                <a href="{{ c.slug }}">{{ c.Name }}</a>
+                            </div>
+                            {% if forloop.counter|divisibleby:4 %}
+                                </div>
+                                <div class="row">
+                            {% endif %}
+                        {%  endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%  endblock %}

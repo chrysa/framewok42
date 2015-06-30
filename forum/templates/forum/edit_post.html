@@ -1,0 +1,19 @@
+{%  extends 'core/base.html' %}
+{% load i18n %}
+{% block content %}
+    <ol class="breadcrumb">
+        <li><a href="{%  url 'forum' %}">{% trans 'forum' %}</a></li>
+        <li><a href="{%  url 'cat' cat.slug %}">{{ cat.Name }}</a></li>
+        <li class="active">{% trans "edit_post" %}</li>
+    </ol>
+    <form action="{%  url 'edit_post' cat.slug topic post %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_Message">{{ form.Message.label|capfirst }} </label>
+            {{ form.Message }}
+        </div>
+        <div class="form-group">
+            <input type="submit" value="{% trans 'edit_post'|capfirst %}" class="btn btn-primary btn-lg btn-block" />
+        </div>
+    </form>
+{%  endblock %}

@@ -1,0 +1,10 @@
+{% load i18n %}
+<form action="{% url 'send_reply' cat topic %}" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.Message }}
+    </div>
+    <div class="form-group">
+        <input type="submit" value="{% trans 'response_topic'|capfirst %}" class="btn btn-primary btn-lg btn-block" />
+    </div>
+</form>

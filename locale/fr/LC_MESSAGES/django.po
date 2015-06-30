@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-22 22:03+0000\n"
+
+#: contact/forms/ContactFrom.py:8 contact/forms/ContactFrom.py:12
+#: profil/forms/RegisterForm.py:27 profil/forms/RegisterForm.py:31
+msgid "mail_adress"
+msgstr "adresse mail"
+
+#: contact/forms/ContactFrom.py:17 contact/forms/ContactFrom.py:21
+msgid "subject"
+msgstr "sujet"
+
+#: contact/forms/ContactFrom.py:26 contact/forms/ContactFrom.py:30
+#: forum/forms/CreateTopic.py:28 forum/forms/CreateTopic.py:32
+#: forum/forms/ReplyTopic.py:16 forum/forms/ReplyTopic.py:20
+msgid "message"
+msgstr "message"
+
+#: contact/templates/contact/contact.html:5 core/templates/core/base.html:56
+msgid "contact"
+msgstr "contact"
+
+#: contact/templates/contact/contact.html:11
+msgid "send_message"
+msgstr "envoyer le message"
+
+#: core/templates/core/base.html:32
+msgid "home"
+msgstr "accueil"
+
+#: core/templates/core/base.html:37 forum/templates/forum/cat.html:5
+#: forum/templates/forum/create_topic.html:5 forum/templates/forum/home.html:6
+msgid "forum"
+msgstr ""
+
+#: core/templates/core/base.html:43
+msgid "logout"
+msgstr "deconnexion"
+
+#: core/templates/core/base.html:45 profil/templates/profil/register.html:36
+msgid "register"
+msgstr "s'enregistrer"
+
+#: core/templates/core/base.html:46
+msgid "login"
+msgstr "se connecter"
+
+#: core/templates/core/base.html:71
+msgid "change_lang"
+msgstr "change de langue"
+
+#: forum/forms/CreateTopic.py:18 forum/forms/CreateTopic.py:22
+msgid "title"
+msgstr ""
+
+#: forum/models.py:15
+msgid "categorie"
+msgstr ""
+
+#: forum/templates/forum/cat.html:9 forum/templates/forum/create_topic.html:7
+msgid "new_topic"
+msgstr ""
+
+#: forum/templates/forum/cat.html:16
+msgid "last_mod"
+msgstr ""
+
+#: forum/templates/forum/cat.html:16
+msgid "by"
+msgstr ""
+
+#: forum/templates/forum/cat.html:16
+msgid "at"
+msgstr ""
+
+#: forum/templates/forum/create_topic.html:30
+msgid "create_topic"
+msgstr ""
+
+#: forum/views.py:76
+msgid "thread_ok"
+msgstr ""
+
+#: forum/views.py:82
+msgid "thread_fail"
+msgstr ""
+
+#: profil/forms/LogInForm.py:17 profil/forms/LogInForm.py:21
+#: profil/forms/RegisterForm.py:18 profil/forms/RegisterForm.py:22
+msgid "username"
+msgstr "nom d'utilistateur"
+
+#: profil/forms/LogInForm.py:26 profil/forms/LogInForm.py:30
+#: profil/forms/RegisterForm.py:36 profil/forms/RegisterForm.py:40
+#: profil/templates/profil/login.html:17
+#: profil/templates/profil/register.html:22
+msgid "password"
+msgstr "mot de passe"
+
+#: profil/forms/RegisterForm.py:45
+msgid "passeword_conf"
+msgstr "confirmation du mot de passe"
+
+#: profil/forms/RegisterForm.py:49 profil/templates/profil/register.html:29
+#, fuzzy
+#| msgid "passeword_conf"
+msgid "password_conf"
+msgstr "confirmation du mot de passe"
+
+#: profil/templates/profil/login.html:24
+msgid "connexion"
+msgstr "connexion"
+
+#: profil/views.py:26
+msgid "error_mail_already_exist"
+msgstr "adresse mail deja utilisee"
+
+#: profil/views.py:28
+msgid "error_password"
+msgstr "les mots de passe ne correspondent pas"
+
+#: profil/views.py:48
+msgid "error_user_already_exist"
+msgstr "nom d'utilisateur deja utilise"
+
+#: profil/views.py:69
+msgid "error_user_not_exist"
+msgstr "l'utilisateur n'existe pas"
+
+#: profil/views.py:85
+msgid "error_wrong_password"
+msgstr "mauvais mot de passe"
+
+#~ msgid "inscription"
+#~ msgstr "s'enregistrer"
