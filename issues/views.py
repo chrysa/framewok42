@@ -11,7 +11,7 @@ from issues.forms.AdminResponseIssue import AdminResponseIssueForm
 from issues.forms.SubmitIssue import IssueForm
 from issues.models import Issue
 
-@login_required(login_url='/profil/login')
+@login_required
 def index(request):
     if request.user.is_superuser:
         context = {
@@ -24,7 +24,7 @@ def index(request):
     return render(request, 'issues/home.html', context)
 
 
-@login_required(login_url='/profil/login')
+@login_required
 def new_issue(request):
     form = IssueForm(request.POST)
     context = {}
@@ -58,7 +58,7 @@ def new_issue(request):
     return render(request, 'issues/send_issue.html', context)
 
 
-@login_required(login_url='/profil/login')
+@login_required
 def respond_issue(request, issue):
     context = {}
     SelectIssue = Issue.objects.get(slug=issue)
@@ -91,14 +91,14 @@ def respond_issue(request, issue):
     return render(request, 'issues/issue_admin_response.html', context)
 
 
-@login_required(login_url='/profil/login')
+@login_required
 def view_issue(request, issue):
     context = {
         'issue': Issue.objects.get(slug=issue),
     }
     return render(request, 'issues/issue.html', context)
 
-@login_required(login_url='/profil/login')
+@login_required
 def reopen_issue(request, issue):
     Issue.objects.filter(
         slug=issue
