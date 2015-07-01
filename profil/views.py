@@ -144,7 +144,7 @@ def login_ldap(request):
     # Any errors will throw an ldap.LDAPError exception
     # or related exception so you can ignore the result
 
-@login_required(login_url='/profil/login')
+@login_required
 def logout_user(request):
     if request.user.is_staff is not True:
         cur_language = translation.get_language()

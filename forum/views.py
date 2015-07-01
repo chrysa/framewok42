@@ -14,7 +14,7 @@ from forum.forms.ReplyTopic import PostForm
 from django.utils.text import slugify
 
 
-@login_required(login_url='/profil/login')
+@login_required
 def display_all(request):
     return render(
         request,
@@ -25,7 +25,7 @@ def display_all(request):
     )
 
 
-@login_required(login_url='/profil/login')
+@login_required
 def display_cat(request, cat):
     cat = models.ForumCat.objects.get(slug=cat)
     if cat is not None:
@@ -43,7 +43,7 @@ def display_cat(request, cat):
         display_all(request)
 
 
-@login_required(login_url='/profil/login')
+@login_required
 def display_topic(request, cat, topic):
     thr = models.ForumTopic.objects.get(slug=topic)
     cat = models.ForumCat.objects.filter(slug=cat)[0]
@@ -67,7 +67,7 @@ def display_topic(request, cat, topic):
             display_all(request)
 
 
-@login_required(login_url='/profil/login')
+@login_required
 def create_topic(request, cat):
     form = TopicForm(request.POST)
     cat = models.ForumCat.objects.get(slug=cat)
@@ -114,7 +114,7 @@ def create_topic(request, cat):
     )
 
 
-@login_required(login_url='/profil/login')
+@login_required
 def reply_topic(request, cat, topic):
     form = PostForm(request.POST)
     top = models.ForumTopic.objects.get(slug=topic)
@@ -149,7 +149,7 @@ def reply_topic(request, cat, topic):
             display_all(request)
 
 
-@login_required(login_url='/profil/login')
+@login_required
 def edit_topic(request, cat, topic):
     cat = models.ForumCat.objects.get(slug=cat)
     if request.POST:
@@ -212,7 +212,7 @@ def edit_topic(request, cat, topic):
     )
 
 
-@login_required(login_url='/profil/login')
+@login_required
 def edit_post(request, cat, topic, post):
     cat = models.ForumCat.objects.get(slug=cat)
     if request.POST:
