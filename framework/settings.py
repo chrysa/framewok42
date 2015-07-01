@@ -23,6 +23,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_PAGE = '/profil/sel_login'
+LOGIN_URL = '/profil/sel_login'
+
 ALLOWED_HOSTS = ['*']
 
 APP_PERSO = (
@@ -31,6 +34,12 @@ APP_PERSO = (
     'forum',
     'profil',
     'issues'
+)
+
+ADDITIONALS_APPS = (
+    'bootstrap3',
+    'autoslug',
+    'jquery',
 )
 
 LANGUAGES = (
@@ -45,10 +54,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap3',
-    'autoslug',
-    'jquery',
-) + APP_PERSO
+) + ADDITIONALS_APPS + APP_PERSO
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

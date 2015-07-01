@@ -2,34 +2,49 @@
 {% load i18n %}
 
 {% block content %}
-
-    <ol class="breadcrumb">
-        <li><a href="{%  url 'home' %}">{% trans 'home'|capfirst %}</a></li>
-        <li class="active">{% trans 'connection_classique'|capfirst %}</li>
-    </ol>
-    {%  if error.unknow %}
-        <div class="alert alert-danger" role="alert">{{ error.unknow }}</div>
+    {%  if type == "select" %}
+        <ol class="breadcrumb">
+            <li><a href="{%  url 'home' %}">{% trans 'home'|capfirst %}</a></li>
+            <li class="active">{% trans 'login'|capfirst %}</li>
+        </ol>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <button type="button" class="btn btn-lg btn-block"><a href="{% url 'login_classic' %}">{% trans 'login_classic'|capfirst %}</a></button>
+                    <button type="button" class="btn btn-lg btn-block"><a href="{% url 'login_ldap' %}">{% trans 'login_ldap'|capfirst %}</a></button>
+                </div>
+            </div>
+        </div>
+    {% elif type == "classic" %}
+        <ol class="breadcrumb">
+            <li><a href="{%  url 'home' %}">{% trans 'home'|capfirst %}</a></li>
+            <li><a href="{%  url 'login' %}">{% trans 'login'|capfirst %}</a></li>
+            <li class="active">{% trans 'connection_classique'|capfirst %}</li>
+        </ol>
+        {%  if error.unknow %}
+            <div class="alert alert-danger" role="alert">{{ error.unknow }}</div>
+        {%  endif %}
+        <form action="{% url 'login_classic' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_username">{{ form.username.label|capfirst }} </label>
+                {{ form.username }}
+            </div>
+            {%  if error.username %}
+                <p class="alert alert-danger" role="alert">{{ error.user|capfirst }}</p>
+            {%  endif %}
+            <div class="form-group">
+                <label for="id_password">{%  trans 'password'|capfirst %} </label>
+                {{ form.password }}
+            </div>
+            {%  if error.pass %}
+                <p class="alert alert-danger" role="alert">{{ error.pass|capfirst }}</p>
+            {%  endif %}
+            <div class="form-group">
+                <input type="submit" value="{% trans 'connexion'|capfirst %}" class="btn btn-primary btn-lg btn-block" />
+            </div>
+        </form>
     {%  endif %}
-    <form action="{% url 'login' %}" method="post">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="id_username">{{ form.username.label|capfirst }} </label>
-            {{ form.username }}
-        </div>
-        {%  if error.username %}
-            <p class="alert alert-danger" role="alert">{{ error.user|capfirst }}</p>
-        {%  endif %}
-        <div class="form-group">
-            <label for="id_password">{%  trans 'password'|capfirst %} </label>
-            {{ form.password }}
-        </div>
-        {%  if error.pass %}
-            <p class="alert alert-danger" role="alert">{{ error.pass|capfirst }}</p>
-        {%  endif %}
-        <div class="form-group">
-            <input type="submit" value="{% trans 'connexion'|capfirst %}" class="btn btn-primary btn-lg btn-block" />
-        </div>
-    </form>
 {%  endblock %}
 
 

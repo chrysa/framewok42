@@ -67,6 +67,14 @@ def register_user(request):
         }
     )
 
+def select_login(request):
+    return render(
+        request,
+        "profil/login.html",
+        {
+            'type': "select",
+        }
+    )
 
 def login_user(request):
     if request.user.is_authenticated():
@@ -107,6 +115,7 @@ def login_user(request):
         {
             'form': form,
             'error': error,
+            'type': "classic",
             'formcontact': contact.ContactForm(),
         }
     )
