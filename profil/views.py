@@ -122,20 +122,22 @@ def login_ldap(request):
     )
     c = ldap3.Connection(
         s,
-        user='uid=%s,ou=2013,ou=2014,ou=people,dc=42,dc=fr' % user,
+        user='dc=42,dc=fr,ou=2013,ou=paris,ou=people,uid={}'.format(user),
         password=password,
         auto_bind='NONE',
         version=3,
         authentication='SIMPLE',
-        client_strategy = 'SYNC',
+        client_strategy='SYNC',
         auto_referrals=True,
         check_names=True,
         read_only=False,
         lazy=False,
-        raise_exceptions=False
+        raise_exceptions=True
     )
     if not c.bind():
         print('error in bind', c.result)
+    else:
+        print ('plop')
     # username = "uid=agreau,ou=2013,ou=2014, ou=people,dc=42,dc=fr"
     # password  = "mCKb0ss#123"
 
