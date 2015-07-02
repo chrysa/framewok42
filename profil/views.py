@@ -122,31 +122,25 @@ def login_user(request):
 
 def login_ldap(request):
     user = 'agreau'
-    password  = "mCKb0ss#123"
-    s = ldap3.Server(
-        host='ldap.42.fr',
-        port=636,
-        use_ssl=True,
-        get_info='ALL'
-    )
+    password = "mCKb0ss#123"
+    s = ldap3.Server('ldaps://ldap.42.fr', port = 636, get_info = ldap3.ALL)
     c = ldap3.Connection(
         s,
-        user='dc=42,dc=fr,ou=2013,ou=paris,ou=people,uid={}'.format(user),
+        auto_bind = True,
+        client_strategy = 'SYNC',
+        user='uid={},ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr'.format(user),
         password=password,
-        auto_bind='NONE',
-        version=3,
-        authentication='SIMPLE',
-        client_strategy='SYNC',
-        auto_referrals=True,
-        check_names=True,
-        read_only=False,
-        lazy=False,
-        raise_exceptions=True
+        authentication = ldap3.SIMPLE,
+        check_names = True,
+        raise_exceptions=False
     )
-    if not c.bind():
-        print('error in bind', c.result)
-    else:
-        print ('plop')
+    c.search('ou=people,dc=42,dc=fr','(objectClass=*)', ldap3.SUBTREE, attributes = ['sn', 'objectClass'])
+    response = c.response
+    result = c.result
+    for r in response:
+        print(r['dn'], r['attributes'])
+    print(result)
+    c.unbind()
     # username = "uid=agreau,ou=2013,ou=2014, ou=people,dc=42,dc=fr"
     # password  = "mCKb0ss#123"
 
