@@ -1,4 +1,7 @@
 {% load i18n %} {% load bootstrap3 %} {% load staticfiles %} {% spaceless %}
+{% get_available_languages as LANGUAGES %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_language_info_list for LANGUAGES as languages %}
 {% url 'cat' cat.slug as url_cat %}
 {% url 'contact' as url_contact%}
 {% url 'create_topic' cat.slug as url_create_topic %}
@@ -74,36 +77,52 @@
                                 </ul>
                             </li>
                         {% endif %}
-                        <li {% if request.path == url_contact %} class="active" {% endif %}><a href="{{ url_contact }}">{% trans "contact" %}</a></li>
+                        <li {% if request.path == url_contact %} class="active" {% endif %}>
+                            <a href="{{ url_contact }}">{% trans "contact" %}</a>
+                        </li>
+                        <li role="presentation" class="dropdown">
+                            <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                              {% trans 'change_lang'|capfirst %}
+                              <span class="caret"></span>
+                            </a>
+                            <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+                                <li>
+                                    {% for language in languages %}
+                                        {% ifequal language.code LANGUAGE_CODE %}
+                                            {% trans 'current_lang' %} : {{ language.name_local|capfirst }}
+                                        {% endifequal %}
+                                    {% endfor %}
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <form action="{% url 'set_language' %}" method="post" id="language_form">
+                                        {% csrf_token %}
+                                        <input name="next" type="hidden" value="{{ request.path }}" />
+                                        <select name="language" id="language" class="form-control">>
+                                            {% for language in languages %}
+                                                    <option value="{{ language.code }}" {% ifequal language.code LANGUAGE_CODE %} disabled="disabled" selected="selected"{% endifequal %}>{{ language.name_local|capfirst }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </form>
+                                </li>
+                            </ul>
+
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
         {% block content %}{% endblock %}
-        <footer class="bs-docs-footer" role="contentinfo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        {% get_available_languages as LANGUAGES %}
-                        {% get_current_language as LANGUAGE_CODE %}
-                        <form action="u" method="post">
-                            {% csrf_token %}
-                            <input name="next" type="hidden" value="{{ request.path }}" />
-                            <select name="language">
-                                {% get_language_info_list for LANGUAGES as languages %}
-                                {% for language in languages %}
-                                    <option value="{{ language.code }}" {% ifequal language.code LANGUAGE_CODE %}selected="selected"{% endifequal %}>{{ language.name_local|capfirst }}</option>
-                                {% endfor %}
-                            </select>
-                            <input type="submit" value="{% trans 'change_lang' %}" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
     <script type="text/javascript" src="{% static 'js/jquery.js' %}" ></script>
     {% bootstrap_javascript %}
+    <script>
+        $(document).ready(function(){
+            $('#language').change(function(){
+                $('#language_form').submit();
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 
 
-class LogInForm(forms.Form, forms.ModelForm):
+class LdapForm(forms.Form, forms.ModelForm):
 
     class Meta:
         model = User
@@ -13,12 +13,12 @@ class LogInForm(forms.Form, forms.ModelForm):
             'password',
         ]
 
-    username = forms.CharField(
-        label=_("username"),
+    login = forms.CharField(
+        label=_("login_user"),
         widget=forms.TextInput(
             attrs={
                 'class': "form-control",
-                'placeholder': _("username"),
+                'placeholder': _("login_user"),
             },
         ),
     )

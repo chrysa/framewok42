@@ -23,8 +23,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-LOGIN_PAGE = '/profil/sel_login'
-LOGIN_URL = '/profil/sel_login'
+LOGIN_PAGE = '/profil/login'
+LOGIN_URL = '/profil/login'
 
 ALLOWED_HOSTS = ['*']
 
@@ -69,7 +69,6 @@ MIDDLEWARE_CLASSES = (
 )
 
 AUTHENTICATION_BACKENDS = (
-    'django_python3_ldap.auth.LDAPBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 

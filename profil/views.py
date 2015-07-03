@@ -13,6 +13,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.translation import ugettext as _
 
 from contact import contact
+from profil.forms.LdapForm import LdapForm
 from profil.forms.LogInForm import LogInForm
 from profil.forms.RegisterForm import RegisterForm
 from profil.models import UserLang
@@ -41,7 +42,8 @@ def register_user(request):
                 UserLang(user=user, lang=translation.get_language()).save()
                 redir = reverse('home')
                 if "HTTP_REFERER" in request.META:
-                    redir = reverse('home') if request.META['PATH_INFO'] == reverse('register') else request.META['PATH_INFO']
+                    redir = reverse('home') if request.META['PATH_INFO'] == reverse(
+                        'register') else request.META['PATH_INFO']
                 login(request, user)
                 return redirect(
                     redir,
@@ -67,6 +69,7 @@ def register_user(request):
         }
     )
 
+
 def select_login(request):
     return render(
         request,
@@ -76,6 +79,7 @@ def select_login(request):
         }
     )
 
+
 def login_user(request):
     if request.user.is_authenticated():
         return redirect(reverse('home'))
@@ -83,30 +87,35 @@ def login_user(request):
         error = {}
         form = LogInForm(request.POST)
         if request.method == 'POST':
-            user_exist = User.objects.filter(username=request.POST['username'])
-            if len(user_exist) == 0:
-                error['user'] = _("error_user_not_exist")
-            if 'user' not in error:
-                user = authenticate(
-                    username=request.POST['username'],
-                    password=request.POST['password'],
-                )
-                if user is not None:
-                    if user.is_active:
-                        login(request, user)
-                        userlang = UserLang.objects.get(user=request.user)
-                        translation.activate(userlang.lang)
-                        request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
-                        return redirect(
-                            request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
-                            permanent=True
-                        )
-                    else:
-                        error['unknow'] = _("authenticate error")
-                else:
-                    error['pass'] = _("error_wrong_password")
+            if request.POST['username'] == "admin":
+                error['unknow'] = _("admin_cant_log_here")
             else:
-                error['unknow'] = _("unknow error")
+                user_exist = User.objects.filter(username=request.POST['username'])
+                if len(user_exist) == 0:
+                    error['user'] = _("error_user_not_exist")
+                if 'user' not in error:
+                    user = authenticate(
+                        username=request.POST['username'],
+                        password=request.POST['password'],
+                    )
+                    if user is not None:
+                        if user.is_active:
+                            login(request, user)
+                            userlang = UserLang.objects.get(user=request.user)
+                            translation.activate(userlang.lang)
+                            request.session[
+                                translation.LANGUAGE_SESSION_KEY] = userlang.lang
+                            return redirect(
+                                request.META[
+                                    'HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
+                                permanent=True
+                            )
+                        else:
+                            error['unknow'] = _("authenticate error")
+                    else:
+                        error['pass'] = _("error_wrong_password")
+                else:
+                    error['unknow'] = _("unknow error")
         else:
             form = LogInForm()
     return render(
@@ -120,32 +129,60 @@ def login_user(request):
         }
     )
 
-def login_ldap(request):
-    user = 'agreau'
-    password = "mCKb0ss#123"
-    s = ldap3.Server('ldaps://ldap.42.fr', port = 636, get_info = ldap3.ALL)
-    c = ldap3.Connection(
-        s,
-        auto_bind = True,
-        client_strategy = 'SYNC',
-        user='uid={},ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr'.format(user),
-        password=password,
-        authentication = ldap3.SIMPLE,
-        check_names = True,
-        raise_exceptions=False
-    )
-    c.search('ou=people,dc=42,dc=fr','(objectClass=*)', ldap3.SUBTREE, attributes = ['sn', 'objectClass'])
-    response = c.response
-    result = c.result
-    for r in response:
-        print(r['dn'], r['attributes'])
-    print(result)
-    c.unbind()
-    # username = "uid=agreau,ou=2013,ou=2014, ou=people,dc=42,dc=fr"
-    # password  = "mCKb0ss#123"
 
-    # Any errors will throw an ldap.LDAPError exception
-    # or related exception so you can ignore the result
+def login_ldap(request):
+    if request.user.is_authenticated():
+        return redirect(reverse('home'))
+    else:
+        error = {}
+        form = LdapForm(request.POST)
+        if request.method == 'POST':
+            try:
+                s = ldap3.Server(
+                    'ldaps://ldap.42.fr',
+                    port=636,
+                    get_info=ldap3.ALL
+                )
+                c = ldap3.Connection(
+                    s,
+                    auto_bind=True,
+                    client_strategy='SYNC',
+                    user='uid={},ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr'.format(request.POST['login']),
+                    password=request.POST['password'],
+                    authentication=ldap3.SIMPLE,
+                    check_names=True,
+                    raise_exceptions=False
+                )
+                if c.bind():
+                    print(c)
+                    c.search(
+                        search_base='ou=people,dc=42,dc=fr',
+                        search_filter='(uid={})'.format(request.POST['login']),
+                        search_scope=ldap3.SUBTREE,
+                        attributes=[
+                            'sn',
+                            'objectClass',
+                        ]
+                    )
+                    response = c.response
+                    for r in response:
+                        print(r['attributes'])
+                    c.unbind()
+            except:
+                error['unknow'] = _("bind_error")
+        else:
+            form = LdapForm()
+    return render(
+        request,
+        "profil/login.html",
+        {
+            'form': form,
+            'error': error,
+            'type': "ldap",
+            'formcontact': contact.ContactForm(),
+        }
+    )
+
 
 @login_required
 def logout_user(request):
@@ -155,7 +192,8 @@ def logout_user(request):
         if userlang.lang is not cur_language:
             userlang.lang = cur_language
             userlang.save()
-    redir = request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home')
+    redir = request.META[
+        'HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home')
     logout(request)
     return redirect(
         redir,
