@@ -9,7 +9,7 @@
                 </div>
             {%  endfor %}
         {% endif %}
-        <form action="{% url 'register' %}" method="post">
+        <form action="{% url 'register' %}?next={{ request.META.HTTP_REFERER }}" method="post">
             {% csrf_token %}
             <div class="form-group">
                 <label for="id_username">{{ form.username.label|capfirst }} </label>

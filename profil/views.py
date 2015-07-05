@@ -41,9 +41,8 @@ def register_user(request):
                 )
                 UserLang(user=user, lang=translation.get_language()).save()
                 redir = reverse('home')
-                if "HTTP_REFERER" in request.META:
-                    redir = reverse('home') if request.META['PATH_INFO'] == reverse(
-                        'register') else request.META['PATH_INFO']
+                if request.GET['next'] != reverse('register'):
+                    redir = request.GET['next']
                 login(request, user)
                 return redirect(
                     redir,
@@ -105,9 +104,11 @@ def login_user(request):
                             translation.activate(userlang.lang)
                             request.session[
                                 translation.LANGUAGE_SESSION_KEY] = userlang.lang
+                            redir = reverse('home')
+                            if request.GET['next'] != reverse('login_classic') or request.GET['next'] != reverse('login_ldap') or request.GET['next'] != reverse('login'):
+                                redir = request.GET['next']
                             return redirect(
-                                request.META[
-                                    'HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
+                                redir,
                                 permanent=True
                             )
                         else:
