@@ -67,13 +67,13 @@ class RegisterTests(TestCase):
 
 
 class LoginTests(TestCase):
-    fixtures = ['tests.json']
+    fixtures = ['profil.json']
 
     def test_login_url(self):
         reponse = self.client.get(reverse('login'))
         self.assertEqual(reponse.status_code, 200)
 
-    def test_login(self):
+    def test_login_home(self):
         data = {
             'username': "chrysa",
             'password': "plop",
@@ -86,6 +86,48 @@ class LoginTests(TestCase):
         self.assertRedirects(
             reponse,
             reverse('home'),
+            status_code=301,
+            target_status_code=200,
+            host=None,
+            msg_prefix='',
+            fetch_redirect_response=True
+        )
+
+    def test_login_contact(self):
+        data = {
+            'username': "chrysa",
+            'password': "plop",
+        }
+        reponse = self.client.post(
+            reverse('login'),
+            data,
+            follow=True,
+            HTTP_REFERER=reverse('contact'),
+        )
+        self.assertRedirects(
+            reponse,
+            reverse('contact'),
+            status_code=301,
+            target_status_code=200,
+            host=None,
+            msg_prefix='',
+            fetch_redirect_response=True
+        )
+
+    def test_login_forum(self):
+        data = {
+            'username': "chrysa",
+            'password': "plop",
+        }
+        reponse = self.client.post(
+            reverse('login'),
+            data,
+            follow=True,
+            HTTP_REFERER=reverse('forum'),
+        )
+        self.assertRedirects(
+            reponse,
+            reverse('forum'),
             status_code=301,
             target_status_code=200,
             host=None,
