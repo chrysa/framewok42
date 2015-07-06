@@ -80,7 +80,7 @@ class RegisterTests(TestCase):
         reponse = self.client.post(reverse('register'), data)
         self.assertEqual(reponse.status_code, 200)
         self.assertEqual(
-            reponse.context[0]['errors']['user'], 
+            reponse.context[0]['errors']['user'],
             _("error_user_already_exist")
         )
 
@@ -167,7 +167,6 @@ class LoginTests(TestCase):
             msg_prefix='',
             fetch_redirect_response=True
         )
-
 
     def test_login_wrong_user(self):
         data = {

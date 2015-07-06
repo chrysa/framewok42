@@ -24,7 +24,12 @@
         {%  if error.unknow %}
             <div class="alert alert-danger" role="alert">{{ error.unknow }}</div>
         {%  endif %}
-        <form action="{% url 'login_classic' %}?next={{ request.META.HTTP_REFERER }}" method="post">
+        {%  if error.admin %}
+            <div class="alert alert-danger" role="alert">{{ error.admin }}</div>
+            <form action="{% url 'login_classic' %}" method="post">
+        {%  else  %}
+            <form action="{% url 'login_classic' %}?next={{ request.META.HTTP_REFERER }}" method="post">
+        {%  endif %}
             {% csrf_token %}
             <div class="form-group">
                 <label for="id_username">{{ form.username.label|capfirst }} </label>

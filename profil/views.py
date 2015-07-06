@@ -87,7 +87,7 @@ def login_user(request):
         form = LogInForm(request.POST)
         if request.method == 'POST':
             if request.POST['username'] == "admin":
-                error['unknow'] = _("admin_cant_log_here")
+                error['admin'] = _("admin_cant_log_here")
             else:
                 user_exist = User.objects.filter(username=request.POST['username'])
                 if len(user_exist) == 0:

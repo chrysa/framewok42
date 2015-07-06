@@ -23,8 +23,18 @@ USE_L10N = True
 
 USE_TZ = True
 
+HIJACK_NOTIFY_ADMIN = True
+HIJACK_NOTIFY_USER = True
+
 LOGIN_PAGE = '/profil/login'
 LOGIN_URL = '/profil/login'
+
+HIJACK_LOGIN_REDIRECT_URL = "/"
+REVERSE_HIJACK_LOGIN_REDIRECT_URL = "/admin/"
+REVERSE_HIJACK_LOGIN_REDIRECT_URL = '/admin/auth/user/'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = 'statics/'
 
 ALLOWED_HOSTS = ['*']
 
@@ -32,14 +42,27 @@ APP_PERSO = (
     'contact',
     'core',
     'forum',
+    'issues',
+    'logs',
     'profil',
-    'issues'
 )
 
 ADDITIONALS_APPS = (
-    'bootstrap3',
     'autoslug',
+    'bootstrap3',
+    'compat',
+    'hijack',
     'jquery',
+)
+
+ADDITIONALS_MIDDLEWARE = (
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'hijack.middleware.HijackRemoteUserMiddleware',
+    'django.contrib.auth.middleware.RemoteUserMiddleware',
+)
+
+ADDITIONNALS_TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
 )
 
 LANGUAGES = (
@@ -66,11 +89,21 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-)
+) + ADDITIONALS_MIDDLEWARE
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.template.context_processors.debug",
+    "django.template.context_processors.i18n",
+    "django.template.context_processors.media",
+    "django.template.context_processors.static",
+    "django.template.context_processors.tz",
+    "django.contrib.messages.context_processors.messages"
+) + ADDITIONNALS_TEMPLATE_CONTEXT_PROCESSORS
 
 ROOT_URLCONF = 'framework.urls'
 
@@ -99,16 +132,11 @@ DATABASES = {
     }
 }
 
-STATIC_URL = '/static/'
-STATIC_ROOT = '/statics/'
-
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATICFILES_DIRS = ()
 
 for a in APP_PERSO:
     static = os.path.join(os.path.join(BASE_DIR, a),  'statics')
