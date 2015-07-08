@@ -2,4 +2,7 @@
 {% load i18n %}
 {% block content %}
     {{ type_log }}
+    {% for log in type_log %}
+        <p><a href="{% url 'view_log' log %}">{{ log }}</a></p>
+    {% endfor %}
 {% endblock %}

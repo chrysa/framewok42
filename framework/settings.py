@@ -31,7 +31,6 @@ LOGIN_URL = '/profil/login'
 
 HIJACK_LOGIN_REDIRECT_URL = "/"
 REVERSE_HIJACK_LOGIN_REDIRECT_URL = "/admin/"
-REVERSE_HIJACK_LOGIN_REDIRECT_URL = '/admin/auth/user/'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = 'statics/'
@@ -141,8 +140,8 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
-            'datefmt' : "%d/%b/%Y %H:%M:%S"
+            'format': "[%(levelname)s] [%(asctime)s][%(module)s:%(funcName)s:%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%d/%m/%Y %H:%M:%S"
         },
         'simple': {
             'format': '[%(asctime)s] %(message)s',
@@ -150,31 +149,31 @@ LOGGING = {
         },
     },
     'handlers': {
-        'file': {
+        'file_critical': {
             'level': 'CRITICAL',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/critical.log'),
             'formatter': 'verbose'
         },
-        'file': {
+        'file_error': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/error.log'),
             'formatter': 'verbose'
         },
-        'file': {
+        'file_warning': {
             'level': 'WARNING',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/warning.log'),
             'formatter': 'verbose'
         },
-        'file': {
+        'file_info': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/info.log'),
             'formatter': 'simple'
         },
-        'file': {
+        'file_debug': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/debug.log'),
@@ -182,12 +181,32 @@ LOGGING = {
         },
     },
     'loggers': {
-        'django': {
-            'handlers':['file'],
-            'propagate': True,
+        'critical': {
+            'handlers': ['file_critical'],
+            'propagate': False,
+            'level': 'CRITICAL',
+        },
+        'error': {
+            'handlers': ['file_error'],
+            'propagate': False,
+            'level': 'ERROR',
+        },
+        'warning': {
+            'handlers': ['file_warning'],
+            'propagate': False,
+            'level': 'WARNING',
+        },
+        'info': {
+            'handlers': ['file_info'],
+            'propagate': False,
+            'level': 'INFO',
+        },
+        'debug': {
+            'handlers': ['file_debug'],
+            'propagate': False,
             'level': 'DEBUG',
         },
-    }
+    },
 }
 
 STATICFILES_DIRS = ()
@@ -199,7 +218,3 @@ for a in APP_PERSO:
         STATICFILES_DIRS = STATICFILES_DIRS + (static,)
     if os.path.isdir(template):
         TEMPLATES[0]['DIRS'].append(template)
-    LOGGING['loggers'][a] = {
-        'handlers': ['file'],
-        'level': 'DEBUG',
-    }

@@ -1,5 +1,4 @@
 #-*-coding:utf-8 -*-
-import datetime
 import logging
 
 from django.shortcuts import render
@@ -13,19 +12,38 @@ LOG_TYPE = [
     _('error'),
     _('warning'),
     _('info'),
-    _('debug'),
+    _('debug')
 ]
 
 @login_required
 def index(request):
+    print(LOG_TYPE)
+    print(LOG_TYPE.sort())
     return render(
         request,
         'logs/index.html', {
-            'type_log': LOG_TYPE,
+            'type_log': LOG_TYPE.sort(),
         }
     )
 
 
+def add_log(type, mess):
+    logger = logging.getLogger(type)
+    if type == 'critical':
+        logger.critical(mess)
+    elif type == 'error':
+        logger.error(mess)
+    elif type == 'warning':
+        logger.warning(mess)
+    elif type == 'info':
+        logger.info(mess)
+    elif type == 'debug':
+        logger.debug(mess)
+
+
+@login_required
+def display_log(request):
+    return
 # from datetime import datetime
 # lines = (ligne.split(' :: ') for ligne in open('fichier.log'))
 # errors = ((date, mes) for date, lvl, mes in lines if lvl in ('ERROR', 'CRITICAL'))
