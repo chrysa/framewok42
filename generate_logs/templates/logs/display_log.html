@@ -1,15 +1,17 @@
 {% extends "core/base.html" %}
 {% load i18n %}
 {% block content %}
+    <h1 class="text-center">{{ type }} log</h1>
     <table class="table">
-        <caption>{{ type }}.</caption>
         <thead>
         <tr>
             <th>#</th>
             <th>day</th>
             <th>hour</th>
             <th>action</th>
+            <th>by</th>
             <th>module</th>
+            <th>ligne</th>
         </tr>
         </thead>
         <tbody>
@@ -18,8 +20,10 @@
                 <th scope="row">{{ forloop.counter }}</th>
                 <td>{{ l.0.0 }}</td>
                 <td>{{ l.0.1 }}</td>
-                <td>{{ l.1 }}</td>
-                <td>{{ l.2 }}</td>
+                <td>{{ l.1.0 }}</td>
+                <td>{{ l.1.1 }}</td>
+                <td>{{ l.2.0 }}</td>
+                <td>{{ l.2.1 }}</td>
             </tr>
         {% endfor %}
         </tbody>

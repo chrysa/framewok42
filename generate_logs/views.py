@@ -25,21 +25,6 @@ def index(request):
         }
     )
 
-
-def add_log(type, mess):
-    logger = logging.getLogger(type)
-    if type == 'critical':
-        logger.critical(mess)
-    elif type == 'error':
-        logger.error(mess)
-    elif type == 'warning':
-        logger.warning(mess)
-    elif type == 'info':
-        logger.info(mess)
-    elif type == 'debug':
-        logger.debug(mess)
-
-
 @login_required
 def display_log(request, log_type):
     if not request.user.is_superuser:
@@ -52,11 +37,20 @@ def display_log(request, log_type):
                 split_ligne[0] = split_ligne[0].split(' ')
                 split_ligne[0][0] = split_ligne[0][0].replace('[', '')
                 split_ligne[0][1] = split_ligne[0][1].replace(']', '')
-                split_ligne[1] = split_ligne[1].replace('\n', '')
+                split_ligne[1] = split_ligne[1].replace('\n', '').split(' by ')
             elif len(split_ligne) == 4:
                 split_ligne.remove(split_ligne[0])
-                print(split_ligne)
+                split_ligne[0] = split_ligne[0].split(' ')
+                split_ligne[0][0] = split_ligne[0][0].replace('[', '')
+                split_ligne[0][1] = split_ligne[0][1].replace(']', '')
+                split_ligne[1] = split_ligne[1].replace(':', '/').replace('[', '').replace(']', '')
+                split_ligne[1] = split_ligne[1].split(' ')
+                split_ligne[2] = split_ligne[2].replace('\n', '').split(' by ')
 
+                split_ligne.append(split_ligne[2])
+                split_ligne[2] = split_ligne[1]
+                split_ligne[1] = split_ligne[3]
+            print(split_ligne)
             log.append(split_ligne)
     return render(
         request,

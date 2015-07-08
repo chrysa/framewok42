@@ -1,7 +1,14 @@
 {% extends "core/base.html" %}
 {% load i18n %}
 {% block content %}
-    {% for log in type_log %}
-        <p><a href="{% url 'view_log' log %}">{{ log }}</a></p>
-    {% endfor %}
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                {% for log in type_log %}
+                    <button type="button" class="btn btn-lg btn-block"><a href="{% url 'view_log' log %}">{{ log }}</a>
+                    </button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
