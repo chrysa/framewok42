@@ -20,53 +20,56 @@ from profil.models import UserLang
 
 
 def register_user(request):
-    errors = {}
-    form = RegisterForm(request.POST)
-    if request.method == 'POST':
-        email_exist = User.objects.filter(email=request.POST['email'])
-        if form.is_valid():
-            if len(email_exist) > 0:
-                errors['mail'] = _("error_mail_already_exist")
-            elif form.cleaned_data['password'] != form.cleaned_data['password_conf']:
-                errors['pass'] = _("error_password")
-            if 'mail' not in errors and 'pass' not in errors:
-                User.objects.create_user(
-                    username=form.cleaned_data['username'],
-                    email=form.cleaned_data['email'],
-                    password=form.cleaned_data['password']
-                )
-                user = authenticate(
-                    username=form.cleaned_data['username'],
-                    password=form.cleaned_data['password'],
-                )
-                UserLang(user=user, lang=translation.get_language()).save()
-                redir = reverse('home')
-                if request.GET['next'] != reverse('register'):
-                    redir = request.GET['next']
-                login(request, user)
-                return redirect(
-                    redir,
-                    permanent=True
-                )
-        else:
-            user_exist = User.objects.filter(username=request.POST['username'])
-            if len(user_exist) > 0:
-                errors['user'] = _("error_user_already_exist")
-            if len(email_exist) > 0:
-                errors['mail'] = _("error_mail_already_exist")
-            if request.POST['password'] != request.POST['password_conf']:
-                errors['pass'] = _("error_password")
-            if not len(errors):
-                errors['form'] = _("unknow_error_register_form")
-    return render(
-        request,
-        "profil/register.html",
-        {
-            'form': form,
-            'errors': errors,
-            'formcontact': contact.ContactForm(),
-        }
-    )
+    if request.user.is_authenticated():
+        return redirect(reverse('home'))
+    else:
+        errors = {}
+        form = RegisterForm(request.POST)
+        if request.method == 'POST':
+            email_exist = User.objects.filter(email=request.POST['email'])
+            if form.is_valid():
+                if len(email_exist) > 0:
+                    errors['mail'] = _("error_mail_already_exist")
+                elif form.cleaned_data['password'] != form.cleaned_data['password_conf']:
+                    errors['pass'] = _("error_password")
+                if 'mail' not in errors and 'pass' not in errors:
+                    User.objects.create_user(
+                        username=form.cleaned_data['username'],
+                        email=form.cleaned_data['email'],
+                        password=form.cleaned_data['password']
+                    )
+                    user = authenticate(
+                        username=form.cleaned_data['username'],
+                        password=form.cleaned_data['password'],
+                    )
+                    UserLang(user=user, lang=translation.get_language()).save()
+                    redir = reverse('home')
+                    if request.GET['next'] != reverse('register'):
+                        redir = request.GET['next']
+                    login(request, user)
+                    return redirect(
+                        redir,
+                        permanent=True
+                    )
+            else:
+                user_exist = User.objects.filter(username=request.POST['username'])
+                if len(user_exist) > 0:
+                    errors['user'] = _("error_user_already_exist")
+                if len(email_exist) > 0:
+                    errors['mail'] = _("error_mail_already_exist")
+                if request.POST['password'] != request.POST['password_conf']:
+                    errors['pass'] = _("error_password")
+                if not len(errors):
+                    errors['form'] = _("unknow_error_register_form")
+        return render(
+            request,
+            "profil/register.html",
+            {
+                'form': form,
+                'errors': errors,
+                'formcontact': contact.ContactForm(),
+            }
+        )
 
 
 def select_login(request):
@@ -78,14 +81,17 @@ def select_login(request):
         }
     )
 
-
+# from ast import literal_eval
 def login_user(request):
     if request.user.is_authenticated():
         return redirect(reverse('home'))
     else:
         error = {}
-        form = LogInForm(request.POST)
         if request.method == 'POST':
+            form = LogInForm(request.POST)
+            # array_transfere = literal_eval(request.GET["test"])
+            # for k in array_transfere:
+            #     print (k)
             if request.POST['username'] == "admin":
                 error['unknow'] = _("admin_cant_log_here")
             else:

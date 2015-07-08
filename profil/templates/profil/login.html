@@ -25,6 +25,7 @@
             <div class="alert alert-danger" role="alert">{{ error.unknow }}</div>
         {%  endif %}
         <form action="{% url 'login_classic' %}?next={{ request.META.HTTP_REFERER }}" method="post">
+{#        <form action="{% url 'login_classic' %}" method="post" id="plop">#}
             {% csrf_token %}
             <div class="form-group">
                 <label for="id_username">{{ form.username.label|capfirst }} </label>
@@ -41,12 +42,9 @@
                 <p class="alert alert-danger" role="alert">{{ error.pass|capfirst }}</p>
             {%  endif %}
             <div class="form-group">
-                <input type="submit" value="{% trans 'connexion'|capfirst %}" class="btn btn-primary btn-lg btn-block" />
+                <input type="submit" value="{% trans 'connexion'|capfirst %}" class="btn btn-primary btn-lg btn-block" id="submit" />
             </div>
         </form>
-
-
-
     {% elif type == "ldap" %}
         <ol class="breadcrumb">
             <li><a href="{%  url 'home' %}">{% trans 'home'|capfirst %}</a></li>
@@ -76,10 +74,19 @@
                 <input type="submit" value="{% trans 'connexion'|capfirst %}" class="btn btn-primary btn-lg btn-block" />
             </div>
         </form>
-
-
-
     {%  endif %}
 {%  endblock %}
 
 
+{#{% block js %}#}
+{#    <script>#}
+{#    var display = new Array();#}
+{#    display.push("none");#}
+{#    display.push("block");#}
+{#    display.push("none");#}
+{#    $("#submit").on("click", function(e){#}
+{#        e.preventDefault;#}
+{#        $('#plop').attr('action', $('#plop').attr('action') + "?test="+JSON.stringify(display));#}
+{#    });#}
+{#    </script>#}
+{#{% endblock %}#}
