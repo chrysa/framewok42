@@ -1,6 +1,7 @@
 #-*-coding:utf-8 -*-
 import logging
 
+from django.shortcuts import redirect
 from django.shortcuts import render
 from django.utils.translation import ugettext as _
 from django.contrib.auth.decorators import login_required
@@ -17,12 +18,10 @@ LOG_TYPE = [
 
 @login_required
 def index(request):
-    print(LOG_TYPE)
-    print(LOG_TYPE.sort())
     return render(
         request,
         'logs/index.html', {
-            'type_log': LOG_TYPE.sort(),
+            'type_log': LOG_TYPE,
         }
     )
 
@@ -42,13 +41,27 @@ def add_log(type, mess):
 
 
 @login_required
-def display_log(request):
-    return
-# from datetime import datetime
-# lines = (ligne.split(' :: ') for ligne in open('fichier.log'))
-# errors = ((date, mes) for date, lvl, mes in lines if lvl in ('ERROR', 'CRITICAL'))
-# before, after = datetime(2012, 1, 12), datetime(2012, 3, 24)
-# parse = lambda d: datetime.strptime(d, '%Y-%m-%d %H:%M:%S,%f')
-# dated_line = ((date, mes) for date, mess in errors if before <= parse(date) <= after)
-# for date, message in dated_line:
-#     print date, message
+def display_log(request, log_type):
+    if not request.user.is_superuser:
+        return redirect(request.META['HTTP_REFERER'])
+    else:
+        log = []
+        for ligne in open('logs/' + log_type + '.log'):
+            split_ligne = ligne.split(' :: ')
+            if len(split_ligne) == 2:
+                split_ligne[0] = split_ligne[0].split(' ')
+                split_ligne[0][0] = split_ligne[0][0].replace('[', '')
+                split_ligne[0][1] = split_ligne[0][1].replace(']', '')
+                split_ligne[1] = split_ligne[1].replace('\n', '')
+            elif len(split_ligne) == 4:
+                split_ligne.remove(split_ligne[0])
+                print(split_ligne)
+
+            log.append(split_ligne)
+    return render(
+        request,
+        'logs/display_log.html', {
+            'type': log_type,
+            'log': log,
+        }
+    )

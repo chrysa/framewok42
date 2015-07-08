@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% block content %}
+    <table class="table">
+        <caption>{{ type }}.</caption>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>day</th>
+            <th>hour</th>
+            <th>action</th>
+            <th>module</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for l in log %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ l.0.0 }}</td>
+                <td>{{ l.0.1 }}</td>
+                <td>{{ l.1 }}</td>
+                <td>{{ l.2 }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -140,12 +140,12 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': "[%(levelname)s] [%(asctime)s][%(module)s:%(funcName)s:%(name)s:%(lineno)s] %(message)s",
+            'format': "[%(levelname)s] :: [%(asctime)s] :: [%(module)s:%(funcName)s:%(name)s:%(lineno)s] :: %(message)s",
             'datefmt': "%d/%m/%Y %H:%M:%S"
         },
         'simple': {
-            'format': '[%(asctime)s] %(message)s',
-            'datefmt' : "%d/%b/%Y %H:%M:%S"
+            'format': '[%(asctime)s] :: %(message)s',
+            'datefmt': "%d/%m/%Y %H:%M:%S"
         },
     },
     'handlers': {
@@ -171,7 +171,7 @@ LOGGING = {
             'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/info.log'),
-            'formatter': 'simple'
+            'formatter': 'verbose'
         },
         'file_debug': {
             'level': 'DEBUG',
