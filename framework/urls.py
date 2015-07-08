@@ -12,7 +12,7 @@ urlpatterns = patterns('',
                        url(r'^forum/', include('forum.urls')),
                        url(r'^hijack/', include('hijack.urls')),
                        url(r'^issue/', include('issues.urls')),
-                       url(r'^log/', include('logs.urls')),
+                       url(r'^log/', include('generate_logs.urls')),
                        url(r'^i18n/', include('django.conf.urls.i18n')),
                        url(r'^profil/', include('profil.urls')),
                        ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

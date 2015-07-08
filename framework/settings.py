@@ -43,7 +43,7 @@ APP_PERSO = (
     'core',
     'forum',
     'issues',
-    'logs',
+    'generate_logs',
     'profil',
 )
 
@@ -136,6 +136,60 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '[%(asctime)s] %(message)s',
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'CRITICAL',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/critical.log'),
+            'formatter': 'verbose'
+        },
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/error.log'),
+            'formatter': 'verbose'
+        },
+        'file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/warning.log'),
+            'formatter': 'verbose'
+        },
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/info.log'),
+            'formatter': 'simple'
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/debug.log'),
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers':['file'],
+            'propagate': True,
+            'level': 'DEBUG',
+        },
+    }
+}
+
 STATICFILES_DIRS = ()
 
 for a in APP_PERSO:
@@ -145,3 +199,7 @@ for a in APP_PERSO:
         STATICFILES_DIRS = STATICFILES_DIRS + (static,)
     if os.path.isdir(template):
         TEMPLATES[0]['DIRS'].append(template)
+    LOGGING['loggers'][a] = {
+        'handlers': ['file'],
+        'level': 'DEBUG',
+    }

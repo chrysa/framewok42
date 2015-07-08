@@ -6,16 +6,14 @@ from django.shortcuts import render
 from django.utils.translation import ugettext as _
 from django.contrib.auth.decorators import login_required
 
-logger = logging.getLogger()
-logger.setLevel(logging.ERROR)
+logger = logging.getLogger(__name__)
 
 LOG_TYPE = [
     _('critical'),
-    _('debug'),
     _('error'),
-    _('log'),
-    _('info'),
     _('warning'),
+    _('info'),
+    _('debug'),
 ]
 
 @login_required
@@ -23,21 +21,9 @@ def index(request):
     return render(
         request,
         'logs/index.html', {
-            'type_log' : LOG_TYPE,
+            'type_log': LOG_TYPE,
         }
     )
-
-def add_log(type, mess):
-    if type == "critical":
-        logger.critical(mess)
-    elif type == "debug":
-        logger.debug(mess)
-    elif type == "info":
-        logger.info(mess)
-    elif type == "error":
-        logger.error(mess)
-    elif type == "warning":
-        logger.warning(mess)
 
 
 # from datetime import datetime
