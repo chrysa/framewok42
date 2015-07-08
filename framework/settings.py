@@ -171,7 +171,7 @@ LOGGING = {
             'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/info.log'),
-            'formatter': 'verbose'
+            'formatter': 'simple'
         },
         'file_debug': {
             'level': 'DEBUG',
@@ -179,8 +179,19 @@ LOGGING = {
             'filename': os.path.join(BASE_DIR, 'logs/debug.log'),
             'formatter': 'verbose'
         },
+        'file_django': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/general_log.log'),
+            'formatter': 'verbose'
+        },
     },
     'loggers': {
+        'django': {
+            'handlers': ['file_django'],
+            'propagate': True,
+            'level': 'DEBUG',
+        },
         'critical': {
             'handlers': ['file_critical'],
             'propagate': False,

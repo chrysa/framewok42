@@ -13,7 +13,8 @@ LOG_TYPE = [
     _('error'),
     _('warning'),
     _('info'),
-    _('debug')
+    _('debug'),
+    _('general_log')
 ]
 
 @login_required
