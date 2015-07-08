@@ -2,7 +2,10 @@ Django==1.8.2
 coverage==3.7.1
 django-autoslug==1.8.0
 django-bootstrap3==5.4.0
+django-compat==1.0.6
+django-hijack==1.0.8
 django-jquery==1.9.1
 pyasn1==0.1.8
 python3-ldap==0.9.8.4
+six==1.9.0
 sqlparse==0.1.15
