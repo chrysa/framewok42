@@ -1,17 +1,17 @@
 {% extends "core/base.html" %}
 {% load i18n %}
 {% block content %}
-    <h1 class="text-center">{{ type }} log</h1>
+    <h1 class="text-center">{{ type }} {% trans 'log'|capfirst %}</h1>
     <table class="table">
         <thead>
         <tr>
             <th>#</th>
-            <th>day</th>
-            <th>hour</th>
-            <th>action</th>
-            <th>by</th>
-            <th>module</th>
-            <th>ligne</th>
+            <th>{% trans 'day'|capfirst %}</th>
+            <th>{% trans 'hour'|capfirst %}</th>
+            <th>{% trans 'action'|capfirst %}</th>
+            <th>{% trans 'by'|capfirst %}</th>
+            <th>{% trans 'module'|capfirst %}</th>
+            <th>{% trans 'ligne'|capfirst %}</th>
         </tr>
         </thead>
         <tbody>

@@ -1,12 +1,8 @@
 #-*-coding:utf-8 -*-
-import logging
-
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.utils.translation import ugettext as _
 from django.contrib.auth.decorators import login_required
-
-logger = logging.getLogger(__name__)
 
 LOG_TYPE = [
     _('critical'),
@@ -17,6 +13,7 @@ LOG_TYPE = [
     _('general_log')
 ]
 
+
 @login_required
 def index(request):
     return render(
@@ -25,6 +22,7 @@ def index(request):
             'type_log': LOG_TYPE,
         }
     )
+
 
 @login_required
 def display_log(request, log_type):
@@ -44,7 +42,8 @@ def display_log(request, log_type):
                 split_ligne[0] = split_ligne[0].split(' ')
                 split_ligne[0][0] = split_ligne[0][0].replace('[', '')
                 split_ligne[0][1] = split_ligne[0][1].replace(']', '')
-                split_ligne[1] = split_ligne[1].replace(':', '/').replace('[', '').replace(']', '')
+                split_ligne[1] = split_ligne[1].replace(
+                    ':', '/').replace('[', '').replace(']', '')
                 split_ligne[1] = split_ligne[1].split(' ')
                 split_ligne[2] = split_ligne[2].replace('\n', '').split(' by ')
 

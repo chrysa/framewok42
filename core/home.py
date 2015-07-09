@@ -4,10 +4,10 @@ import logging
 
 from django.shortcuts import render
 
+from core.functions import info_log_message
+
+
 def index(request):
-    mess = "chargement de la page " + request.META['PATH_INFO']
-    if request.user.is_authenticated():
-        mess += " by " + request.user.username
     logger = logging.getLogger('info')
-    logger.info(mess)
+    logger.info(info_log_message(request))
     return render(request, 'core/home.html', {})
