@@ -1,9 +1,141 @@
-[DEBUG] :: [09/07/2015 01:00:50] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-[DEBUG] :: [09/07/2015 01:00:50] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-[DEBUG] :: [09/07/2015 01:00:51] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."is_superuser" = %s' - PARAMS = (True,); args=(True,)
-[DEBUG] :: [09/07/2015 01:00:51] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = 'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = ('q13529ywiuzzb95pt7dv8er76hciiohz', '2015-07-08 23:00:51.323104'); args=('q13529ywiuzzb95pt7dv8er76hciiohz', '2015-07-08 23:00:51.323104')
-[DEBUG] :: [09/07/2015 01:00:51] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = %s' - PARAMS = (1,); args=(1,)
-[DEBUG] :: [09/07/2015 01:00:52] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = 'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = ('q13529ywiuzzb95pt7dv8er76hciiohz', '2015-07-08 23:00:52.617982'); args=('q13529ywiuzzb95pt7dv8er76hciiohz', '2015-07-08 23:00:52.617982')
-[DEBUG] :: [09/07/2015 01:00:52] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = %s' - PARAMS = (1,); args=(1,)
-[DEBUG] :: [09/07/2015 01:02:53] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-[DEBUG] :: [09/07/2015 01:02:53] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:34:55] :: [utils:execute:django.db.backends] [89] :: (0.025) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:34:55] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:37:53] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:37:53] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:38:12] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:38:12] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:38:16] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:38:16] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:38:46] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:38:46] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:39:21] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:39:21] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:44:37] :: [utils:execute:django.db.backends] [89] :: (0.017) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:44:37] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:44:52] :: [utils:execute:django.db.backends] [89] :: (0.023) QUERY = 'SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."is_superuser" = %s' - PARAMS = (True,); args=(True,)
+[DEBUG] :: [09/07/2015 21:44:53] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = 'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %s AND "django_session"."session_key" = %s)' - PARAMS = ('2015-07-09 21:44:53.564905', 'gg1lerk6b26xe538v89mx9ladwkbea08'); args=('2015-07-09 21:44:53.564905', 'gg1lerk6b26xe538v89mx9ladwkbea08')
+[DEBUG] :: [09/07/2015 21:44:53] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = %s LIMIT 1' - PARAMS = ('qpvet0b3jgj3d0lf63elhcs52240861z',); args=('qpvet0b3jgj3d0lf63elhcs52240861z',)
+[DEBUG] :: [09/07/2015 21:44:53] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:44:53] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT %s AS "session_key", %s AS "session_data", %s AS "expire_date"' - PARAMS = ('qpvet0b3jgj3d0lf63elhcs52240861z', 'ZmU2ZDBlYTRkOTY3Y2RmNGNjMjZlOTFjY2ViZjg4NzkyOWYxNTc4MTp7fQ==', '2015-07-23 21:44:53.580896'); args=('qpvet0b3jgj3d0lf63elhcs52240861z', 'ZmU2ZDBlYTRkOTY3Y2RmNGNjMjZlOTFjY2ViZjg4NzkyOWYxNTc4MTp7fQ==', '2015-07-23 21:44:53.580896')
+[DEBUG] :: [09/07/2015 21:44:53] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'BEGIN' - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:44:53] :: [utils:execute:django.db.backends] [89] :: (0.006) QUERY = 'UPDATE "django_session" SET "session_data" = %s, "expire_date" = %s WHERE "django_session"."session_key" = %s' - PARAMS = ('ZmU2ZDBlYTRkOTY3Y2RmNGNjMjZlOTFjY2ViZjg4NzkyOWYxNTc4MTp7fQ==', '2015-07-23 21:44:53.940787', 'qpvet0b3jgj3d0lf63elhcs52240861z'); args=('ZmU2ZDBlYTRkOTY3Y2RmNGNjMjZlOTFjY2ViZjg4NzkyOWYxNTc4MTp7fQ==', '2015-07-23 21:44:53.940787', 'qpvet0b3jgj3d0lf63elhcs52240861z')
+[DEBUG] :: [09/07/2015 21:44:55] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > %s AND "django_session"."session_key" = %s)' - PARAMS = ('2015-07-09 21:44:55.937489', 'qpvet0b3jgj3d0lf63elhcs52240861z'); args=('2015-07-09 21:44:55.937489', 'qpvet0b3jgj3d0lf63elhcs52240861z')
+[WARNING] :: [09/07/2015 21:44:55] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[DEBUG] :: [09/07/2015 21:45:33] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:45:33] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:45:33] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."is_superuser" = %s' - PARAMS = (True,); args=(True,)
+[DEBUG] :: [09/07/2015 21:45:33] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = ('qpvet0b3jgj3d0lf63elhcs52240861z', '2015-07-09 21:45:33.921138'); args=('qpvet0b3jgj3d0lf63elhcs52240861z', '2015-07-09 21:45:33.921138')
+[DEBUG] :: [09/07/2015 21:45:39] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:45:39] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:45:53] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:45:53] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:45:55] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:45:55] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:48:13] :: [utils:execute:django.db.backends] [89] :: (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:48:13] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:48:18] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:48:18] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:49:41] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:49:41] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[DEBUG] :: [09/07/2015 21:49:46] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+[DEBUG] :: [09/07/2015 21:49:46] :: [utils:execute:django.db.backends] [89] :: (0.000) QUERY = 'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+[ERROR] :: [09/07/2015 22:37:46] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /log/file_info/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/views.py", line 25, in display_log
+    for ligne in open('logs/' + log_type + '.log'):
+FileNotFoundError: [Errno 2] No such file or directory: 'logs/file_info.log'
+[ERROR] :: [09/07/2015 22:38:08] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /log/file_info/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/views.py", line 25, in display_log
+    for ligne in open('logs/' + log_type + '.log'):
+FileNotFoundError: [Errno 2] No such file or directory: 'logs/file_info.log'
+[ERROR] :: [09/07/2015 22:38:13] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /log/file_info/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/views.py", line 25, in display_log
+    for ligne in open('logs/' + log_type + '.log'):
+FileNotFoundError: [Errno 2] No such file or directory: 'logs/file_info.log'
+[ERROR] :: [09/07/2015 22:45:09] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /log/info/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.list_log' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/views.py", line 52, in display_log
+    'log': log,
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'list_log' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+[ERROR] :: [09/07/2015 22:47:20] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /log/complet/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/views.py", line 26, in display_log
+    for ligne in open('logs/' + log_type + '.log'):
+FileNotFoundError: [Errno 2] No such file or directory: 'logs/complet.log'

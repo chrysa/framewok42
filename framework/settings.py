@@ -1,5 +1,6 @@
 #-*-coding:utf-8 -*-
 import os
+from django.utils.translation import ugettext_lazy as _
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -65,8 +66,8 @@ ADDITIONNALS_TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 LANGUAGES = (
-    ('fr', u"français"),
-    ('en', u"anglais"),
+    ('fr', _("francais")),
+    ('en', _("anglais")),
 )
 
 INSTALLED_APPS = (
@@ -139,8 +140,12 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
-        'verbose': {
+        'complet': {
             'format': "[%(levelname)s] :: [%(asctime)s] :: [%(module)s:%(funcName)s:%(name)s] [%(lineno)s] :: %(message)s",
+            'datefmt': "%d/%m/%Y %H:%M:%S"
+        },
+        'verbose': {
+            'format': "[%(asctime)s] :: [%(module)s:%(funcName)s:%(name)s] [%(lineno)s] :: %(message)s",
             'datefmt': "%d/%m/%Y %H:%M:%S"
         },
         'simple': {
@@ -149,71 +154,80 @@ LOGGING = {
         },
     },
     'handlers': {
-        'file_critical': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+        'critical': {
             'level': 'CRITICAL',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/critical.log'),
             'formatter': 'verbose'
         },
-        'file_error': {
+        'error': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/error.log'),
-            'formatter': 'verbose'
+            'formatter': 'verbose',
         },
-        'file_warning': {
+        'warning': {
             'level': 'WARNING',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/warning.log'),
-            'formatter': 'verbose'
+            'formatter': 'verbose',
         },
-        'file_info': {
+        'info': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/info.log'),
-            'formatter': 'simple'
+            'formatter': 'simple',
         },
-        'file_debug': {
+        'debug': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/debug.log'),
-            'formatter': 'verbose'
+            'formatter': 'verbose',
         },
-        'file_django': {
+        'django': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'logs/general_log.log'),
-            'formatter': 'verbose'
+            'filename': os.path.join(BASE_DIR, 'logs/django.log'),
+            'formatter': 'verbose',
+        },
+        'complet': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/complet.log'),
+            'formatter': 'complet',
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['file_django'],
+            'handlers': ['console', 'complet', 'django'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO' if DEBUG else 'warning'),
             'propagate': True,
-            'level': 'DEBUG',
         },
         'critical': {
-            'handlers': ['file_critical'],
+            'handlers': ['complet', 'critical'],
             'propagate': False,
             'level': 'CRITICAL',
         },
         'error': {
-            'handlers': ['file_error'],
+            'handlers': ['complet', 'error'],
             'propagate': False,
             'level': 'ERROR',
         },
         'warning': {
-            'handlers': ['file_warning'],
+            'handlers': ['complet', 'warning'],
             'propagate': False,
             'level': 'WARNING',
         },
         'info': {
-            'handlers': ['file_info'],
+            'handlers': ['complet', 'info'],
             'propagate': False,
             'level': 'INFO',
         },
         'debug': {
-            'handlers': ['file_debug'],
+            'handlers': ['complet', 'debug'],
             'propagate': False,
             'level': 'DEBUG',
         },

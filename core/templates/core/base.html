@@ -10,6 +10,7 @@
 {% url 'forum' as url_forum %}
 {% url 'list_issue' as url_issue %}
 {% url 'list_logs' as url_log %}
+{% url 'view_log' type as url_view_log %}
 {% url 'new_issue' as url_new_issue %}
 {% url 'login_classic' as url_login_classic %}
 {% url 'login_ldap' as url_login_ldap %}
@@ -62,7 +63,7 @@
                             ><a href="{{ url_issue }}">{% trans 'issue'|capfirst %}</a></li>
                             {%  if request.user.is_superuser %}
                                 <li
-                                    {% if request.path == url_log %}
+                                    {% if request.path == url_log or request.path == url_view_log %}
                                         class="active"
                                     {% endif %}
                                 ><a href="{{ url_log }}">{% trans 'log'|capfirst %}</a></li>

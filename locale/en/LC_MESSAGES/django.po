@@ -6,138 +6,349 @@
 #, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-22 22:03+0000\n"
+"POT-Creation-Date: 2015-07-09 22:34+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
 #: contact/forms/ContactFrom.py:8 contact/forms/ContactFrom.py:12
 #: profil/forms/RegisterForm.py:27 profil/forms/RegisterForm.py:31
 msgid "mail_adress"
-msgstr "mail"
+msgstr ""
 
 #: contact/forms/ContactFrom.py:17 contact/forms/ContactFrom.py:21
 msgid "subject"
-msgstr "subject"
+msgstr ""
 
 #: contact/forms/ContactFrom.py:26 contact/forms/ContactFrom.py:30
 #: forum/forms/CreateTopic.py:28 forum/forms/CreateTopic.py:32
-#: forum/forms/ReplyTopic.py:16 forum/forms/ReplyTopic.py:20
+#: forum/forms/ReplyTopic.py:17
 msgid "message"
-msgstr "message"
+msgstr ""
 
-#: contact/templates/contact/contact.html:5 core/templates/core/base.html:56
+#: contact/templates/contact/contact.html:5 core/templates/core/base.html:91
 msgid "contact"
-msgstr "contact"
+msgstr ""
 
 #: contact/templates/contact/contact.html:11
 msgid "send_message"
-msgstr "send message"
+msgstr ""
 
-#: core/templates/core/base.html:32
+#: core/functions.py:6
+msgid "chargement de la page "
+msgstr ""
+
+#: core/templates/core/base.html:47 profil/templates/profil/login.html:7
+#: profil/templates/profil/login.html:20 profil/templates/profil/login.html:55
 msgid "home"
-msgstr "home"
+msgstr ""
 
-#: core/templates/core/base.html:37 forum/templates/forum/cat.html:5
-#: forum/templates/forum/create_topic.html:5 forum/templates/forum/home.html:6
+#: core/templates/core/base.html:57 forum/templates/forum/cat.html:5
+#: forum/templates/forum/create_topic.html:5
+#: forum/templates/forum/edit_post.html:5 forum/templates/forum/home.html:5
+#: forum/templates/forum/topic.html:5
 msgid "forum"
 msgstr ""
 
-#: core/templates/core/base.html:43
+#: core/templates/core/base.html:62 issues/forms/SubmitIssue.py:26
+#: issues/forms/SubmitIssue.py:30
+msgid "issue"
+msgstr ""
+
+#: core/templates/core/base.html:68
+#: generate_logs/templates/logs/display_log.html:4
+msgid "log"
+msgstr ""
+
+#: core/templates/core/base.html:75
 msgid "logout"
-msgstr "log out"
+msgstr ""
 
-#: core/templates/core/base.html:45 profil/templates/profil/register.html:36
+#: core/templates/core/base.html:77 profil/templates/profil/register.html:43
 msgid "register"
-msgstr "register"
+msgstr ""
 
-#: core/templates/core/base.html:46
+#: core/templates/core/base.html:80 profil/templates/profil/login.html:8
+#: profil/templates/profil/login.html:21 profil/templates/profil/login.html:56
 msgid "login"
-msgstr "login"
+msgstr ""
 
-#: core/templates/core/base.html:71
+#: core/templates/core/base.html:84 profil/templates/profil/login.html:13
+msgid "login_classic"
+msgstr ""
+
+#: core/templates/core/base.html:86 profil/templates/profil/login.html:14
+msgid "login_ldap"
+msgstr ""
+
+#: core/templates/core/base.html:95
 msgid "change_lang"
-msgstr "change language"
+msgstr ""
+
+#: core/templates/core/base.html:102
+msgid "current_lang"
+msgstr ""
 
 #: forum/forms/CreateTopic.py:18 forum/forms/CreateTopic.py:22
+#: issues/forms/SubmitIssue.py:17 issues/forms/SubmitIssue.py:21
+#: issues/templates/issues/issue_admin.html:9
+#: issues/templates/issues/issue_user.html:9
 msgid "title"
 msgstr ""
 
-#: forum/models.py:15
+#: forum/forms/ReplyTopic.py:21
+msgid "reponse"
+msgstr ""
+
+#: forum/models.py:13
+msgid "Name"
+msgstr ""
+
+#: forum/models.py:20
+msgid "categorie_parente"
+msgstr ""
+
+#: forum/models.py:21
 msgid "categorie"
 msgstr ""
 
-#: forum/templates/forum/cat.html:9 forum/templates/forum/create_topic.html:7
+#: forum/templates/forum/cat.html:11
+#: forum/templates/forum/create_topic.html:10
 msgid "new_topic"
 msgstr ""
 
-#: forum/templates/forum/cat.html:16
+#: forum/templates/forum/cat.html:32 forum/templates/forum/cat.html.py:34
 msgid "last_mod"
 msgstr ""
 
-#: forum/templates/forum/cat.html:16
+#: forum/templates/forum/cat.html:32 forum/templates/forum/cat.html.py:34
+#: generate_logs/templates/logs/display_log.html:12
 msgid "by"
 msgstr ""
 
-#: forum/templates/forum/cat.html:16
+#: forum/templates/forum/cat.html:32 forum/templates/forum/cat.html.py:34
+#: forum/templates/forum/topic.html:22 forum/templates/forum/topic.html:46
+#: forum/templates/forum/topic.html:52
 msgid "at"
 msgstr ""
 
-#: forum/templates/forum/create_topic.html:30
+#: forum/templates/forum/create_topic.html:8
+msgid "edit_topic"
+msgstr ""
+
+#: forum/templates/forum/create_topic.html:34
 msgid "create_topic"
 msgstr ""
 
-#: forum/views.py:76
-msgid "thread_ok"
+#: forum/templates/forum/edit_post.html:7
+#: forum/templates/forum/edit_post.html:16
+msgid "edit_post"
 msgstr ""
 
-#: forum/views.py:82
+#: forum/templates/forum/response.html:8
+msgid "response_topic"
+msgstr ""
+
+#: forum/templates/forum/topic.html:52
+msgid "modify_by"
+msgstr ""
+
+#: forum/views.py:102 forum/views.py:188
 msgid "thread_fail"
+msgstr ""
+
+#: framework/settings.py:69
+msgid "francais"
+msgstr ""
+
+#: framework/settings.py:70
+msgid "anglais"
+msgstr ""
+
+#: generate_logs/templates/logs/display_log.html:9
+msgid "day"
+msgstr ""
+
+#: generate_logs/templates/logs/display_log.html:10
+msgid "hour"
+msgstr ""
+
+#: generate_logs/templates/logs/display_log.html:11
+msgid "action"
+msgstr ""
+
+#: generate_logs/templates/logs/display_log.html:13
+msgid "module"
+msgstr ""
+
+#: generate_logs/templates/logs/display_log.html:14
+msgid "ligne"
+msgstr ""
+
+#: issues/forms/AdminResponseIssue.py:24 issues/forms/AdminResponseIssue.py:30
+#: issues/models.py:11
+msgid "assign"
+msgstr ""
+
+#: issues/forms/AdminResponseIssue.py:35 issues/forms/AdminResponseIssue.py:45
+#: issues/models.py:29 issues/templates/issues/issue_admin.html:13
+#: issues/templates/issues/issue_user.html:13
+msgid "status"
+msgstr ""
+
+#: issues/forms/AdminResponseIssue.py:37 issues/models.py:27
+#: issues/templates/issues/issue.html:13
+msgid "open"
+msgstr ""
+
+#: issues/forms/AdminResponseIssue.py:38
+msgid "in progress"
+msgstr ""
+
+#: issues/forms/AdminResponseIssue.py:39 issues/templates/issues/issue.html:17
+msgid "close"
+msgstr ""
+
+#: issues/forms/AdminResponseIssue.py:50 issues/forms/AdminResponseIssue.py:54
+msgid "answer"
+msgstr ""
+
+#: issues/models.py:16
+msgid "titre"
+msgstr ""
+
+#: issues/models.py:28 issues/templates/issues/issue.html:15
+msgid "in_progress"
+msgstr ""
+
+#: issues/templates/issues/issue.html:9
+msgid "assign_to"
+msgstr ""
+
+#: issues/templates/issues/issue.html:45
+msgid "reopen_issue"
+msgstr ""
+
+#: issues/templates/issues/issue_admin.html:3
+#: issues/templates/issues/issue_user.html:3
+msgid "new_issue"
+msgstr ""
+
+#: issues/templates/issues/issue_admin.html:10
+#: issues/templates/issues/issue_user.html:10
+msgid "asign_to"
+msgstr ""
+
+#: issues/templates/issues/issue_admin.html:11
+#: issues/templates/issues/issue_user.html:11
+msgid "createdate"
+msgstr ""
+
+#: issues/templates/issues/issue_admin.html:12
+#: issues/templates/issues/issue_user.html:12
+msgid "lastactivity"
+msgstr ""
+
+#: issues/templates/issues/issue_admin.html:32
+#: issues/templates/issues/issue_user.html:32
+msgid "no_issues"
+msgstr ""
+
+#: issues/templates/issues/issue_admin_response.html:45
+msgid "response_issue"
+msgstr ""
+
+#: issues/templates/issues/send_issue.html:20
+msgid "submit_issue"
+msgstr ""
+
+#: issues/views.py:56
+msgid "save_error"
+msgstr ""
+
+#: issues/views.py:81
+msgid "update_error"
+msgstr ""
+
+#: profil/forms/LdapForm.py:17 profil/forms/LdapForm.py:21
+msgid "login_user"
+msgstr ""
+
+#: profil/forms/LdapForm.py:26 profil/forms/LdapForm.py:30
+#: profil/forms/LogInForm.py:26 profil/forms/LogInForm.py:30
+#: profil/forms/RegisterForm.py:36 profil/forms/RegisterForm.py:40
+#: profil/templates/profil/login.html:43 profil/templates/profil/login.html:72
+#: profil/templates/profil/register.html:29
+msgid "password"
 msgstr ""
 
 #: profil/forms/LogInForm.py:17 profil/forms/LogInForm.py:21
 #: profil/forms/RegisterForm.py:18 profil/forms/RegisterForm.py:22
 msgid "username"
-msgstr "username"
-
-#: profil/forms/LogInForm.py:26 profil/forms/LogInForm.py:30
-#: profil/forms/RegisterForm.py:36 profil/forms/RegisterForm.py:40
-#: profil/templates/profil/login.html:17
-#: profil/templates/profil/register.html:22
-msgid "password"
-msgstr "password"
+msgstr ""
 
 #: profil/forms/RegisterForm.py:45
 msgid "passeword_conf"
-msgstr "password confirmation"
+msgstr ""
 
-#: profil/forms/RegisterForm.py:49 profil/templates/profil/register.html:29
-#, fuzzy
-#| msgid "passeword_conf"
+#: profil/forms/RegisterForm.py:49 profil/templates/profil/register.html:36
 msgid "password_conf"
-msgstr "password confirmation"
+msgstr ""
 
-#: profil/templates/profil/login.html:24
+#: profil/templates/profil/login.html:22
+msgid "connection_classique"
+msgstr ""
+
+#: profil/templates/profil/login.html:50 profil/templates/profil/login.html:79
 msgid "connexion"
-msgstr "log in"
+msgstr ""
 
-#: profil/views.py:26
-msgid "error_mail_already_exist"
-msgstr "mail already exist"
+#: profil/templates/profil/login.html:57
+msgid "connection_ldap"
+msgstr ""
 
-#: profil/views.py:28
+#: profil/tests.py:71 profil/views.py:34 profil/views.py:61
 msgid "error_password"
-msgstr "passwords not match"
+msgstr ""
 
-#: profil/views.py:48
+#: profil/tests.py:84 profil/views.py:57
 msgid "error_user_already_exist"
-msgstr "user already exist"
+msgstr ""
 
-#: profil/views.py:69
+#: profil/tests.py:98 profil/views.py:32 profil/views.py:59
+msgid "error_mail_already_exist"
+msgstr ""
+
+#: profil/views.py:63
+msgid "unknow_error_register_form"
+msgstr ""
+
+#: profil/views.py:96
+msgid "admin_cant_log_here"
+msgstr ""
+
+#: profil/views.py:100
 msgid "error_user_not_exist"
-msgstr "user not found"
+msgstr ""
 
-#: profil/views.py:85
+#: profil/views.py:121
+msgid "authenticate error"
+msgstr ""
+
+#: profil/views.py:123
 msgid "error_wrong_password"
-msgstr "wrong password"
+msgstr ""
 
-#~ msgid "inscription"
-#~ msgstr "sign in"
+#: profil/views.py:125
+msgid "unknow error"
+msgstr ""
+
+#: profil/views.py:179
+msgid "bind_error"
+msgstr ""
