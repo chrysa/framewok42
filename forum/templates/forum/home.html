@@ -9,15 +9,19 @@
             <div class="jumbotron">
                 <div class="container">
                     <div class="row">
-                        {% for c in cat %}
-                            <div class="col-md-3">
-                                <a href="{{ c.slug }}">{{ c.Name }}</a>
-                            </div>
-                            {% if forloop.counter|divisibleby:4 %}
+                        {%  if cat %}
+                            {% for c in cat %}
+                                <div class="col-md-3">
+                                    <a href="{{ c.slug }}">{{ c.Name }}</a>
                                 </div>
-                                <div class="row">
-                            {% endif %}
-                        {%  endfor %}
+                                {% if forloop.counter|divisibleby:4 %}
+                                    </div>
+                                    <div class="row">
+                                {% endif %}
+                            {%  endfor %}
+                        {%  else %}
+                            <div class="alert alert-info" role="alert">{%  trans "no_category" %}</div>
+                        {%  endif %}
                     </div>
                 </div>
             </div>

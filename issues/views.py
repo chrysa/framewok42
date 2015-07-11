@@ -1,5 +1,6 @@
 #-*-coding:utf-8 -*-
 import datetime
+import logging
 
 from django.shortcuts import redirect
 from django.shortcuts import render
@@ -7,12 +8,18 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
+
+from issues.models import Issue
+from generate_logs.functions import info_load_log_message
 from issues.forms.AdminResponseIssue import AdminResponseIssueForm
 from issues.forms.SubmitIssue import IssueForm
-from issues.models import Issue
+
+
+logger_info = logging.getLogger('info')
 
 @login_required
 def index(request):
+    logger_info.info(info_load_log_message(request))
     if request.user.is_superuser:
         context = {
             'issues': Issue.objects.all(),
@@ -26,6 +33,7 @@ def index(request):
 
 @login_required
 def new_issue(request):
+    logger_info.info(info_load_log_message(request))
     form = IssueForm(request.POST)
     context = {}
     if request.POST:
@@ -60,6 +68,7 @@ def new_issue(request):
 
 @login_required
 def respond_issue(request, issue):
+    logger_info.info(info_load_log_message(request))
     context = {}
     SelectIssue = Issue.objects.get(slug=issue)
     if request.POST:
@@ -93,6 +102,7 @@ def respond_issue(request, issue):
 
 @login_required
 def view_issue(request, issue):
+    logger_info.info(info_load_log_message(request))
     context = {
         'issue': Issue.objects.get(slug=issue),
     }
@@ -100,6 +110,7 @@ def view_issue(request, issue):
 
 @login_required
 def reopen_issue(request, issue):
+    logger_info.info(info_load_log_message(request))
     Issue.objects.filter(
         slug=issue
     ).update(

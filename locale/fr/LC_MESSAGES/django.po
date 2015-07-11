@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-09 22:34+0000\n"
+"POT-Creation-Date: 2015-07-10 22:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,90 +18,99 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: contact/contact.py:34
+#, fuzzy
+#| msgid "contact"
+msgid "success_contact"
+msgstr "contact"
+
+#: contact/contact.py:36
+#, fuzzy
+#| msgid "contact"
+msgid "error_contact"
+msgstr "contact"
+
 #: contact/forms/ContactFrom.py:8 contact/forms/ContactFrom.py:12
 #: profil/forms/RegisterForm.py:27 profil/forms/RegisterForm.py:31
 msgid "mail_adress"
-msgstr ""
+msgstr "adresse mail"
 
 #: contact/forms/ContactFrom.py:17 contact/forms/ContactFrom.py:21
 msgid "subject"
-msgstr ""
+msgstr "sujet"
 
 #: contact/forms/ContactFrom.py:26 contact/forms/ContactFrom.py:30
 #: forum/forms/CreateTopic.py:28 forum/forms/CreateTopic.py:32
 #: forum/forms/ReplyTopic.py:17
 msgid "message"
-msgstr ""
+msgstr "message"
 
-#: contact/templates/contact/contact.html:5 core/templates/core/base.html:91
+#: contact/templates/contact/contact.html:5 core/templates/core/base.html:92
 msgid "contact"
-msgstr ""
+msgstr "contact"
 
 #: contact/templates/contact/contact.html:11
 msgid "send_message"
-msgstr ""
+msgstr "envoi du message"
 
-#: core/functions.py:6
-msgid "chargement de la page "
-msgstr ""
-
-#: core/templates/core/base.html:47 profil/templates/profil/login.html:7
+#: core/templates/core/base.html:48 profil/templates/profil/login.html:7
 #: profil/templates/profil/login.html:20 profil/templates/profil/login.html:55
 msgid "home"
-msgstr ""
+msgstr "accueil"
 
-#: core/templates/core/base.html:57 forum/templates/forum/cat.html:5
+#: core/templates/core/base.html:58 forum/templates/forum/cat.html:5
 #: forum/templates/forum/create_topic.html:5
 #: forum/templates/forum/edit_post.html:5 forum/templates/forum/home.html:5
 #: forum/templates/forum/topic.html:5
 msgid "forum"
-msgstr ""
+msgstr "forum"
 
-#: core/templates/core/base.html:62 issues/forms/SubmitIssue.py:26
+#: core/templates/core/base.html:63 issues/forms/SubmitIssue.py:26
 #: issues/forms/SubmitIssue.py:30
 msgid "issue"
-msgstr ""
+msgstr "problèmes"
 
-#: core/templates/core/base.html:68
+#: core/templates/core/base.html:69
 #: generate_logs/templates/logs/display_log.html:4
+#: generate_logs/templates/logs/display_log.html:7
 msgid "log"
-msgstr ""
+msgstr "journalisation"
 
-#: core/templates/core/base.html:75
+#: core/templates/core/base.html:76
 msgid "logout"
-msgstr ""
+msgstr "se deconnecter"
 
-#: core/templates/core/base.html:77 profil/templates/profil/register.html:43
+#: core/templates/core/base.html:78 profil/templates/profil/register.html:43
 msgid "register"
-msgstr ""
+msgstr "s'enregistrer"
 
-#: core/templates/core/base.html:80 profil/templates/profil/login.html:8
+#: core/templates/core/base.html:81 profil/templates/profil/login.html:8
 #: profil/templates/profil/login.html:21 profil/templates/profil/login.html:56
 msgid "login"
-msgstr ""
+msgstr "se connecter"
 
-#: core/templates/core/base.html:84 profil/templates/profil/login.html:13
+#: core/templates/core/base.html:85 profil/templates/profil/login.html:13
 msgid "login_classic"
-msgstr ""
+msgstr "connection classique"
 
-#: core/templates/core/base.html:86 profil/templates/profil/login.html:14
+#: core/templates/core/base.html:87 profil/templates/profil/login.html:14
 msgid "login_ldap"
-msgstr ""
+msgstr "connection ldap"
 
-#: core/templates/core/base.html:95
+#: core/templates/core/base.html:96
 msgid "change_lang"
-msgstr ""
+msgstr "changer de langue"
 
-#: core/templates/core/base.html:102
+#: core/templates/core/base.html:103
 msgid "current_lang"
-msgstr ""
+msgstr "langue courante"
 
 #: forum/forms/CreateTopic.py:18 forum/forms/CreateTopic.py:22
 #: issues/forms/SubmitIssue.py:17 issues/forms/SubmitIssue.py:21
 #: issues/templates/issues/issue_admin.html:9
 #: issues/templates/issues/issue_user.html:9
 msgid "title"
-msgstr ""
+msgstr "titre"
 
 #: forum/forms/ReplyTopic.py:21
 msgid "reponse"
@@ -129,7 +138,8 @@ msgid "last_mod"
 msgstr ""
 
 #: forum/templates/forum/cat.html:32 forum/templates/forum/cat.html.py:34
-#: generate_logs/templates/logs/display_log.html:12
+#: generate_logs/templates/logs/display_log.html:16
+#: generate_logs/templates/logs/display_log.html:30
 msgid "by"
 msgstr ""
 
@@ -160,7 +170,7 @@ msgstr ""
 msgid "modify_by"
 msgstr ""
 
-#: forum/views.py:102 forum/views.py:188
+#: forum/views.py:111 forum/views.py:199
 msgid "thread_fail"
 msgstr ""
 
@@ -172,24 +182,40 @@ msgstr ""
 msgid "anglais"
 msgstr ""
 
-#: generate_logs/templates/logs/display_log.html:9
+#: generate_logs/functions.py:6
+msgid "chargement_page "
+msgstr "chargement de la page "
+
+#: generate_logs/templates/logs/display_log.html:13
+#: generate_logs/templates/logs/display_log.html:19
+#: generate_logs/templates/logs/display_log.html:27
 msgid "day"
 msgstr ""
 
-#: generate_logs/templates/logs/display_log.html:10
+#: generate_logs/templates/logs/display_log.html:14
+#: generate_logs/templates/logs/display_log.html:20
+#: generate_logs/templates/logs/display_log.html:28
 msgid "hour"
 msgstr ""
 
-#: generate_logs/templates/logs/display_log.html:11
+#: generate_logs/templates/logs/display_log.html:15
+#: generate_logs/templates/logs/display_log.html:21
+#: generate_logs/templates/logs/display_log.html:29
 msgid "action"
 msgstr ""
 
-#: generate_logs/templates/logs/display_log.html:13
+#: generate_logs/templates/logs/display_log.html:22
+#: generate_logs/templates/logs/display_log.html:31
 msgid "module"
 msgstr ""
 
-#: generate_logs/templates/logs/display_log.html:14
+#: generate_logs/templates/logs/display_log.html:23
+#: generate_logs/templates/logs/display_log.html:32
 msgid "ligne"
+msgstr ""
+
+#: generate_logs/templates/logs/display_log.html:26
+msgid "error_level"
 msgstr ""
 
 #: issues/forms/AdminResponseIssue.py:24 issues/forms/AdminResponseIssue.py:30
@@ -269,11 +295,11 @@ msgstr ""
 msgid "submit_issue"
 msgstr ""
 
-#: issues/views.py:56
+#: issues/views.py:57
 msgid "save_error"
 msgstr ""
 
-#: issues/views.py:81
+#: issues/views.py:82
 msgid "update_error"
 msgstr ""
 
