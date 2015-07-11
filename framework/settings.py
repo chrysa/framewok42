@@ -1,6 +1,5 @@
 #-*-coding:utf-8 -*-
 import os
-from django.utils.translation import ugettext_lazy as _
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -66,8 +65,8 @@ ADDITIONNALS_TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 LANGUAGES = (
-    ('fr', _("francais")),
-    ('en', _("anglais")),
+    ('fr', "francais"),
+    ('en', "anglais"),
 )
 
 INSTALLED_APPS = (

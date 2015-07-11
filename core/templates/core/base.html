@@ -98,11 +98,7 @@
                             </a>
                             <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
                                 <li>
-                                    {% for language in languages %}
-                                        {% ifequal language.code LANGUAGE_CODE %}
-                                            {% trans 'current_lang' %} : {{ language.name_local|capfirst }}
-                                        {% endifequal %}
-                                    {% endfor %}
+                                    {% trans 'current_lang' %} : {{ LANGUAGE_CODE|language_name_local|capfirst }}
                                 </li>
                                 <li role="separator" class="divider"></li>
                                 <li>
@@ -111,13 +107,12 @@
                                         <input name="next" type="hidden" value="{{ request.path }}" />
                                         <select name="language" id="language" class="form-control">>
                                             {% for language in languages %}
-                                                    <option value="{{ language.code }}" {% ifequal language.code LANGUAGE_CODE %} disabled="disabled" selected="selected"{% endifequal %}>{{ language.name_local|capfirst }}</option>
+                                                    <option value="{{ language.code }}" {% ifequal language.code LANGUAGE_CODE %} disabled="disabled" selected="selected"{% endifequal %}>{{ language.code|language_name_local|capfirst }}</option>
                                             {% endfor %}
                                         </select>
                                     </form>
                                 </li>
                             </ul>
-
                         </li>
                     </ul>
                 </div>

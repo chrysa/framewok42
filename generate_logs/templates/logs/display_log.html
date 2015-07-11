@@ -1,72 +1,64 @@
-{% extends "core/base.html" %}
-{% load i18n %}
+{% extends "core/base.html" %} {% load i18n %}
 {% block content %}
     <ol class="breadcrumb">
         <li><a href="{%  url 'list_logs' %}">{% trans 'log' %}</a></li>
-        <li class="active">{{ type }}</li>
+        <li class="active">{{ type_log }}</li>
     </ol>
-    <h1 class="text-center">{{ type }} {% trans 'log'|capfirst %}</h1>
-    {% if len == 2 %}
-        <table class="table">
-            <thead>
+    <h1 class="text-center">{{ type_log }} {% trans 'log'|capfirst %}</h1>
+    <table class="table">
+        <thead>
             <tr>
-                <th>#</th>
-                <th>{% trans 'day'|capfirst %}</th>
-                <th>{% trans 'hour'|capfirst %}</th>
-                <th>{% trans 'action'|capfirst %}</th>
-                <th>{% trans 'by'|capfirst %}</th>
-                <th>{% trans 'module'|capfirst %}</th>
-                <th>{% trans 'ligne'|capfirst %}</th>
+                {% if type_format == 'simple' %}
+                    <th>#</th>
+                    <th>{% trans 'day'|capfirst %}</th>
+                    <th>{% trans 'hour'|capfirst %}</th>
+                    <th>{% trans 'action'|capfirst %}</th>
+                    <th>{% trans 'by'|capfirst %}</th>
+                {% elif type_format == 'verbose' %}
+                    <th>#</th>
+                    <th>{% trans 'day'|capfirst %}</th>
+                    <th>{% trans 'hour'|capfirst %}</th>
+                    <th>{% trans 'action'|capfirst %}</th>
+                    <th>{% trans 'module'|capfirst %}</th>
+                    <th>{% trans 'ligne'|capfirst %}</th>
+                {% elif type_format == 'complet' %}
+                    <th>#</th>
+                    <th>{% trans 'error_level'|capfirst %}</th>
+                    <th>{% trans 'day'|capfirst %}</th>
+                    <th>{% trans 'hour'|capfirst %}</th>
+                    <th>{% trans 'action'|capfirst %}</th>
+                    <th>{% trans 'by'|capfirst %}</th>
+                    <th>{% trans 'module'|capfirst %}</th>
+                    <th>{% trans 'ligne'|capfirst %}</th>
+                {% endif %}
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
             {% for l in log %}
                 <tr>
                     <th scope="row">{{ forloop.counter }}</th>
-                    <td>{{ l.0.0 }}</td>
-                    <td>{{ l.0.1 }}</td>
-                    <td>{{ l.1.0 }}</td>
-                    <td>{{ l.1.1 }}</td>
-                    <td>{{ l.2.0 }}</td>
-                    <td>{{ l.2.1 }}</td>
+                    {% if type_format == 'simple' %}
+                        <td>{{l.split.0.0}}</td>
+                        <td>{{l.split.0.1}}</td>
+                        <td>{{l.split.1.0}}</td>
+                        <td>{{l.split.1.1}}</td>
+                    {% elif type_format == 'verbose' %}
+                        <td>{{l.split.0.0}}</td>
+                        <td>{{l.split.0.1}}</td>
+                        <td>{{l.split.1.0}}</td>
+                        <td>{{l.split.2.0}}</td>
+                        <td>{{l.split.2.1}}</td>
+                    {% elif type_format == 'complet' %}
+                        <td>{{l.split.0}}</td>   
+                        <td>{{l.split.1.0}}</td>   
+                        <td>{{l.split.1.1}}</td>   
+                        <td>{{l.split.2.0}}</td>   
+                        <td>{{l.split.2.1}}</td>    
+                        <td>{{l.split.3.0}}</td>   
+                        <td>{{l.split.3.1}}</td>
+                    {% endif %}
                 </tr>
             {% endfor %}
-            </tbody>
-        </table>
-    {% elif len == 3 %}
- 
-    {% elif len == 4 %}
-        <table class="table">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>{% trans 'error_level'|capfirst %}</th>
-                <th>{% trans 'day'|capfirst %}</th>
-                <th>{% trans 'hour'|capfirst %}</th>
-                <th>{% trans 'action'|capfirst %}</th>
-                <th>{% trans 'by'|capfirst %}</th>
-                <th>{% trans 'module'|capfirst %}</th>
-                <th>{% trans 'ligne'|capfirst %}</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for l in log %}
-                <tr>
-                    <th scope="row">{{ forloop.counter }}</th>
-                    <td>{{ l.0 }}</td>
-                    <td>{{ l.1.0 }}</td>
-                    <td>{{ l.1.1 }}</td>
-                    <td>{{ l.2 }}</td>
-                    <td>{{ l.3 }}</td>
-                    <td>{{ l.3 }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-
-
-
-
-
-    {% endif %}
+        </tbody>
+    </table>
 {% endblock %}

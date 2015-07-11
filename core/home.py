@@ -4,10 +4,11 @@ import logging
 
 from django.shortcuts import render
 
-from core.functions import info_log_message
+from generate_logs.functions import info_load_log_message
 
 
 def index(request):
+    print (request.META)
     logger = logging.getLogger('info')
-    logger.info(info_log_message(request))
+    logger.info(info_load_log_message(request))
     return render(request, 'core/home.html', {})

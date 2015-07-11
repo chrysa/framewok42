@@ -1,5 +1,6 @@
 #-*-coding:utf-8 -*-
 import ldap3
+import logging
 
 from django.shortcuts import redirect
 from django.shortcuts import render
@@ -13,13 +14,20 @@ from django.contrib.auth.decorators import login_required
 from django.utils.translation import ugettext as _
 
 from contact import contact
+from profil.models import UserLang
+from generate_logs.functions import info_load_log_message
+from generate_logs.functions import info_login_class_log_message
+from generate_logs.functions import info_login_ldap_log_message
+from generate_logs.functions import info_logout_log_message
 from profil.forms.LdapForm import LdapForm
 from profil.forms.LogInForm import LogInForm
 from profil.forms.RegisterForm import RegisterForm
-from profil.models import UserLang
 
+logger_error = logging.getLogger('error')
+logger_info = logging.getLogger('info')
 
 def register_user(request):
+    logger_info.info(info_load_log_message(request))
     if request.user.is_authenticated():
         return redirect(reverse('home'))
     else:
@@ -73,6 +81,7 @@ def register_user(request):
 
 
 def select_login(request):
+    logger_info.info(info_load_log_message(request))
     return render(
         request,
         "profil/login.html",
@@ -81,17 +90,14 @@ def select_login(request):
         }
     )
 
-# from ast import literal_eval
 def login_user(request):
+    logger_info.info(info_load_log_message(request))
     if request.user.is_authenticated():
         return redirect(reverse('home'))
     else:
         error = {}
         if request.method == 'POST':
             form = LogInForm(request.POST)
-            # array_transfere = literal_eval(request.GET["test"])
-            # for k in array_transfere:
-            #     print (k)
             if request.POST['username'] == "admin":
                 error['admin'] = _("admin_cant_log_here")
             else:
@@ -138,6 +144,7 @@ def login_user(request):
 
 
 def login_ldap(request):
+    logger_info.info(info_load_log_message(request))
     if request.user.is_authenticated():
         return redirect(reverse('home'))
     else:
@@ -193,15 +200,18 @@ def login_ldap(request):
 
 @login_required
 def logout_user(request):
+    logger_info.info(info_load_log_message(request))
     if request.user.is_staff is not True:
         cur_language = translation.get_language()
         userlang = UserLang.objects.get(user=request.user)
         if userlang.lang is not cur_language:
             userlang.lang = cur_language
             userlang.save()
-    redir = request.META[
-        'HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home')
-    logout(request)
+    redir = request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home')
+    if logout(request):
+        logger_info.info(info_logout_log_message(request))
+    else:
+        logger_error.info(info_logout_log_message(request))
     return redirect(
         redir,
         permanent=True

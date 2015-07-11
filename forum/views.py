@@ -1,21 +1,25 @@
 #-*-coding:utf-8 -*-
 import datetime
+import logging
 
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
+from django.utils.text import slugify
 
 from forum import models
+from generate_logs.functions import info_load_log_message
 from forum.forms.CreateTopic import TopicForm
 from forum.forms.ReplyTopic import PostForm
 
-from django.utils.text import slugify
-
+logger_info = logging.getLogger('info')
+logger_error = logging.getLogger('error')
 
 @login_required
 def display_all(request):
+    logger_info.info(info_load_log_message(request))
     return render(
         request,
         "forum/home.html",
@@ -27,10 +31,10 @@ def display_all(request):
 
 @login_required
 def display_cat(request, cat):
+    logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
     if cat is not None:
-        last_mod = models.ForumTopic.objects.filter(CatParent=cat).order_by(
-            'LastReply').order_by('CreateDate').reverse()
+        last_mod = models.ForumTopic.objects.filter(CatParent=cat).order_by('LastReply').order_by('CreateDate').reverse()
         return render(
             request,
             "forum/cat.html",
@@ -45,6 +49,7 @@ def display_cat(request, cat):
 
 @login_required
 def display_topic(request, cat, topic):
+    logger_info.info(info_load_log_message(request))
     thr = models.ForumTopic.objects.get(slug=topic)
     cat = models.ForumCat.objects.filter(slug=cat)[0]
     if thr is not None:
@@ -69,34 +74,37 @@ def display_topic(request, cat, topic):
 
 @login_required
 def create_topic(request, cat):
+    logger_info.info(info_load_log_message(request))
     form = TopicForm(request.POST)
     cat = models.ForumCat.objects.get(slug=cat)
     if form.is_valid():
-        create = models.ForumTopic(
-            CatParent=cat,
-            Title=form.cleaned_data['Title'],
-            Autor=request.user,
-            Message=form.cleaned_data['Message'],
-        ).save()
-        if create is None:
-            topic = models.ForumTopic.objects.filter(
-                Title=form.cleaned_data['Title']
-            ).filter(
-                Autor=request.user
-            ).filter(
-                Message=form.cleaned_data['Message']
-            )[0]
-            return redirect(
-                reverse(
-                    'topic_cat',
-                    kwargs={
-                        'cat': cat.slug,
-                        'topic': topic.slug,
-                    }
-                ),
-                permanent=True
-            )
-        else:
+        try:
+            create = models.ForumTopic(
+                CatParent=cat,
+                Title=form.cleaned_data['Title'],
+                Autor=request.user,
+                Message=form.cleaned_data['Message'],
+            ).save()
+            if create is None:
+                topic = models.ForumTopic.objects.filter(
+                    Title=form.cleaned_data['Title']
+                ).filter(
+                    Autor=request.user
+                ).filter(
+                    Message=form.cleaned_data['Message']
+                )[0]
+                return redirect(
+                    reverse(
+                        'topic_cat',
+                        kwargs={
+                            'cat': cat.slug,
+                            'topic': topic.slug,
+                        }
+                    ),
+                    permanent=True
+                )
+        except:
+            logger_error.error(_('save_topic'))
             context = {
                 'cat': cat,
                 'error': _('thread_fail'),
@@ -116,6 +124,7 @@ def create_topic(request, cat):
 
 @login_required
 def reply_topic(request, cat, topic):
+    logger_info.info(info_load_log_message(request))
     form = PostForm(request.POST)
     top = models.ForumTopic.objects.get(slug=topic)
     if form.is_valid():
@@ -151,6 +160,7 @@ def reply_topic(request, cat, topic):
 
 @login_required
 def edit_topic(request, cat, topic):
+    logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
     if request.POST:
         form = TopicForm(request.POST)
@@ -214,6 +224,7 @@ def edit_topic(request, cat, topic):
 
 @login_required
 def edit_post(request, cat, topic, post):
+    logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
     if request.POST:
         form = PostForm(request.POST)
