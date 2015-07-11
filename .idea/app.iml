@@ -11,8 +11,13 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.4.3 virtualenv at D:\42_work\framework\venv" jdkType="Python SDK" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/contact/forms" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/forum/forms" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/issues/forms" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/profil/forms" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.4.2 virtualenv at ~/Bureau/42_work/framework/venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="framework_perso" />
   </component>
@@ -20,7 +25,12 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
+        <option value="$MODULE_DIR$/contact/templates" />
         <option value="$MODULE_DIR$/core/templates" />
+        <option value="$MODULE_DIR$/forum/templates" />
+        <option value="$MODULE_DIR$/generate_logs/templates" />
+        <option value="$MODULE_DIR$/issues/templates" />
+        <option value="$MODULE_DIR$/profil/templates" />
       </list>
     </option>
   </component>

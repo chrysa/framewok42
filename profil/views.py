@@ -2,6 +2,8 @@
 import ldap3
 import logging
 
+import generate_logs.functions as l_fct
+
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.utils import translation
@@ -15,11 +17,6 @@ from django.utils.translation import ugettext as _
 
 from contact import contact
 from profil.models import UserLang
-from generate_logs.functions import info_load_log_message
-from generate_logs.functions import info_login_class_log_message
-from generate_logs.functions import info_login_ldap_log_message
-from generate_logs.functions import info_logout_log_message
-from generate_logs.functions import info_register_log_message
 from profil.forms.LdapForm import LdapForm
 from profil.forms.LogInForm import LogInForm
 from profil.forms.RegisterForm import RegisterForm
@@ -28,7 +25,7 @@ logger_error = logging.getLogger('error')
 logger_info = logging.getLogger('info')
 
 def register_user(request):
-    logger_info.info(info_load_log_message(request))
+    logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_authenticated():
         return redirect(reverse('home'))
     else:
@@ -52,7 +49,7 @@ def register_user(request):
                         password=form.cleaned_data['password'],
                     )
                     UserLang(user=user, lang=translation.get_language()).save()
-                    logger_info.info(info_register_log_message(request))
+                    logger_info.info(l_fct.info_register_log_message(request))
                     redir = reverse('home')
                     if request.GET['next'] != reverse('register'):
                         redir = request.GET['next']
@@ -83,7 +80,7 @@ def register_user(request):
 
 
 def select_login(request):
-    logger_info.info(info_load_log_message(request))
+    logger_info.info(l_fct.info_load_log_message(request))
     return render(
         request,
         "profil/login.html",
@@ -93,7 +90,7 @@ def select_login(request):
     )
 
 def login_user(request):
-    logger_info.info(info_load_log_message(request))
+    logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_authenticated():
         return redirect(reverse('home'))
     else:
@@ -115,7 +112,7 @@ def login_user(request):
                         if user.is_active:
                             login(request, user)
                             userlang = UserLang.objects.get(user=request.user)
-                            logger_info.info(info_login_class_log_message(request))
+                            logger_info.info(l_fct.info_login_class_log_message(request))
                             translation.activate(userlang.lang)
                             request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
                             redir = reverse('home')
@@ -146,7 +143,7 @@ def login_user(request):
 
 
 def login_ldap(request):
-    logger_info.info(info_load_log_message(request))
+    logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_authenticated():
         return redirect(reverse('home'))
     else:
@@ -170,7 +167,7 @@ def login_ldap(request):
                     raise_exceptions=False
                 )
                 if c.bind():
-                    logger_info.info(info_login_class_log_message(request))
+                    logger_info.info(l_fct.info_login_class_log_message(request))
                     c.search(
                         search_base='ou=people,dc=42,dc=fr',
                         search_filter='(uid={})'.format(request.POST['login']),
@@ -211,9 +208,9 @@ def logout_user(request):
             userlang.save()
     redir = request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home')
     if logout(request):
-        logger_info.info(info_logout_log_message(request))
+        logger_info.info(l_fct.info_logout_log_message(request))
     else:
-        logger_error.info(info_logout_log_message(request))
+        logger_error.info(l_fct.error_logout_log_message(request))
     return redirect(
         redir,
         permanent=True

@@ -37,3 +37,97 @@ AttributeError: 'NoneType' object has no attribute 'append'
 [INFO] :: [10/07/2015 23:41:53] :: [home:index:info] [13] :: chargement de la page / par admin
 [INFO] :: [11/07/2015 09:08:34] :: [views:display_all:info] [22] :: chargement de la page /forum/ par admin
 [INFO] :: [11/07/2015 09:11:52] :: [views:display_all:info] [22] :: chargement de la page /forum/ par admin
+[INFO] :: [11/07/2015 20:27:36] :: [home:index:info] [13] :: chargement de la page / par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [11/07/2015 20:27:36] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [11/07/2015 20:27:36] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [11/07/2015 20:27:36] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [11/07/2015 20:27:36] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:27:36] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [home:index:info] [13] :: chargement de la page / par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [11/07/2015 20:28:08] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [11/07/2015 20:28:08] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
