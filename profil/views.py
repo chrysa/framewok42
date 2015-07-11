@@ -19,6 +19,7 @@ from generate_logs.functions import info_load_log_message
 from generate_logs.functions import info_login_class_log_message
 from generate_logs.functions import info_login_ldap_log_message
 from generate_logs.functions import info_logout_log_message
+from generate_logs.functions import info_register_log_message
 from profil.forms.LdapForm import LdapForm
 from profil.forms.LogInForm import LogInForm
 from profil.forms.RegisterForm import RegisterForm
@@ -51,6 +52,7 @@ def register_user(request):
                         password=form.cleaned_data['password'],
                     )
                     UserLang(user=user, lang=translation.get_language()).save()
+                    logger_info.info(info_register_log_message(request))
                     redir = reverse('home')
                     if request.GET['next'] != reverse('register'):
                         redir = request.GET['next']
@@ -113,9 +115,9 @@ def login_user(request):
                         if user.is_active:
                             login(request, user)
                             userlang = UserLang.objects.get(user=request.user)
+                            logger_info.info(info_login_class_log_message(request))
                             translation.activate(userlang.lang)
-                            request.session[
-                                translation.LANGUAGE_SESSION_KEY] = userlang.lang
+                            request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
                             redir = reverse('home')
                             if request.GET['next'] != reverse('login_classic') or request.GET['next'] != reverse('login_ldap') or request.GET['next'] != reverse('login'):
                                 redir = request.GET['next']
@@ -168,7 +170,7 @@ def login_ldap(request):
                     raise_exceptions=False
                 )
                 if c.bind():
-                    print(c)
+                    logger_info.info(info_login_class_log_message(request))
                     c.search(
                         search_base='ou=people,dc=42,dc=fr',
                         search_filter='(uid={})'.format(request.POST['login']),
