@@ -1,0 +1,39 @@
+[INFO] :: [10/07/2015 23:04:52] :: [home:index:info] [12] :: chargement_page /
+[ERROR] :: [10/07/2015 23:09:51] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/core/home.py", line 12, in index
+    logger.info(info_load_log_message(request))
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/functions.py", line 5, in info_load_log_message
+    return 'chargement de la page ' + request.META['PATH_INFO'] + ' par ' + request.user
+TypeError: Can't convert 'SimpleLazyObject' object to str implicitly
+[ERROR] :: [10/07/2015 23:10:11] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/core/home.py", line 12, in index
+    logger.info(info_load_log_message(request))
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/functions.py", line 4, in info_load_log_message
+    return 'chargement de la page ' + request.META['PATH_INFO'] + ' par ' + request.user
+TypeError: Can't convert 'SimpleLazyObject' object to str implicitly
+[INFO] :: [10/07/2015 23:10:46] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [10/07/2015 23:14:42] :: [views:display_all:info] [21] :: chargement de la page /forum/ par admin
+[INFO] :: [10/07/2015 23:14:50] :: [views:display_all:info] [21] :: chargement de la page /forum/ par admin
+[ERROR] :: [10/07/2015 23:16:24] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /log/info/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/views.py", line 60, in display_log
+    log.append(
+AttributeError: 'NoneType' object has no attribute 'append'
+[INFO] :: [10/07/2015 23:16:47] :: [home:index:info] [12] :: chargement de la page / par admin
+[INFO] :: [10/07/2015 23:37:47] :: [home:index:info] [12] :: chargement de la page / par admin
+[INFO] :: [10/07/2015 23:39:37] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [10/07/2015 23:40:02] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [10/07/2015 23:40:37] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [10/07/2015 23:41:53] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [11/07/2015 09:08:34] :: [views:display_all:info] [22] :: chargement de la page /forum/ par admin
+[INFO] :: [11/07/2015 09:11:52] :: [views:display_all:info] [22] :: chargement de la page /forum/ par admin
