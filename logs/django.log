@@ -207,3 +207,44 @@ Traceback (most recent call last):
   File "D:\42_work\framework\venv\lib\site-packages\django\middleware\common.py", line 84, in process_request
     "settings.") % (new_url[0], new_url[1]))
 RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/i18n/setlang/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[12/07/2015 15:30:08] :: [base:get_response:django.request] [170] :: Not Found: /profil
+[12/07/2015 15:31:40] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/ldap
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 187, in login_ldap
+    'objectClass',
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 568, in search
+    request = search_operation(search_base, search_filter, search_scope, dereference_aliases, attributes, size_limit, time_limit, types_only, self.server.schema if self.server else None)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/operation/search.py", line 369, in search_operation
+    request['attributes'] = build_attribute_selection(attributes, schema)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/operation/search.py", line 324, in build_attribute_selection
+    raise LDAPAttributeError('invalid attribute type in attribute list: ' + attribute)
+ldap3.core.exceptions.LDAPAttributeError: invalid attribute type in attribute list: first-name
+[12/07/2015 15:34:51] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /log/error/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/views.py", line 42, in display_log
+    split_ligne[2] = split_ligne[2].replace('\n', '').split(' par ')
+IndexError: list index out of range
+[12/07/2015 15:35:55] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /log/error/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/views.py", line 61, in display_log
+    if add:
+UnboundLocalError: local variable 'add' referenced before assignment
+[12/07/2015 15:36:45] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /log/error/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/generate_logs/views.py", line 46, in display_log
+    split_ligne.remove(split_ligne[4])
+IndexError: list index out of range

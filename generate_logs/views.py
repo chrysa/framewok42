@@ -36,18 +36,11 @@ def display_log(request, log_type):
                 split_ligne[1] = split_ligne[1].replace('\n', '').split(' par ')
                 add = True
             elif type_format == 'verbose':
-                try:
-                    split_ligne.remove(split_ligne[0])
-                    split_ligne[0] = split_ligne[0].replace('[', '').replace(']', '').split(' ')
-                    split_ligne[1] = split_ligne[1].replace(':', '.').replace('[', '').replace(']', '').split(' ')
-                    split_ligne[2] = split_ligne[2].replace('\n', '').split(' par ')
-                    split_ligne.append(split_ligne[2])
-                    split_ligne[2] = split_ligne[1]
-                    split_ligne[1] = split_ligne[3]
-                    split_ligne.remove(split_ligne[4])
-                    add = True
-                except:
-                    add = False
+                split_ligne[0] = split_ligne[0].replace('[', '').replace(']', '').split(' ')
+                split_ligne[1] = split_ligne[1].replace(':', '.').replace('[', '').replace(']', '').split(' ')
+                split_ligne[2] = split_ligne[2].replace('\n', '').split(' par ')
+                print(split_ligne)
+                add = True
             elif type_format == 'complet':
                 try:
                     split_ligne[0] = split_ligne[0].replace('[', '').replace(']', '')
@@ -62,13 +55,9 @@ def display_log(request, log_type):
                 except:
                     add = False
             if add:
-                log.append(
-                    {
-                        'len': len_line,
-                        'split': split_ligne,
-                    }
-                )
-                log.reverse()
+                log.append(split_ligne)
+        if len(log) > 1:
+            log.reverse()
     return render(
         request,
         'logs/display_log.html', {
