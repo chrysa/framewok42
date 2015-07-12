@@ -131,3 +131,193 @@ django.utils.datastructures.MultiValueDictKeyError: "'next'"
 [INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
 [INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
 [INFO] :: [11/07/2015 20:28:08] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:05] :: [home:index:info] [13] :: chargement de la page / par AnonymousUser
+[INFO] :: [12/07/2015 14:24:05] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:05] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:06] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:06] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:06] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:06] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:06] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:06] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [12/07/2015 14:24:06] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [12/07/2015 14:24:06] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:06] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [12/07/2015 14:24:06] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [12/07/2015 14:24:06] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:06] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:06] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:06] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:11] :: [home:index:info] [13] :: chargement de la page / par admin
+[WARNING] :: [12/07/2015 14:24:12] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[INFO] :: [12/07/2015 14:24:15] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:24:18] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:24:40] :: [home:index:info] [13] :: chargement de la page / par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [12/07/2015 14:24:40] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [12/07/2015 14:24:40] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [12/07/2015 14:24:40] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [12/07/2015 14:24:40] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 14:24:40] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [home:index:info] [13] :: chargement de la page / par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:select_login:info] [83] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [12/07/2015 13:27:56] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [12/07/2015 13:27:56] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [12/07/2015 13:27:56] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [12/07/2015 13:27:56] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 13:27:56] :: [views:register_user:info] [28] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [12/07/2015 15:10:06] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 15:10:39] :: [home:index:info] [13] :: chargement de la page / par admin
+[ERROR] :: [12/07/2015 15:10:42] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /i18n/setlang
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\middleware\common.py", line 84, in process_request
+    "settings.") % (new_url[0], new_url[1]))
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/i18n/setlang/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[ERROR] :: [12/07/2015 15:11:15] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /i18n/setlang
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\middleware\common.py", line 84, in process_request
+    "settings.") % (new_url[0], new_url[1]))
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/i18n/setlang/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[INFO] :: [12/07/2015 15:11:18] :: [home:index:info] [13] :: chargement de la page / par admin
+[ERROR] :: [12/07/2015 15:11:20] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /i18n/setlang
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\middleware\common.py", line 84, in process_request
+    "settings.") % (new_url[0], new_url[1]))
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/i18n/setlang/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+[INFO] :: [12/07/2015 15:11:49] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 15:11:51] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 15:11:54] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 15:11:57] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 15:12:13] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 15:12:13] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 15:12:18] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 15:12:20] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:13:24] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:13:25] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:13:36] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:13:40] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:15:57] :: [home:index:info] [15] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:16:09] :: [home:index:info] [15] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:17:31] :: [home:index:info] [15] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:18:06] :: [home:index:info] [15] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:18:16] :: [home:index:info] [15] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:18:20] :: [home:index:info] [15] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:20:09] :: [home:index:info] [15] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:20:19] :: [home:index:info] [15] :: chargement de la page / par admin
+[INFO] :: [12/07/2015 14:20:24] :: [views:index:info] [22] :: chargement de la page /issue/ par admin

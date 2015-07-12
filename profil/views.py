@@ -1,9 +1,7 @@
 #-*-coding:utf-8 -*-
-import ldap3
 import logging
 
-import generate_logs.functions as l_fct
-
+import ldap3
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.utils import translation
@@ -15,6 +13,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import ugettext as _
 
+import generate_logs.functions as l_fct
 from contact import contact
 from profil.models import UserLang
 from profil.forms.LdapForm import LdapForm
@@ -27,6 +26,7 @@ logger_info = logging.getLogger('info')
 def register_user(request):
     logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_authenticated():
+        logger_error.error(l_fct.error_load_log_message(request))
         return redirect(reverse('home'))
     else:
         errors = {}
@@ -61,8 +61,10 @@ def register_user(request):
             else:
                 user_exist = User.objects.filter(username=request.POST['username'])
                 if len(user_exist) > 0:
+                    logger_error.error(l_fct.error_register_user_exist(request))
                     errors['user'] = _("error_user_already_exist")
                 if len(email_exist) > 0:
+                    logger_error.error(l_fct.error_register_mail_exist(request))
                     errors['mail'] = _("error_mail_already_exist")
                 if request.POST['password'] != request.POST['password_conf']:
                     errors['pass'] = _("error_password")
@@ -92,16 +94,19 @@ def select_login(request):
 def login_user(request):
     logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_authenticated():
+        logger_error.error(l_fct.error_load_log_message(request))
         return redirect(reverse('home'))
     else:
         error = {}
         if request.method == 'POST':
             form = LogInForm(request.POST)
             if request.POST['username'] == "admin":
+                logger_error.error(l_fct.error_login_admin_front_log_message())
                 error['admin'] = _("admin_cant_log_here")
             else:
                 user_exist = User.objects.filter(username=request.POST['username'])
                 if len(user_exist) == 0:
+                    logger_error.error(l_fct.error_inexistant_user_log_message(request))
                     error['user'] = _("error_user_not_exist")
                 if 'user' not in error:
                     user = authenticate(
@@ -123,10 +128,13 @@ def login_user(request):
                                 permanent=True
                             )
                         else:
+                            logger_error.error(l_fct.error_login_log_message(request))
                             error['unknow'] = _("authenticate error")
                     else:
+                        logger_error.error(l_fct.error_login_wrong_password_log_message(request))
                         error['pass'] = _("error_wrong_password")
                 else:
+                    logger_error.error(l_fct.error_login_unknow_log_message(request))
                     error['unknow'] = _("unknow error")
         else:
             form = LogInForm()
@@ -145,6 +153,7 @@ def login_user(request):
 def login_ldap(request):
     logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_authenticated():
+        logger_error.error(l_fct.error_load_log_message(request))
         return redirect(reverse('home'))
     else:
         error = {}
@@ -182,6 +191,7 @@ def login_ldap(request):
                         print(r['attributes'])
                     c.unbind()
             except:
+                logger_error.info(l_fct.error_ldap_log_message(request, "bind"))
                 error['unknow'] = _("bind_error")
         else:
             form = LdapForm()
@@ -199,7 +209,7 @@ def login_ldap(request):
 
 @login_required
 def logout_user(request):
-    logger_info.info(info_load_log_message(request))
+    logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_staff is not True:
         cur_language = translation.get_language()
         userlang = UserLang.objects.get(user=request.user)
