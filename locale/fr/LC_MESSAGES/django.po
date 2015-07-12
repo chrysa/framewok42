@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-10 22:52+0000\n"
+"POT-Creation-Date: 2015-07-12 15:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,7 +101,7 @@ msgstr "connection ldap"
 msgid "change_lang"
 msgstr "changer de langue"
 
-#: core/templates/core/base.html:103
+#: core/templates/core/base.html:101
 msgid "current_lang"
 msgstr "langue courante"
 
@@ -138,8 +138,8 @@ msgid "last_mod"
 msgstr ""
 
 #: forum/templates/forum/cat.html:32 forum/templates/forum/cat.html.py:34
-#: generate_logs/templates/logs/display_log.html:16
-#: generate_logs/templates/logs/display_log.html:30
+#: generate_logs/templates/logs/display_log.html:25
+#: generate_logs/templates/logs/display_log.html:39
 msgid "by"
 msgstr ""
 
@@ -162,6 +162,10 @@ msgstr ""
 msgid "edit_post"
 msgstr ""
 
+#: forum/templates/forum/home.html:23
+msgid "no_category"
+msgstr ""
+
 #: forum/templates/forum/response.html:8
 msgid "response_topic"
 msgstr ""
@@ -170,51 +174,49 @@ msgstr ""
 msgid "modify_by"
 msgstr ""
 
-#: forum/views.py:111 forum/views.py:199
+#: forum/views.py:107
+msgid "save_topic"
+msgstr ""
+
+#: forum/views.py:110 forum/views.py:198
 msgid "thread_fail"
 msgstr ""
 
-#: framework/settings.py:69
-msgid "francais"
-msgstr ""
+#: generate_logs/templates/logs/display_log.html:12
+#, fuzzy
+#| msgid "register"
+msgid "no_logs_register"
+msgstr "s'enregistrer"
 
-#: framework/settings.py:70
-msgid "anglais"
-msgstr ""
-
-#: generate_logs/functions.py:6
-msgid "chargement_page "
-msgstr "chargement de la page "
-
-#: generate_logs/templates/logs/display_log.html:13
-#: generate_logs/templates/logs/display_log.html:19
-#: generate_logs/templates/logs/display_log.html:27
+#: generate_logs/templates/logs/display_log.html:22
+#: generate_logs/templates/logs/display_log.html:28
+#: generate_logs/templates/logs/display_log.html:36
 msgid "day"
 msgstr ""
 
-#: generate_logs/templates/logs/display_log.html:14
-#: generate_logs/templates/logs/display_log.html:20
-#: generate_logs/templates/logs/display_log.html:28
+#: generate_logs/templates/logs/display_log.html:23
+#: generate_logs/templates/logs/display_log.html:29
+#: generate_logs/templates/logs/display_log.html:37
 msgid "hour"
 msgstr ""
 
-#: generate_logs/templates/logs/display_log.html:15
-#: generate_logs/templates/logs/display_log.html:21
-#: generate_logs/templates/logs/display_log.html:29
+#: generate_logs/templates/logs/display_log.html:24
+#: generate_logs/templates/logs/display_log.html:30
+#: generate_logs/templates/logs/display_log.html:38
 msgid "action"
 msgstr ""
 
-#: generate_logs/templates/logs/display_log.html:22
 #: generate_logs/templates/logs/display_log.html:31
+#: generate_logs/templates/logs/display_log.html:40
 msgid "module"
 msgstr ""
 
-#: generate_logs/templates/logs/display_log.html:23
 #: generate_logs/templates/logs/display_log.html:32
+#: generate_logs/templates/logs/display_log.html:41
 msgid "ligne"
 msgstr ""
 
-#: generate_logs/templates/logs/display_log.html:26
+#: generate_logs/templates/logs/display_log.html:35
 msgid "error_level"
 msgstr ""
 
@@ -295,11 +297,11 @@ msgstr ""
 msgid "submit_issue"
 msgstr ""
 
-#: issues/views.py:57
+#: issues/views.py:64
 msgid "save_error"
 msgstr ""
 
-#: issues/views.py:82
+#: issues/views.py:90
 msgid "update_error"
 msgstr ""
 
@@ -340,42 +342,45 @@ msgstr ""
 msgid "connection_ldap"
 msgstr ""
 
-#: profil/tests.py:71 profil/views.py:34 profil/views.py:61
+#: profil/tests.py:71 profil/views.py:40 profil/views.py:70
 msgid "error_password"
 msgstr ""
 
-#: profil/tests.py:84 profil/views.py:57
+#: profil/tests.py:84 profil/views.py:65
 msgid "error_user_already_exist"
 msgstr ""
 
-#: profil/tests.py:98 profil/views.py:32 profil/views.py:59
+#: profil/tests.py:98 profil/views.py:38 profil/views.py:68
 msgid "error_mail_already_exist"
 msgstr ""
 
-#: profil/views.py:63
+#: profil/views.py:72
 msgid "unknow_error_register_form"
 msgstr ""
 
-#: profil/views.py:96
+#: profil/views.py:105
 msgid "admin_cant_log_here"
 msgstr ""
 
-#: profil/views.py:100
+#: profil/views.py:110
 msgid "error_user_not_exist"
 msgstr ""
 
-#: profil/views.py:121
+#: profil/views.py:132
 msgid "authenticate error"
 msgstr ""
 
-#: profil/views.py:123
+#: profil/views.py:135
 msgid "error_wrong_password"
 msgstr ""
 
-#: profil/views.py:125
+#: profil/views.py:138
 msgid "unknow error"
 msgstr ""
 
-#: profil/views.py:179
+#: profil/views.py:195
 msgid "bind_error"
 msgstr ""
+
+#~ msgid "chargement_page "
+#~ msgstr "chargement de la page "

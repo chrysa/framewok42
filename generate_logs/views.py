@@ -74,6 +74,7 @@ def display_log(request, log_type):
         'logs/display_log.html', {
             'type_format': type_format,
             'type_log': log_type,
+            'len': len(log),
             'log': log,
         }
     )
