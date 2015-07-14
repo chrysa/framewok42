@@ -75,26 +75,33 @@ class RegisterTests(TestCase):
 #         self.client.logout()
 
     def test_register_with_blank_datas(self):
-        reponse = self.client.post(
-            reverse('register'),
-            {},
-            follow=True,
-        )
+        reponse = self.client.post(reverse('register'), {}, follow=True)
+        self.assertEqual(reponse.status_code, 200)
         self.assertFormError(reponse, 'form', 'username', 'Ce champ est obligatoire.')
-        self.assertFormError(reponse, 'form', 'email', 'Ce champ est obligatoire')
-        self.assertFormError(reponse, 'form', 'password', 'Ce champ est obligatoire')
-        self.assertFormError(reponse, 'form', 'password_conf', 'Ce champ est obligatoire')
+        self.assertFormError(reponse, 'form', 'email', 'Ce champ est obligatoire.')
+        self.assertFormError(reponse, 'form', 'password', 'Ce champ est obligatoire.')
+        self.assertFormError(reponse, 'form', 'password_conf', 'Ce champ est obligatoire.')
 
-    def test_register_with_wrong_mail_format(self):
-        user_test = self.register_user
-        user_test['email'] = 'plop@sda'
-        reponse = self.client.post(
-            reverse('register'),
-            user_test,
-            follow=True,
-        )
-        self.assertFormError(reponse, 'form', 'email', 'Saisissez une adresse de courriel valide.')
+    def test_register_user_password_error(self):
+        data = self.unittest_fr
+        data['password_conf'] = "error"
+        reponse = self.client.post(reverse('register'), data, follow=True)
+        self.assertEqual(reponse.status_code, 200)
+        self.assertEqual(reponse.context[0]['errors']['pass'], _("error_password"))
 
+    def test_register_user_already_exist(self):
+        data = self.unittest_fr
+        data['mail'] = "plop@plop.plop"
+        reponse = self.client.post(reverse('register'), data)
+        self.assertEqual(reponse.status_code, 200)
+        self.assertEqual(reponse.context[0]['errors']['user'], _("error_user_already_exist"))
+
+    def test_register_mail_already_exist(self):
+        data = self.unittest_fr
+        data['username'] = "plop"
+        reponse = self.client.post(reverse('register'), data)
+        self.assertEqual(reponse.status_code, 200)
+        self.assertEqual(reponse.context[0]['errors']['mail'], _("error_mail_already_exist"))
 
 #     def test_register_from_home(self):
 #         reponse = self.client.post(
@@ -129,43 +136,8 @@ class RegisterTests(TestCase):
 #             msg_prefix='',
 #             fetch_redirect_response=True
 #         )
-#
-#     def test_register_user_password_error(self):
-#         data = self.unittest_fr
-#         reponse = self.client.post(reverse('register'), data)
-#         self.assertEqual(reponse.status_code, 200)
-#         self.assertEqual(
-#             reponse.context[0]['errors']['pass'], _("error_password"))
-#
-#     def test_register_user_already_exist(self):
-#         data = {
-#             'username': "chrysa",
-#             'email': "chrysa@chrysa.me",
-#             'password': "test",
-#             'password_conf': "test",
-#         }
-#         reponse = self.client.post(reverse('register'), data)
-#         self.assertEqual(reponse.status_code, 200)
-#         self.assertEqual(
-#             reponse.context[0]['errors']['user'],
-#             _("error_user_already_exist")
-#         )
-#
-#     def test_register_mail_already_exist(self):
-#         data = {
-#             'username': "anthony",
-#             'email': "chrysa@chrysa.fr",
-#             'password': "test",
-#             'password_conf': "test",
-#         }
-#         reponse = self.client.post(reverse('register'), data)
-#         self.assertEqual(reponse.status_code, 200)
-#         self.assertEqual(
-#             reponse.context[0]['errors']['mail'],
-#             _("error_mail_already_exist")
-#         )
-#
-#
+
+
 # class LoginTests(TestCase):
 #     fixtures = ['profil.json']
 #
@@ -252,8 +224,8 @@ class RegisterTests(TestCase):
 #         reponse = self.client.post(reverse('login'), data)
 #         self.assertEqual(reponse.status_code, 200)
 #         self.assertContains(reponse, "error_wrong_password")
-#
-#
+
+
 # class LogoutTests(TestCase):
 #
 #     def test_logout_user_log(self):
