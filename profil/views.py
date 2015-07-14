@@ -31,7 +31,7 @@ def register_user(request):
     else:
         errors = {}
         form = RegisterForm(request.POST)
-        if request.method == 'POST':
+        if request.method == 'POST' and len(request.POST):
             email_exist = User.objects.filter(email=request.POST['email'])
             if form.is_valid():
                 if len(email_exist) > 0:

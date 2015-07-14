@@ -777,3 +777,106 @@ Traceback (most recent call last):
   File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
     raise MultiValueDictKeyError(repr(key))
 django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[14/07/2015 21:21:25] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[14/07/2015 21:22:45] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[14/07/2015 21:25:01] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[14/07/2015 21:25:06] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[14/07/2015 21:25:15] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[14/07/2015 21:25:49] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 36, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[14/07/2015 21:26:24] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 34, in register_user
+    if request.method == 'POST' and len(request.method['POST']):
+TypeError: string indices must be integers
