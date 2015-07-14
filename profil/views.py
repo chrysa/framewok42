@@ -27,7 +27,7 @@ def register_user(request):
     logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_authenticated():
         logger_error.error(l_fct.error_load_log_message(request))
-        return redirect(reverse('home'))
+        return redirect(reverse('home'), permanent=True)
     else:
         errors = {}
         form = RegisterForm(request.POST)
@@ -51,8 +51,9 @@ def register_user(request):
                     UserLang(user=user, lang=translation.get_language()).save()
                     logger_info.info(l_fct.info_register_log_message(request))
                     redir = reverse('home')
-                    if request.GET['next'] != reverse('register'):
+                    if 'next' in request.GET and request.GET['next'] != reverse('register'):
                         redir = request.GET['next']
+                    print(redir)
                     login(request, user)
                     return redirect(
                         redir,

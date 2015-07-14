@@ -1,1 +1,2 @@
 [12/07/2015 15:23:05] :: [views:login_user:error] [104] :: un admin a essaye de se connecter depuis le front comme un boulet
+[14/07/2015 20:31:01] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par plop

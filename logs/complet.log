@@ -429,3 +429,880 @@ IndexError: list index out of range
 [INFO] :: [12/07/2015 15:42:34] :: [views:display_log:info] [25] :: chargement de la page /log/info/ par admin
 [INFO] :: [12/07/2015 15:42:40] :: [views:display_log:info] [25] :: chargement de la page /log/info/ par admin
 [INFO] :: [12/07/2015 15:42:42] :: [views:display_log:info] [25] :: chargement de la page /log/error/ par admin
+[INFO] :: [14/07/2015 19:50:36] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:50:36] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:50:51] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:50:51] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:54:35] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:55:20] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:56:15] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:56:15] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:56:59] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:56:59] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:56:59] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [14/07/2015 19:56:59] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [14/07/2015 19:57:00] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:58:00] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:58:00] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:58:00] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[ERROR] :: [14/07/2015 19:58:00] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 54, in register_user
+    if request.GET['next'] != reverse('register'):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"
+[INFO] :: [14/07/2015 19:58:00] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:00:31] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:00:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:00:31] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:00:31] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 20:00:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:01:03] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:01:03] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:01:03] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 19:01:03] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 19:01:03] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:01:18] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:01:18] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:01:18] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:01:18] :: [home:index:info] [12] :: chargement de la page / par plop
+[INFO] :: [14/07/2015 20:01:18] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:01:18] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:01:18] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 20:01:18] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:02:32] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:02:32] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:02:32] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 19:02:32] :: [home:index:info] [12] :: chargement de la page / par plop
+[INFO] :: [14/07/2015 19:02:32] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:02:32] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 19:02:32] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 19:02:32] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:05:07] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:05:07] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:05:07] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:05:07] :: [home:index:info] [12] :: chargement de la page / par plop
+[INFO] :: [14/07/2015 20:05:07] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:05:07] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:05:07] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 20:05:07] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:05:31] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:05:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:05:31] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:05:31] :: [home:index:info] [12] :: chargement de la page / par plop
+[INFO] :: [14/07/2015 20:05:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:05:31] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:05:31] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 20:05:32] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:05:57] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:05:57] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:05:57] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:05:57] :: [home:index:info] [12] :: chargement de la page / par plop
+[INFO] :: [14/07/2015 20:05:57] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:05:57] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:05:57] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 20:05:57] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:06:40] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:06:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:06:40] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:06:40] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 20:06:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:07:00] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:07:00] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:07:00] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:07:00] :: [contact:display:info] [17] :: chargement de la page /contact par plop
+[INFO] :: [14/07/2015 20:07:00] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:07:00] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:07:00] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 20:07:00] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:07:18] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:07:19] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:07:19] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:07:19] :: [contact:display:info] [17] :: chargement de la page /contact par plop
+[INFO] :: [14/07/2015 20:07:19] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:07:19] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:07:19] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 20:07:19] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:07:19] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:11:14] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:11:14] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:11:14] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:11:14] :: [contact:display:info] [17] :: chargement de la page /contact par plop
+[INFO] :: [14/07/2015 20:11:14] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:11:14] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 69, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 20:11:14] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:11:14] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:11:14] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:11:14] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:12:37] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:12:37] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:12:37] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:12:37] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:12:37] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:12:37] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:12:37] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:12:53] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:12:54] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:12:54] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:12:54] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:12:54] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:12:54] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 19:12:54] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:13:34] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:13:34] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:13:35] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:13:35] :: [contact:display:info] [17] :: chargement de la page /contact par plop
+[INFO] :: [14/07/2015 19:13:35] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:13:35] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:13:35] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:13:35] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:13:35] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 19:13:35] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:13:35] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:13:35] :: [contact:display:info] [17] :: chargement de la page /contact par plop
+[INFO] :: [14/07/2015 19:13:35] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:13:35] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:13:35] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 19:13:35] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 20:13:35] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:13:35] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:13:35] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:13:35] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:13:35] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 19:13:35] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:48] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:14:48] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:48] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:14:48] :: [contact:display:info] [17] :: chargement de la page /contact par plop
+[INFO] :: [14/07/2015 20:14:48] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:48] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:14:48] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 20:14:48] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:48] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:48] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:14:48] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:14:48] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 69, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 19:18:02] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:18:10] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:18:10] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:18:10] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 19:18:10] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 19:18:10] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:18:27] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:18:27] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:18:27] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 19:18:28] :: [contact:display:info] [17] :: chargement de la page /contact par plop
+[INFO] :: [14/07/2015 19:18:28] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:18:28] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 19:18:28] :: [home:index:info] [12] :: chargement de la page / par anthony
+[INFO] :: [14/07/2015 19:18:28] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:21:23] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:21:23] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:21:23] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:21:23] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:21:23] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:21:23] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 69, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 19:21:34] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:21:34] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:21:34] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:21:34] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:21:34] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 19:21:34] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 69, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 20:22:23] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:22:24] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:22:24] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:22:24] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 69, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 19:22:42] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:22:42] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:22:42] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:22:42] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:22:42] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 19:22:42] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 69, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 20:24:18] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:25:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:26:16] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:26:36] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:27:32] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:27:32] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:27:32] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:27:33] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:28:24] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 19:28:24] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:28:24] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 19:28:24] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:29:24] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:29:56] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:30:20] :: [home:index:info] [12] :: chargement de la page / par admin
+[WARNING] :: [14/07/2015 20:30:21] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[INFO] :: [14/07/2015 20:30:23] :: [views:logout_user:info] [213] :: chargement de la page /profil/logout par admin
+[INFO] :: [14/07/2015 20:30:23] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:30:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:30:38] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:31:00] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:31:00] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:31:01] :: [views:register_user:info] [27] :: chargement de la page /profil/register par plop
+[ERROR] :: [14/07/2015 20:31:01] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par plop
+[INFO] :: [14/07/2015 20:31:01] :: [home:index:info] [12] :: chargement de la page / par plop
+[INFO] :: [14/07/2015 20:38:45] :: [home:index:info] [12] :: chargement de la page / par plop
+[INFO] :: [14/07/2015 20:38:47] :: [home:index:info] [12] :: chargement de la page / par plop
+[INFO] :: [14/07/2015 20:38:54] :: [home:index:info] [12] :: chargement de la page / par plop
+[INFO] :: [14/07/2015 20:38:57] :: [home:index:info] [12] :: chargement de la page / par plop
+[INFO] :: [14/07/2015 20:39:08] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:39:08] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:39:08] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:39:08] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:42:41] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:42:41] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:42:41] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:44:34] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:44:34] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:44:34] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:44:34] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:45:18] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:45:18] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:45:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:45:31] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:46:22] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:46:22] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:46:41] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:46:41] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:47:00] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:47:00] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:47:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:47:40] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:47:57] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:47:57] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:48:17] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:48:17] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:48:17] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:48:17] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:48:17] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:01:40] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 21:01:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:01:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:01:41] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:01:41] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 21:01:41] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:02:25] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:03:12] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:04:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:04:34] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:05:14] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:05:24] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:07:27] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:07:39] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 21:07:39] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:07:40] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 21:07:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 21:07:40] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:07:40] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 70, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 20:08:09] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:08:09] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:08:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:08:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:08:09] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 70, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 21:11:05] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:11:05] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 21:11:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 21:11:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:11:05] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 70, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 21:11:11] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:11:11] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 21:11:11] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 21:11:11] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:11:11] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 70, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 21:12:08] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [14/07/2015 21:12:08] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:12:08] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:12:08] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:12:08] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:12:08] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:12:08] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 21:12:08] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:08] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:12:09] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 21:12:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:09] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 21:12:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:09] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 21:12:09] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:12:09] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 70, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 21:12:50] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:50] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:50] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:50] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:12:50] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 21:12:50] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:50] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 21:12:50] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:50] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 21:12:50] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 21:12:50] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 21:12:50] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 70, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[INFO] :: [14/07/2015 21:13:24] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:select_login:info] [86] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:14:13] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'email'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 35, in register_user
+    email_exist = User.objects.filter(email=request.POST['email'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'email'"
+[INFO] :: [14/07/2015 20:14:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [14/07/2015 20:14:14] :: [views:register_user:info] [52] :: creation du compte AnonymousUser
+[INFO] :: [14/07/2015 20:14:14] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [14/07/2015 20:14:14] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 70, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
