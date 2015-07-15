@@ -1,0 +1,101 @@
+[15/07/2015 11:10:22] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 43, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[15/07/2015 11:11:11] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 43, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[15/07/2015 11:11:30] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 43, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[15/07/2015 11:12:41] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'password_conf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 43, in register_user
+    if request.POST['password'] != request.POST['password_conf']:
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'password_conf'"
+[15/07/2015 13:18:17] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/local
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 120, in login_user
+    if 'user' not in error:
+NameError: name 'error' is not defined
+[15/07/2015 13:18:35] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/local
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 120, in login_user
+    if 'user' not in error:
+NameError: name 'error' is not defined
+[15/07/2015 13:19:05] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/local
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 118, in login_user
+    if 'user' not in error:
+NameError: name 'error' is not defined
+[15/07/2015 13:19:46] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/local
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 320, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'next'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/profil/views.py", line 130, in login_user
+    if request.GET['next'] != reverse('login_classic') or request.GET['next'] != reverse('login_ldap') or request.GET['next'] != reverse('login'):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'next'"

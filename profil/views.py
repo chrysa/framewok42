@@ -23,11 +23,15 @@ from profil.forms.RegisterForm import RegisterForm
 logger_error = logging.getLogger('error')
 logger_info = logging.getLogger('info')
 
+
 def register_user(request):
     logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_authenticated():
         logger_error.error(l_fct.error_load_log_message(request))
-        return redirect(reverse('home'), permanent=True)
+        return redirect(
+            request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
+            permanent=True
+        )
     else:
         errors = {}
         form = RegisterForm(request.POST)
@@ -62,7 +66,7 @@ def register_user(request):
                     redir,
                     permanent=True
                 )
-            elif not len(errors):
+            elif len(errors) == 0:
                 errors['form'] = _("unknow_error_register_form")
         return render(
             request,
@@ -85,28 +89,35 @@ def select_login(request):
         }
     )
 
+
 def login_user(request):
+    print ('plop')
     logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_authenticated():
+        print ('slop')
         logger_error.error(l_fct.error_load_log_message(request))
-        return redirect(reverse('home'))
+        return redirect(
+            request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
+            permanent=True
+        )
     else:
-        error = {}
+        print ('tlop')
+        errors = {}
         form = LogInForm(request.POST)
-        if request.method == 'POST':
+        if request.method == 'POST' and len(request.POST):
             user_exist = User.objects.filter(username=request.POST['username'])
             if len(user_exist) == 0:
                 logger_error.error(l_fct.error_inexistant_user_log_message(request))
-                error['user'] = _("error_user_not_exist")
+                errors['user'] = _("error_user_not_exist")
             else:
                 if user_exist[0].is_superuser:
                     logger_error.error(l_fct.error_login_admin_front_log_message())
-                    error['admin'] = _("admin_cant_log_here")
+                    errors['admin'] = _("admin_cant_log_here")
                 elif user_exist[0].is_staff:
                     logger_error.error(l_fct.error_login_staff_front_log_message())
-                    error['staff'] = _("staff_cant_log_here")
-                if len(error) == 0:
-                    if 'user' not in error:
+                    errors['staff'] = _("staff_cant_log_here")
+                if len(errors) == 0:
+                    if 'user' not in errors:
                         user = authenticate(
                             username=request.POST['username'],
                             password=request.POST['password'],
@@ -119,27 +130,29 @@ def login_user(request):
                                 translation.activate(userlang.lang)
                                 request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
                                 redir = reverse('home')
-                                if request.GET['next'] != reverse('login_classic') or request.GET['next'] != reverse('login_ldap') or request.GET['next'] != reverse('login'):
-                                    redir = request.GET['next']
+                                if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('register'):
+                                    redir = request.META['HTTP_REFERER']
+                                # if 'next' in request.GET and request.GET['next'] != reverse('register'):
+                                #     redir = request.GET['next']
                                 return redirect(
                                     redir,
                                     permanent=True
                                 )
                             else:
                                 logger_error.error(l_fct.error_login_log_message(request))
-                                error['unknow'] = _("authenticate error")
+                                errors['unknow'] = _("authenticate error")
                         else:
                             logger_error.error(l_fct.error_login_wrong_password_log_message(request))
-                            error['pass'] = _("error_wrong_password")
+                            errors['pass'] = _("error_wrong_password")
                     else:
                         logger_error.error(l_fct.error_login_unknow_log_message(request))
-                        error['unknow'] = _("unknow error")
+                        errors['unknow'] = _("unknow error")
     return render(
         request,
         "profil/login.html",
         {
             'form': form,
-            'error': error,
+            'errors': errors,
             'type': "classic",
             'formcontact': contact.ContactForm(),
         }
@@ -152,7 +165,7 @@ def login_ldap(request):
         logger_error.error(l_fct.error_load_log_message(request))
         return redirect(reverse('home'))
     else:
-        error = {}
+        errors = {}
         form = LdapForm(request.POST)
         if request.method == 'POST':
             try:
@@ -188,7 +201,7 @@ def login_ldap(request):
                     c.unbind()
             except:
                 logger_error.info(l_fct.error_ldap_log_message(request, "bind"))
-                error['unknow'] = _("bind_error")
+                errors['unknow'] = _("bind_error")
         else:
             form = LdapForm()
     return render(
@@ -196,7 +209,7 @@ def login_ldap(request):
         "profil/login.html",
         {
             'form': form,
-            'error': error,
+            'errors': errors,
             'type': "ldap",
             'formcontact': contact.ContactForm(),
         }
