@@ -15,6 +15,7 @@ class RegisterForm(forms.Form, forms.ModelForm):
         ]
 
     username = forms.CharField(
+        required=True,
         label=_("username"),
         widget=forms.TextInput(
             attrs={
@@ -24,6 +25,7 @@ class RegisterForm(forms.Form, forms.ModelForm):
         ),
     )
     email = forms.EmailField(
+        required=True,
         label=_("mail_adress"),
         widget=forms.TextInput(
             attrs={
@@ -33,6 +35,7 @@ class RegisterForm(forms.Form, forms.ModelForm):
         ),
     )
     password = forms.CharField(
+        required=True,
         label=_("password"),
         widget=forms.PasswordInput(
             attrs={
@@ -42,6 +45,7 @@ class RegisterForm(forms.Form, forms.ModelForm):
         ),
     )
     password_conf = forms.CharField(
+        required=True,
         label=_("passeword_conf"),
         widget=forms.PasswordInput(
             attrs={

@@ -1,2 +1,45 @@
 [12/07/2015 15:23:05] :: [views:login_user:error] [104] :: un admin a essaye de se connecter depuis le front comme un boulet
 [14/07/2015 20:31:01] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par plop
+[15/07/2015 01:49:08] :: [views:register_user:error] [39] :: error register unittest_fralready exist
+[15/07/2015 01:50:38] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:51:12] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:51:19] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 01:51:19] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 01:51:20] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:51:20] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:51:20] :: [views:register_user:error] [41] :: error register unittest_fr@unittest.fralready exist
+[15/07/2015 01:51:56] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 01:51:56] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 01:51:56] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:51:56] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:51:56] :: [views:register_user:error] [41] :: error register unittest_fr@unittest.fralready exist
+[15/07/2015 01:56:01] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 01:56:01] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 01:56:02] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:56:02] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:56:02] :: [views:register_user:error] [41] :: error register unittest_fr@unittest.fralready exist
+[15/07/2015 01:56:30] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 01:56:30] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 01:56:31] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:56:31] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:56:31] :: [views:register_user:error] [41] :: error register unittest_fr@unittest.fralready exist
+[15/07/2015 00:56:40] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 00:56:40] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 00:56:41] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 00:56:41] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 00:56:41] :: [views:register_user:error] [41] :: error register unittest_fr@unittest.fralready exist
+[15/07/2015 02:24:58] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 02:24:58] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 02:24:58] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 02:24:59] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 02:24:59] :: [views:register_user:error] [41] :: error register unittest_fr@unittest.fralready exist
+[15/07/2015 02:29:43] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 02:29:43] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 02:29:44] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 02:29:44] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 02:29:44] :: [views:register_user:error] [41] :: error register unittest_fr@unittest.fralready exist
+[15/07/2015 01:30:48] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 01:30:48] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[15/07/2015 01:30:49] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:30:49] :: [views:register_user:error] [38] :: error register unittest_fralready exist
+[15/07/2015 01:30:49] :: [views:register_user:error] [41] :: error register unittest_fr@unittest.fralready exist
