@@ -159,6 +159,54 @@ class RegisterTests(TestCase):
             fetch_redirect_response=True
         )
 
+    def test_register_user_already_exist(self):
+        data = self.unittest_fr
+        data['mail'] = "plop@plop.plop"
+        reponse = self.client.post(reverse('register'), data)
+        self.assertEqual(reponse.status_code, 200)
+        self.assertEqual(reponse.context[0]['errors']['user'], _("error_user_already_exist"))
+
+    def test_register_mail_already_exist(self):
+        data = self.unittest_fr
+        data['username'] = "plop"
+        reponse = self.client.post(reverse('register'), data)
+        self.assertEqual(reponse.status_code, 200)
+        self.assertEqual(reponse.context[0]['errors']['mail'], _("error_mail_already_exist"))
+
+class LoginTests(TestCase):
+    def test_register_from_home(self):
+        reponse = self.client.post(
+            reverse('register'),
+            self.register_user,
+            follow=True,
+        )
+        self.assertRedirects(
+            reponse,
+            reverse('home'),
+            status_code=301,
+            target_status_code=200,
+            host=None,
+            msg_prefix='',
+            fetch_redirect_response=True
+        )
+
+    def test_register_from_anywhere(self):
+        data = self.register_user
+        data['password_conf'] = 'error'
+        reponse = self.client.post(
+            reverse('register') + '?next=' + reverse('contact'),
+            data,
+            follow=True,
+        )
+        self.assertRedirects(
+            reponse,
+            reverse('contact'),
+            status_code=301,
+            target_status_code=200,
+            host=None,
+            msg_prefix='',
+            fetch_redirect_response=True
+        )
 
 class LoginTests(TestCase):
     fixtures = ['profil.json']
