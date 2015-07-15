@@ -72,8 +72,15 @@
                     {% endif %}
                     <ul class="nav navbar-nav navbar-right">
                         {% if user.is_authenticated %}
-                          <li><a>{{ user }}</a></li>
-                          <li><a href="{% url 'logout' %}">{% trans 'logout'|capfirst %}</a></li>
+                            <li role="presentation" {% if request.path == url_login_classic or request.path == url_login_ldap %} class="dropdown active" {% else %}class="dropdown"{% endif %}>
+                                <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                  {{ user }}
+                                  <span class="caret"></span>
+                                </a>
+                                <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+                                  <li><a href="{% url 'logout' %}">{% trans 'logout'|capfirst %}</a</li>
+                                </ul>
+                            </li>
                         {% else %}
                             <li {% if request.path == url_register %} class="active" {% endif %}><a href="{{ url_register }}">{% trans 'register'|capfirst %}</a></li>
                             <li role="presentation" {% if request.path == url_login_classic or request.path == url_login_ldap %} class="dropdown active" {% else %}class="dropdown"{% endif %}>

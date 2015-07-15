@@ -17,7 +17,7 @@
       <sourceFolder url="file://$MODULE_DIR$/issues/forms" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/profil/forms" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.4.2 virtualenv at ~/Bureau/42_work/framework/venv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.4.3 virtualenv at D:\42_work\framework\venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="framework_perso" />
   </component>

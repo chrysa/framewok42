@@ -28,10 +28,10 @@ def error_logout_log_message(request):
     return 'error logout ' + str(request.user)
 
 def error_register_mail_exist(request):
-    return 'error register ' + str(request.POST['email']) + 'already exist'
+    return 'error register ' + str(request.POST['email']) + ' already exist'
 
 def error_register_user_exist(request):
-    return 'error register ' + str(request.POST['username']) + 'already exist'
+    return 'error register ' + str(request.POST['username']) + ' already exist'
 
 def info_load_log_message(request):
     return 'chargement de la page ' + str(request.META['PATH_INFO']) + ' par ' + str(request.user)

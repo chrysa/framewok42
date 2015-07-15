@@ -91,17 +91,14 @@ def select_login(request):
 
 
 def login_user(request):
-    print ('plop')
     logger_info.info(l_fct.info_load_log_message(request))
     if request.user.is_authenticated():
-        print ('slop')
         logger_error.error(l_fct.error_load_log_message(request))
         return redirect(
             request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
             permanent=True
         )
     else:
-        print ('tlop')
         errors = {}
         form = LogInForm(request.POST)
         if request.method == 'POST' and len(request.POST):
@@ -132,8 +129,6 @@ def login_user(request):
                                 redir = reverse('home')
                                 if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('register'):
                                     redir = request.META['HTTP_REFERER']
-                                # if 'next' in request.GET and request.GET['next'] != reverse('register'):
-                                #     redir = request.GET['next']
                                 return redirect(
                                     redir,
                                     permanent=True
@@ -219,7 +214,7 @@ def login_ldap(request):
 @login_required
 def logout_user(request):
     logger_info.info(l_fct.info_load_log_message(request))
-    if request.user.is_staff is not True:
+    if (request.user.is_staff or request.user.is_superuser) is not True:
         cur_language = translation.get_language()
         userlang = UserLang.objects.get(user=request.user)
         if userlang.lang is not cur_language:
