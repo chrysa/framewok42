@@ -1,5 +1,6 @@
 #-*-coding:utf-8 -*-
 import logging
+import json
 
 import ldap3
 from django.shortcuts import redirect
@@ -9,7 +10,9 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import hashers
 from django.contrib.auth import login
 from django.core.urlresolvers import reverse
+
 from django.contrib.auth.models import User
+
 from django.utils.translation import ugettext as _
 
 from contact import contact
@@ -20,6 +23,23 @@ from profil.forms.LdapForm import LdapForm
 
 logger_error = logging.getLogger('error')
 logger_info = logging.getLogger('info')
+
+
+def annuaire(request, filter):
+    if request.user.is_authenticated() and not request.session['ldap_connection']:
+        logger_error.error(l_fct.error_load_log_message(request))
+        return redirect(reverse('home'))
+    else:
+        annuaire = json.loads(request.session['annuaire'])
+        print(annuaire)
+        return render(
+            request,
+            "ldap42/annuaire.html",
+            {
+                'filter': filter if filter else 'uid',
+            }
+        )
+
 
 
 def login_ldap(request):
@@ -47,7 +67,7 @@ def login_ldap(request):
                 raise_exceptions=False
             )
             if c.bind():
-                logger_info.info(l_fct.info_login_class_log_message(request))
+                logger_info.info(l_fct.info_login_ldap_log_message(request))
                 c.search(
                     search_base='ou=people,dc=42,dc=fr',
                     search_filter='(uid={})'.format(request.POST['login']),
@@ -55,22 +75,20 @@ def login_ldap(request):
                     attributes=[
                         'uid',
                         'givenName',
-                        'jpegPhoto',
                         'mobile',
                         'sn',
                         'alias'
                     ]
                 )
-                response = c.response
-                u = User.objects.filter(username=response[0]['attributes']['uid'][0])
-                if len(u) == 0 :
+                u = User.objects.filter(username=c.response[0]['attributes']['uid'][0])
+                if len(u) == 0:
                     create_user(
                         request,
-                        response[0]['attributes']['uid'][0],
-                        response[0]['attributes']['alias'][0],
+                        c.response[0]['attributes']['uid'][0],
+                        c.response[0]['attributes']['alias'][0],
                         request.POST['password'],
-                        response[0]['attributes']['givenName'][0],
-                        response[0]['attributes']['sn'][0],
+                        c.response[0]['attributes']['givenName'][0],
+                        c.response[0]['attributes']['sn'][0],
                     )
                 else:
                     if not hashers.check_password(request.POST['password'], u[0].password):
@@ -88,8 +106,22 @@ def login_ldap(request):
                         translation.activate(userlang.lang)
                         request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
                         request.session['ldap_connection'] = True
+                        c.search(
+                            search_base='ou=people,dc=42,dc=fr',
+                            search_filter='(uid=a*)',
+                            search_scope=ldap3.SUBTREE,
+                            attributes=[
+                                'uid',
+                                'givenName',
+                                'mobile',
+                                'sn',
+                                'alias'
+                            ]
+                        )
+                        print(c.response)
+                        request.session['annuaire'] = json.dumps(c.response)
                         redir = reverse('home')
-                        if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('register'):
+                        if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('login'):
                             redir = request.META['HTTP_REFERER']
                         return redirect(
                             redir,

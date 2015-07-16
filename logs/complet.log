@@ -4635,3 +4635,623 @@ TypeError: 'User' object is not subscriptable
 [INFO] :: [16/07/2015 02:26:33] :: [home:index:info] [12] :: chargement de la page / par agreau
 [INFO] :: [16/07/2015 02:26:38] :: [views:logout_user:info] [154] :: chargement de la page /profil/logout par agreau
 [INFO] :: [16/07/2015 02:26:39] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 04:52:59] :: [home:index:info] [12] :: chargement de la page / par admin
+[WARNING] :: [16/07/2015 04:53:00] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[INFO] :: [16/07/2015 04:53:03] :: [views:logout_user:info] [154] :: chargement de la page /profil/logout par admin
+[INFO] :: [16/07/2015 04:53:03] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 04:53:05] :: [views:login_ldap:info] [50] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 04:53:12] :: [views:login_ldap:info] [50] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 04:53:15] :: [views:login_ldap:info] [74] :: connection classique par AnonymousUser
+[ERROR] :: [16/07/2015 04:53:16] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/ldap
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 109, in login_ldap
+    login(request, user)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\__init__.py", line 110, in login
+    request.session.cycle_key()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 285, in cycle_key
+    self.create()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 41, in create
+    self.save(must_create=True)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 58, in save
+    session_data=self.encode(self._get_session(no_load=must_create)),
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 88, in encode
+    serialized = self.serializer().dumps(session_dict)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\signing.py", line 90, in dumps
+    return json.dumps(obj, separators=(',', ':')).encode('latin-1')
+  File "C:\Python34\Lib\json\__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: Connection(server=Server(host='ldap.42.fr', port=636, use_ssl=True, tls=Tls(validate=0), get_info='ALL'), user='uid=agreau,ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr', password='mCKb0ss#123', auto_bind='NO_TLS', version=3, authentication='SIMPLE', client_strategy='SYNC', auto_referrals=True, check_names=True, read_only=False, lazy=False, raise_exceptions=False) is not JSON serializable
+[INFO] :: [16/07/2015 04:54:26] :: [views:login_ldap:info] [50] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 04:54:29] :: [views:login_ldap:info] [75] :: connection classique par AnonymousUser
+[ERROR] :: [16/07/2015 04:54:30] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/ldap
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 109, in login_ldap
+    login(request, user)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\__init__.py", line 110, in login
+    request.session.cycle_key()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 285, in cycle_key
+    self.create()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 41, in create
+    self.save(must_create=True)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 58, in save
+    session_data=self.encode(self._get_session(no_load=must_create)),
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 88, in encode
+    serialized = self.serializer().dumps(session_dict)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\signing.py", line 90, in dumps
+    return json.dumps(obj, separators=(',', ':')).encode('latin-1')
+  File "C:\Python34\Lib\json\__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: Connection(server=Server(host='ldap.42.fr', port=636, use_ssl=True, tls=Tls(validate=0), get_info='ALL'), user='uid=agreau,ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr', password='mCKb0ss#123', auto_bind='NO_TLS', version=3, authentication='SIMPLE', client_strategy='SYNC', auto_referrals=True, check_names=True, read_only=False, lazy=False, raise_exceptions=False) is not JSON serializable
+[INFO] :: [16/07/2015 04:54:53] :: [views:login_ldap:info] [50] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 04:54:56] :: [views:login_ldap:info] [75] :: connection classique par AnonymousUser
+[ERROR] :: [16/07/2015 04:54:57] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/ldap
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 109, in login_ldap
+    login(request, user)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\__init__.py", line 110, in login
+    request.session.cycle_key()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 285, in cycle_key
+    self.create()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 41, in create
+    self.save(must_create=True)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 58, in save
+    session_data=self.encode(self._get_session(no_load=must_create)),
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 88, in encode
+    serialized = self.serializer().dumps(session_dict)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\signing.py", line 90, in dumps
+    return json.dumps(obj, separators=(',', ':')).encode('latin-1')
+  File "C:\Python34\Lib\json\__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: Connection(server=Server(host='ldap.42.fr', port=636, use_ssl=True, tls=Tls(validate=0), get_info='ALL'), user='uid=agreau,ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr', password='mCKb0ss#123', auto_bind='NO_TLS', version=3, authentication='SIMPLE', client_strategy='SYNC', auto_referrals=True, check_names=True, read_only=False, lazy=False, raise_exceptions=False) is not JSON serializable
+[INFO] :: [16/07/2015 04:55:35] :: [views:login_ldap:info] [50] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 04:55:41] :: [views:login_ldap:info] [74] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 04:55:41] :: [views:login_ldap:info] [110] :: connection classique par agreau
+[INFO] :: [16/07/2015 04:55:42] :: [views:login_ldap:info] [50] :: chargement de la page /profil/ldap par agreau
+[ERROR] :: [16/07/2015 04:55:42] :: [views:login_ldap:error] [52] :: user deja connecte essai de charger de la page /profil/ldap par agreau
+[INFO] :: [16/07/2015 04:55:42] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 04:59:52] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 04:59:55] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:00:37] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:01:27] :: [home:index:info] [12] :: chargement de la page / par agreau
+[ERROR] :: [16/07/2015 05:01:27] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.annuaire' with arguments '('',)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\core\home.py", line 13, in index
+    return render(request, 'core/home.html', {})
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\six.py", line 659, in reraise
+    raise value
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'annuaire' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['profil/annuaire/(?P<filter>.+)']
+[INFO] :: [16/07/2015 05:04:08] :: [home:index:info] [12] :: chargement de la page / par agreau
+[ERROR] :: [16/07/2015 05:04:08] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.annuaire' with arguments '('',)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\core\home.py", line 13, in index
+    return render(request, 'core/home.html', {})
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\six.py", line 659, in reraise
+    raise value
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'annuaire' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['profil/annuaire/(?P<filter>.+)']
+[INFO] :: [16/07/2015 05:04:25] :: [views:login_ldap:info] [42] :: chargement de la page /profil/ldap par agreau
+[ERROR] :: [16/07/2015 05:04:25] :: [views:login_ldap:error] [44] :: user deja connecte essai de charger de la page /profil/ldap par agreau
+[INFO] :: [16/07/2015 05:04:26] :: [home:index:info] [12] :: chargement de la page / par agreau
+[ERROR] :: [16/07/2015 05:04:26] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.annuaire' with arguments '('',)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\core\home.py", line 13, in index
+    return render(request, 'core/home.html', {})
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\six.py", line 659, in reraise
+    raise value
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'annuaire' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['profil/annuaire/(?P<filter>.+)']
+[INFO] :: [16/07/2015 05:04:37] :: [home:index:info] [12] :: chargement de la page / par agreau
+[WARNING] :: [16/07/2015 05:04:59] :: [base:get_response:django.request] [170] :: Not Found: /annuaire
+[WARNING] :: [16/07/2015 05:05:15] :: [base:get_response:django.request] [170] :: Not Found: /profil/annuaire
+[ERROR] :: [16/07/2015 05:05:22] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/annuaire/all
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 30, in annuaire
+    print (request.session['annuaire'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'annuaire'
+[ERROR] :: [16/07/2015 05:06:19] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/annuaire/all
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 30, in annuaire
+    print (request.session['annuaire'])
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'annuaire'
+[INFO] :: [16/07/2015 05:07:09] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:07:44] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:07:56] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:07:56] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:08:21] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:08:40] :: [views:logout_user:info] [154] :: chargement de la page /profil/logout par agreau
+[INFO] :: [16/07/2015 05:08:41] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 05:08:41] :: [contact:display:info] [17] :: chargement de la page /contact par AnonymousUser
+[INFO] :: [16/07/2015 05:08:44] :: [views:login_ldap:info] [42] :: chargement de la page /ldap/ldap par AnonymousUser
+[INFO] :: [16/07/2015 05:08:52] :: [views:login_ldap:info] [42] :: chargement de la page /ldap/ldap par AnonymousUser
+[INFO] :: [16/07/2015 05:08:56] :: [views:login_ldap:info] [66] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:08:57] :: [views:login_ldap:info] [102] :: connection classique par agreau
+[INFO] :: [16/07/2015 05:09:12] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 05:09:15] :: [views:login_ldap:info] [42] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:09:23] :: [views:login_ldap:info] [42] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:09:30] :: [views:login_ldap:info] [66] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:09:31] :: [views:login_ldap:info] [102] :: connection classique par agreau
+[INFO] :: [16/07/2015 05:21:49] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 05:23:13] :: [views:login_ldap:info] [42] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:23:23] :: [views:login_ldap:info] [42] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:23:28] :: [views:login_ldap:info] [66] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:23:29] :: [views:login_ldap:info] [102] :: connection classique par agreau
+[INFO] :: [16/07/2015 05:24:08] :: [views:login_ldap:info] [42] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:24:51] :: [views:login_ldap:info] [40] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:25:46] :: [views:login_ldap:info] [40] :: chargement de la page /ldap/ par AnonymousUser
+[ERROR] :: [16/07/2015 05:25:47] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 61, in login_ldap
+    raise_exceptions=False
+  File "D:\42_work\framework\venv\lib\site-packages\ldap3\core\connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[INFO] :: [16/07/2015 05:26:42] :: [views:login_ldap:info] [40] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:26:49] :: [views:login_ldap:info] [40] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:26:56] :: [views:login_ldap:info] [64] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:26:57] :: [views:login_ldap:info] [100] :: connection classique par agreau
+[INFO] :: [16/07/2015 05:26:57] :: [views:login_ldap:info] [40] :: chargement de la page /ldap/ par agreau
+[ERROR] :: [16/07/2015 05:26:57] :: [views:login_ldap:error] [42] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[INFO] :: [16/07/2015 05:26:57] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:27:01] :: [views:logout_user:info] [154] :: chargement de la page /profil/logout par agreau
+[INFO] :: [16/07/2015 05:27:02] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 05:27:35] :: [views:login_ldap:info] [40] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:27:41] :: [views:login_ldap:info] [40] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:27:44] :: [views:login_ldap:info] [64] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:27:45] :: [views:login_ldap:info] [100] :: connection classique par agreau
+[INFO] :: [16/07/2015 05:30:44] :: [views:login_ldap:info] [41] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:30:57] :: [views:login_ldap:info] [41] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:31:01] :: [views:login_ldap:info] [65] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:34:55] :: [views:login_ldap:info] [41] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:34:57] :: [views:select_login:info] [77] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [16/07/2015 05:34:59] :: [views:login_ldap:info] [41] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:35:05] :: [views:login_ldap:info] [41] :: chargement de la page /ldap/ par AnonymousUser
+[ERROR] :: [16/07/2015 05:35:06] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 62, in login_ldap
+    raise_exceptions=False
+  File "D:\42_work\framework\venv\lib\site-packages\ldap3\core\connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidDNSyntax
+[INFO] :: [16/07/2015 05:35:14] :: [views:select_login:info] [77] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [16/07/2015 05:35:17] :: [views:login_ldap:info] [41] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:35:23] :: [views:login_ldap:info] [41] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:35:25] :: [views:login_ldap:info] [65] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:36:54] :: [functions:create_user:info] [27] :: creation du compte AnonymousUser
+[INFO] :: [16/07/2015 05:36:54] :: [views:login_ldap:info] [101] :: connection classique par agreau
+[ERROR] :: [16/07/2015 05:36:54] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 223, in get_response
+    response = middleware_method(request, response)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\middleware.py", line 50, in process_response
+    request.session.save()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 58, in save
+    session_data=self.encode(self._get_session(no_load=must_create)),
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 88, in encode
+    serialized = self.serializer().dumps(session_dict)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\signing.py", line 90, in dumps
+    return json.dumps(obj, separators=(',', ':')).encode('latin-1')
+  File "C:\Python34\Lib\json\__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: {'givenName': [b'Andrei'], 'uid': [b'apop'], 'mobile': [b'0743421045'], 'sn': [b'POP'], 'alias': [b'andrei.pop@student.42.fr', b'apop@student.42.fr', b'pop.andrei@student.42.fr']} is not JSON serializable
+[INFO] :: [16/07/2015 05:41:35] :: [views:login_ldap:info] [58] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:41:43] :: [views:login_ldap:info] [58] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:41:50] :: [views:login_ldap:info] [82] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:41:51] :: [views:login_ldap:info] [118] :: connection classique par agreau
+[ERROR] :: [16/07/2015 05:41:51] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 122, in login_ldap
+    request.session['annuaire'] = json.dumps(c)
+  File "C:\Python34\Lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: Connection(server=Server(host='ldap.42.fr', port=636, use_ssl=True, tls=Tls(validate=0), get_info='ALL'), user='uid=agreau,ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr', password='mCKb0ss#123', auto_bind='NO_TLS', version=3, authentication='SIMPLE', client_strategy='SYNC', auto_referrals=True, check_names=True, read_only=False, lazy=False, raise_exceptions=False) is not JSON serializable
+[INFO] :: [16/07/2015 05:43:15] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:43:16] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:43:30] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:43:35] :: [views:login_ldap:info] [68] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:46:43] :: [views:select_login:info] [77] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [16/07/2015 05:46:46] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:46:58] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:47:03] :: [views:login_ldap:info] [68] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:47:17] :: [functions:create_user:info] [27] :: creation du compte AnonymousUser
+[INFO] :: [16/07/2015 05:47:18] :: [views:login_ldap:info] [103] :: connection classique par agreau
+[ERROR] :: [16/07/2015 05:47:18] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 107, in login_ldap
+    request.session['annuaire'] = json.dumps(c.reponse)
+AttributeError: 'Connection' object has no attribute 'reponse'
+[INFO] :: [16/07/2015 05:47:37] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:47:37] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:47:45] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:47:51] :: [views:login_ldap:info] [68] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:48:04] :: [views:login_ldap:info] [103] :: connection classique par agreau
+[ERROR] :: [16/07/2015 05:48:04] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 107, in login_ldap
+    request.session['annuaire'] = json.dumps(c.response)
+  File "C:\Python34\Lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: {'sn': ['42'], 'alias': ['intra@student.42.fr', '42.intra@student.42.fr', 'intra.42@student.42.fr'], 'givenName': ['Intra'], 'uid': ['intra']} is not JSON serializable
+[INFO] :: [16/07/2015 05:50:08] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:50:10] :: [views:select_login:info] [77] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [16/07/2015 05:50:11] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:50:18] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:50:23] :: [views:login_ldap:info] [68] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 05:50:38] :: [views:login_ldap:info] [104] :: connection classique par agreau
+[INFO] :: [16/07/2015 05:50:38] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par agreau
+[ERROR] :: [16/07/2015 05:50:38] :: [views:login_ldap:error] [46] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[INFO] :: [16/07/2015 05:50:38] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:50:58] :: [views:logout_user:info] [154] :: chargement de la page /profil/logout par agreau
+[INFO] :: [16/07/2015 05:50:58] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 05:53:53] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:54:19] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:54:23] :: [views:login_ldap:info] [68] :: connection ldap par AnonymousUser
+[INFO] :: [16/07/2015 05:54:26] :: [views:login_ldap:info] [104] :: connection classique par agreau
+[INFO] :: [16/07/2015 05:54:26] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par agreau
+[ERROR] :: [16/07/2015 05:54:26] :: [views:login_ldap:error] [46] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[INFO] :: [16/07/2015 05:54:26] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:55:32] :: [views:logout_user:info] [154] :: chargement de la page /profil/logout par agreau
+[INFO] :: [16/07/2015 05:55:32] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 05:58:12] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 05:58:15] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:58:21] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 05:58:26] :: [views:login_ldap:info] [68] :: connection ldap par AnonymousUser
+[INFO] :: [16/07/2015 05:58:26] :: [views:login_ldap:info] [104] :: connection classique par agreau
+[INFO] :: [16/07/2015 05:58:28] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par agreau
+[ERROR] :: [16/07/2015 05:58:28] :: [views:login_ldap:error] [46] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[INFO] :: [16/07/2015 05:58:28] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:58:56] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 05:59:23] :: [views:logout_user:info] [154] :: chargement de la page /profil/logout par agreau
+[INFO] :: [16/07/2015 05:59:23] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 05:59:26] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 06:00:03] :: [views:login_ldap:info] [44] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 06:00:07] :: [views:login_ldap:info] [68] :: connection ldap par AnonymousUser
+[INFO] :: [16/07/2015 06:00:08] :: [views:login_ldap:info] [103] :: connection classique par agreau
+[ERROR] :: [16/07/2015 06:00:10] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 120, in login_ldap
+    request.session['annuaire'] = json.dumps(c.response)
+  File "C:\Python34\Lib\json\__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: {'sn': ['POP'], 'alias': ['andrei.pop@student.42.fr', 'apop@student.42.fr', 'pop.andrei@student.42.fr'], 'mobile': ['0743421045'], 'uid': ['apop'], 'givenName': ['Andrei']} is not JSON serializable
+[INFO] :: [16/07/2015 06:07:02] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 06:07:02] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [16/07/2015 06:07:02] :: [views:login_user:error] [110] :: un admin a essaye de se connecter depuis le front comme un boulet
+[INFO] :: [16/07/2015 06:07:02] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [16/07/2015 06:07:02] :: [views:login_user:error] [113] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[INFO] :: [16/07/2015 06:07:03] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [16/07/2015 06:07:03] :: [views:login_user:info] [125] :: connection classique par user_test
+[INFO] :: [16/07/2015 06:07:03] :: [contact:display:info] [17] :: chargement de la page /contact par user_test
+[INFO] :: [16/07/2015 06:07:03] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [16/07/2015 06:07:03] :: [views:login_user:info] [125] :: connection classique par user_test
+[INFO] :: [16/07/2015 06:07:03] :: [views:display_all:info] [22] :: chargement de la page /forum/ par user_test
+[INFO] :: [16/07/2015 06:07:03] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [16/07/2015 06:07:03] :: [views:login_user:info] [125] :: connection classique par user_test
+[INFO] :: [16/07/2015 06:07:03] :: [home:index:info] [12] :: chargement de la page / par user_test
+[INFO] :: [16/07/2015 06:07:03] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [16/07/2015 06:07:03] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [16/07/2015 06:07:03] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [16/07/2015 06:07:03] :: [views:login_user:error] [140] :: connection avec un mauvais password par user_test
+[INFO] :: [16/07/2015 06:07:03] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [16/07/2015 06:07:03] :: [views:login_user:error] [106] :: connection avec un user qui n'existe pas parwrong_user
+[INFO] :: [16/07/2015 06:07:04] :: [views:register_user:info] [27] :: chargement de la page /profil/register par unittest_fr
+[ERROR] :: [16/07/2015 06:07:04] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[INFO] :: [16/07/2015 06:07:04] :: [contact:display:info] [17] :: chargement de la page /contact par unittest_fr
+[INFO] :: [16/07/2015 06:07:04] :: [views:register_user:info] [27] :: chargement de la page /profil/register par unittest_fr
+[ERROR] :: [16/07/2015 06:07:04] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[INFO] :: [16/07/2015 06:07:04] :: [home:index:info] [12] :: chargement de la page / par unittest_fr
+[INFO] :: [16/07/2015 06:07:04] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [16/07/2015 06:07:04] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: auth_user.first_name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 53, in register_user
+    form.cleaned_data['password']
+  File "D:\42_work\framework\app\profil\functions.py", line 20, in create_user
+    last_name=last_name
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\models.py", line 187, in create_user
+    **extra_fields)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\models.py", line 182, in _create_user
+    user.save(using=self._db)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\sql\compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: auth_user.first_name
+[INFO] :: [16/07/2015 06:07:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [16/07/2015 06:07:05] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/register
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: auth_user.first_name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\profil\views.py", line 53, in register_user
+    form.cleaned_data['password']
+  File "D:\42_work\framework\app\profil\functions.py", line 20, in create_user
+    last_name=last_name
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\models.py", line 187, in create_user
+    **extra_fields)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\models.py", line 182, in _create_user
+    user.save(using=self._db)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\base.py", line 710, in save
+    force_update=force_update, update_fields=update_fields)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\base.py", line 738, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\base.py", line 822, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\base.py", line 861, in _do_insert
+    using=using, raw=raw)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\models\sql\compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\42_work\framework\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: auth_user.first_name
+[INFO] :: [16/07/2015 06:07:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [16/07/2015 06:07:05] :: [views:register_user:error] [44] :: error register unittest_fr@unittest.fr already exist
+[INFO] :: [16/07/2015 06:07:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [16/07/2015 06:07:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [16/07/2015 06:07:05] :: [views:register_user:error] [41] :: error register unittest_fr already exist
+[INFO] :: [16/07/2015 06:07:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [16/07/2015 06:07:05] :: [views:register_user:error] [41] :: error register unittest_fr already exist
+[ERROR] :: [16/07/2015 06:07:05] :: [views:register_user:error] [44] :: error register unittest_fr@unittest.fr already exist
+[INFO] :: [16/07/2015 06:07:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser

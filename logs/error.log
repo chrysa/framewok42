@@ -1119,3 +1119,19 @@
 [16/07/2015 02:22:05] :: [views:login_ldap:error] [27] :: user deja connecte essai de charger de la page /profil/ldap par agreau
 [16/07/2015 02:25:41] :: [views:login_ldap:error] [28] :: user deja connecte essai de charger de la page /profil/ldap par agreau
 [16/07/2015 02:26:33] :: [views:login_ldap:error] [28] :: user deja connecte essai de charger de la page /profil/ldap par agreau
+[16/07/2015 04:55:42] :: [views:login_ldap:error] [52] :: user deja connecte essai de charger de la page /profil/ldap par agreau
+[16/07/2015 05:04:25] :: [views:login_ldap:error] [44] :: user deja connecte essai de charger de la page /profil/ldap par agreau
+[16/07/2015 05:26:57] :: [views:login_ldap:error] [42] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[16/07/2015 05:50:38] :: [views:login_ldap:error] [46] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[16/07/2015 05:54:26] :: [views:login_ldap:error] [46] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[16/07/2015 05:58:28] :: [views:login_ldap:error] [46] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[16/07/2015 06:07:02] :: [views:login_user:error] [110] :: un admin a essaye de se connecter depuis le front comme un boulet
+[16/07/2015 06:07:02] :: [views:login_user:error] [113] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[16/07/2015 06:07:03] :: [views:login_user:error] [140] :: connection avec un mauvais password par user_test
+[16/07/2015 06:07:03] :: [views:login_user:error] [106] :: connection avec un user qui n'existe pas parwrong_user
+[16/07/2015 06:07:04] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[16/07/2015 06:07:04] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[16/07/2015 06:07:05] :: [views:register_user:error] [44] :: error register unittest_fr@unittest.fr already exist
+[16/07/2015 06:07:05] :: [views:register_user:error] [41] :: error register unittest_fr already exist
+[16/07/2015 06:07:05] :: [views:register_user:error] [41] :: error register unittest_fr already exist
+[16/07/2015 06:07:05] :: [views:register_user:error] [44] :: error register unittest_fr@unittest.fr already exist

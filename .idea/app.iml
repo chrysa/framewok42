@@ -31,6 +31,7 @@
         <option value="$MODULE_DIR$/generate_logs/templates" />
         <option value="$MODULE_DIR$/issues/templates" />
         <option value="$MODULE_DIR$/profil/templates" />
+        <option value="$MODULE_DIR$/ldap42/templates" />
       </list>
     </option>
   </component>
