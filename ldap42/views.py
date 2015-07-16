@@ -1,6 +1,5 @@
 #-*-coding:utf-8 -*-
 import logging
-import json
 
 import ldap3
 from django.shortcuts import redirect
@@ -10,9 +9,8 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import hashers
 from django.contrib.auth import login
 from django.core.urlresolvers import reverse
-
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-
 from django.utils.translation import ugettext as _
 
 from contact import contact
@@ -25,21 +23,15 @@ logger_error = logging.getLogger('error')
 logger_info = logging.getLogger('info')
 
 
+@login_required
 def annuaire(request, filter):
-    if request.user.is_authenticated() and not request.session['ldap_connection']:
-        logger_error.error(l_fct.error_load_log_message(request))
-        return redirect(reverse('home'))
-    else:
-        annuaire = json.loads(request.session['annuaire'])
-        print(annuaire)
-        return render(
-            request,
-            "ldap42/annuaire.html",
-            {
-                'filter': filter if filter else 'uid',
-            }
-        )
-
+    return render(
+        request,
+        "ldap42/annuaire.html",
+        {
+            'filter': filter if filter else 'uid',
+        }
+    )
 
 
 def login_ldap(request):
@@ -106,20 +98,6 @@ def login_ldap(request):
                         translation.activate(userlang.lang)
                         request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
                         request.session['ldap_connection'] = True
-                        c.search(
-                            search_base='ou=people,dc=42,dc=fr',
-                            search_filter='(uid=a*)',
-                            search_scope=ldap3.SUBTREE,
-                            attributes=[
-                                'uid',
-                                'givenName',
-                                'mobile',
-                                'sn',
-                                'alias'
-                            ]
-                        )
-                        print(c.response)
-                        request.session['annuaire'] = json.dumps(c.response)
                         redir = reverse('home')
                         if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('login'):
                             redir = request.META['HTTP_REFERER']

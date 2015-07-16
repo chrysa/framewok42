@@ -1135,3 +1135,15 @@
 [16/07/2015 06:07:05] :: [views:register_user:error] [41] :: error register unittest_fr already exist
 [16/07/2015 06:07:05] :: [views:register_user:error] [41] :: error register unittest_fr already exist
 [16/07/2015 06:07:05] :: [views:register_user:error] [44] :: error register unittest_fr@unittest.fr already exist
+[16/07/2015 12:48:24] :: [views:login_ldap:error] [45] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[16/07/2015 13:03:20] :: [views:login_ldap:error] [45] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[16/07/2015 13:06:11] :: [views:login_ldap:error] [44] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[16/07/2015 13:06:14] :: [views:login_ldap:error] [44] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[16/07/2015 13:06:19] :: [views:login_ldap:error] [44] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[16/07/2015 13:06:22] :: [views:login_ldap:error] [44] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[16/07/2015 13:06:51] :: [views:login_ldap:error] [44] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[16/07/2015 13:07:22] :: [views:login_ldap:error] [40] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[16/07/2015 13:07:24] :: [views:login_ldap:error] [40] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[16/07/2015 13:08:01] :: [views:login_ldap:error] [40] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[16/07/2015 13:09:12] :: [views:login_ldap:error] [42] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[16/07/2015 13:09:16] :: [views:login_ldap:error] [42] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
