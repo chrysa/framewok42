@@ -2,8 +2,8 @@
 {% get_available_languages as LANGUAGES %}
 {% get_current_language as LANGUAGE_CODE %}
 {% get_language_info_list for LANGUAGES as languages %}
-    {% url 'annuaire' as url_annuaire %}
-    {% url 'annuaire' filter as url_annuaire_filter %}
+{% url 'annuaire' as url_annuaire %}
+{% url 'annuaire' filter as url_annuaire_filter %}
 {% url 'cat' cat.slug as url_cat %}
 {% url 'contact' as url_contact%}
 {% url 'create_topic' cat.slug as url_create_topic %}

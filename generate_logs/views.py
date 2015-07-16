@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from generate_logs.functions import info_load_log_message
 
 logger_info = logging.getLogger('info')
+
 @login_required
 def index(request):
     logger_info.info(info_load_log_message(request))
@@ -30,7 +31,6 @@ def display_log(request, log_type):
         log = []
         for ligne in open('logs/' + log_type + '.log'):
             split_ligne = ligne.split(' :: ')
-            len_line = len(split_ligne)
             if type_format == 'simple':
                 split_ligne[0] = split_ligne[0].replace('[', '').replace(']', '').split(' ')
                 split_ligne[1] = split_ligne[1].replace('\n', '').split(' par ')

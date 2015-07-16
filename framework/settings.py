@@ -11,6 +11,7 @@ EMAIL_HOST_USER = 'agreau@student.42.fr'
 EMAIL_HOST_PASSWORD = 'mCKb0ss#123'
 EMAIL_PORT = 468
 EMAIL_USE_TLS = True
+
 APPEND_SLASH = True
 
 LANGUAGE_CODE = 'fr-FR'
@@ -203,12 +204,12 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['console', 'complet', 'django'],
-            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO' if DEBUG else 'warning'),
-            'propagate': True,
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO' if DEBUG else 'WARNING'),
+            'propagate': False,
         },
         'critical': {
             'handlers': ['complet', 'critical'],
-            'propagate': False,
+            'propagate': True,
             'level': 'CRITICAL',
         },
         'error': {

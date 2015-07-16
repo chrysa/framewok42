@@ -1,7 +1,7 @@
 #-*-coding:utf-8 -*-
+import ldap3
 import logging
 
-import ldap3
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.utils import translation
@@ -15,9 +15,9 @@ from django.utils.translation import ugettext as _
 
 from contact import contact
 from generate_logs import functions as l_fct
+from ldap42.forms.LdapForm import LdapForm
 from profil.functions import create_user
 from profil.models import UserLang
-from profil.forms.LdapForm import LdapForm
 
 logger_error = logging.getLogger('error')
 logger_info = logging.getLogger('info')
@@ -41,6 +41,7 @@ def login_ldap(request):
         return redirect(reverse('home'))
     else:
         errors = {}
+        print(request.POST)
         form = LdapForm(request.POST)
         if request.method == 'POST':
             s = ldap3.Server(
@@ -52,7 +53,7 @@ def login_ldap(request):
                 s,
                 auto_bind=True,
                 client_strategy='SYNC',
-                user='uid={},ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr'.format(request.POST['login']),
+                user='uid={},ou={},ou={},ou=paris,ou=people,dc=42,dc=fr'.format(request.POST['login'], request.POST['pool_month'], request.POST['pool_year']),
                 password=request.POST['password'],
                 authentication=ldap3.SIMPLE,
                 check_names=True,
@@ -119,7 +120,7 @@ def login_ldap(request):
             form = LdapForm()
     return render(
         request,
-        "profil/login.html",
+        "ldap42/loginldap.html",
         {
             'form': form,
             'errors': errors,

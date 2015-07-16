@@ -3,11 +3,12 @@
 import logging
 
 from django.shortcuts import render
-from django.utils import translation
 
 from generate_logs.functions import info_load_log_message
 
+logger = logging.getLogger('info')
+
+
 def index(request):
-    logger = logging.getLogger('info')
     logger.info(info_load_log_message(request))
     return render(request, 'core/home.html', {})

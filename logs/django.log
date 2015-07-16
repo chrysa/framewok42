@@ -1104,3 +1104,735 @@ Traceback (most recent call last):
   File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
     (lookup_view_s, args, kwargs, len(patterns), patterns))
 django.core.urlresolvers.NoReverseMatch: Reverse for 'annuaire' with arguments '()' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<filter>.+)']
+[16/07/2015 13:52:53] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[16/07/2015 13:56:41] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 59, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[16/07/2015 17:13:34] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 59, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[16/07/2015 17:19:07] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 60, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[16/07/2015 17:19:28] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 60, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[16/07/2015 17:19:38] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 60, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[16/07/2015 17:20:06] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 60, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[16/07/2015 18:24:06] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 39, in login_ldap
+    print (datetime.now())
+AttributeError: 'module' object has no attribute 'now'
+[16/07/2015 18:44:26] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 45, in login_ldap
+    print(form)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 143, in __str__
+    return self.as_table()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 241, in _html_output
+    'field': six.text_type(bf),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:45:56] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+django.template.base.TemplateDoesNotExist: ldap/login.html
+[16/07/2015 18:46:18] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+django.template.base.TemplateDoesNotExist: ldap42/login.html
+[16/07/2015 18:46:31] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/encoding.py", line 90, in force_text
+    s = six.text_type(s)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:46:54] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/encoding.py", line 90, in force_text
+    s = six.text_type(s)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 143, in __str__
+    return self.as_table()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 241, in _html_output
+    'field': six.text_type(bf),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:48:00] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/encoding.py", line 90, in force_text
+    s = six.text_type(s)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:48:57] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/encoding.py", line 90, in force_text
+    s = six.text_type(s)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:49:52] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/encoding.py", line 90, in force_text
+    s = six.text_type(s)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:50:31] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/encoding.py", line 90, in force_text
+    s = six.text_type(s)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 143, in __str__
+    return self.as_table()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 241, in _html_output
+    'field': six.text_type(bf),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:50:41] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/encoding.py", line 90, in force_text
+    s = six.text_type(s)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 143, in __str__
+    return self.as_table()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 284, in as_table
+    errors_on_separate_row=False)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 241, in _html_output
+    'field': six.text_type(bf),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:51:06] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/encoding.py", line 90, in force_text
+    s = six.text_type(s)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:52:16] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/encoding.py", line 90, in force_text
+    s = six.text_type(s)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:53:29] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 127, in login_ldap
+    'formcontact': contact.ContactForm(),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 92, in render
+    output = force_text(output)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/encoding.py", line 90, in force_text
+    s = six.text_type(s)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/html.py", line 399, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 543, in __str__
+    return self.as_widget()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/forms.py", line 599, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 513, in render
+    options = self.render_options(choices, [value])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/forms/widgets.py", line 539, in render_options
+    for option_value, option_label in chain(self.choices, choices):
+TypeError: 'int' object is not iterable
+[16/07/2015 18:59:51] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 59, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[16/07/2015 19:00:39] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 59, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[16/07/2015 19:01:20] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 60, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[16/07/2015 19:02:07] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 60, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials
+[16/07/2015 19:02:54] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/untitled/ldap42/views.py", line 60, in login_ldap
+    raise_exceptions=False
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 289, in __init__
+    raise LDAPBindError(self.last_error)
+ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCredentials

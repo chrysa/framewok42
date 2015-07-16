@@ -21,12 +21,6 @@
             <li><a href="{%  url 'login' %}">{% trans 'login'|capfirst %}</a></li>
             <li class="active">{% trans 'connection_classique'|capfirst %}</li>
         </ol>
-    {% elif type == "ldap" %}
-        <ol class="breadcrumb">
-            <li><a href="{%  url 'home' %}">{% trans 'home'|capfirst %}</a></li>
-            <li><a href="{%  url 'login' %}">{% trans 'login'|capfirst %}</a></li>
-            <li class="active">{% trans 'connection_ldap'|capfirst %}</li>
-        </ol>
     {%  endif %}
     {%  if errors %}
         {%  for k, v in errors.items %}
@@ -50,31 +44,6 @@
             </div>
             {%  if errors.username %}
                 <p class="alert alert-danger" role="alert">{{ error.user|capfirst }}</p>
-            {%  endif %}
-            <div class="form-group">
-                <label for="id_password">{%  trans 'password'|capfirst %} </label>
-                {{ form.password }}
-            </div>
-            {%  if errors.pass %}
-                <p class="alert alert-danger" role="alert">{{ errors.pass|capfirst }}</p>
-            {%  endif %}
-            <div class="form-group">
-                <input type="submit" value="{% trans 'connexion'|capfirst %}" class="btn btn-primary btn-lg btn-block" />
-            </div>
-        </form>
-    {% elif type == "ldap" %}
-        {%  if errors.admin or errors.staff %}
-            <form action="{% url 'login_ldap' %}" method="post">
-        {%  else  %}
-            <form action="{% url 'login_ldap' %}?next={{ request.META.HTTP_REFERER }}" method="post">
-        {%  endif %}
-            {% csrf_token %}
-            <div class="form-group">
-                <label for="id_login">{{ form.login.label|capfirst }} </label>
-                {{ form.login }}
-            </div>
-            {%  if errors.username %}
-                <p class="alert alert-danger" role="alert">{{ errors.user|capfirst }}</p>
             {%  endif %}
             <div class="form-group">
                 <label for="id_password">{%  trans 'password'|capfirst %} </label>
