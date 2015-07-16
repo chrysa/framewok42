@@ -13,8 +13,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import ugettext as _
 
-import generate_logs.functions as l_fct
 from contact import contact
+from generate_logs import functions as l_fct
+from profil.functions import create_user
 from profil.models import UserLang
 from profil.forms.LdapForm import LdapForm
 from profil.forms.LogInForm import LogInForm
@@ -47,17 +48,12 @@ def register_user(request):
             if request.POST['password'] != request.POST['password_conf']:
                 errors['pass'] = _("error_password")
             if len(errors) == 0 and form.is_valid():
-                User.objects.create_user(
-                    username=form.cleaned_data['username'],
-                    email=form.cleaned_data['email'],
-                    password=form.cleaned_data['password']
+                create_user(
+                    request,
+                    form.cleaned_data['username'],
+                    form.cleaned_data['email'],
+                    form.cleaned_data['password']
                 )
-                user = authenticate(
-                    username=form.cleaned_data['username'],
-                    password=form.cleaned_data['password'],
-                )
-                UserLang(user=user, lang=translation.get_language()).save()
-                logger_info.info(l_fct.info_register_log_message(request))
                 redir = reverse('home')
                 if 'next' in request.GET and request.GET['next'] != reverse('register'):
                     redir = request.GET['next']
@@ -126,6 +122,7 @@ def login_user(request):
                                 logger_info.info(l_fct.info_login_class_log_message(request))
                                 translation.activate(userlang.lang)
                                 request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
+                                request.session['ldap_connection'] = False
                                 redir = reverse('home')
                                 if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('register'):
                                     redir = request.META['HTTP_REFERER']
@@ -163,38 +160,76 @@ def login_ldap(request):
         errors = {}
         form = LdapForm(request.POST)
         if request.method == 'POST':
-            try:
-                s = ldap3.Server(
-                    'ldaps://ldap.42.fr',
-                    port=636,
-                    get_info=ldap3.ALL
+            s = ldap3.Server(
+                'ldaps://ldap.42.fr',
+                port=636,
+                get_info=ldap3.ALL
+            )
+            c = ldap3.Connection(
+                s,
+                auto_bind=True,
+                client_strategy='SYNC',
+                user='uid={},ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr'.format(request.POST['login']),
+                password=request.POST['password'],
+                authentication=ldap3.SIMPLE,
+                check_names=True,
+                raise_exceptions=False
+            )
+            if c.bind():
+                logger_info.info(l_fct.info_login_class_log_message(request))
+                c.search(
+                    search_base='ou=people,dc=42,dc=fr',
+                    search_filter='(uid={})'.format(request.POST['login']),
+                    search_scope=ldap3.SUBTREE,
+                    attributes=[
+                        'uid',
+                        'givenName',
+                        'jpegPhoto',
+                        'mobile',
+                        'sn',
+                        'alias'
+                    ]
                 )
-                c = ldap3.Connection(
-                    s,
-                    auto_bind=True,
-                    client_strategy='SYNC',
-                    user='uid={},ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr'.format(request.POST['login']),
-                    password=request.POST['password'],
-                    authentication=ldap3.SIMPLE,
-                    check_names=True,
-                    raise_exceptions=False
-                )
-                if c.bind():
-                    logger_info.info(l_fct.info_login_class_log_message(request))
-                    c.search(
-                        search_base='ou=people,dc=42,dc=fr',
-                        search_filter='(uid={})'.format(request.POST['login']),
-                        search_scope=ldap3.SUBTREE,
-                        attributes=[
-                            'sn',
-                            'objectClass',
-                        ]
+                response = c.response
+                u = User.objects.filter(username=response[0]['attributes']['uid'][0])
+                if len(u) == 0 :
+                    create_user(
+                        request,
+                        response[0]['attributes']['uid'][0],
+                        response[0]['attributes']['alias'][0],
+                        request.POST['password'],
+                        response[0]['attributes']['givenName'][0],
+                        response[0]['attributes']['sn'][0],
                     )
-                    response = c.response
-                    for r in response:
-                        print(r['attributes'])
-                    c.unbind()
-            except:
+                else:
+                    u[0].set_password(request.POST['password']).save()
+                user = authenticate(
+                    username=request.POST['login'],
+                    password=request.POST['password'],
+                )
+                if user is not None:
+                    if user.is_active:
+                        login(request, user)
+                        userlang = UserLang.objects.get(user=request.user)
+                        logger_info.info(l_fct.info_login_class_log_message(request))
+                        translation.activate(userlang.lang)
+                        request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
+                        request.session['ldap_connection'] = True
+                        redir = reverse('home')
+                        if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('register'):
+                            redir = request.META['HTTP_REFERER']
+                        return redirect(
+                            redir,
+                            permanent=True
+                        )
+                    else:
+                        logger_error.error(l_fct.error_login_log_message(request))
+                        errors['unknow'] = _("authenticate error")
+                else:
+                    logger_error.error(l_fct.error_login_wrong_password_log_message(request))
+                    errors['pass'] = _("error_wrong_password")
+                c.unbind()
+            else:
                 logger_error.info(l_fct.error_ldap_log_message(request, "bind"))
                 errors['unknow'] = _("bind_error")
         else:

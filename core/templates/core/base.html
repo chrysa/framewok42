@@ -47,37 +47,32 @@
                     </button>
                     <a class="navbar-brand" href="{% url 'home' %}">{% trans 'home'|capfirst %}</a>
                 </div>
-                {% url 'cat' cat as url_cat %}
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    {% if user.is_authenticated %}
-                        <ul class="nav navbar-nav">
-                            <li
-                                {% if request.path == url_forum or request.path == url_cat or request.path == url_create_topic or request.path == url_edit_topic or request.path == url_edit_post or request.path == url_send_reply or request.path == url_topic_cat %}
-                                    class="active"
-                                {% endif %}
-                            ><a href="{{ url_forum }}">{% trans 'forum'|capfirst %}</a></li>
-                            <li
-                                {% if request.path == url_issue or request.path == url_new_issue or request.path == url_view_issue  or request.path == url_respond_issue %}
-                                    class="active"
-                                {% endif %}
-                            ><a href="{{ url_issue }}">{% trans 'issue'|capfirst %}</a></li>
-                            {%  if request.user.is_superuser %}
-                                <li
-                                    {% if request.path == url_log or request.path == url_view_log %}
-                                        class="active"
-                                    {% endif %}
-                                ><a href="{{ url_log }}">{% trans 'log'|capfirst %}</a></li>
-                            {%  endif  %}
-                        </ul>
-                    {% endif %}
                     <ul class="nav navbar-nav navbar-right">
                         {% if user.is_authenticated %}
                             <li role="presentation" {% if request.path == url_login_classic or request.path == url_login_ldap %} class="dropdown active" {% else %}class="dropdown"{% endif %}>
                                 <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-                                  {{ user }}
-                                  <span class="caret"></span>
+                                    {{ request.user.username }}
+                                    <span class="caret"></span>
                                 </a>
                                 <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+                                    {%  if request.session.ldap_connection %}
+                                        <li>{% trans 'annuaire'|capfirst %}</li>
+                                    {%  endif %}
+                                    <li {% if request.path == url_contact %} class="active" {% endif %}>
+                                        <a href="{{ url_contact }}">{% trans "contact" %}</a>
+                                    </li>
+                                    <li {% if request.path == url_forum or request.path == url_cat or request.path == url_create_topic or request.path == url_edit_topic or request.path == url_edit_post or request.path == url_send_reply or request.path == url_topic_cat %}
+                                        class="active"
+                                    {% endif %}><a href="{{ url_forum }}">{% trans 'forum'|capfirst %}</a></li>
+                                    <li {% if request.path == url_issue or request.path == url_new_issue or request.path == url_view_issue  or request.path == url_respond_issue %}
+                                        class="active"
+                                    {% endif %}><a href="{{ url_issue }}">{% trans 'issue'|capfirst %}</a></li>
+                                    {%  if request.user.is_superuser %}
+                                        <li {% if request.path == url_log or request.path == url_view_log %}
+                                            class="active"
+                                        {% endif %}><a href="{{ url_log }}">{% trans 'log'|capfirst %}</a></li>
+                                    {%  endif  %}
                                   <li><a href="{% url 'logout' %}">{% trans 'logout'|capfirst %}</a</li>
                                 </ul>
                             </li>
@@ -94,10 +89,10 @@
                                   <li><a href="{{ url_login_ldap }}">{% trans 'login_ldap'|capfirst %}</a></li>
                                 </ul>
                             </li>
+                            <li {% if request.path == url_contact %} class="active" {% endif %}>
+                                <a href="{{ url_contact }}">{% trans "contact" %}</a>
+                            </li>
                         {% endif %}
-                        <li {% if request.path == url_contact %} class="active" {% endif %}>
-                            <a href="{{ url_contact }}">{% trans "contact" %}</a>
-                        </li>
                         <li role="presentation" class="dropdown">
                             <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
                               {% trans 'change_lang'|capfirst %}
