@@ -1,5 +1,4 @@
 # ajouter test de gestion de langue
-# tester ldap
 
 from django.test import Client
 from django.test import TestCase

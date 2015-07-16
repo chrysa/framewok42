@@ -4569,3 +4569,69 @@ Traceback (most recent call last):
 django.template.base.TemplateSyntaxError: Could not parse the remainder: '(url_forum' from '(url_forum'
 [INFO] :: [16/07/2015 02:53:47] :: [home:index:info] [12] :: chargement de la page / par admin
 [WARNING] :: [16/07/2015 02:54:30] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[INFO] :: [16/07/2015 02:12:56] :: [home:index:info] [12] :: chargement de la page / par admin
+[WARNING] :: [16/07/2015 02:12:58] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[INFO] :: [16/07/2015 02:13:36] :: [views:logout_user:info] [251] :: chargement de la page /profil/logout par admin
+[INFO] :: [16/07/2015 02:13:37] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 02:13:41] :: [views:login_ldap:info] [155] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 02:13:49] :: [views:login_ldap:info] [155] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 02:13:54] :: [views:login_ldap:info] [179] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 02:13:55] :: [functions:create_user:info] [27] :: creation du compte AnonymousUser
+[INFO] :: [16/07/2015 02:13:55] :: [views:login_ldap:info] [214] :: connection classique par agreau
+[INFO] :: [16/07/2015 02:13:55] :: [views:login_ldap:info] [155] :: chargement de la page /profil/ldap par agreau
+[ERROR] :: [16/07/2015 02:13:55] :: [views:login_ldap:error] [157] :: user deja connecte essai de charger de la page /profil/ldap par agreau
+[INFO] :: [16/07/2015 02:13:55] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 02:14:06] :: [views:logout_user:info] [251] :: chargement de la page /profil/logout par agreau
+[INFO] :: [16/07/2015 02:14:06] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 02:14:08] :: [contact:display:info] [17] :: chargement de la page /contact par AnonymousUser
+[INFO] :: [16/07/2015 02:14:10] :: [views:login_ldap:info] [155] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 02:14:12] :: [views:select_login:info] [79] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [16/07/2015 02:18:20] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 02:18:24] :: [views:login_ldap:info] [25] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 02:18:31] :: [views:login_ldap:info] [25] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 02:18:34] :: [views:login_ldap:info] [49] :: connection classique par AnonymousUser
+[ERROR] :: [16/07/2015 02:18:34] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/ldap
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 75, in login_ldap
+    u[0].set_password(request.POST['password']).save()
+AttributeError: 'NoneType' object has no attribute 'save'
+[INFO] :: [16/07/2015 02:21:27] :: [views:login_ldap:info] [25] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 02:21:29] :: [views:login_ldap:info] [49] :: connection classique par AnonymousUser
+[ERROR] :: [16/07/2015 02:21:29] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/ldap
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 76, in login_ldap
+    u[0].set_password(request.POST['password']).save()
+AttributeError: 'NoneType' object has no attribute 'save'
+[INFO] :: [16/07/2015 02:22:03] :: [views:login_ldap:info] [25] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 02:22:04] :: [views:login_ldap:info] [49] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 02:22:05] :: [views:login_ldap:info] [85] :: connection classique par agreau
+[INFO] :: [16/07/2015 02:22:05] :: [views:login_ldap:info] [25] :: chargement de la page /profil/ldap par agreau
+[ERROR] :: [16/07/2015 02:22:05] :: [views:login_ldap:error] [27] :: user deja connecte essai de charger de la page /profil/ldap par agreau
+[INFO] :: [16/07/2015 02:22:05] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 02:25:41] :: [views:login_ldap:info] [26] :: chargement de la page /profil/ldap par agreau
+[ERROR] :: [16/07/2015 02:25:41] :: [views:login_ldap:error] [28] :: user deja connecte essai de charger de la page /profil/ldap par agreau
+[INFO] :: [16/07/2015 02:25:41] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 02:25:44] :: [views:logout_user:info] [154] :: chargement de la page /profil/logout par agreau
+[INFO] :: [16/07/2015 02:25:44] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser
+[INFO] :: [16/07/2015 02:25:51] :: [views:login_ldap:info] [26] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 02:25:57] :: [views:login_ldap:info] [26] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 02:26:00] :: [views:login_ldap:info] [50] :: connection classique par AnonymousUser
+[ERROR] :: [16/07/2015 02:26:00] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/ldap
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 76, in login_ldap
+    if not hashers.check_password(request.POST['password'], u[0]['password']):
+TypeError: 'User' object is not subscriptable
+[INFO] :: [16/07/2015 02:26:31] :: [views:login_ldap:info] [26] :: chargement de la page /profil/ldap par AnonymousUser
+[INFO] :: [16/07/2015 02:26:32] :: [views:login_ldap:info] [50] :: connection classique par AnonymousUser
+[INFO] :: [16/07/2015 02:26:33] :: [views:login_ldap:info] [87] :: connection classique par agreau
+[INFO] :: [16/07/2015 02:26:33] :: [views:login_ldap:info] [26] :: chargement de la page /profil/ldap par agreau
+[ERROR] :: [16/07/2015 02:26:33] :: [views:login_ldap:error] [28] :: user deja connecte essai de charger de la page /profil/ldap par agreau
+[INFO] :: [16/07/2015 02:26:33] :: [home:index:info] [12] :: chargement de la page / par agreau
+[INFO] :: [16/07/2015 02:26:38] :: [views:logout_user:info] [154] :: chargement de la page /profil/logout par agreau
+[INFO] :: [16/07/2015 02:26:39] :: [home:index:info] [12] :: chargement de la page / par AnonymousUser

@@ -503,3 +503,25 @@ Traceback (most recent call last):
     "from '%s'" % (token[upto:], token))
 django.template.base.TemplateSyntaxError: Could not parse the remainder: '(url_forum' from '(url_forum'
 [16/07/2015 02:54:30] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[16/07/2015 02:12:58] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[16/07/2015 02:18:34] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/ldap
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 75, in login_ldap
+    u[0].set_password(request.POST['password']).save()
+AttributeError: 'NoneType' object has no attribute 'save'
+[16/07/2015 02:21:29] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/ldap
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 76, in login_ldap
+    u[0].set_password(request.POST['password']).save()
+AttributeError: 'NoneType' object has no attribute 'save'
+[16/07/2015 02:26:00] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /profil/ldap
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 76, in login_ldap
+    if not hashers.check_password(request.POST['password'], u[0]['password']):
+TypeError: 'User' object is not subscriptable

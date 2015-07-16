@@ -15,4 +15,5 @@ urlpatterns = patterns('',
                        url(r'^log/', include('generate_logs.urls')),
                        url(r'^i18n/', include('django.conf.urls.i18n')),
                        url(r'^profil/', include('profil.urls')),
+                       url(r'^profil/', include('ldap42.urls')),
                        ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

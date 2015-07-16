@@ -41,8 +41,9 @@ APP_PERSO = (
     'contact',
     'core',
     'forum',
-    'issues',
     'generate_logs',
+    'issues',
+    'ldap42',
     'profil',
 )
 
