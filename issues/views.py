@@ -17,6 +17,7 @@ from issues.forms.SubmitIssue import IssueForm
 
 logger_info = logging.getLogger('info')
 
+
 @login_required
 def index(request):
     logger_info.info(info_load_log_message(request))
@@ -107,6 +108,7 @@ def view_issue(request, issue):
         'issue': Issue.objects.get(slug=issue),
     }
     return render(request, 'issues/issue.html', context)
+
 
 @login_required
 def reopen_issue(request, issue):

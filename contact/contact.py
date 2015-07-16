@@ -13,6 +13,7 @@ from contact.forms.ContactFrom import ContactForm
 logger_info = logging.getLogger('info')
 logger_error = logging.getLogger('error')
 
+
 def display(request):
     logger_info.info(info_load_log_message(request))
     context = {
@@ -35,6 +36,7 @@ def send_contact(request):
         else:
             logger_error.error(_("error_contact") + request.user)
     return redirect(
-        request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
+        request.META[
+            'HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
         permanent=True
     )

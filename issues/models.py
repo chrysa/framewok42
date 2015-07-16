@@ -4,6 +4,7 @@ from django.utils.translation import ugettext as _
 
 from autoslug import AutoSlugField
 
+
 class Issue(models.Model):
     Autor = models.ForeignKey(User)
     Assign = models.ForeignKey(

@@ -11,6 +11,7 @@ from profil.models import UserLang
 logger_error = logging.getLogger('error')
 logger_info = logging.getLogger('info')
 
+
 def create_user(request, username, email, password, first_name=None, last_name=None):
     User.objects.create_user(
         username=username,

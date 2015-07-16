@@ -28,7 +28,8 @@ def register_user(request):
     if request.user.is_authenticated():
         logger_error.error(l_fct.error_load_log_message(request))
         return redirect(
-            request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
+            request.META[
+                'HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
             permanent=True
         )
     else:
@@ -94,7 +95,8 @@ def login_user(request):
     if request.user.is_authenticated():
         logger_error.error(l_fct.error_load_log_message(request))
         return redirect(
-            request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
+            request.META[
+                'HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home'),
             permanent=True
         )
     else:
@@ -103,14 +105,17 @@ def login_user(request):
         if request.method == 'POST' and len(request.POST):
             user_exist = User.objects.filter(username=request.POST['username'])
             if len(user_exist) == 0:
-                logger_error.error(l_fct.error_inexistant_user_log_message(request))
+                logger_error.error(
+                    l_fct.error_inexistant_user_log_message(request))
                 errors['user'] = _("error_user_not_exist")
             else:
                 if user_exist[0].is_superuser:
-                    logger_error.error(l_fct.error_login_admin_front_log_message())
+                    logger_error.error(
+                        l_fct.error_login_admin_front_log_message())
                     errors['admin'] = _("admin_cant_log_here")
                 elif user_exist[0].is_staff:
-                    logger_error.error(l_fct.error_login_staff_front_log_message())
+                    logger_error.error(
+                        l_fct.error_login_staff_front_log_message())
                     errors['staff'] = _("staff_cant_log_here")
                 if len(errors) == 0:
                     if 'user' not in errors:
@@ -121,10 +126,13 @@ def login_user(request):
                         if user is not None:
                             if user.is_active:
                                 login(request, user)
-                                userlang = UserLang.objects.get(user=request.user)
-                                logger_info.info(l_fct.info_login_class_log_message(request))
+                                userlang = UserLang.objects.get(
+                                    user=request.user)
+                                logger_info.info(
+                                    l_fct.info_login_class_log_message(request))
                                 translation.activate(userlang.lang)
-                                request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
+                                request.session[
+                                    translation.LANGUAGE_SESSION_KEY] = userlang.lang
                                 request.session['ldap_connection'] = False
                                 redir = reverse('home')
                                 if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('register'):
@@ -134,13 +142,16 @@ def login_user(request):
                                     permanent=True
                                 )
                             else:
-                                logger_error.error(l_fct.error_login_log_message(request))
+                                logger_error.error(
+                                    l_fct.error_login_log_message(request))
                                 errors['unknow'] = _("authenticate error")
                         else:
-                            logger_error.error(l_fct.error_login_wrong_password_log_message(request))
+                            logger_error.error(
+                                l_fct.error_login_wrong_password_log_message(request))
                             errors['pass'] = _("error_wrong_password")
                     else:
-                        logger_error.error(l_fct.error_login_unknow_log_message(request))
+                        logger_error.error(
+                            l_fct.error_login_unknow_log_message(request))
                         errors['unknow'] = _("unknow error")
     return render(
         request,
@@ -163,7 +174,8 @@ def logout_user(request):
         if userlang.lang is not cur_language:
             userlang.lang = cur_language
             userlang.save()
-    redir = request.META['HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home')
+    redir = request.META[
+        'HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home')
     if logout(request):
         logger_info.info(l_fct.info_logout_log_message(request))
     else:

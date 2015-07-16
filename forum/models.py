@@ -17,7 +17,8 @@ class ForumCat(models.Model):
 
 
 class ForumTopic(models.Model):
-    CatParent = models.ForeignKey(ForumCat, related_name=_("categorie_parente"))
+    CatParent = models.ForeignKey(
+        ForumCat, related_name=_("categorie_parente"))
     Title = models.CharField(max_length=100, default=_('categorie'))
     slug = AutoSlugField(populate_from='Title')
     Autor = models.ForeignKey(User)

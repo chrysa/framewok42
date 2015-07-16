@@ -44,7 +44,7 @@ class LdapForm(forms.Form, forms.ModelForm):
         ],
         widget=forms.Select(
             attrs={
-                'class':'selector',
+                'class': 'selector',
                 'class': "form-control",
                 'placeholder': _("pool_month")
             }
@@ -63,7 +63,7 @@ class LdapForm(forms.Form, forms.ModelForm):
         choices=years,
         widget=forms.Select(
             attrs={
-                'class':'selector',
+                'class': 'selector',
                 'class': "form-control",
                 'placeholder': _("pool_year")
             }

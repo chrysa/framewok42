@@ -6386,3 +6386,234 @@ ldap3.core.exceptions.LDAPBindError: automatic bind not successful - invalidCred
 [INFO] :: [16/07/2015 19:03:26] :: [views:logout_user:info] [159] :: chargement de la page /profil/logout par mguillau
 [INFO] :: [16/07/2015 19:03:26] :: [home:index:info] [13] :: chargement de la page / par AnonymousUser
 [INFO] :: [16/07/2015 19:03:30] :: [home:index:info] [13] :: chargement de la page / par admin
+[INFO] :: [16/07/2015 23:54:51] :: [home:index:info] [13] :: chargement de la page / par AnonymousUser
+[WARNING] :: [16/07/2015 23:54:52] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[INFO] :: [16/07/2015 23:56:23] :: [views:login_ldap:info] [38] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 23:58:14] :: [views:login_ldap:info] [38] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 23:58:33] :: [views:login_ldap:info] [38] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 23:59:23] :: [views:login_ldap:info] [38] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [16/07/2015 23:59:48] :: [views:login_ldap:info] [64] :: connection ldap par AnonymousUser
+[INFO] :: [16/07/2015 23:59:48] :: [functions:create_user:info] [27] :: creation du compte AnonymousUser
+[INFO] :: [16/07/2015 23:59:49] :: [views:login_ldap:info] [99] :: connection classique par agreau
+[INFO] :: [16/07/2015 23:59:49] :: [views:login_ldap:info] [38] :: chargement de la page /ldap/ par agreau
+[ERROR] :: [16/07/2015 23:59:49] :: [views:login_ldap:error] [40] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[INFO] :: [16/07/2015 23:59:49] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:02:16] :: [views:login_ldap:info] [57] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:02:16] :: [views:login_ldap:error] [59] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:02:16] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:02:31] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:02:34] :: [views:login_ldap:info] [56] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:02:34] :: [views:login_ldap:error] [58] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:02:34] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:02:36] :: [views:login_ldap:info] [56] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:02:36] :: [views:login_ldap:error] [58] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:02:36] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:02:51] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:03:18] :: [views:login_ldap:info] [60] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:03:18] :: [views:login_ldap:error] [62] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:03:18] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:03:27] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:03:29] :: [views:login_ldap:info] [60] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:03:29] :: [views:login_ldap:error] [62] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:03:29] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:05:33] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:05:35] :: [views:login_ldap:info] [60] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:05:35] :: [views:login_ldap:error] [62] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:05:35] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:05:50] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:05:52] :: [views:login_ldap:info] [60] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:05:52] :: [views:login_ldap:error] [62] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:05:52] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:06:01] :: [views:login_ldap:info] [60] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:06:01] :: [views:login_ldap:error] [62] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:06:01] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:19:46] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:19:48] :: [views:login_ldap:info] [60] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:19:48] :: [views:login_ldap:error] [62] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:19:48] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:19:53] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:19:55] :: [views:login_ldap:info] [60] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:19:55] :: [views:login_ldap:error] [62] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:19:55] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:22:27] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:22:30] :: [views:login_ldap:info] [60] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:22:30] :: [views:login_ldap:error] [62] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:22:30] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:22:51] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:22:54] :: [views:login_ldap:info] [61] :: chargement de la page /ldap/annuaire par agreau
+[ERROR] :: [17/07/2015 00:22:54] :: [views:login_ldap:error] [63] :: user deja connecte essai de charger de la page /ldap/annuaire par agreau
+[INFO] :: [17/07/2015 00:22:54] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:23:19] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:23:22] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:23:39] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:23:42] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:24:54] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:24:57] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:26:27] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:26:30] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:28:08] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:28:11] :: [views:ldap_annuaire:info] [29] :: chargement de la page /ldap/annuaire/ par agreau
+[ERROR] :: [17/07/2015 00:28:11] :: [views:ldap_annuaire:error] [32] :: user deja connecte essai de charger de la page /ldap/annuaire/ par agreau
+[INFO] :: [17/07/2015 00:28:11] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:40:01] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:40:04] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:40:24] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:40:26] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:40:53] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:40:55] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:40:57] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:41:03] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:41:16] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:41:53] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:41:55] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:42:07] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:42:09] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:42:10] :: [views:logout_user:info] [159] :: chargement de la page /profil/logout par agreau
+[INFO] :: [17/07/2015 00:42:11] :: [home:index:info] [13] :: chargement de la page / par AnonymousUser
+[INFO] :: [17/07/2015 00:42:20] :: [views:login_ldap:info] [55] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:42:30] :: [views:login_ldap:info] [55] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:42:45] :: [views:login_ldap:info] [80] :: connection ldap par AnonymousUser
+[ERROR] :: [17/07/2015 00:42:45] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 113, in login_ldap
+    login(request, user)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\__init__.py", line 110, in login
+    request.session.cycle_key()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 285, in cycle_key
+    self.create()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 41, in create
+    self.save(must_create=True)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 58, in save
+    session_data=self.encode(self._get_session(no_load=must_create)),
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 88, in encode
+    serialized = self.serializer().dumps(session_dict)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\signing.py", line 90, in dumps
+    return json.dumps(obj, separators=(',', ':')).encode('latin-1')
+  File "C:\Python34\Lib\json\__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: Connection(server=Server(host='ldap.42.fr', port=636, use_ssl=True, tls=Tls(validate=0), get_info='ALL'), user='uid=agreau,ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr', password='mCKb0ss#123', auto_bind='NO_TLS', version=3, authentication='SIMPLE', client_strategy='SYNC', auto_referrals=True, check_names=True, read_only=False, lazy=False, raise_exceptions=False) is not JSON serializable
+[INFO] :: [17/07/2015 00:43:26] :: [views:login_ldap:info] [55] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:43:35] :: [views:login_ldap:info] [55] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:43:48] :: [views:login_ldap:info] [81] :: connection ldap par AnonymousUser
+[ERROR] :: [17/07/2015 00:43:48] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 114, in login_ldap
+    login(request, user)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\__init__.py", line 110, in login
+    request.session.cycle_key()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 285, in cycle_key
+    self.create()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 41, in create
+    self.save(must_create=True)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 58, in save
+    session_data=self.encode(self._get_session(no_load=must_create)),
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 88, in encode
+    serialized = self.serializer().dumps(session_dict)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\signing.py", line 90, in dumps
+    return json.dumps(obj, separators=(',', ':')).encode('latin-1')
+  File "C:\Python34\Lib\json\__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: Connection(server=Server(host='ldap.42.fr', port=636, use_ssl=True, tls=Tls(validate=0), get_info='ALL'), user='uid=agreau,ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr', password='mCKb0ss#123', auto_bind='NO_TLS', version=3, authentication='SIMPLE', client_strategy='SYNC', auto_referrals=True, check_names=True, read_only=False, lazy=False, raise_exceptions=False) is not JSON serializable
+[INFO] :: [17/07/2015 00:45:54] :: [views:login_ldap:info] [55] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:46:08] :: [views:login_ldap:info] [55] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:46:23] :: [views:login_ldap:info] [81] :: connection ldap par AnonymousUser
+[ERROR] :: [17/07/2015 00:46:24] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 114, in login_ldap
+    login(request, user)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\__init__.py", line 110, in login
+    request.session.cycle_key()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 285, in cycle_key
+    self.create()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 41, in create
+    self.save(must_create=True)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 58, in save
+    session_data=self.encode(self._get_session(no_load=must_create)),
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 88, in encode
+    serialized = self.serializer().dumps(session_dict)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\signing.py", line 90, in dumps
+    return json.dumps(obj, separators=(',', ':')).encode('latin-1')
+  File "C:\Python34\Lib\json\__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: Connection(server=Server(host='ldap.42.fr', port=636, use_ssl=True, tls=Tls(validate=0), get_info='ALL'), user='uid=agreau,ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr', password='mCKb0ss#123', auto_bind='NO_TLS', version=3, authentication='SIMPLE', client_strategy='SYNC', auto_referrals=True, check_names=True, read_only=False, lazy=False, raise_exceptions=False) is not JSON serializable
+[INFO] :: [17/07/2015 00:47:24] :: [views:login_ldap:info] [55] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:47:37] :: [views:login_ldap:info] [55] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:47:50] :: [views:login_ldap:info] [81] :: connection ldap par AnonymousUser
+[ERROR] :: [17/07/2015 00:47:50] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 114, in login_ldap
+    login(request, user)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\__init__.py", line 110, in login
+    request.session.cycle_key()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 285, in cycle_key
+    self.create()
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 41, in create
+    self.save(must_create=True)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 58, in save
+    session_data=self.encode(self._get_session(no_load=must_create)),
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 88, in encode
+    serialized = self.serializer().dumps(session_dict)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\signing.py", line 90, in dumps
+    return json.dumps(obj, separators=(',', ':')).encode('latin-1')
+  File "C:\Python34\Lib\json\__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "C:\Python34\Lib\json\encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python34\Lib\json\encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python34\Lib\json\encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: Connection(server=Server(host='ldap.42.fr', port=636, use_ssl=True, tls=Tls(validate=0), get_info='ALL'), user='uid=agreau,ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr', password='mCKb0ss#123', auto_bind='NO_TLS', version=3, authentication='SIMPLE', client_strategy='SYNC', auto_referrals=True, check_names=True, read_only=False, lazy=False, raise_exceptions=False) is not JSON serializable
+[INFO] :: [17/07/2015 00:52:47] :: [views:login_ldap:info] [112] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:52:56] :: [views:login_ldap:info] [132] :: connection ldap par AnonymousUser
+[INFO] :: [17/07/2015 00:52:57] :: [views:login_ldap:info] [167] :: connection classique par agreau
+[INFO] :: [17/07/2015 00:52:57] :: [views:login_ldap:info] [112] :: chargement de la page /ldap/ par agreau
+[ERROR] :: [17/07/2015 00:52:57] :: [views:login_ldap:error] [114] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[INFO] :: [17/07/2015 00:52:57] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:53:03] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:53:18] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:53:30] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:53:33] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:54:12] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:54:16] :: [views:logout_user:info] [159] :: chargement de la page /profil/logout par agreau
+[INFO] :: [17/07/2015 00:54:16] :: [home:index:info] [13] :: chargement de la page / par AnonymousUser
+[INFO] :: [17/07/2015 00:54:18] :: [views:login_ldap:info] [113] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:54:28] :: [views:login_ldap:info] [113] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 00:54:41] :: [views:login_ldap:info] [133] :: connection ldap par AnonymousUser
+[INFO] :: [17/07/2015 00:54:41] :: [views:login_ldap:info] [168] :: connection classique par agreau
+[INFO] :: [17/07/2015 00:54:41] :: [views:login_ldap:info] [113] :: chargement de la page /ldap/ par agreau
+[ERROR] :: [17/07/2015 00:54:41] :: [views:login_ldap:error] [115] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[INFO] :: [17/07/2015 00:54:41] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:55:04] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:56:36] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:57:44] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:59:23] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:59:36] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:59:47] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 00:59:53] :: [home:index:info] [13] :: chargement de la page / par agreau

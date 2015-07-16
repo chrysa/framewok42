@@ -5,5 +5,6 @@ from contact import contact
 
 urlpatterns = patterns('',
                        url(r'^contact', contact.display, name="contact"),
-                       url(r'^send_contact', contact.send_contact, name="send_contact"),
+                       url(r'^send_contact', contact.send_contact,
+                           name="send_contact"),
                        )

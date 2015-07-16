@@ -4,6 +4,7 @@ from django.utils.translation import ugettext as _
 
 from issues.models import Issue
 
+
 class IssueForm(forms.Form):
 
     class Meta:

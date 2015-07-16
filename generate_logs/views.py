@@ -10,6 +10,7 @@ from generate_logs.functions import info_load_log_message
 
 logger_info = logging.getLogger('info')
 
+
 @login_required
 def index(request):
     logger_info.info(info_load_log_message(request))
@@ -32,21 +33,30 @@ def display_log(request, log_type):
         for ligne in open('logs/' + log_type + '.log'):
             split_ligne = ligne.split(' :: ')
             if type_format == 'simple':
-                split_ligne[0] = split_ligne[0].replace('[', '').replace(']', '').split(' ')
-                split_ligne[1] = split_ligne[1].replace('\n', '').split(' par ')
+                split_ligne[0] = split_ligne[0].replace(
+                    '[', '').replace(']', '').split(' ')
+                split_ligne[1] = split_ligne[
+                    1].replace('\n', '').split(' par ')
                 add = True
             elif type_format == 'verbose':
-                split_ligne[0] = split_ligne[0].replace('[', '').replace(']', '').split(' ')
-                split_ligne[1] = split_ligne[1].replace(':', '.').replace('[', '').replace(']', '').split(' ')
-                split_ligne[2] = split_ligne[2].replace('\n', '').split(' par ')
+                split_ligne[0] = split_ligne[0].replace(
+                    '[', '').replace(']', '').split(' ')
+                split_ligne[1] = split_ligne[1].replace(
+                    ':', '.').replace('[', '').replace(']', '').split(' ')
+                split_ligne[2] = split_ligne[
+                    2].replace('\n', '').split(' par ')
                 print(split_ligne)
                 add = True
             elif type_format == 'complet':
                 try:
-                    split_ligne[0] = split_ligne[0].replace('[', '').replace(']', '')
-                    split_ligne[1] = split_ligne[1].replace('[', '').replace(']', '').split(' ')
-                    split_ligne[2] = split_ligne[2].replace(':', '.').replace('[', '').replace(']', '').split(' ')
-                    split_ligne[3] = split_ligne[3].replace('\n', '').split(' par ')
+                    split_ligne[0] = split_ligne[
+                        0].replace('[', '').replace(']', '')
+                    split_ligne[1] = split_ligne[1].replace(
+                        '[', '').replace(']', '').split(' ')
+                    split_ligne[2] = split_ligne[2].replace(
+                        ':', '.').replace('[', '').replace(']', '').split(' ')
+                    split_ligne[3] = split_ligne[
+                        3].replace('\n', '').split(' par ')
                     split_ligne.append(split_ligne[2])
                     split_ligne[2] = split_ligne[3]
                     split_ligne[3] = split_ligne[4]

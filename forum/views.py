@@ -17,6 +17,7 @@ from forum.forms.ReplyTopic import PostForm
 logger_info = logging.getLogger('info')
 logger_error = logging.getLogger('error')
 
+
 @login_required
 def display_all(request):
     logger_info.info(info_load_log_message(request))
@@ -34,7 +35,8 @@ def display_cat(request, cat):
     logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
     if cat is not None:
-        last_mod = models.ForumTopic.objects.filter(CatParent=cat).order_by('LastReply').order_by('CreateDate').reverse()
+        last_mod = models.ForumTopic.objects.filter(CatParent=cat).order_by(
+            'LastReply').order_by('CreateDate').reverse()
         return render(
             request,
             "forum/cat.html",
