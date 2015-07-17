@@ -31897,3 +31897,51 @@ TypeError: ldap_display() got an unexpected keyword argument 'filter'
 [INFO] :: [17/07/2015 16:40:07] :: [views:ldap_display:info] [50] :: connection ldap par agreau
 [INFO] :: [17/07/2015 16:40:13] :: [views:ldap_display:info] [47] :: chargement de la page /ldap/annuaire/ par agreau
 [INFO] :: [17/07/2015 16:40:16] :: [views:ldap_display:info] [50] :: connection ldap par agreau
+[INFO] :: [17/07/2015 14:45:46] :: [home:index:info] [13] :: chargement de la page / par AnonymousUser
+[INFO] :: [17/07/2015 14:46:05] :: [views:login_ldap:info] [81] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 14:46:15] :: [views:login_ldap:info] [81] :: chargement de la page /ldap/ par AnonymousUser
+[INFO] :: [17/07/2015 14:46:16] :: [views:login_ldap:info] [92] :: connection ldap par AnonymousUser
+[INFO] :: [17/07/2015 14:46:17] :: [views:login_ldap:info] [129] :: connection classique par agreau
+[INFO] :: [17/07/2015 14:46:17] :: [views:login_ldap:info] [81] :: chargement de la page /ldap/ par agreau
+[ERROR] :: [17/07/2015 14:46:17] :: [views:login_ldap:error] [83] :: user deja connecte essai de charger de la page /ldap/ par agreau
+[INFO] :: [17/07/2015 14:46:17] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 14:46:30] :: [views:ldap_display:info] [50] :: chargement de la page /ldap/annuaire/ par agreau
+[INFO] :: [17/07/2015 14:46:32] :: [views:ldap_display:info] [53] :: connection ldap par agreau
+[INFO] :: [17/07/2015 14:52:18] :: [views:ldap_display:info] [50] :: chargement de la page /ldap/annuaire/ par agreau
+[INFO] :: [17/07/2015 14:52:21] :: [views:ldap_display:info] [53] :: connection ldap par agreau
+[INFO] :: [17/07/2015 15:02:13] :: [views:ldap_display:info] [50] :: chargement de la page /ldap/annuaire/ par agreau
+[INFO] :: [17/07/2015 15:02:15] :: [views:ldap_display:info] [53] :: connection ldap par agreau
+[INFO] :: [17/07/2015 15:10:32] :: [views:ldap_display:info] [50] :: chargement de la page /ldap/annuaire/ par agreau
+[INFO] :: [17/07/2015 15:10:34] :: [views:ldap_display:info] [53] :: connection ldap par agreau
+[INFO] :: [17/07/2015 15:21:44] :: [views:ldap_display:info] [50] :: chargement de la page /ldap/annuaire/ par agreau
+[INFO] :: [17/07/2015 15:21:45] :: [views:ldap_display:info] [53] :: connection ldap par agreau
+[ERROR] :: [17/07/2015 15:32:02] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 72, in ldap_display
+    'mobile': r['attributes']['mobile'][0],
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/utils/ciDict.py", line 67, in __getitem__
+    return self._store[self._getkey(key)]
+KeyError: 'mobile'
+[INFO] :: [17/07/2015 15:37:13] :: [views:ldap_display:info] [50] :: chargement de la page /ldap/annuaire/ par agreau
+[INFO] :: [17/07/2015 15:37:18] :: [views:ldap_display:info] [53] :: connection ldap par agreau
+[ERROR] :: [17/07/2015 15:42:37] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 72, in ldap_display
+    'mobile': r['attributes']['mobile'],
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/utils/ciDict.py", line 67, in __getitem__
+    return self._store[self._getkey(key)]
+KeyError: 'mobile'
+[INFO] :: [17/07/2015 15:49:43] :: [views:ldap_display:info] [50] :: chargement de la page /ldap/annuaire/ par agreau
+[INFO] :: [17/07/2015 15:49:45] :: [views:ldap_display:info] [53] :: connection ldap par agreau
+[INFO] :: [17/07/2015 15:50:49] :: [views:ldap_display:info] [50] :: chargement de la page /ldap/annuaire/ par agreau
+[INFO] :: [17/07/2015 15:50:50] :: [views:ldap_display:info] [53] :: connection ldap par agreau
+[INFO] :: [17/07/2015 15:52:32] :: [views:ldap_display:info] [50] :: chargement de la page /ldap/annuaire/ par agreau
+[INFO] :: [17/07/2015 15:52:34] :: [views:ldap_display:info] [53] :: connection ldap par agreau

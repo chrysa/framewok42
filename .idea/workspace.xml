@@ -1,7 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e384430e-93fd-4d29-9fc6-0e96243847d3" name="Default" comment="annuaire a filtrer">
+    <list default="true" id="e384430e-93fd-4d29-9fc6-0e96243847d3" name="Default" comment="plus que la base64 a gerer&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/changelist-bg.gif" afterPath="$PROJECT_DIR$/statics/admin/img/changelist-bg.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/changelist-bg_rtl.gif" afterPath="$PROJECT_DIR$/statics/admin/img/changelist-bg_rtl.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/default-bg-reverse.gif" afterPath="$PROJECT_DIR$/statics/admin/img/default-bg-reverse.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/default-bg.gif" afterPath="$PROJECT_DIR$/statics/admin/img/default-bg.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/deleted-overlay.gif" afterPath="$PROJECT_DIR$/statics/admin/img/deleted-overlay.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon-no.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon-no.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon-unknown.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon-unknown.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon-yes.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon-yes.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_addlink.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_addlink.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_alert.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_alert.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_calendar.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_calendar.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_changelink.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_changelink.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_clock.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_clock.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_deletelink.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_deletelink.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_error.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_error.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_searchbox.png" afterPath="$PROJECT_DIR$/statics/admin/img/icon_searchbox.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_success.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_success.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/inline-delete-8bit.png" afterPath="$PROJECT_DIR$/statics/admin/img/inline-delete-8bit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/inline-delete.png" afterPath="$PROJECT_DIR$/statics/admin/img/inline-delete.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/inline-restore-8bit.png" afterPath="$PROJECT_DIR$/statics/admin/img/inline-restore-8bit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/inline-restore.png" afterPath="$PROJECT_DIR$/statics/admin/img/inline-restore.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/inline-splitter-bg.gif" afterPath="$PROJECT_DIR$/statics/admin/img/inline-splitter-bg.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/gis/move_vertex_off.png" afterPath="$PROJECT_DIR$/statics/admin/img/gis/move_vertex_off.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/gis/move_vertex_on.png" afterPath="$PROJECT_DIR$/statics/admin/img/gis/move_vertex_on.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/nav-bg-grabber.gif" afterPath="$PROJECT_DIR$/statics/admin/img/nav-bg-grabber.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/nav-bg-reverse.gif" afterPath="$PROJECT_DIR$/statics/admin/img/nav-bg-reverse.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/nav-bg-selected.gif" afterPath="$PROJECT_DIR$/statics/admin/img/nav-bg-selected.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/nav-bg.gif" afterPath="$PROJECT_DIR$/statics/admin/img/nav-bg.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/selector-icons.gif" afterPath="$PROJECT_DIR$/statics/admin/img/selector-icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/selector-search.gif" afterPath="$PROJECT_DIR$/statics/admin/img/selector-search.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/sorting-icons.gif" afterPath="$PROJECT_DIR$/statics/admin/img/sorting-icons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/tooltag-add.png" afterPath="$PROJECT_DIR$/statics/admin/img/tooltag-add.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/tooltag-arrowright.png" afterPath="$PROJECT_DIR$/statics/admin/img/tooltag-arrowright.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/admin/DateTimeShortcuts.js" afterPath="$PROJECT_DIR$/statics/admin/js/admin/DateTimeShortcuts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/LICENSE-JQUERY.txt" afterPath="$PROJECT_DIR$/statics/admin/js/LICENSE-JQUERY.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/admin/RelatedObjectLookups.js" afterPath="$PROJECT_DIR$/statics/admin/js/admin/RelatedObjectLookups.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/SelectBox.js" afterPath="$PROJECT_DIR$/statics/admin/js/SelectBox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/SelectFilter2.js" afterPath="$PROJECT_DIR$/statics/admin/js/SelectFilter2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/__init__.py" afterPath="$PROJECT_DIR$/ldap42/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/forms/__init__.py" afterPath="$PROJECT_DIR$/ldap42/forms/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/migrations/__init__.py" afterPath="$PROJECT_DIR$/ldap42/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/actions.js" afterPath="$PROJECT_DIR$/statics/admin/js/actions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/actions.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/actions.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/admin.py" afterPath="$PROJECT_DIR$/ldap42/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/app.iml" afterPath="$PROJECT_DIR$/.idea/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/base.css" afterPath="$PROJECT_DIR$/statics/admin/css/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugs" afterPath="$PROJECT_DIR$/bugs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/calendar.js" afterPath="$PROJECT_DIR$/statics/admin/js/calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/changelists.css" afterPath="$PROJECT_DIR$/statics/admin/css/changelists.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/collapse.js" afterPath="$PROJECT_DIR$/statics/admin/js/collapse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/collapse.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/collapse.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/complet.log" afterPath="$PROJECT_DIR$/logs/complet.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/core.js" afterPath="$PROJECT_DIR$/statics/admin/js/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/dashboard.css" afterPath="$PROJECT_DIR$/statics/admin/css/dashboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/django.log" afterPath="$PROJECT_DIR$/logs/django.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/forms.css" afterPath="$PROJECT_DIR$/statics/admin/css/forms.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profil/functions.py" afterPath="$PROJECT_DIR$/profil/functions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/hijack/hijack-styles.css" afterPath="$PROJECT_DIR$/statics/hijack/hijack-styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/ie.css" afterPath="$PROJECT_DIR$/statics/admin/css/ie.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/info.log" afterPath="$PROJECT_DIR$/logs/info.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/inlines.js" afterPath="$PROJECT_DIR$/statics/admin/js/inlines.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/inlines.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/inlines.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/jquery.init.js" afterPath="$PROJECT_DIR$/statics/admin/js/jquery.init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/jquery.js" afterPath="$PROJECT_DIR$/statics/admin/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/js/jquery.js" afterPath="$PROJECT_DIR$/statics/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/jquery.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html" afterPath="$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/login.css" afterPath="$PROJECT_DIR$/statics/admin/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/templates/ldap42/loginldap.html" afterPath="$PROJECT_DIR$/ldap42/templates/ldap42/loginldap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/models.py" afterPath="$PROJECT_DIR$/ldap42/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/prepopulate.js" afterPath="$PROJECT_DIR$/statics/admin/js/prepopulate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/prepopulate.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/prepopulate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/related-widget-wrapper.js" afterPath="$PROJECT_DIR$/statics/admin/js/related-widget-wrapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/rtl.css" afterPath="$PROJECT_DIR$/statics/admin/css/rtl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/tests.py" afterPath="$PROJECT_DIR$/ldap42/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/timeparse.js" afterPath="$PROJECT_DIR$/statics/admin/js/timeparse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/urlify.js" afterPath="$PROJECT_DIR$/statics/admin/js/urlify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/urls.py" afterPath="$PROJECT_DIR$/ldap42/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/views.py" afterPath="$PROJECT_DIR$/ldap42/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/widgets.css" afterPath="$PROJECT_DIR$/statics/admin/css/widgets.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled.iws" />
@@ -16,8 +101,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/app$Test__app.coverage" NAME="Test: app Coverage Results" MODIFIED="1437087603715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/app$Test__profil.coverage" NAME="Test: profil Coverage Results" MODIFIED="1437083641303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/app$Test__app.coverage" NAME="Test: app Coverage Results" MODIFIED="1437087603715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -56,8 +141,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ldap42/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6165803">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="62" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.7403599">
+              <caret line="72" column="97" selection-start-line="72" selection-start-column="97" selection-end-line="72" selection-end-column="97" />
               <folding>
                 <element signature="e#21#35#0" expanded="true" />
               </folding>
@@ -68,8 +153,8 @@
       <file leaf-file-name="ldap_display.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077">
-              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+            <state vertical-scroll-proportion="-10.666667">
+              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -116,10 +201,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="22" />
-    <option name="width" value="1696" />
-    <option name="height" value="1036" />
+    <option name="x" value="-1" />
+    <option name="y" value="26" />
+    <option name="width" value="1368" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -590,52 +675,52 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="22" width="1696" height="1036" extended-state="6" />
+    <frame x="-1" y="26" width="1368" height="743" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.502445" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32853982" sideWeight="0.49755502" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4651589" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25427872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25427872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.502445" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32686085" sideWeight="0.49755502" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="99" y="126" width="1168" height="543" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="99" y="126" width="1168" height="543" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4651589" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39652568" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39652568" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -654,7 +739,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="menage" />
     <MESSAGE value="annuaire a filtrer" />
-    <option name="LAST_COMMIT_MESSAGE" value="annuaire a filtrer" />
+    <MESSAGE value="plus que la base64 a gerer&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="plus que la base64 a gerer&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -666,14 +752,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ldap42/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -875,7 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5177665">
           <caret line="36" column="98" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="98" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,16 +1121,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        <state vertical-scroll-proportion="-10.666667">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/hijack/hijack-styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33247423">
+          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ldap42/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6165803">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="62" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.7403599">
+          <caret line="72" column="97" selection-start-line="72" selection-start-column="97" selection-end-line="72" selection-end-column="97" />
           <folding>
             <element signature="e#21#35#0" expanded="true" />
           </folding>

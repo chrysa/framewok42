@@ -14,12 +14,12 @@
         </thead>
         {% for user in annuaire %}
             <tr>
-                <td><img src="{{ user.attributes.jpegPhoto.0 }}" class="img-circle" height="50" widtrh="50"></td>
-                <td>{{ user.attributes.uid.0 }}</td>
-                <td>{{ user.attributes.sn.0 }}</td>
-                <td>{{ user.attributes.givenName.0 }}</td>
+                <td><img src="{{ user.avat }}" class="img-circle" height="50" widtrh="50"></td>
+                <td>{{ user.uid }}</td>
+                <td>{{ user.sn }}</td>
+                <td>{{ user.givenName }}</td>
                 <td></td>
-                <td>{{ user.attributes.mobile.0 }}</td>
+                <td>{{ user.mobile }}</td>
             </tr>
         {% endfor %}
     </table>

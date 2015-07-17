@@ -63,7 +63,17 @@ def ldap_display(request):
                 'sn',
             ]
         )
-        annuaire = c.response
+        annuaire = []
+        for r in c.response:
+            print(r['attributes'])
+            annuaire.append(
+                {
+                    'uid': r['attributes']['uid'][0],
+                    'givenName': r['attributes']['givenName'][0],
+                    'mobile': r['attributes']['mobile'][0] if 'mobile' in r['attributes'] else '',
+                    'sn': r['attributes']['sn'][0],
+                }
+            )
         c.unbind()
     else:
         logger_error.info(l_fct.error_ldap_log_message(request, "bind"))
