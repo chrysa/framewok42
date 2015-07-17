@@ -6617,3 +6617,5 @@ TypeError: Connection(server=Server(host='ldap.42.fr', port=636, use_ssl=True, t
 [INFO] :: [17/07/2015 00:59:36] :: [home:index:info] [13] :: chargement de la page / par agreau
 [INFO] :: [17/07/2015 00:59:47] :: [home:index:info] [13] :: chargement de la page / par agreau
 [INFO] :: [17/07/2015 00:59:53] :: [home:index:info] [13] :: chargement de la page / par agreau
+[INFO] :: [17/07/2015 11:23:00] :: [home:index:info] [13] :: chargement de la page / par agreau
+[WARNING] :: [17/07/2015 11:23:01] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico

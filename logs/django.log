@@ -1945,3 +1945,4 @@ Traceback (most recent call last):
   File "C:\Python34\Lib\json\encoder.py", line 173, in default
     raise TypeError(repr(o) + " is not JSON serializable")
 TypeError: Connection(server=Server(host='ldap.42.fr', port=636, use_ssl=True, tls=Tls(validate=0), get_info='ALL'), user='uid=agreau,ou=july,ou=2013,ou=paris,ou=people,dc=42,dc=fr', password='mCKb0ss#123', auto_bind='NO_TLS', version=3, authentication='SIMPLE', client_strategy='SYNC', auto_referrals=True, check_names=True, read_only=False, lazy=False, raise_exceptions=False) is not JSON serializable
+[17/07/2015 11:23:01] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico

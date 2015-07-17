@@ -1,7 +1,7 @@
 #-*-coding:utf-8 -*-
-import ldap3
 import logging
 
+import ldap3
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.utils import translation
@@ -58,52 +58,14 @@ def ldap_display(request):
                 'alias'
             ]
         )
-        u = User.objects.filter(username=c.response[0]['attributes']['uid'][0])
-        if len(u) == 0:
-            create_user(
-                request,
-                c.response[0]['attributes']['uid'][0],
-                c.response[0]['attributes']['alias'][0],
-                request.POST['password'],
-                c.response[0]['attributes']['givenName'][0],
-                c.response[0]['attributes']['sn'][0],
-            )
-        else:
-            if not hashers.check_password(request.POST['password'], u[0].password):
-                u[0].set_password(request.POST['password'])
-                u[0].save()
-        user = authenticate(
-            username=request.POST['login'],
-            password=request.POST['password'],
-        )
-        if user is not None:
-            if user.is_active:
-                login(request, user)
-                userlang = UserLang.objects.get(user=request.user)
-                logger_info.info(l_fct.info_login_class_log_message(request))
-                translation.activate(userlang.lang)
-                request.session[
-                    translation.LANGUAGE_SESSION_KEY] = userlang.lang
-                request.session['ldap_connection'] = True
-                redir = reverse('home')
-                if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('login'):
-                    redir = request.META['HTTP_REFERER']
-                return redirect(
-                    redir,
-                    permanent=True
-                )
-            else:
-                logger_error.error(l_fct.error_login_log_message(request))
-                errors['unknow'] = _("authenticate error")
-        else:
-            logger_error.error(
-                l_fct.error_login_wrong_password_log_message(request))
-            errors['pass'] = _("error_wrong_password")
+        plop = c.resonse
         c.unbind()
+        print(plop)
     else:
         logger_error.info(l_fct.error_ldap_log_message(request, "bind"))
         errors['unknow'] = _("bind_error")
     print ('tlop')
+    print(plop)
     return render(
         request,
         "ldap42/ldap_display.html",
