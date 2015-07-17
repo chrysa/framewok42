@@ -22,28 +22,33 @@ from profil.models import UserLang
 logger_error = logging.getLogger('error')
 logger_info = logging.getLogger('info')
 
-s = ldap3.Server(
-    'ldaps://ldap.42.fr',
-    port=636,
-    get_info=ldap3.ALL
-)
 
-
-@login_required
-def ldap_display(request):
-    print('plop')
-    errors = []
-    logger_info.info(l_fct.info_load_log_message(request))
+def connect_to_ldap(session):
+    s = ldap3.Server(
+        'ldaps://ldap.42.fr',
+        port=636,
+        get_info=ldap3.ALL
+    )
     c = ldap3.Connection(
         s,
         auto_bind=True,
         client_strategy='SYNC',
-        user='uid={},ou={},ou={},ou=paris,ou=people,dc=42,dc=fr'.format(request.session['ldap_log']['login'], request.POST['pool_month'], request.session['ldap_log']['pool_year']),
-        password=request.POST['password'],
+        user='uid={},ou={},ou={},ou=paris,ou=people,dc=42,dc=fr'.format(session['ldap_log']['login'],
+                                                                        session['ldap_log']['pool_month'],
+                                                                        session['ldap_log']['pool_year']),
+        password=session['ldap_log']['password'],
         authentication=ldap3.SIMPLE,
         check_names=True,
         raise_exceptions=False
     )
+    return c
+
+
+@login_required
+def ldap_display(request):
+    errors = []
+    logger_info.info(l_fct.info_load_log_message(request))
+    c = connect_to_ldap(request.session)
     if c.bind():
         logger_info.info(l_fct.info_login_ldap_log_message(request))
         c.search(
@@ -53,23 +58,22 @@ def ldap_display(request):
             attributes=[
                 'uid',
                 'givenName',
+                'jpegPhoto',
                 'mobile',
                 'sn',
-                'alias'
             ]
         )
-        plop = c.resonse
+        annuaire = c.response
         c.unbind()
-        print(plop)
     else:
         logger_error.info(l_fct.error_ldap_log_message(request, "bind"))
         errors['unknow'] = _("bind_error")
-    print ('tlop')
-    print(plop)
     return render(
         request,
         "ldap42/ldap_display.html",
-        {}
+        {
+            'annuaire': annuaire,
+        }
     )
 
 
@@ -83,16 +87,7 @@ def login_ldap(request):
         form = LdapForm(request.POST)
         if request.method == 'POST':
             request.session['ldap_log'] = request.POST
-            c = ldap3.Connection(
-                s,
-                auto_bind=True,
-                client_strategy='SYNC',
-                user='uid={},ou={},ou={},ou=paris,ou=people,dc=42,dc=fr'.format(request.session['ldap_log']['login'], request.POST['pool_month'], request.session['ldap_log']['pool_year']),
-                password=request.POST['password'],
-                authentication=ldap3.SIMPLE,
-                check_names=True,
-                raise_exceptions=False
-            )
+            c = connect_to_ldap(request.session)
             if c.bind():
                 logger_info.info(l_fct.info_login_ldap_log_message(request))
                 c.search(
@@ -164,7 +159,6 @@ def login_ldap(request):
         {
             'form': form,
             'errors': errors,
-            'type': "ldap",
             'formcontact': contact.ContactForm(),
         }
     )

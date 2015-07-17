@@ -2,7 +2,7 @@
 {% get_available_languages as LANGUAGES %}
 {% get_current_language as LANGUAGE_CODE %}
 {% get_language_info_list for LANGUAGES as languages %}
-{% url 'ldap_display' filter as url_annuaire %}
+    {% url 'ldap_display_all' as url_annuaire_all %}
 {% url 'cat' cat.slug as url_cat %}
 {% url 'contact' as url_contact%}
 {% url 'create_topic' cat.slug as url_create_topic %}
@@ -58,8 +58,8 @@
                                 </a>
                                 <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
                                     {%  if request.session.ldap_connection %}
-                                        <li {% if request.path == url_annuaire %} class="active" {% endif %}><a
-                                                href="{{ url_annuaire }}">{% trans 'annuaire'|capfirst %}</a></li>
+                                        <li {% if request.path == url_annuaire_all %} class="active" {% endif %}><a
+                                                href="{{ url_annuaire_all }}">{% trans 'annuaire'|capfirst %}</a></li>
                                     {%  endif %}
                                     <li {% if request.path == url_contact %} class="active" {% endif %}>
                                         <a href="{{ url_contact }}">{% trans "contact" %}</a>
@@ -86,9 +86,11 @@
                                   <span class="caret"></span>
                                 </a>
                                 <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
-                                  <li><a href="{{ url_login_classic }}">{% trans 'login_classic'|capfirst %}</a></li>
+                                    <li {% if request.path == url_login_classic %} class="active"{% endif %}><a
+                                            href="{{ url_login_classic }}">{% trans 'login_classic'|capfirst %}</a></li>
                                   <li role="separator" class="divider"></li>
-                                  <li><a href="{{ url_login_ldap }}">{% trans 'login_ldap'|capfirst %}</a></li>
+                                    <li {% if request.path == url_login_ldap %} class="active"{% endif %}><a
+                                            href="{{ url_login_ldap }}">{% trans 'login_ldap'|capfirst %}</a></li>
                                 </ul>
                             </li>
                             <li {% if request.path == url_contact %} class="active" {% endif %}>
