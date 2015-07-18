@@ -2,7 +2,7 @@
 {% get_available_languages as LANGUAGES %}
 {% get_current_language as LANGUAGE_CODE %}
 {% get_language_info_list for LANGUAGES as languages %}
-    {% url 'ldap_display_all' as url_annuaire_all %}
+    {% url 'ldap_display_filter' 'a' 'natural' as url_annuaire_all %}
 {% url 'cat' cat.slug as url_cat %}
 {% url 'contact' as url_contact%}
 {% url 'create_topic' cat.slug as url_create_topic %}
@@ -22,7 +22,6 @@
 {% url 'view_issue' issue.slug as url_view_issue %}
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

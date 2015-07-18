@@ -1,6 +1,23 @@
 {% extends "core/base.html" %}
 {% load i18n %}
 {% block content %}
+    <nav class="text-center">
+        <ul class="pagination">
+            <li class="disabled"></li>
+            {% for l in alphabet %}
+                {% if letter == l %}
+                    <li class="active">{{ l }}</li>
+                {% else %}
+                    <li><a href="{% url 'ldap_display_filter' l order %}">{{ l }}<span class="sr-only">(current)</span></a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+    filter by year<br/>
+    filter by year<br/>
+    riverse_display<br/>
+    random mode
     <table class="table">
         <thead>
         <tr>

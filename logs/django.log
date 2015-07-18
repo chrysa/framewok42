@@ -43297,3 +43297,943 @@ Traceback (most recent call last):
   File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 70, in ldap_display
     'avatar': '<img src="data:image/jpeg;base64,' + r['attributes']['jpegPhoto'][0] if 'jpegPhoto' in r['attributes'] else '' +'/>',
 TypeError: Can't convert 'bytes' object to str implicitly
+[18/07/2015 12:49:51] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[18/07/2015 13:49:50] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 80, in ldap_display
+    'avatar': r['attributes']['jpegPhoto'][0].decode('base64_codec') if 'jpegPhoto' in r['attributes'] else '',
+LookupError: 'base64_codec' is not a text encoding; use codecs.decode() to handle arbitrary codecs
+[18/07/2015 14:00:16] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 80, in ldap_display
+    'avatar': r['attributes']['jpegPhoto'][0].decode('base64_codec') if 'jpegPhoto' in r['attributes'] else '',
+LookupError: 'base64_codec' is not a text encoding; use codecs.decode() to handle arbitrary codecs
+[18/07/2015 14:01:35] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 80, in ldap_display
+    'avatar': r['attributes']['jpegPhoto'][0].decode('base64_codec') if 'jpegPhoto' in r['attributes'] else '',
+LookupError: 'base64_codec' is not a text encoding; use codecs.decode() to handle arbitrary codecs
+[18/07/2015 14:02:01] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 79, in ldap_display
+    'avatar': r['attributes']['jpegPhoto'][0].decode('base64_codec') if 'jpegPhoto' in r['attributes'] else '',
+LookupError: 'base64_codec' is not a text encoding; use codecs.decode() to handle arbitrary codecs
+[18/07/2015 14:06:00] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 74, in ldap_display
+    'avatar': r['attributes']['jpegPhoto'][0].decode() if 'jpegPhoto' in r['attributes'] else '',
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+[18/07/2015 14:06:32] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 73, in ldap_display
+    'avatar': r['attributes']['jpegPhoto'][0].decode() if 'jpegPhoto' in r['attributes'] else '',
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+[18/07/2015 14:07:10] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 74, in ldap_display
+    'avatar': r['attributes']['jpegPhoto'][0].decode() if 'jpegPhoto' in r['attributes'] else '',
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+[18/07/2015 14:08:40] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 73, in ldap_display
+    'avatar': r['attributes']['jpegPhoto'][0].decode() if 'jpegPhoto' in r['attributes'] else '',
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+[18/07/2015 14:11:46] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/J/xff/xd19k=/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: ldap_display() got an unexpected keyword argument 'filter'
+[18/07/2015 14:11:58] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 88, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 317, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.base.TemplateSyntaxError: Could not parse the remainder: '\x13\xe9\xc6\tc\xb3\xd8\x7f\xf6\xfaYf\x94\x86\xb1\xce<\x01\xfa*\xa5\xbc\x9e\x9as\x0e@\xc2\xed\x93\x80p\x06\x07\xf2\x1c3\xf7\xb4i\xaa\xe9\xa0P\xaa\xd2\x05\x8ccm\xd9\xb0=~\xbf\xd3\x81{W\xfe\xa0r\xfa\xa5\xc8~mS\xf3\x0cB\x92\x96\x18\x00n\x98\xe2X\xcb;u3\xe0``~\x9f\xd7\x8f\xb7)\xd5\xab\xa7u\xcb\x11G\t\x19P\xe4b5]\xf7\xcf\xa0\xcf\x1aj\x80\xbb\x1ax~\x15\'.\xd7\x9a*k\xa8\xa3\x06\xa9\xfa\xd5i\x93\xc4vW*\xcc\x17\xcd\xb8\xfe\x9cg\x18\'\xaa0?u\x83^\xd5\xee\x81\xcf\xcbN\x15\xad\n\xa4#\xf7g\xb7bs\xef\xc7\xb5\x9f\xc4`\x8b\x13\xbb\xc9\x80\x88\x80\xbb\xb1\'\xb0\x1e\xfc\x14\xe6\x93\xb7H6E\x1c\xc6\xbdM\xa3\xb4\xfd=\xb2\xf1T-\x0fy\xb8\xc5:QJ\xe0T\xca\x04l\xaa\\v\x07s\xd2\t\xceOa\xc4h\xb8\xdc\x18\xb9n\xa2\xd1HKtu\xf4\xb7\xd3\'\xdc\x01\xff\x00N7\xc4/\x10i\xc1\x1c=T\xe9\xe3\xbf\xf2[\x07\xd7\xfc(\xef\xac&\x9e;\x84U\x90\xbb\xc7$r\xf8\xf0\xcd\x1eCF\xcar\xac\x8d\xee\x08\x18\xf6\xe1gc\xd4\x10\xdf(\xa2\xaeR\x8br\xa5`\x978A\x11\x87rv\x9c\x0c|\xaf\x83\x91\xfc-\x91\xd8\x8e;D\xfe\x8a\xa8\xb4\x9d~\xa8\xe3\xe3\xbc,\x90p\xc7\x9f\xed,-\xb7y)\xaa!x\x1cFS\xe6\x91\x19\x84\x81\x8ew\xfa\x1fOm\x87\x1b\xab\xf4\xecu\xf53\xdet\xe4\x11\x19\xd5Z\xa2\xedb\x83\xf0\xcdL\x99\xea5T\x8b\x8cx\x87\xbc\x90\x8f\x9f\xba\xeeH\'fh{[+ui\xf3\x1cG\xdf\xc1F;\xc6\xec\xe8u\xfb{\xedW\xdf\xf6(s/Kj;W3\xf91=\xc6\n=ah\x14\xfa\x9e\x82\xdd3\x04\x92\xf3n\x98\xb7\x88\xf0\x8e\xe4\xc3#\x15\x91G\xca\xac\x87\xb6qy\xf7m-\x1dw\x850\x8cIK\x8f\x06E\x8d2\x14\x1c\x03\xe9\xdb\x19\xfe\xbcP\xc8\xf7\xa9Z\xe6\xe9wz\xb8\xa7\x9a\x19\x84\x94\xcc#P\x00=\xe0[\xf0\x8b\xad\xb6\x05\xa1\xbb\xd5\xc0c\xe9\xa7\x8a\x00\x91\xca\x01 \x00\t\x19\xdf`\x0e\xd9\xf7\xe1\xed\xe5\xc5\xe8\xc2\xe2\x91\x9b\x03\xab\n\xce\xd9\xea\x00\xe3\x03\x1f\x9e7\xe3T-1\x9b\xae<\x97\x12\xa4\xec\xd6x.\x94\xb0\xc8\xa2?\x18\xc5\x80\xd0\x90\x8c=ppN\x06\xc7\x18\xcf\xe5\xc2\x16\xaa\xc9YN\x8f\x95\x86\xa1"b\xa0F\xa69\x94\x03\x92\x08\xeev\xdf\x1fM\x8f\x1a\x18\xe0\xe1n+K\x801\x82\x16S\xda#\x96!\xfd\xd9\xd5\x9b\xce\x81\xe3b\xcc\x0flc\xd3>\xdbp\x02\xb2\xd8\xf0*\xa2\xaa\xc6\xd30B\xf2B\xc8#\xdb\x1d\x00wl\x9c`z\xfd8\xcbQ\x1b\x8d\xcf\x15\x068\x17\x0bg\xd9A\xad\xb6\xaf\xbb\t\xea\x1c\x16w\x93\x12\x17*$#\x1f62\x00\x03o(9\xfc\xcexAk\x8b\x8c\x10x\xf0\x0ce\x91\x8b\xf5\x8e\xa2q\xb6\xe7\xb0\x19\xc6\xc7\xb7\xd7\x8c/e\x9bc\xa2\xf4\x86\xee\x00*\xec\xe7\xfd\xfc\xda4e\xee\xa5\x1d\xbfh\\\xd0\xdb\xad\xf1\xe4\x13\xd4\xe0\xf58\xf5\xdb$\xfe\x83\x8eU~5\xb5m,z\x96\x8b\x97\x94\x13\x17\x92\xd4\xe2\xf7\xa9:H\xc1\xa8\x91\x08\xa5\x8d\xf1\xdc\xaaH\xd2\xb7\xb1\x95;\x11\xc6*\x86`\x03\xa6\x07\x9eO\xa0Y\xeb\x9e\x19L\xebjp\x15w\xde\xaa\x03t\x80\xe3\n:@c\x9d\xb1\xb0\xe1\xbc\x8e\x92K\xa6\xa0\xa4\xa5\x87\xa8\xbf\x8e\xbd}\x04\x12\x123\xd7#~\x80\x7f>\x17v\x80t\x935\x9c\xdc\x02\x0b\x10\xddm\xce\x89\xea\xa8\x9a\x13\x1a\x08\x95\x81V"@A\x07c\xb0\'\xb1\x18\xe0\x8a\xb6o\x12X\xdcc\xaf\xa4)\xc1\xf4\x04\xed\xfd{\xf1\xae\xaa\xc6P\xd1\xa7\xe9f\x17.\xcaI\xea)\x99)\xe3\xa3\\\x86\xad\x93\xa4\x8c\xe1\xbc59o\xf2\x03\x8c\xe0D\xb16Y\\\\t\xc2\xd7\x1d\xc30/\xe3\xfaWkf\xd2\x9e-/\xed\x8dAr\x8a\xcdeIZ6\x9aS\xf8\xf5L\x99\xeaH\x17\xbc\xa4n\x0f\x87\x95S\xf3:\xf0\x1e\xe9\xcd\xab\x06\x9e\x82K~\x8c\xb6SYfLG=\xf6\xaa\x18\xeb\xef\xb5\x04n\xac\xb2I\x95\x81N?\x83\'m\xcf\r\x10A\xba\xdd\xe7\xfc\xdfO\xda@s];\xba6h5\xe1\x7f\x7f\xa5\x07\xb9\xd1[U\xaaRJ\xca\xcb\x8dM\xce\xad\xd9\xa5\x15U\x13\xf8\xc79\xcf\xccN\x7f\xef\x9e\xd8\xe1\xa8\xd1\x9a\xb9\xeaUt\xf5\xeebf\xa6\xcaRT;\x7f\xc5(\xff\x00\xdbc\xea\xcb\xe8}G\xd4qN\xf7ET\x08=Wa\x1e\x8a h\xac\x06[\x91\xf7[\xf5e\xb1\xe5_\x1a&\x7f\x0c/WJ\xee\xab\xfa\xfa\xe7}\xff\x00\xcf\x84\x0e\x9c\xb9Ki\xba\xc3\'\xee\xe3|\xc120\xf2J\x8d\x90\xc8\xdfC\xef\xdfn,\x9c\x18\xe7k\xf8-p\xff\x00%9h\xe4\x9e\tH\x86H\x9e\x05Q\x0c\xcb\xd7\x0c\x87\xca\xd2.\xfb6?\x88g\xd7\xe9\xef\xc1\xe5\xa2\xf1Snh\x9e&q4d\x18\x88\xc8\x19\xc9\xeeq\xeb\xd3\xe9\xc1\xfaYn\xc0\xebw\xac\xc3\xac\xcb\x10\x9c\r\x19\xaf\xb5\xcf&\xb9\xaf\xa4\xbe"\xf97W%&\xb8\xd1\xb5\t[~\xb1\xc03\x06\xa1\xa5\x88\xbb\xce\xc53\x89\x16H\x9eH\xa7\x80\x8f\xc4F,\xbb\x83\xc7j\xbf\x0b\x1f\x14\x1c\xaf\xf8\xbc\xe4\x95\x9b\x9b\\\xb8\xac\xa7I*a\x8a\xdd\xab\xf4\xc1\xa8W\xba\xe8\xeb\x9fB\xb4\xb4s\xa09\xe8\xc9\xea\x8aR:e\x8c\x82=@\xb3g06yh\x1cq}\xf6\xf7\x1f\x98x;\xea\x98\xb6=Q\x17\x89\xc7P<\xc7\xe4}\n\x93v\xad(\xb5s\x19\x08tc\x1f@F9f\xca\xe3\x01\xbd3\x8d\x81\xcfn\x10U\xe9Y\xa35\x18\x12\xa9\x8e\x8d\xe5\xceZ\\\xf4\xe4\xe7b=\xb8\xdb#\x03|\xd1v\x8c\x91\xc5J\x9d\x15\xaad\xae\xa3\x11\x82\xb2D\xcb\xb4\x9d@\x9c\xe3#\x07\xbf\xae=\xff\x00\xaf\n+\x84\xd3\xc1#\xe1\xa4\x922\xb9*\xca\xbf\x86\x18\x1c\x91\x90\x08\x19\xc7o_\xd7\x8c\xf77\xd1_\x19\x1b\x96)1%\xee1"\xc9%4\x1dHH\x13x(w\xf4\xd87\x7frp\x0f\x01\xe5\xb9I^\x0cp\xacQ\xab\xcb\xf3x@\x159\xf4,' from '\x13\xe9\xc6\tc\xb3\xd8\x7f\xf6\xfaYf\x94\x86\xb1\xce<\x01\xfa*\xa5\xbc\x9e\x9as\x0e@\xc2\xed\x93\x80p\x06\x07\xf2\x1c3\xf7\xb4i\xaa\xe9\xa0P\xaa\xd2\x05\x8ccm\xd9\xb0=~\xbf\xd3\x81{W\xfe\xa0r\xfa\xa5\xc8~mS\xf3\x0cB\x92\x96\x18\x00n\x98\xe2X\xcb;u3\xe0``~\x9f\xd7\x8f\xb7)\xd5\xab\xa7u\xcb\x11G\t\x19P\xe4b5]\xf7\xcf\xa0\xcf\x1aj\x80\xbb\x1ax~\x15\'.\xd7\x9a*k\xa8\xa3\x06\xa9\xfa\xd5i\x93\xc4vW*\xcc\x17\xcd\xb8\xfe\x9cg\x18\'\xaa0?u\x83^\xd5\xee\x81\xcf\xcbN\x15\xad\n\xa4#\xf7g\xb7bs\xef\xc7\xb5\x9f\xc4`\x8b\x13\xbb\xc9\x80\x88\x80\xbb\xb1\'\xb0\x1e\xfc\x14\xe6\x93\xb7H6E\x1c\xc6\xbdM\xa3\xb4\xfd=\xb2\xf1T-\x0fy\xb8\xc5:QJ\xe0T\xca\x04l\xaa\\v\x07s\xd2\t\xceOa\xc4h\xb8\xdc\x18\xb9n\xa2\xd1HKtu\xf4\xb7\xd3\'\xdc\x01\xff\x00N7\xc4/\x10i\xc1\x1c=T\xe9\xe3\xbf\xf2[\x07\xd7\xfc(\xef\xac&\x9e;\x84U\x90\xbb\xc7$r\xf8\xf0\xcd\x1eCF\xcar\xac\x8d\xee\x08\x18\xf6\xe1gc\xd4\x10\xdf(\xa2\xaeR\x8br\xa5`\x978A\x11\x87rv\x9c\x0c|\xaf\x83\x91\xfc-\x91\xd8\x8e;D\xfe\x8a\xa8\xb4\x9d~\xa8\xe3\xe3\xbc,\x90p\xc7\x9f\xed,-\xb7y)\xaa!x\x1cFS\xe6\x91\x19\x84\x81\x8ew\xfa\x1fOm\x87\x1b\xab\xf4\xecu\xf53\xdet\xe4\x11\x19\xd5Z\xa2\xedb\x83\xf0\xcdL\x99\xea5T\x8b\x8cx\x87\xbc\x90\x8f\x9f\xba\xeeH\'fh{[+ui\xf3\x1cG\xdf\xc1F;\xc6\xec\xe8u\xfb{\xedW\xdf\xf6(s/Kj;W3\xf91=\xc6\n=ah\x14\xfa\x9e\x82\xdd3\x04\x92\xf3n\x98\xb7\x88\xf0\x8e\xe4\xc3#\x15\x91G\xca\xac\x87\xb6qy\xf7m-\x1dw\x850\x8cIK\x8f\x06E\x8d2\x14\x1c\x03\xe9\xdb\x19\xfe\xbcP\xc8\xf7\xa9Z\xe6\xe9wz\xb8\xa7\x9a\x19\x84\x94\xcc#P\x00=\xe0[\xf0\x8b\xad\xb6\x05\xa1\xbb\xd5\xc0c\xe9\xa7\x8a\x00\x91\xca\x01 \x00\t\x19\xdf`\x0e\xd9\xf7\xe1\xed\xe5\xc5\xe8\xc2\xe2\x91\x9b\x03\xab\n\xce\xd9\xea\x00\xe3\x03\x1f\x9e7\xe3T-1\x9b\xae<\x97\x12\xa4\xec\xd6x.\x94\xb0\xc8\xa2?\x18\xc5\x80\xd0\x90\x8c=ppN\x06\xc7\x18\xcf\xe5\xc2\x16\xaa\xc9YN\x8f\x95\x86\xa1"b\xa0F\xa69\x94\x03\x92\x08\xeev\xdf\x1fM\x8f\x1a\x18\xe0\xe1n+K\x801\x82\x16S\xda#\x96!\xfd\xd9\xd5\x9b\xce\x81\xe3b\xcc\x0flc\xd3>\xdbp\x02\xb2\xd8\xf0*\xa2\xaa\xc6\xd30B\xf2B\xc8#\xdb\x1d\x00wl\x9c`z\xfd8\xcbQ\x1b\x8d\xcf\x15\x068\x17\x0bg\xd9A\xad\xb6\xaf\xbb\t\xea\x1c\x16w\x93\x12\x17*$#\x1f62\x00\x03o(9\xfc\xcexAk\x8b\x8c\x10x\xf0\x0ce\x91\x8b\xf5\x8e\xa2q\xb6\xe7\xb0\x19\xc6\xc7\xb7\xd7\x8c/e\x9bc\xa2\xf4\x86\xee\x00*\xec\xe7\xfd\xfc\xda4e\xee\xa5\x1d\xbfh\\\xd0\xdb\xad\xf1\xe4\x13\xd4\xe0\xf58\xf5\xdb$\xfe\x83\x8eU~5\xb5m,z\x96\x8b\x97\x94\x13\x17\x92\xd4\xe2\xf7\xa9:H\xc1\xa8\x91\x08\xa5\x8d\xf1\xdc\xaaH\xd2\xb7\xb1\x95;\x11\xc6*\x86`\x03\xa6\x07\x9eO\xa0Y\xeb\x9e\x19L\xebjp\x15w\xde\xaa\x03t\x80\xe3\n:@c\x9d\xb1\xb0\xe1\xbc\x8e\x92K\xa6\xa0\xa4\xa5\x87\xa8\xbf\x8e\xbd}\x04\x12\x123\xd7#~\x80\x7f>\x17v\x80t\x935\x9c\xdc\x02\x0b\x10\xddm\xce\x89\xea\xa8\x9a\x13\x1a\x08\x95\x81V"@A\x07c\xb0\'\xb1\x18\xe0\x8a\xb6o\x12X\xdcc\xaf\xa4)\xc1\xf4\x04\xed\xfd{\xf1\xae\xaa\xc6P\xd1\xa7\xe9f\x17.\xcaI\xea)\x99)\xe3\xa3\\\x86\xad\x93\xa4\x8c\xe1\xbc59o\xf2\x03\x8c\xe0D\xb16Y\\\\t\xc2\xd7\x1d\xc30/\xe3\xfaWkf\xd2\x9e-/\xed\x8dAr\x8a\xcdeIZ6\x9aS\xf8\xf5L\x99\xeaH\x17\xbc\xa4n\x0f\x87\x95S\xf3:\xf0\x1e\xe9\xcd\xab\x06\x9e\x82K~\x8c\xb6SYfLG=\xf6\xaa\x18\xeb\xef\xb5\x04n\xac\xb2I\x95\x81N?\x83\'m\xcf\r\x10A\xba\xdd\xe7\xfc\xdfO\xda@s];\xba6h5\xe1\x7f\x7f\xa5\x07\xb9\xd1[U\xaaRJ\xca\xcb\x8dM\xce\xad\xd9\xa5\x15U\x13\xf8\xc79\xcf\xccN\x7f\xef\x9e\xd8\xe1\xa8\xd1\x9a\xb9\xeaUt\xf5\xeebf\xa6\xcaRT;\x7f\xc5(\xff\x00\xdbc\xea\xcb\xe8}G\xd4qN\xf7ET\x08=Wa\x1e\x8a h\xac\x06[\x91\xf7[\xf5e\xb1\xe5_\x1a&\x7f\x0c/WJ\xee\xab\xfa\xfa\xe7}\xff\x00\xcf\x84\x0e\x9c\xb9Ki\xba\xc3\'\xee\xe3|\xc120\xf2J\x8d\x90\xc8\xdfC\xef\xdfn,\x9c\x18\xe7k\xf8-p\xff\x00%9h\xe4\x9e\tH\x86H\x9e\x05Q\x0c\xcb\xd7\x0c\x87\xca\xd2.\xfb6?\x88g\xd7\xe9\xef\xc1\xe5\xa2\xf1Snh\x9e&q4d\x18\x88\xc8\x19\xc9\xeeq\xeb\xd3\xe9\xc1\xfaYn\xc0\xebw\xac\xc3\xac\xcb\x10\x9c\r\x19\xaf\xb5\xcf&\xb9\xaf\xa4\xbe"\xf97W%&\xb8\xd1\xb5\t[~\xb1\xc03\x06\xa1\xa5\x88\xbb\xce\xc53\x89\x16H\x9eH\xa7\x80\x8f\xc4F,\xbb\x83\xc7j\xbf\x0b\x1f\x14\x1c\xaf\xf8\xbc\xe4\x95\x9b\x9b\\\xb8\xac\xa7I*a\x8a\xdd\xab\xf4\xc1\xa8W\xba\xe8\xeb\x9fB\xb4\xb4s\xa09\xe8\xc9\xea\x8aR:e\x8c\x82=@\xb3g06yh\x1cq}\xf6\xf7\x1f\x98x;\xea\x98\xb6=Q\x17\x89\xc7P<\xc7\xe4}\n\x93v\xad(\xb5s\x19\x08tc\x1f@F9f\xca\xe3\x01\xbd3\x8d\x81\xcfn\x10U\xe9Y\xa35\x18\x12\xa9\x8e\x8d\xe5\xceZ\\\xf4\xe4\xe7b=\xb8\xdb#\x03|\xd1v\x8c\x91\xc5J\x9d\x15\xaad\xae\xa3\x11\x82\xb2D\xcb\xb4\x9d@\x9c\xe3#\x07\xbf\xae=\xff\x00\xaf\n+\x84\xd3\xc1#\xe1\xa4\x922\xb9*\xca\xbf\x86\x18\x1c\x91\x90\x08\x19\xc7o_\xd7\x8c\xf77\xd1_\x19\x1b\x96)1%\xee1"\xc9%4\x1dHH\x13x(w\xf4\xd87\x7frp\x0f\x01\xe5\xb9I^\x0cp\xacQ\xab\xcb\xf3x@\x159\xf4,'
+[18/07/2015 14:12:38] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 88, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 317, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.base.TemplateSyntaxError: Could not parse the remainder: '\x13\xe9\xc6\tc\xb3\xd8\x7f\xf6\xfaYf\x94\x86\xb1\xce<\x01\xfa*\xa5\xbc\x9e\x9as\x0e@\xc2\xed\x93\x80p\x06\x07\xf2\x1c3\xf7\xb4i\xaa\xe9\xa0P\xaa\xd2\x05\x8ccm\xd9\xb0=~\xbf\xd3\x81{W\xfe\xa0r\xfa\xa5\xc8~mS\xf3\x0cB\x92\x96\x18\x00n\x98\xe2X\xcb;u3\xe0``~\x9f\xd7\x8f\xb7)\xd5\xab\xa7u\xcb\x11G\t\x19P\xe4b5]\xf7\xcf\xa0\xcf\x1aj\x80\xbb\x1ax~\x15\'.\xd7\x9a*k\xa8\xa3\x06\xa9\xfa\xd5i\x93\xc4vW*\xcc\x17\xcd\xb8\xfe\x9cg\x18\'\xaa0?u\x83^\xd5\xee\x81\xcf\xcbN\x15\xad\n\xa4#\xf7g\xb7bs\xef\xc7\xb5\x9f\xc4`\x8b\x13\xbb\xc9\x80\x88\x80\xbb\xb1\'\xb0\x1e\xfc\x14\xe6\x93\xb7H6E\x1c\xc6\xbdM\xa3\xb4\xfd=\xb2\xf1T-\x0fy\xb8\xc5:QJ\xe0T\xca\x04l\xaa\\v\x07s\xd2\t\xceOa\xc4h\xb8\xdc\x18\xb9n\xa2\xd1HKtu\xf4\xb7\xd3\'\xdc\x01\xff\x00N7\xc4/\x10i\xc1\x1c=T\xe9\xe3\xbf\xf2[\x07\xd7\xfc(\xef\xac&\x9e;\x84U\x90\xbb\xc7$r\xf8\xf0\xcd\x1eCF\xcar\xac\x8d\xee\x08\x18\xf6\xe1gc\xd4\x10\xdf(\xa2\xaeR\x8br\xa5`\x978A\x11\x87rv\x9c\x0c|\xaf\x83\x91\xfc-\x91\xd8\x8e;D\xfe\x8a\xa8\xb4\x9d~\xa8\xe3\xe3\xbc,\x90p\xc7\x9f\xed,-\xb7y)\xaa!x\x1cFS\xe6\x91\x19\x84\x81\x8ew\xfa\x1fOm\x87\x1b\xab\xf4\xecu\xf53\xdet\xe4\x11\x19\xd5Z\xa2\xedb\x83\xf0\xcdL\x99\xea5T\x8b\x8cx\x87\xbc\x90\x8f\x9f\xba\xeeH\'fh{[+ui\xf3\x1cG\xdf\xc1F;\xc6\xec\xe8u\xfb{\xedW\xdf\xf6(s/Kj;W3\xf91=\xc6\n=ah\x14\xfa\x9e\x82\xdd3\x04\x92\xf3n\x98\xb7\x88\xf0\x8e\xe4\xc3#\x15\x91G\xca\xac\x87\xb6qy\xf7m-\x1dw\x850\x8cIK\x8f\x06E\x8d2\x14\x1c\x03\xe9\xdb\x19\xfe\xbcP\xc8\xf7\xa9Z\xe6\xe9wz\xb8\xa7\x9a\x19\x84\x94\xcc#P\x00=\xe0[\xf0\x8b\xad\xb6\x05\xa1\xbb\xd5\xc0c\xe9\xa7\x8a\x00\x91\xca\x01 \x00\t\x19\xdf`\x0e\xd9\xf7\xe1\xed\xe5\xc5\xe8\xc2\xe2\x91\x9b\x03\xab\n\xce\xd9\xea\x00\xe3\x03\x1f\x9e7\xe3T-1\x9b\xae<\x97\x12\xa4\xec\xd6x.\x94\xb0\xc8\xa2?\x18\xc5\x80\xd0\x90\x8c=ppN\x06\xc7\x18\xcf\xe5\xc2\x16\xaa\xc9YN\x8f\x95\x86\xa1"b\xa0F\xa69\x94\x03\x92\x08\xeev\xdf\x1fM\x8f\x1a\x18\xe0\xe1n+K\x801\x82\x16S\xda#\x96!\xfd\xd9\xd5\x9b\xce\x81\xe3b\xcc\x0flc\xd3>\xdbp\x02\xb2\xd8\xf0*\xa2\xaa\xc6\xd30B\xf2B\xc8#\xdb\x1d\x00wl\x9c`z\xfd8\xcbQ\x1b\x8d\xcf\x15\x068\x17\x0bg\xd9A\xad\xb6\xaf\xbb\t\xea\x1c\x16w\x93\x12\x17*$#\x1f62\x00\x03o(9\xfc\xcexAk\x8b\x8c\x10x\xf0\x0ce\x91\x8b\xf5\x8e\xa2q\xb6\xe7\xb0\x19\xc6\xc7\xb7\xd7\x8c/e\x9bc\xa2\xf4\x86\xee\x00*\xec\xe7\xfd\xfc\xda4e\xee\xa5\x1d\xbfh\\\xd0\xdb\xad\xf1\xe4\x13\xd4\xe0\xf58\xf5\xdb$\xfe\x83\x8eU~5\xb5m,z\x96\x8b\x97\x94\x13\x17\x92\xd4\xe2\xf7\xa9:H\xc1\xa8\x91\x08\xa5\x8d\xf1\xdc\xaaH\xd2\xb7\xb1\x95;\x11\xc6*\x86`\x03\xa6\x07\x9eO\xa0Y\xeb\x9e\x19L\xebjp\x15w\xde\xaa\x03t\x80\xe3\n:@c\x9d\xb1\xb0\xe1\xbc\x8e\x92K\xa6\xa0\xa4\xa5\x87\xa8\xbf\x8e\xbd}\x04\x12\x123\xd7#~\x80\x7f>\x17v\x80t\x935\x9c\xdc\x02\x0b\x10\xddm\xce\x89\xea\xa8\x9a\x13\x1a\x08\x95\x81V"@A\x07c\xb0\'\xb1\x18\xe0\x8a\xb6o\x12X\xdcc\xaf\xa4)\xc1\xf4\x04\xed\xfd{\xf1\xae\xaa\xc6P\xd1\xa7\xe9f\x17.\xcaI\xea)\x99)\xe3\xa3\\\x86\xad\x93\xa4\x8c\xe1\xbc59o\xf2\x03\x8c\xe0D\xb16Y\\\\t\xc2\xd7\x1d\xc30/\xe3\xfaWkf\xd2\x9e-/\xed\x8dAr\x8a\xcdeIZ6\x9aS\xf8\xf5L\x99\xeaH\x17\xbc\xa4n\x0f\x87\x95S\xf3:\xf0\x1e\xe9\xcd\xab\x06\x9e\x82K~\x8c\xb6SYfLG=\xf6\xaa\x18\xeb\xef\xb5\x04n\xac\xb2I\x95\x81N?\x83\'m\xcf\r\x10A\xba\xdd\xe7\xfc\xdfO\xda@s];\xba6h5\xe1\x7f\x7f\xa5\x07\xb9\xd1[U\xaaRJ\xca\xcb\x8dM\xce\xad\xd9\xa5\x15U\x13\xf8\xc79\xcf\xccN\x7f\xef\x9e\xd8\xe1\xa8\xd1\x9a\xb9\xeaUt\xf5\xeebf\xa6\xcaRT;\x7f\xc5(\xff\x00\xdbc\xea\xcb\xe8}G\xd4qN\xf7ET\x08=Wa\x1e\x8a h\xac\x06[\x91\xf7[\xf5e\xb1\xe5_\x1a&\x7f\x0c/WJ\xee\xab\xfa\xfa\xe7}\xff\x00\xcf\x84\x0e\x9c\xb9Ki\xba\xc3\'\xee\xe3|\xc120\xf2J\x8d\x90\xc8\xdfC\xef\xdfn,\x9c\x18\xe7k\xf8-p\xff\x00%9h\xe4\x9e\tH\x86H\x9e\x05Q\x0c\xcb\xd7\x0c\x87\xca\xd2.\xfb6?\x88g\xd7\xe9\xef\xc1\xe5\xa2\xf1Snh\x9e&q4d\x18\x88\xc8\x19\xc9\xeeq\xeb\xd3\xe9\xc1\xfaYn\xc0\xebw\xac\xc3\xac\xcb\x10\x9c\r\x19\xaf\xb5\xcf&\xb9\xaf\xa4\xbe"\xf97W%&\xb8\xd1\xb5\t[~\xb1\xc03\x06\xa1\xa5\x88\xbb\xce\xc53\x89\x16H\x9eH\xa7\x80\x8f\xc4F,\xbb\x83\xc7j\xbf\x0b\x1f\x14\x1c\xaf\xf8\xbc\xe4\x95\x9b\x9b\\\xb8\xac\xa7I*a\x8a\xdd\xab\xf4\xc1\xa8W\xba\xe8\xeb\x9fB\xb4\xb4s\xa09\xe8\xc9\xea\x8aR:e\x8c\x82=@\xb3g06yh\x1cq}\xf6\xf7\x1f\x98x;\xea\x98\xb6=Q\x17\x89\xc7P<\xc7\xe4}\n\x93v\xad(\xb5s\x19\x08tc\x1f@F9f\xca\xe3\x01\xbd3\x8d\x81\xcfn\x10U\xe9Y\xa35\x18\x12\xa9\x8e\x8d\xe5\xceZ\\\xf4\xe4\xe7b=\xb8\xdb#\x03|\xd1v\x8c\x91\xc5J\x9d\x15\xaad\xae\xa3\x11\x82\xb2D\xcb\xb4\x9d@\x9c\xe3#\x07\xbf\xae=\xff\x00\xaf\n+\x84\xd3\xc1#\xe1\xa4\x922\xb9*\xca\xbf\x86\x18\x1c\x91\x90\x08\x19\xc7o_\xd7\x8c\xf77\xd1_\x19\x1b\x96)1%\xee1"\xc9%4\x1dHH\x13x(w\xf4\xd87\x7frp\x0f\x01\xe5\xb9I^\x0cp\xacQ\xab\xcb\xf3x@\x159\xf4,' from '\x13\xe9\xc6\tc\xb3\xd8\x7f\xf6\xfaYf\x94\x86\xb1\xce<\x01\xfa*\xa5\xbc\x9e\x9as\x0e@\xc2\xed\x93\x80p\x06\x07\xf2\x1c3\xf7\xb4i\xaa\xe9\xa0P\xaa\xd2\x05\x8ccm\xd9\xb0=~\xbf\xd3\x81{W\xfe\xa0r\xfa\xa5\xc8~mS\xf3\x0cB\x92\x96\x18\x00n\x98\xe2X\xcb;u3\xe0``~\x9f\xd7\x8f\xb7)\xd5\xab\xa7u\xcb\x11G\t\x19P\xe4b5]\xf7\xcf\xa0\xcf\x1aj\x80\xbb\x1ax~\x15\'.\xd7\x9a*k\xa8\xa3\x06\xa9\xfa\xd5i\x93\xc4vW*\xcc\x17\xcd\xb8\xfe\x9cg\x18\'\xaa0?u\x83^\xd5\xee\x81\xcf\xcbN\x15\xad\n\xa4#\xf7g\xb7bs\xef\xc7\xb5\x9f\xc4`\x8b\x13\xbb\xc9\x80\x88\x80\xbb\xb1\'\xb0\x1e\xfc\x14\xe6\x93\xb7H6E\x1c\xc6\xbdM\xa3\xb4\xfd=\xb2\xf1T-\x0fy\xb8\xc5:QJ\xe0T\xca\x04l\xaa\\v\x07s\xd2\t\xceOa\xc4h\xb8\xdc\x18\xb9n\xa2\xd1HKtu\xf4\xb7\xd3\'\xdc\x01\xff\x00N7\xc4/\x10i\xc1\x1c=T\xe9\xe3\xbf\xf2[\x07\xd7\xfc(\xef\xac&\x9e;\x84U\x90\xbb\xc7$r\xf8\xf0\xcd\x1eCF\xcar\xac\x8d\xee\x08\x18\xf6\xe1gc\xd4\x10\xdf(\xa2\xaeR\x8br\xa5`\x978A\x11\x87rv\x9c\x0c|\xaf\x83\x91\xfc-\x91\xd8\x8e;D\xfe\x8a\xa8\xb4\x9d~\xa8\xe3\xe3\xbc,\x90p\xc7\x9f\xed,-\xb7y)\xaa!x\x1cFS\xe6\x91\x19\x84\x81\x8ew\xfa\x1fOm\x87\x1b\xab\xf4\xecu\xf53\xdet\xe4\x11\x19\xd5Z\xa2\xedb\x83\xf0\xcdL\x99\xea5T\x8b\x8cx\x87\xbc\x90\x8f\x9f\xba\xeeH\'fh{[+ui\xf3\x1cG\xdf\xc1F;\xc6\xec\xe8u\xfb{\xedW\xdf\xf6(s/Kj;W3\xf91=\xc6\n=ah\x14\xfa\x9e\x82\xdd3\x04\x92\xf3n\x98\xb7\x88\xf0\x8e\xe4\xc3#\x15\x91G\xca\xac\x87\xb6qy\xf7m-\x1dw\x850\x8cIK\x8f\x06E\x8d2\x14\x1c\x03\xe9\xdb\x19\xfe\xbcP\xc8\xf7\xa9Z\xe6\xe9wz\xb8\xa7\x9a\x19\x84\x94\xcc#P\x00=\xe0[\xf0\x8b\xad\xb6\x05\xa1\xbb\xd5\xc0c\xe9\xa7\x8a\x00\x91\xca\x01 \x00\t\x19\xdf`\x0e\xd9\xf7\xe1\xed\xe5\xc5\xe8\xc2\xe2\x91\x9b\x03\xab\n\xce\xd9\xea\x00\xe3\x03\x1f\x9e7\xe3T-1\x9b\xae<\x97\x12\xa4\xec\xd6x.\x94\xb0\xc8\xa2?\x18\xc5\x80\xd0\x90\x8c=ppN\x06\xc7\x18\xcf\xe5\xc2\x16\xaa\xc9YN\x8f\x95\x86\xa1"b\xa0F\xa69\x94\x03\x92\x08\xeev\xdf\x1fM\x8f\x1a\x18\xe0\xe1n+K\x801\x82\x16S\xda#\x96!\xfd\xd9\xd5\x9b\xce\x81\xe3b\xcc\x0flc\xd3>\xdbp\x02\xb2\xd8\xf0*\xa2\xaa\xc6\xd30B\xf2B\xc8#\xdb\x1d\x00wl\x9c`z\xfd8\xcbQ\x1b\x8d\xcf\x15\x068\x17\x0bg\xd9A\xad\xb6\xaf\xbb\t\xea\x1c\x16w\x93\x12\x17*$#\x1f62\x00\x03o(9\xfc\xcexAk\x8b\x8c\x10x\xf0\x0ce\x91\x8b\xf5\x8e\xa2q\xb6\xe7\xb0\x19\xc6\xc7\xb7\xd7\x8c/e\x9bc\xa2\xf4\x86\xee\x00*\xec\xe7\xfd\xfc\xda4e\xee\xa5\x1d\xbfh\\\xd0\xdb\xad\xf1\xe4\x13\xd4\xe0\xf58\xf5\xdb$\xfe\x83\x8eU~5\xb5m,z\x96\x8b\x97\x94\x13\x17\x92\xd4\xe2\xf7\xa9:H\xc1\xa8\x91\x08\xa5\x8d\xf1\xdc\xaaH\xd2\xb7\xb1\x95;\x11\xc6*\x86`\x03\xa6\x07\x9eO\xa0Y\xeb\x9e\x19L\xebjp\x15w\xde\xaa\x03t\x80\xe3\n:@c\x9d\xb1\xb0\xe1\xbc\x8e\x92K\xa6\xa0\xa4\xa5\x87\xa8\xbf\x8e\xbd}\x04\x12\x123\xd7#~\x80\x7f>\x17v\x80t\x935\x9c\xdc\x02\x0b\x10\xddm\xce\x89\xea\xa8\x9a\x13\x1a\x08\x95\x81V"@A\x07c\xb0\'\xb1\x18\xe0\x8a\xb6o\x12X\xdcc\xaf\xa4)\xc1\xf4\x04\xed\xfd{\xf1\xae\xaa\xc6P\xd1\xa7\xe9f\x17.\xcaI\xea)\x99)\xe3\xa3\\\x86\xad\x93\xa4\x8c\xe1\xbc59o\xf2\x03\x8c\xe0D\xb16Y\\\\t\xc2\xd7\x1d\xc30/\xe3\xfaWkf\xd2\x9e-/\xed\x8dAr\x8a\xcdeIZ6\x9aS\xf8\xf5L\x99\xeaH\x17\xbc\xa4n\x0f\x87\x95S\xf3:\xf0\x1e\xe9\xcd\xab\x06\x9e\x82K~\x8c\xb6SYfLG=\xf6\xaa\x18\xeb\xef\xb5\x04n\xac\xb2I\x95\x81N?\x83\'m\xcf\r\x10A\xba\xdd\xe7\xfc\xdfO\xda@s];\xba6h5\xe1\x7f\x7f\xa5\x07\xb9\xd1[U\xaaRJ\xca\xcb\x8dM\xce\xad\xd9\xa5\x15U\x13\xf8\xc79\xcf\xccN\x7f\xef\x9e\xd8\xe1\xa8\xd1\x9a\xb9\xeaUt\xf5\xeebf\xa6\xcaRT;\x7f\xc5(\xff\x00\xdbc\xea\xcb\xe8}G\xd4qN\xf7ET\x08=Wa\x1e\x8a h\xac\x06[\x91\xf7[\xf5e\xb1\xe5_\x1a&\x7f\x0c/WJ\xee\xab\xfa\xfa\xe7}\xff\x00\xcf\x84\x0e\x9c\xb9Ki\xba\xc3\'\xee\xe3|\xc120\xf2J\x8d\x90\xc8\xdfC\xef\xdfn,\x9c\x18\xe7k\xf8-p\xff\x00%9h\xe4\x9e\tH\x86H\x9e\x05Q\x0c\xcb\xd7\x0c\x87\xca\xd2.\xfb6?\x88g\xd7\xe9\xef\xc1\xe5\xa2\xf1Snh\x9e&q4d\x18\x88\xc8\x19\xc9\xeeq\xeb\xd3\xe9\xc1\xfaYn\xc0\xebw\xac\xc3\xac\xcb\x10\x9c\r\x19\xaf\xb5\xcf&\xb9\xaf\xa4\xbe"\xf97W%&\xb8\xd1\xb5\t[~\xb1\xc03\x06\xa1\xa5\x88\xbb\xce\xc53\x89\x16H\x9eH\xa7\x80\x8f\xc4F,\xbb\x83\xc7j\xbf\x0b\x1f\x14\x1c\xaf\xf8\xbc\xe4\x95\x9b\x9b\\\xb8\xac\xa7I*a\x8a\xdd\xab\xf4\xc1\xa8W\xba\xe8\xeb\x9fB\xb4\xb4s\xa09\xe8\xc9\xea\x8aR:e\x8c\x82=@\xb3g06yh\x1cq}\xf6\xf7\x1f\x98x;\xea\x98\xb6=Q\x17\x89\xc7P<\xc7\xe4}\n\x93v\xad(\xb5s\x19\x08tc\x1f@F9f\xca\xe3\x01\xbd3\x8d\x81\xcfn\x10U\xe9Y\xa35\x18\x12\xa9\x8e\x8d\xe5\xceZ\\\xf4\xe4\xe7b=\xb8\xdb#\x03|\xd1v\x8c\x91\xc5J\x9d\x15\xaad\xae\xa3\x11\x82\xb2D\xcb\xb4\x9d@\x9c\xe3#\x07\xbf\xae=\xff\x00\xaf\n+\x84\xd3\xc1#\xe1\xa4\x922\xb9*\xca\xbf\x86\x18\x1c\x91\x90\x08\x19\xc7o_\xd7\x8c\xf77\xd1_\x19\x1b\x96)1%\xee1"\xc9%4\x1dHH\x13x(w\xf4\xd87\x7frp\x0f\x01\xe5\xb9I^\x0cp\xacQ\xab\xcb\xf3x@\x159\xf4,'
+[18/07/2015 14:19:35] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 72, in ldap_display
+    'avatar': HttpResponse(r['attributes']['jpegPhoto'][0], mimetype="image/jpeg") if 'jpegPhoto' in r['attributes'] else '',
+  File "D:\42_work\framework\venv\lib\site-packages\django\http\response.py", line 340, in __init__
+    super(HttpResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'mimetype'
+[18/07/2015 14:47:25] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 82, in ldap_display
+    print (range('A', 'Z'))
+TypeError: 'str' object cannot be interpreted as an integer
+[18/07/2015 15:26:28] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 83, in ldap_display
+    print (string.lowercase[:26])
+AttributeError: 'module' object has no attribute 'lowercase'
+[18/07/2015 16:10:07] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 87, in ldap_display
+    'alphabet': string.lowercase,
+AttributeError: 'module' object has no attribute 'lowercase'
+[18/07/2015 16:33:29] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 87, in ldap_display
+    'alphabet': string.lowercase,
+AttributeError: 'module' object has no attribute 'lowercase'
+[18/07/2015 16:45:40] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: ldap_display() missing 2 required positional arguments: 'letter' and 'order'
+[18/07/2015 16:46:27] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: ldap_display() missing 2 required positional arguments: 'letter' and 'order'
+[18/07/2015 16:46:57] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: ldap_display() missing 2 required positional arguments: 'letter' and 'order'
+[18/07/2015 16:47:20] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+TypeError: ldap_display() missing 2 required positional arguments: 'letter' and 'order'
+[18/07/2015 16:52:44] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('b', '')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 94, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\six.py", line 659, in reraise
+    raise value
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('b', '')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<letter>.+)/(?P<order>.+)/$']
+[18/07/2015 16:56:46] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('b', '')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 96, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\six.py", line 659, in reraise
+    raise value
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('b', '')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<letter>.+)/(?P<order>.+)/$']
+[18/07/2015 17:03:01] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 53, in ldap_display
+    alphabet = string.ascii_lowercas
+AttributeError: 'module' object has no attribute 'ascii_lowercas'
+[18/07/2015 17:06:37] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 337, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 95, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 1028, in do_if
+    nodelist = parser.parse(('endif',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 339, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 394, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endblock', expected 'endif'
+[18/07/2015 17:08:57] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 337, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 95, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 1028, in do_if
+    nodelist = parser.parse(('endif',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 339, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 394, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endblock', expected 'endif'
+[18/07/2015 17:09:04] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 337, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 95, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 1028, in do_if
+    nodelist = parser.parse(('endif',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 339, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 394, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endblock', expected 'endif'
+[18/07/2015 17:19:46] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 79, in ldap_display
+    'avatar': '<img src="data:image/png;base64,{0}"/>'.format(base64.b64encode(r['attributes']['uid'][0])),
+  File "D:\42_work\framework\venv\lib\base64.py", line 62, in b64encode
+    encoded = binascii.b2a_base64(s)[:-1]
+TypeError: 'str' does not support the buffer interface
+[18/07/2015 17:21:20] :: [base:get_response:django.request] [170] :: Not Found: /l
+[18/07/2015 17:25:10] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 79, in ldap_display
+    'avatar': '<img src="data:image/png;base64,{0}"/>'.format(base64.b64decode(r['attributes']['uid'][0])),
+  File "D:\42_work\framework\venv\lib\base64.py", line 90, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+[18/07/2015 17:25:25] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 79, in ldap_display
+    'avatar': '<img src="data:image/png;base64,{0}"/>'.format(base64.b64decode(r['attributes']['uid'][0])),
+  File "D:\42_work\framework\venv\lib\base64.py", line 90, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+[18/07/2015 17:25:25] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 79, in ldap_display
+    'avatar': '<img src="data:image/png;base64,{0}"/>'.format(base64.b64decode(r['attributes']['uid'][0])),
+  File "D:\42_work\framework\venv\lib\base64.py", line 90, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+[18/07/2015 17:34:59] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 61, in ldap_display
+    search_filter='(uid={}*)'.format(agreau),
+NameError: name 'agreau' is not defined
+[18/07/2015 17:35:21] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 337, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 99, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 1028, in do_if
+    nodelist = parser.parse(('endif',))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 339, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 394, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'endblock', expected 'endif'
+[18/07/2015 17:36:08] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('b', '')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 99, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\six.py", line 659, in reraise
+    raise value
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('b', '')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<letter>.+)/(?P<order>.+)/$']
+[18/07/2015 17:37:13] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('', 'natural')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 100, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\six.py", line 659, in reraise
+    raise value
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('', 'natural')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<letter>.+)/(?P<order>.+)/$']
+[18/07/2015 17:40:10] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('', 'natural')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 95, in ldap_display
+    'annuaire': annuaire,
+  File "D:\42_work\framework\venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "D:\42_work\framework\venv\lib\site-packages\django\utils\six.py", line 659, in reraise
+    raise value
+  File "D:\42_work\framework\venv\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('', 'natural')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<letter>.+)/(?P<order>.+)/$']
+[18/07/2015 17:52:31] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 52, in ldap_display
+    alphabet = string.ascii_lowercase
+NameError: name 'string' is not defined
+[18/07/2015 17:56:11] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 77, in ldap_display
+    'avatar': '/9j/' + str(base64.b64fdecode(r['attributes']['jpegPhoto'][0])) + 'k=' if 'jpegPhoto' in r['attributes'] else '',
+AttributeError: 'module' object has no attribute 'b64fdecode'
+[18/07/2015 17:57:16] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 77, in ldap_display
+    'avatar': '/9j/' + base64.b64decode(r['attributes']['jpegPhoto'][0]) + 'k=' if 'jpegPhoto' in r['attributes'] else '',
+TypeError: Can't convert 'bytes' object to str implicitly
+[18/07/2015 18:08:00] :: [base:get_response:django.request] [170] :: Not Found: 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AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAQABAAAAAAAAAAAQ/+EUngBAAAEAAAAAAAAAAQAAAAEEAAAAAAAAAAAAABKKaytAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnwAHAHAAYAACAAkAAQDwFaAO8BWgDo0FAAAAAAAAAAAAAAAAAAAAAI0FAAAAAAAAAAAAAAAAAAAAAGgGAAAAAAAAAAAAAAAAAAAAAOD+AAAAAAAAAAAAAAAAAAAAAAAAAQAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////2UAAAABAAEALQEUAQAAAAAAAAAARUY3MC0zMDBtbSBmLzQtNS42IElTIFVTTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE45NjI0MDEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMAQAABAAAAAEAAABcAAAABwAAAAEBAAABAAAAAAAAAAIBAAABAAAAAAAAAAMBAAABAAAAAAAAAAQBAAABAAAAAAAAAAUBAAABAAAAAAAAAAgBAAABAAAAAAAAAA8BAAABAAAAAAAAAAIAAABEAAAABQAAAAECAAABAAAAAAAAAAICAAABAAAAAAAAAAMCAAABAAAAAAAAAAQCAAABAAAAAwAAAAUCAAABAAAAAAAAAAMAAAB4AAAACAAAAAUFAAABAAAAAAAAAAYFAAABAAAAAAAAAA8FAAABAAAAAAAAABAFAAABAAAAAAAAAA4FAAABAAAAAAAAAA8GAAABAAAAAAAAAAgFAAABAAAAAAAAAAcFAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAcAAAABBwAAAQAAAAAAAAACBwAAAQAAAAAAAAAEBwAAAQAAAAAAAAAGBwAAAQAAAAAAAAALCAAAAQAAAAAAAAAPCAAAAQAAAAAAAAALBwAAAQAAAAAAAAAAAAAA8BUAAKAOAAAAAAAAAAAAABwAAAADAAAAAAAAAAAAAAD//8QJgQAAAAAAAAAMABcCAAQABK4BAAAiAKAW3A4BAAEAqAA4AJcW1w4AAAAAAAAAAAAAAAAAAAAABgDhAgAEAAQ9AREC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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwA1ADCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAgQCBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAKAAAAAAAAAAAQdAAAAAAAAAAAADgAAAAAAAAAABnwFaAOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAwkGAAAAAJ9JSSoAOgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAQACAAQAAABSOTgAAgAHAAQAAAAwMTAwAAAAAICxVQCzBQAAACE5AL4DAAABAAAAAQAEAAAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAMBAwABAAAABgAAABoBBQABAAAAMCkAABsBBQABAAAAOCkAACgBAwABAAAAAgAAAAECBAABAAAAQCkAAAICBAABAAAAXCkAAAAAAABIAAAAAQAAAEgAAAABAAAA/9j/2wCEAAEBAQEBAQEBAQEBAQEBAQIBAQEBAQICAgICAwMDAwMDAwMDBAQEAwMEAwMDBAUEBAUFBQUFAwQFBgUFBgQFBQUBAQEBAQEBAgEBAgUDAwMFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBf/AABEIAHgAoAMBIQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsBAAMBAQEBAQEBAQEAAAAAAAABAgME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
+[18/07/2015 18:09:11] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 74, in ldap_display
+    print (base64.b64encode(r['attributes']['jpegPhoto'][0]))
+OSError: [Errno 22] Invalid argument
+[18/07/2015 18:10:02] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 74, in ldap_display
+    print (base64.b64encode(r['attributes']['jpegPhoto'][0]))
+OSError: [Errno 22] Invalid argument
+[18/07/2015 19:38:04] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 85, in ldap_display
+    print (annuaire)
+BrokenPipeError: [Errno 32] Broken pipe
+[18/07/2015 19:38:04] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/a/normal/
+Traceback (most recent call last):
+  File "D:\42_work\framework\venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\app\ldap42\views.py", line 85, in ldap_display
+    print (annuaire)
+OSError: [Errno 22] Invalid argument
