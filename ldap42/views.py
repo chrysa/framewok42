@@ -1,4 +1,5 @@
 #-*-coding:utf-8 -*-
+
 import logging
 
 import ldap3
@@ -53,7 +54,7 @@ def ldap_display(request):
         logger_info.info(l_fct.info_login_ldap_log_message(request))
         c.search(
             search_base='ou=people,dc=42,dc=fr',
-            search_filter='(uid=*)',
+            search_filter='(uid=agreau)',
             search_scope=ldap3.SUBTREE,
             attributes=[
                 'uid',
@@ -65,9 +66,9 @@ def ldap_display(request):
         )
         annuaire = []
         for r in c.response:
-            print(r['attributes'])
             annuaire.append(
                 {
+                    'avatar': r['attributes']['jpegPhoto'][0] if 'jpegPhoto' in r['attributes'] else '',
                     'uid': r['attributes']['uid'][0],
                     'givenName': r['attributes']['givenName'][0],
                     'mobile': r['attributes']['mobile'][0] if 'mobile' in r['attributes'] else '',
@@ -135,12 +136,10 @@ def login_ldap(request):
                     if user.is_active:
                         login(request, user)
                         userlang = UserLang.objects.get(user=request.user)
-                        logger_info.info(
-                            l_fct.info_login_class_log_message(request))
+                        logger_info.info(l_fct.info_login_class_log_message(request))
                         translation.activate(userlang.lang)
                         request.session[
                             translation.LANGUAGE_SESSION_KEY] = userlang.lang
-                        request.session['ldap_connection'] = True
                         redir = reverse('home')
                         if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('login'):
                             redir = request.META['HTTP_REFERER']

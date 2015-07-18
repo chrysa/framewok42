@@ -57,7 +57,7 @@
                                     <span class="caret"></span>
                                 </a>
                                 <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
-                                    {%  if request.session.ldap_connection %}
+                                    {% if request.session.ldap_log %}
                                         <li {% if request.path == url_annuaire_all %} class="active" {% endif %}><a
                                                 href="{{ url_annuaire_all }}">{% trans 'annuaire'|capfirst %}</a></li>
                                     {%  endif %}

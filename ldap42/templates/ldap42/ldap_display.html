@@ -14,7 +14,7 @@
         </thead>
         {% for user in annuaire %}
             <tr>
-                <td><img src="{{ user.avat }}" class="img-circle" height="50" widtrh="50"></td>
+                <td><img src="data:image/jpeg;base64,{{ user.avatar }}" class="img-circle" height="50" widtrh="50"></td>
                 <td>{{ user.uid }}</td>
                 <td>{{ user.sn }}</td>
                 <td>{{ user.givenName }}</td>

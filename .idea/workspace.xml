@@ -2,91 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e384430e-93fd-4d29-9fc6-0e96243847d3" name="Default" comment="plus que la base64 a gerer&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/changelist-bg.gif" afterPath="$PROJECT_DIR$/statics/admin/img/changelist-bg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/changelist-bg_rtl.gif" afterPath="$PROJECT_DIR$/statics/admin/img/changelist-bg_rtl.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/default-bg-reverse.gif" afterPath="$PROJECT_DIR$/statics/admin/img/default-bg-reverse.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/default-bg.gif" afterPath="$PROJECT_DIR$/statics/admin/img/default-bg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/deleted-overlay.gif" afterPath="$PROJECT_DIR$/statics/admin/img/deleted-overlay.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon-no.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon-no.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon-unknown.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon-unknown.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon-yes.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon-yes.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_addlink.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_addlink.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_alert.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_alert.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_calendar.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_calendar.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_changelink.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_changelink.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_clock.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_clock.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_deletelink.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_deletelink.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_error.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_error.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_searchbox.png" afterPath="$PROJECT_DIR$/statics/admin/img/icon_searchbox.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/icon_success.gif" afterPath="$PROJECT_DIR$/statics/admin/img/icon_success.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/inline-delete-8bit.png" afterPath="$PROJECT_DIR$/statics/admin/img/inline-delete-8bit.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/inline-delete.png" afterPath="$PROJECT_DIR$/statics/admin/img/inline-delete.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/inline-restore-8bit.png" afterPath="$PROJECT_DIR$/statics/admin/img/inline-restore-8bit.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/inline-restore.png" afterPath="$PROJECT_DIR$/statics/admin/img/inline-restore.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/inline-splitter-bg.gif" afterPath="$PROJECT_DIR$/statics/admin/img/inline-splitter-bg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/gis/move_vertex_off.png" afterPath="$PROJECT_DIR$/statics/admin/img/gis/move_vertex_off.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/gis/move_vertex_on.png" afterPath="$PROJECT_DIR$/statics/admin/img/gis/move_vertex_on.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/nav-bg-grabber.gif" afterPath="$PROJECT_DIR$/statics/admin/img/nav-bg-grabber.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/nav-bg-reverse.gif" afterPath="$PROJECT_DIR$/statics/admin/img/nav-bg-reverse.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/nav-bg-selected.gif" afterPath="$PROJECT_DIR$/statics/admin/img/nav-bg-selected.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/nav-bg.gif" afterPath="$PROJECT_DIR$/statics/admin/img/nav-bg.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/selector-icons.gif" afterPath="$PROJECT_DIR$/statics/admin/img/selector-icons.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/selector-search.gif" afterPath="$PROJECT_DIR$/statics/admin/img/selector-search.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/sorting-icons.gif" afterPath="$PROJECT_DIR$/statics/admin/img/sorting-icons.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/tooltag-add.png" afterPath="$PROJECT_DIR$/statics/admin/img/tooltag-add.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/img/tooltag-arrowright.png" afterPath="$PROJECT_DIR$/statics/admin/img/tooltag-arrowright.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/admin/DateTimeShortcuts.js" afterPath="$PROJECT_DIR$/statics/admin/js/admin/DateTimeShortcuts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/LICENSE-JQUERY.txt" afterPath="$PROJECT_DIR$/statics/admin/js/LICENSE-JQUERY.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/admin/RelatedObjectLookups.js" afterPath="$PROJECT_DIR$/statics/admin/js/admin/RelatedObjectLookups.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/SelectBox.js" afterPath="$PROJECT_DIR$/statics/admin/js/SelectBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/SelectFilter2.js" afterPath="$PROJECT_DIR$/statics/admin/js/SelectFilter2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/__init__.py" afterPath="$PROJECT_DIR$/ldap42/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/forms/__init__.py" afterPath="$PROJECT_DIR$/ldap42/forms/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/migrations/__init__.py" afterPath="$PROJECT_DIR$/ldap42/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/actions.js" afterPath="$PROJECT_DIR$/statics/admin/js/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/actions.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/actions.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/admin.py" afterPath="$PROJECT_DIR$/ldap42/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/app.iml" afterPath="$PROJECT_DIR$/.idea/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/base.css" afterPath="$PROJECT_DIR$/statics/admin/css/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bugs" afterPath="$PROJECT_DIR$/bugs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/calendar.js" afterPath="$PROJECT_DIR$/statics/admin/js/calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/changelists.css" afterPath="$PROJECT_DIR$/statics/admin/css/changelists.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/collapse.js" afterPath="$PROJECT_DIR$/statics/admin/js/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/collapse.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/collapse.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/core/base.html" afterPath="$PROJECT_DIR$/core/templates/core/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/complet.log" afterPath="$PROJECT_DIR$/logs/complet.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/core.js" afterPath="$PROJECT_DIR$/statics/admin/js/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/dashboard.css" afterPath="$PROJECT_DIR$/statics/admin/css/dashboard.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/django.log" afterPath="$PROJECT_DIR$/logs/django.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/forms.css" afterPath="$PROJECT_DIR$/statics/admin/css/forms.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profil/functions.py" afterPath="$PROJECT_DIR$/profil/functions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/hijack/hijack-styles.css" afterPath="$PROJECT_DIR$/statics/hijack/hijack-styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/ie.css" afterPath="$PROJECT_DIR$/statics/admin/css/ie.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/info.log" afterPath="$PROJECT_DIR$/logs/info.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/inlines.js" afterPath="$PROJECT_DIR$/statics/admin/js/inlines.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/inlines.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/inlines.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/jquery.init.js" afterPath="$PROJECT_DIR$/statics/admin/js/jquery.init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/jquery.js" afterPath="$PROJECT_DIR$/statics/admin/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/js/jquery.js" afterPath="$PROJECT_DIR$/statics/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/jquery.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/jquery.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html" afterPath="$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/login.css" afterPath="$PROJECT_DIR$/statics/admin/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/templates/ldap42/loginldap.html" afterPath="$PROJECT_DIR$/ldap42/templates/ldap42/loginldap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/models.py" afterPath="$PROJECT_DIR$/ldap42/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/prepopulate.js" afterPath="$PROJECT_DIR$/statics/admin/js/prepopulate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/prepopulate.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/prepopulate.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/related-widget-wrapper.js" afterPath="$PROJECT_DIR$/statics/admin/js/related-widget-wrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/rtl.css" afterPath="$PROJECT_DIR$/statics/admin/css/rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/tests.py" afterPath="$PROJECT_DIR$/ldap42/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/timeparse.js" afterPath="$PROJECT_DIR$/statics/admin/js/timeparse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/urlify.js" afterPath="$PROJECT_DIR$/statics/admin/js/urlify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/urls.py" afterPath="$PROJECT_DIR$/ldap42/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/settings.py" afterPath="$PROJECT_DIR$/framework/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/urls.py" afterPath="$PROJECT_DIR$/framework/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/views.py" afterPath="$PROJECT_DIR$/ldap42/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/widgets.css" afterPath="$PROJECT_DIR$/statics/admin/css/widgets.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled.iws" />
@@ -116,11 +42,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.25">
+              <caret line="246" column="0" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -138,23 +74,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ldap42/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7403599">
-              <caret line="72" column="97" selection-start-line="72" selection-start-column="97" selection-end-line="72" selection-end-column="97" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
               <folding>
-                <element signature="e#21#35#0" expanded="true" />
+                <element signature="e#22#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ldap_display.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ldap_display.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667">
-              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.4787234">
+              <caret line="15" column="0" selection-start-line="14" selection-start-column="34" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,7 +113,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/core/templates/core/home.html" />
-        <option value="$PROJECT_DIR$/framework/settings.py" />
         <option value="$PROJECT_DIR$/core/home.py" />
         <option value="$PROJECT_DIR$/profil/views.py" />
         <option value="$PROJECT_DIR$/profil/templates/profil/login.html" />
@@ -187,9 +122,11 @@
         <option value="$PROJECT_DIR$/ldap42/templates/ldap42/annuaire.html" />
         <option value="$PROJECT_DIR$/profil/urls.py" />
         <option value="$PROJECT_DIR$/ldap42/urls.py" />
+        <option value="$PROJECT_DIR$/framework/urls.py" />
         <option value="$PROJECT_DIR$/core/templates/core/base.html" />
-        <option value="$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html" />
+        <option value="$PROJECT_DIR$/framework/settings.py" />
         <option value="$PROJECT_DIR$/ldap42/views.py" />
+        <option value="$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html" />
       </list>
     </option>
   </component>
@@ -229,8 +166,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,7 +230,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="forum" />
+              <option name="myItemId" value="generate_logs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -309,20 +244,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="forum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forum" />
+              <option name="myItemId" value="framework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -671,28 +600,34 @@
       <option name="project" value="LOCAL" />
       <updated>1437144047253</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="plus que la base64 a gerer&#10;">
+      <created>1437148397069</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1437148397069</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="26" width="1368" height="743" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25427872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25377643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.502445" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32686085" sideWeight="0.49755502" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686085" sideWeight="0.49755502" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="99" y="126" width="1168" height="543" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -703,24 +638,27 @@
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="99" y="126" width="1168" height="543" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.502445" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686085" sideWeight="0.49755502" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847896" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294621" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25377643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39652568" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4651589" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -752,24 +690,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ldap42/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
-          <folding>
-            <element signature="e#21#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -831,7 +751,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#21#35#0" expanded="true" />
+            <element signature="e#22#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -888,7 +808,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
           <folding>
-            <element signature="e#21#35#0" expanded="true" />
+            <element signature="e#22#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -953,13 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5177665">
           <caret line="36" column="98" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70558375">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1055,39 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ldap42/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="61" column="73" selection-start-line="61" selection-start-column="73" selection-end-line="61" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generate_logs/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2713797">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generate_logs/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17445838">
@@ -1119,14 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/statics/hijack/hijack-styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33247423">
@@ -1135,13 +1007,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/generate_logs/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.060913704">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3333334">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ldap42/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.25">
+          <caret line="246" column="0" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ldap42/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7403599">
-          <caret line="72" column="97" selection-start-line="72" selection-start-column="97" selection-end-line="72" selection-end-column="97" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
           <folding>
-            <element signature="e#21#35#0" expanded="true" />
+            <element signature="e#22#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ldap42/templates/ldap42/ldap_display.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4787234">
+          <caret line="15" column="0" selection-start-line="14" selection-start-column="34" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

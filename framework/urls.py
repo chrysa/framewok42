@@ -17,3 +17,8 @@ urlpatterns = patterns('',
                        url(r'^log/', include('generate_logs.urls')),
                        url(r'^profil/', include('profil.urls')),
                        ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+    urlpatterns += patterns('',
+                            (r'^media/(?P<path>.*)$', 'django.views.static.serve',
+                             {'document_root': settings.MEDIA_ROOT})
+                            )
