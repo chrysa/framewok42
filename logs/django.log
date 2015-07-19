@@ -44237,3 +44237,1009 @@ Traceback (most recent call last):
   File "D:\42_work\framework\app\ldap42\views.py", line 85, in ldap_display
     print (annuaire)
 OSError: [Errno 22] Invalid argument
+[19/07/2015 01:39:55] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 817, in _resolve_lookup
+    current = current[bit]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 825, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'SessionStore' object has no attribute 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 832, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/core/home.py", line 14, in index
+    return render(request, 'core/home.html', {})
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 474, in render
+    args = [arg.resolve(context) for arg in self.args]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 474, in <listcomp>
+    args = [arg.resolve(context) for arg in self.args]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 668, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 787, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 839, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [ldap_log] in '<django.contrib.sessions.backends.db.SessionStore object at 0x7fe21c4c8b00>'
+[19/07/2015 01:39:55] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 817, in _resolve_lookup
+    current = current[bit]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 825, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'SessionStore' object has no attribute 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 832, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/core/home.py", line 14, in index
+    return render(request, 'core/home.html', {})
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 474, in render
+    args = [arg.resolve(context) for arg in self.args]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 474, in <listcomp>
+    args = [arg.resolve(context) for arg in self.args]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 668, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 787, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 839, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [ldap_log] in '<django.contrib.sessions.backends.db.SessionStore object at 0x7fe21c4c8898>'
+[19/07/2015 01:39:57] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[19/07/2015 01:40:11] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 817, in _resolve_lookup
+    current = current[bit]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 825, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'SessionStore' object has no attribute 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 832, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/core/home.py", line 14, in index
+    return render(request, 'core/home.html', {})
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 474, in render
+    args = [arg.resolve(context) for arg in self.args]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 474, in <listcomp>
+    args = [arg.resolve(context) for arg in self.args]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 668, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 787, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 839, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [ldap_log] in '<django.contrib.sessions.backends.db.SessionStore object at 0x7fe2197c3c88>'
+[19/07/2015 01:40:16] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 817, in _resolve_lookup
+    current = current[bit]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 825, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'SessionStore' object has no attribute 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 832, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'ldap_log'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/core/home.py", line 14, in index
+    return render(request, 'core/home.html', {})
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 474, in render
+    args = [arg.resolve(context) for arg in self.args]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 474, in <listcomp>
+    args = [arg.resolve(context) for arg in self.args]
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 668, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 787, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 839, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [ldap_log] in '<django.contrib.sessions.backends.db.SessionStore object at 0x7fe2197ce978>'
+[19/07/2015 01:53:50] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 112, in ldap_display
+    errors['unknow'] = _("bind_error")
+TypeError: list indices must be integers, not str
+[19/07/2015 02:44:50] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 110, in ldap_display
+    errors['unknow'] = _("bind_error")
+TypeError: list indices must be integers, not str
+[19/07/2015 02:47:52] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 103, in ldap_display
+    print(annuaire)
+BrokenPipeError: [Errno 32] Broken pipe
+[19/07/2015 11:46:02] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[19/07/2015 12:28:22] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 103, in ldap_display
+    errors['unknow'] = _("bind_error")
+TypeError: list indices must be integers, not str
+[19/07/2015 12:29:04] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 103, in ldap_display
+    errors['unknow'] = _("bind_error")
+TypeError: list indices must be integers, not str
+[19/07/2015 13:24:16] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 103, in ldap_display
+    errors['unknow'] = _("bind_error")
+TypeError: list indices must be integers, not str
+[19/07/2015 13:37:55] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('b', 'natural')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 111, in ldap_display
+    'annuaire': annuaire,
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('b', 'natural')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<order>.+)/(?P<year>.+)/(?P<month>.+)/(?P<letter>.+)/$']
+[19/07/2015 13:49:51] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('b', 'natural')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 113, in ldap_display
+    'month': month,
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 329, in render
+    return nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('b', 'natural')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<order>.+)/(?P<year>.+)/(?P<month>.+)/(?P<letter>.+)/$']
+[19/07/2015 14:00:14] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 223, in get_response
+    response = middleware_method(request, response)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/middleware.py", line 50, in process_response
+    request.session.save()
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/db.py", line 58, in save
+    session_data=self.encode(self._get_session(no_load=must_create)),
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 88, in encode
+    serialized = self.serializer().dumps(session_dict)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/signing.py", line 90, in dumps
+    return json.dumps(obj, separators=(',', ':')).encode('latin-1')
+  File "/usr/lib/python3.4/json/__init__.py", line 237, in dumps
+    **kw).encode(obj)
+  File "/usr/lib/python3.4/json/encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.4/json/encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.4/json/encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: b'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AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAQABAAAAAAAAAAAjMJ7UngDAAAEAAAAAAAAAAQAAAAEEAAAAAAAAAAAAABKKaytAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnwAHAHAAYAACAAkAAQDwFaAO8BWgDpkFAAAAAAAAAAAAAAAAAAAAAJkFAAAAAAAAAAAAAAAAAAAAAPAEAAAAAAAAAAAAAAAAAAAAALj+AAAAAAAAAAAAAAAAAAAAAAEAAQAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////2UAAAABAAEASAEtAQAAAAAAAAAARUY3MC0zMDBtbSBmLzQtNS42IElTIFVTTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE45NjI0MDEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMAQAABAAAAAEAAABcAAAABwAAAAEBAAABAAAAAAAAAAIBAAABAAAAAAAAAAMBAAABAAAAAAAAAAQBAAABAAAAAAAAAAUBAAABAAAAAAAAAAgBAAABAAAAAAAAAA8BAAABAAAAAAAAAAIAAABEAAAABQAAAAECAAABAAAAAAAAAAICAAABAAAAAAAAAAMCAAABAAAAAAAAAAQCAAABAAAAAwAAAAUCAAABAAAAAAAAAAMAAAB4AAAACAAAAAUFAAABAAAAAAAAAAYFAAABAAAAAAAAAA8FAAABAAAAAAAAABAFAAABAAAAAAAAAA4FAAABAAAAAAAAAA8GAAABAAAAAAAAAAgFAAABAAAAAAAAAAcFAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAcAAAABBwAAAQAAAAAAAAACBwAAAQAAAAAAAAAEBwAAAQAAAAAAAAAGBwAAAQAAAAAAAAALCAAAAQAAAAAAAAAPCAAAAQAAAAAAAAALBwAAAQAAAAAAAAAAAAAA8BUAAKAOAAAAAAAAAAAAABwAAAADAAAAAAAAAAAAAAD//8QJgQAAAAAAAAAMABoCAAQABLMBAAAiAKAW3A4BAAEAqAA4AJcW1w4AAAAAAAAAAAAAAAAAAAAABgDhAgAEAAQ9AREC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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAgQCBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAKAAAAAAAAAAAQdAAAAAAAAAAAADgAAAAAAAAAABnwFaAOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAwkGAAAAAJ9JSSoAOgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAQACAAQAAABSOTgAAgAHAAQAAAAwMTAwAAAAAICxVQCzBQAAACE5AL4DAAABAAAAAQAEAAAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAMBAwABAAAABgAAABoBBQABAAAAMCkAABsBBQABAAAAOCkAACgBAwABAAAAAgAAAAECBAABAAAAQCkAAAICBAABAAAArCoAAAAAAABIAAAAAQAAAEgAAAABAAAA/9j/2wCEAAEBAQEBAQEBAQEBAQEBAQIBAQEBAQICAgICAwMDAwMDAwMDBAQEAwMEAwMDBAUEBAUFBQUFAwQFBgUFBgQFBQUBAQEBAQEBAgEBAgUDAwMFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBf/AABEIAHgAoAMBIQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsBAAMBAQEBAQEBAQEAAAAAAAABAgME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' is not JSON serializable
+[19/07/2015 14:20:32] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/reverse/2016/july/b/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 59, in ldap_display
+    request.session['ldap']['old_order'] = order
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap'
+[19/07/2015 14:20:39] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/reverse/2013/july/b/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 59, in ldap_display
+    request.session['ldap']['old_order'] = order
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap'
+[19/07/2015 14:20:50] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/b/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 59, in ldap_display
+    request.session['ldap']['old_order'] = order
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap'
+[19/07/2015 14:21:43] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/b/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 58, in ldap_display
+    if 'ldap' not in request.session and 'old_order' not in request.session['ldap']:
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap'
+[19/07/2015 14:22:09] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/b/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 59, in ldap_display
+    request.session['ldap']['old_order'] = order
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap'
+[19/07/2015 14:22:35] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/b/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 60, in ldap_display
+    request.session['ldap']['old_order'] = order
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap'
+[19/07/2015 14:23:25] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/b/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 60, in ldap_display
+    request.session['ldap']['old_order'] = order
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap'
+[19/07/2015 14:23:27] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/b/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 60, in ldap_display
+    request.session['ldap']['old_order'] = order
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap'
+[19/07/2015 14:23:36] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 60, in ldap_display
+    request.session['ldap']['old_order'] = order
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/sessions/backends/base.py", line 48, in __getitem__
+    return self._session[key]
+KeyError: 'ldap'
+[19/07/2015 14:39:31] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 100, in ldap_display
+    sorted(annuaire, key=attrgetter("uid"))
+AttributeError: 'dict' object has no attribute 'uid'
+[19/07/2015 14:40:14] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/aa/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 100, in ldap_display
+    sorted(annuaire, key=attrgetter("uid"))
+AttributeError: 'dict' object has no attribute 'uid'
+[19/07/2015 14:53:12] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/aa/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 98, in ldap_display
+    sorted(annuaire)
+TypeError: unorderable types: dict() < dict()
+[19/07/2015 15:00:19] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/z/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 99, in ldap_display
+    annuaire = annuaire.items()
+AttributeError: 'list' object has no attribute 'items'
+[19/07/2015 15:00:30] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/z/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 99, in ldap_display
+    annuaire = annuaire.items()
+AttributeError: 'list' object has no attribute 'items'
+[19/07/2015 15:00:35] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/z/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 99, in ldap_display
+    annuaire = annuaire.items()
+AttributeError: 'list' object has no attribute 'items'
+[19/07/2015 15:10:03] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 79, in ldap_display
+    'sn',
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 568, in search
+    request = search_operation(search_base, search_filter, search_scope, dereference_aliases, attributes, size_limit, time_limit, types_only, self.server.schema if self.server else None)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/operation/search.py", line 365, in search_operation
+    request['filter'] = build_filter(search_filter, schema)  # parse the searchFilter string and compile it starting from the root node
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/operation/search.py", line 312, in build_filter
+    return compile_filter(parse_filter(search_filter, schema).elements[0])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/operation/search.py", line 231, in parse_filter
+    raise LDAPInvalidFilterError('missing boolean operator in filter')
+ldap3.core.exceptions.LDAPInvalidFilterError: missing boolean operator in filter
+[19/07/2015 15:11:50] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/2013/july/a/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 80, in ldap_display
+    'sn',
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/core/connection.py", line 568, in search
+    request = search_operation(search_base, search_filter, search_scope, dereference_aliases, attributes, size_limit, time_limit, types_only, self.server.schema if self.server else None)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/operation/search.py", line 365, in search_operation
+    request['filter'] = build_filter(search_filter, schema)  # parse the searchFilter string and compile it starting from the root node
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/operation/search.py", line 312, in build_filter
+    return compile_filter(parse_filter(search_filter, schema).elements[0])
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/operation/search.py", line 231, in parse_filter
+    raise LDAPInvalidFilterError('missing boolean operator in filter')
+ldap3.core.exceptions.LDAPInvalidFilterError: missing boolean operator in filter
+[19/07/2015 15:23:21] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/all/all/all/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 68, in ldap_display
+    while year <= date_now.year:
+TypeError: unorderable types: str() <= int()
+[19/07/2015 15:25:49] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/all/all/all/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('natural', 'all', 'all', '')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 122, in ldap_display
+    'month': month,
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('natural', 'all', 'all', '')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<order>.+)/(?P<year>.+)/(?P<month>.+)/(?P<letter>.+)/$']
+[19/07/2015 15:27:46] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/all/all/all/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 80, in ldap_display
+    search_base='ou=paris,ou=people,ou={},ou={},dc=42,dc=fr'.format(select_month, select_year),
+UnboundLocalError: local variable 'select_year' referenced before assignment
+[19/07/2015 15:47:15] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/all/all/all/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 93, in ldap_display
+    print (c.response)
+BrokenPipeError: [Errno 32] Broken pipe
+[19/07/2015 15:54:48] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+                                                                                             [19/07/2015 16:19:16] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[19/07/2015 16:20:36] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[19/07/2015 16:39:37] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/all/all/x/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 83, in ldap_display
+    search_filter='(uid={}*)'.format(l),
+UnboundLocalError: local variable 'l' referenced before assignment
+[19/07/2015 17:52:40] :: [base:get_response:django.request] [170] :: Not Found: /favicon.ico
+[19/07/2015 17:59:08] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/all/all/z/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 101, in ldap_display
+    'givenName': r['attributes']['givenName'][0],
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/ldap3/utils/ciDict.py", line 67, in __getitem__
+    return self._store[self._getkey(key)]
+KeyError: 'givenName'
+[19/07/2015 18:25:24] :: [base:get_response:django.request] [170] :: Not Found: /ldap/annuaire,reverse,all,all,all,
+[19/07/2015 19:05:34] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/reverse/all/all/z/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 113, in ldap_display
+    'pool_month': LdapForm.pool_month,
+AttributeError: 'module' object has no attribute 'pool_month'
+[19/07/2015 19:06:42] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/reverse/all/all/z/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 111, in ldap_display
+    'pool_month': LdapForm.pool_month,
+AttributeError: type object 'LdapForm' has no attribute 'pool_month'
+[19/07/2015 19:07:45] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/reverse/all/all/z/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('reverse', '', 'all', 'z')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 112, in ldap_display
+    'pool_year': year,
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('reverse', '', 'all', 'z')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<order>.+)/(?P<year>.+)/(?P<month>.+)/(?P<letter>.+)/$']
+[19/07/2015 19:08:13] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/reverse/all/all/z/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('reverse', '', 'all', 'z')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 112, in ldap_display
+    'pool_year': year,
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('reverse', '', 'all', 'z')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<order>.+)/(?P<year>.+)/(?P<month>.+)/(?P<letter>.+)/$']
+[19/07/2015 19:20:58] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /ldap/annuaire/natural/all/all/all/
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'framework.ldap_display_filter' with arguments '('natural', '', 'all', 'all')' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/chrysa/Bureau/42_work/framework/app/ldap42/views.py", line 112, in ldap_display
+    'pool_year': year,
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 444, in render
+    return strip_spaces_between_tags(self.nodelist.render(context).strip())
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/utils/six.py", line 659, in reraise
+    raise value
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/chrysa/Bureau/42_work/framework/venv/lib/python3.4/site-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'ldap_display_filter' with arguments '('natural', '', 'all', 'all')' and keyword arguments '{}' not found. 1 pattern(s) tried: ['ldap/annuaire/(?P<order>.+)/(?P<year>.+)/(?P<month>.+)/(?P<letter>.+)/$']

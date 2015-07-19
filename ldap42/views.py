@@ -16,7 +16,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 
-from contact import contact
 from generate_logs import functions as l_fct
 from ldap42.forms.LdapForm import LdapForm
 from profil.functions import create_user
@@ -47,54 +46,59 @@ def connect_to_ldap(session):
     return c
 
 
+from operator import itemgetter
+
 @login_required
-def ldap_display(request, letter, order):
+def ldap_display(request, year, month, order, letter):
     logger_info.info(l_fct.info_load_log_message(request))
     errors = []
     alphabet = string.ascii_lowercase
-    if not 'ldap_annuaire' in request.session:
-        print("connect ldap")
-        c = connect_to_ldap(request.session)
-        if c.bind():
-            logger_info.info(l_fct.info_login_ldap_log_message(request))
-            print("search")
-            c.search(
-                search_base='ou=people,dc=42,dc=fr',
-                search_filter='(uid=*)',
-                search_scope=ldap3.SUBTREE,
-                attributes=[
-                    'uid',
-                    'givenName',
-                    'jpegPhoto',
-                    'mobile',
-                    'sn',
-                ]
-            )
-            print("dump")
-            annuaire = []
-            for r in c.response:
-                print('--> ' + str(r['attributes']['uid'][0]))
-                annuaire.append(
-                    {
-                        'avatar': base64.b64encode(r['attributes']['jpegPhoto'][0]) if 'jpegPhoto' in r[
-                            'attributes'] else 'https://intra.42.fr/static7165/img/nopicture-profilview.pnghttps://intra.42.fr/static7165/img/nopicture-profilview.png',
-                        'uid': r['attributes']['uid'][0],
-                        'givenName': r['attributes']['givenName'][0],
-                        'mobile': r['attributes']['mobile'][0] if 'mobile' in r['attributes'] else '',
-                        'sn': r['attributes']['sn'][0],
-                    }
-                )
-            print("store session")
-            request.session['ldap_annuaire'] = annuaire
-            print("unbind")
-            c.unbind()
+    if letter != 'all' and letter not in alphabet:
+        l = 'a'
+    elif letter == 'all':
+        l = ''
     else:
-        annuaire = request.session['ldap_annuaire']
-    print(annuaire)
-    if letter not in alphabet:
-        letter = 'a'
-    if order == 'reverse':
-        annuaire.reverse()
+        l = letter
+    if year != 'all':
+        select_year = year if year in LdapForm.years else request.session['ldap_log']['pool_year']
+    if month != 'all':
+        select_month = month if month in LdapForm.pool_month else request.session['ldap_log']['pool_month']
+    c = connect_to_ldap(request.session)
+    if c.bind():
+        logger_info.info(l_fct.info_login_ldap_log_message(request))
+        search_base = 'ou=paris,ou=people,'
+        if year != 'all':
+            search_base += 'ou={},'.format(select_year)
+        if month != 'all':
+            search_base += 'ou={},'.format(select_month)
+        search_base += 'dc=42,dc=fr'
+        print(select_year)
+        c.search(
+            search_base=search_base,
+            search_filter='(uid={}*)'.format(l),
+            search_scope=ldap3.SUBTREE,
+            attributes=[
+                'uid',
+                'givenName',
+                'jpegPhoto',
+                'mobile',
+                'sn',
+            ]
+        )
+        annuaire = []
+        for r in c.response:
+            annuaire.append(
+                {
+                    'avatar': base64.b64encode(r['attributes']['jpegPhoto'][0]) if 'jpegPhoto' in r[
+                        'attributes'] else '',
+                    'uid': r['attributes']['uid'][0],
+                    'givenName': r['attributes']['givenName'][0],
+                    'mobile': r['attributes']['mobile'][0] if 'mobile' in r['attributes'] else '',
+                    'sn': r['attributes']['sn'][0],
+                }
+            )
+        c.unbind()
+        annuaire.sort(key=itemgetter('uid'), reverse=True if order == 'reverse' else False)
     else:
         logger_error.info(l_fct.error_ldap_log_message(request, "bind"))
         errors['unknow'] = _("bind_error")
@@ -102,10 +106,13 @@ def ldap_display(request, letter, order):
         request,
         "ldap42/ldap_display.html",
         {
-            'letter': letter,
-            'order': order,
             'alphabet': alphabet,
             'annuaire': annuaire,
+            'form': LdapForm(),
+            'letter': letter,
+            'order': order,
+            'month': month,
+            'year': year,
         }
     )
 
@@ -190,6 +197,5 @@ def login_ldap(request):
         {
             'form': form,
             'errors': errors,
-            'formcontact': contact.ContactForm(),
         }
     )

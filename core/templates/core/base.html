@@ -2,7 +2,9 @@
 {% get_available_languages as LANGUAGES %}
 {% get_current_language as LANGUAGE_CODE %}
 {% get_language_info_list for LANGUAGES as languages %}
-    {% url 'ldap_display_filter' order|default:"nattural" letter|default:"a" as url_annuaire_all %}
+    {% if request.session.ldap_log %}
+        {% url 'ldap_display_filter' order|default:"natural" year|default:"all" month|default:"all" letter|default:"all" as url_annuaire_all %}
+    {% endif %}
 {% url 'cat' cat.slug as url_cat %}
 {% url 'contact' as url_contact%}
 {% url 'create_topic' cat.slug as url_create_topic %}

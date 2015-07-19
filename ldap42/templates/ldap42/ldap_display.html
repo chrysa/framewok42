@@ -2,42 +2,101 @@
 {% load i18n %}
 {% block content %}
     <nav class="text-center">
-        <ul class="pagination">
-            <li class="disabled"></li>
-            {% for l in alphabet %}
-                {% if letter == l %}
-                    <li class="active">{{ l }}</li>
-                {% else %}
-                    <li><a href="{% url 'ldap_display_filter' l order %}">{{ l }}<span class="sr-only">(current)</span></a>
+        <div>
+            <ul class="pagination">
+                <li{% if letter == 'all' %} class="active"{% endif %}>
+                    <a href="{% url 'ldap_display_filter' order year month letter %}">all</a>
+                </li>
+                {% for l in alphabet %}
+                    <li{% if letter == l %} class="active"{% endif %}>
+                        <a href="{% url 'ldap_display_filter' order year month l %}">{{ l }}</a>
                     </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="form-group row">
+            <span class="col-md-offset-1 col-md-4">
+                <button type="button" id="natural-order" class="btn btn-default" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"></span>
+                </button>
+                <button type="button" id="reverse-order" class="btn btn-default" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-sort-by-alphabet-alt" aria-hidden="true"></span>
+                </button>
+            </span>
+            <span class="col-md-3">{{ form.pool_month }}</span>
+            <span class="col-md-3 col-ld-offset-1">{{ form.pool_year }}</span>
+        </div>
     </nav>
-    filter by year<br/>
-    filter by year<br/>
-    riverse_display<br/>
-    random mode
     <table class="table">
         <thead>
         <tr>
             <th></th>
             <th>{% trans 'login42'|capfirst %}</th>
-            <th>{% trans 'nom'|capfirst %}</th>
             <th>{% trans 'prenom'|capfirst %}</th>
+            <th>{% trans 'nom'|capfirst %}</th>
             <th>{% trans 'birthday'|capfirst %}</th>
             <th>{% trans 'phone'|capfirst %}</th>
         </tr>
         </thead>
         {% for user in annuaire %}
             <tr>
-                <td><img src="data:image/jpeg;base64,{{ user.avatar }}" class="img-circle" height="50" widtrh="50"></td>
+                <td>
+                    <img src="
+                        {% if user.avatar %}
+                            data:image/jpeg;base64,{{ user.avatar }}
+                        {% else %}
+                            https://intra.42.fr/static7165/img/nopicture-profilview.png
+                        {% endif %}
+                    " class="img-circle" height="50" widtrh="50">
+                </td>
                 <td>{{ user.uid }}</td>
-                <td>{{ user.sn }}</td>
                 <td>{{ user.givenName }}</td>
+                <td>{{ user.sn }}</td>
                 <td></td>
                 <td>{{ user.mobile }}</td>
             </tr>
         {% endfor %}
     </table>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function () {
+            var split_url = location.pathname.split('/');
+            $('#natural-order').click(function () {
+                if (split_url[3] == 'reverse') {
+                    url = location.pathname.replace("reverse", "natural");
+                    window.location.href = url;
+                }
+            });
+            $('#reverse-order').click(function () {
+                if (split_url[3] == 'natural') {
+                    url = location.pathname.replace("natural", "reverse");
+                    window.location.href = url;
+                }
+            });
+
+
+            $('#id_pool_year').change(function () {
+                if (split_url[4] == 'all') {
+                    if (split_url[3] == 'reverse') {
+                        url = location.pathname.replace("reverse/all", "reverse/" + $('#id_pool_year').val());
+                    } else {
+                        url = location.pathname.replace("natural/all", "natural/" + $('#id_pool_year').val());
+                    }
+                    window.location.href = url;
+                } else {
+                    split_url[4] = $('#id_pool_year').val();
+                    split_url.toString().replace(',', '/').replace(',', '/');
+                    print(split_url);
+                    location.pathname.replace(location.pathname, split_url);
+                }
+            });
+
+            $('#id_pool_month').change(function () {
+
+            });
+
+        });
+    </script>
 {% endblock %}

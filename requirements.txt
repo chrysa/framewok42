@@ -1,5 +1,4 @@
 Django==1.8.2
-Pillow==2.9.0
 coverage==3.7.1
 django-autoslug==1.8.0
 django-bootstrap3==5.4.0
