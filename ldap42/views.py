@@ -53,9 +53,11 @@ def ldap_display(request, letter, order):
     errors = []
     alphabet = string.ascii_lowercase
     if not 'ldap_annuaire' in request.session:
+        print("connect ldap")
         c = connect_to_ldap(request.session)
         if c.bind():
             logger_info.info(l_fct.info_login_ldap_log_message(request))
+            print("search")
             c.search(
                 search_base='ou=people,dc=42,dc=fr',
                 search_filter='(uid=*)',
@@ -68,8 +70,10 @@ def ldap_display(request, letter, order):
                     'sn',
                 ]
             )
+            print("dump")
             annuaire = []
             for r in c.response:
+                print('--> ' + str(r['attributes']['uid'][0]))
                 annuaire.append(
                     {
                         'avatar': base64.b64encode(r['attributes']['jpegPhoto'][0]) if 'jpegPhoto' in r[
@@ -80,7 +84,9 @@ def ldap_display(request, letter, order):
                         'sn': r['attributes']['sn'][0],
                     }
                 )
+            print("store session")
             request.session['ldap_annuaire'] = annuaire
+            print("unbind")
             c.unbind()
     else:
         annuaire = request.session['ldap_annuaire']
