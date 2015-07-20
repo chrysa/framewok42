@@ -75,7 +75,6 @@ def ldap_display(request, order, letter):
         )
         annuaire = []
         for r in c.response:
-            print(r['attributes']['givenName'][0])
             annuaire.append(
                 {
                     'avatar': base64.b64encode(r['attributes']['jpegPhoto'][0]) if 'jpegPhoto' in r[
@@ -154,11 +153,10 @@ def login_ldap(request):
                         userlang = UserLang.objects.get(user=request.user)
                         logger_info.info(l_fct.info_login_class_log_message(request))
                         translation.activate(userlang.lang)
-                        request.session[
-                            translation.LANGUAGE_SESSION_KEY] = userlang.lang
+                        request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
                         redir = reverse('home')
-                        if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('login'):
-                            redir = request.META['HTTP_REFERER']
+                        if 'next' in request.GET and request.GET['next'] != reverse('login'):
+                            redir = request.GET['next']
                         return redirect(
                             redir,
                             permanent=True

@@ -173,14 +173,12 @@ class LoginTests(TestCase):
             reponse.context[0]['errors']['staff'], _("staff_cant_log_here"))
 
     def test_login_contact(self):
-        reponse = self.client.post(reverse(
-            'login_classic'), self.log_user, follow=True, HTTP_REFERER=reverse('contact'))
-        self.assertRedirects(reponse, reverse('contact'), status_code=301,
-                             target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        reponse = self.client.post(reverse('login_classic') + '?next=' + reverse('contact'), self.log_user, follow=True)
+        self.assertRedirects(reponse, reverse('contact'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_login_forum(self):
         reponse = self.client.post(reverse(
-            'login_classic'), self.log_user, follow=True, HTTP_REFERER=reverse('forum'))
+            'login_classic') + '?next=' + reverse('forum'), self.log_user, follow=True)
         self.assertRedirects(reponse, reverse(
             'forum'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
@@ -203,55 +201,20 @@ class LogoutTests(TestCase):
 
     def setUp(self):
         self.client = Client()
-        self.admin = {
-            'username': "admin",
-            'email': "admin@admin.fr",
-            'password': "admin",
-        }
         self.register_user = {
             'username': "user_test",
             'email': 'user_test@test.fr',
             'password': "test",
         }
-        self.staff = {
-            'username': "staff",
-            'email': "ataff@staff.fr",
-            'password': "staff",
-        }
-        self.log_admin = {
-            'username': self.admin['username'],
-            'password': self.admin['password'],
-        }
         self.log_user = {
             'username': self.register_user['username'],
             'password': self.register_user['password'],
         }
-        self.log_staff = {
-            'username': self.staff['username'],
-            'password': self.staff['password'],
-        }
         unittest_fr = User.objects.create_user(**self.register_user)
         UserLang.objects.create(user=unittest_fr, lang='fr')
-        User.objects.create_superuser(**self.admin)
-        staff = User.objects.create(
-            username=self.staff['username'], email=self.staff['email'], is_staff=True)
-        staff.set_password(self.staff['password'])
-        staff.save()
 
-    def test_logout_user_log(self):
-        self.client.login(self.log_user)
-        reponse = self.client.get(reverse('logout'))
-        self.assertEqual(reponse.status_code, 301)
-        self.client.logout()
-
-    def test_logout_admin_log(self):
-        self.client.login(self.log_admin)
-        reponse = self.client.get(reverse('logout'))
-        self.assertEqual(reponse.status_code, 301)
-        self.client.logout()
-
-    def test_logout_staff_log(self):
-        self.client.login(self.log_staff)
+    def test_logout_user(self):
+        self.client.login(username=self.log_user['username'], password=self.log_user['password'])
         reponse = self.client.get(reverse('logout'))
         self.assertEqual(reponse.status_code, 301)
         self.client.logout()

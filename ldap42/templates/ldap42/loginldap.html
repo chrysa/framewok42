@@ -16,8 +16,10 @@
     {% endif %}
     {%  if errors.admin or errors.staff %}
         <form action="{% url 'login_ldap' %}" method="post">
+    {%  elif equest.GET.next %}
+        <form action="{{ request.META.HTTP_REFERER }}" method="post">
     {%  else  %}
-        <form action="{% url 'login_ldap' %}?next={{ request.META.HTTP_REFERER }}" method="post">
+        <form action="{% url 'login_ldap' %}?next={{ request.get_full_path }}" method="post">
     {%  endif %}
         {% csrf_token %}
         <div class="form-group">

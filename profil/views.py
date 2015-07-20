@@ -58,7 +58,6 @@ def register_user(request):
                     password=form.cleaned_data['password'],
                 )
                 UserLang(user=user, lang=translation.get_language()).save()
-                redir = reverse('home')
                 if 'next' in request.GET and request.GET['next'] != reverse('login'):
                     redir = request.GET['next']
                 login(request, user)
@@ -135,8 +134,8 @@ def login_user(request):
                                     translation.LANGUAGE_SESSION_KEY] = userlang.lang
                                 request.session['ldap_connection'] = False
                                 redir = reverse('home')
-                                if 'HTTP_REFERER' in request.META and request.META['HTTP_REFERER'] != reverse('register'):
-                                    redir = request.META['HTTP_REFERER']
+                                if 'next' in request.GET and request.GET['next'] != reverse('login'):
+                                    redir = request.GET['next']
                                 return redirect(
                                     redir,
                                     permanent=True
