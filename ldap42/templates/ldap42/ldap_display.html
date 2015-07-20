@@ -5,17 +5,17 @@
         <div>
             <ul class="pagination">
                 <li{% if letter == 'all' %} class="active"{% endif %}>
-                    <a href="{% url 'ldap_display_filter' order year month letter %}">all</a>
+                    <a href="{% url 'ldap_display_filter' order letter %}">all</a>
                 </li>
                 {% for l in alphabet %}
                     <li{% if letter == l %} class="active"{% endif %}>
-                        <a href="{% url 'ldap_display_filter' order year month l %}">{{ l }}</a>
+                        <a href="{% url 'ldap_display_filter' order l %}">{{ l }}</a>
                     </li>
                 {% endfor %}
             </ul>
         </div>
         <div class="form-group row">
-            <span class="col-md-offset-1 col-md-4">
+            <span class="col-md-offset-4 col-md-4 col-ld-offset-4">
                 <button type="button" id="natural-order" class="btn btn-default" aria-label="Left Align">
                     <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"></span>
                 </button>
@@ -23,8 +23,6 @@
                     <span class="glyphicon glyphicon-sort-by-alphabet-alt" aria-hidden="true"></span>
                 </button>
             </span>
-            <span class="col-md-3">{{ form.pool_month }}</span>
-            <span class="col-md-3 col-ld-offset-1">{{ form.pool_year }}</span>
         </div>
     </nav>
     <table class="table">
@@ -75,28 +73,6 @@
                     window.location.href = url;
                 }
             });
-
-
-            $('#id_pool_year').change(function () {
-                if (split_url[4] == 'all') {
-                    if (split_url[3] == 'reverse') {
-                        url = location.pathname.replace("reverse/all", "reverse/" + $('#id_pool_year').val());
-                    } else {
-                        url = location.pathname.replace("natural/all", "natural/" + $('#id_pool_year').val());
-                    }
-                    window.location.href = url;
-                } else {
-                    split_url[4] = $('#id_pool_year').val();
-                    split_url.toString().replace(',', '/').replace(',', '/');
-                    print(split_url);
-                    location.pathname.replace(location.pathname, split_url);
-                }
-            });
-
-            $('#id_pool_month').change(function () {
-
-            });
-
         });
     </script>
 {% endblock %}

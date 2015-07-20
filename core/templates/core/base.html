@@ -3,7 +3,7 @@
 {% get_current_language as LANGUAGE_CODE %}
 {% get_language_info_list for LANGUAGES as languages %}
     {% if request.session.ldap_log %}
-        {% url 'ldap_display_filter' order|default:"natural" year|default:"all" month|default:"all" letter|default:"all" as url_annuaire_all %}
+        {% url 'ldap_display_filter' order|default:"natural" letter|default:"all" as url_annuaire_all %}
     {% endif %}
 {% url 'cat' cat.slug as url_cat %}
 {% url 'contact' as url_contact%}

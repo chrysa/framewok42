@@ -3,6 +3,7 @@
 import base64
 import logging
 import string
+from operator import itemgetter
 
 import ldap3
 from django.shortcuts import redirect
@@ -46,10 +47,8 @@ def connect_to_ldap(session):
     return c
 
 
-from operator import itemgetter
-
 @login_required
-def ldap_display(request, year, month, order, letter):
+def ldap_display(request, order, letter):
     logger_info.info(l_fct.info_load_log_message(request))
     errors = []
     alphabet = string.ascii_lowercase
@@ -59,22 +58,11 @@ def ldap_display(request, year, month, order, letter):
         l = ''
     else:
         l = letter
-    if year != 'all':
-        select_year = year if year in LdapForm.years else request.session['ldap_log']['pool_year']
-    if month != 'all':
-        select_month = month if month in LdapForm.pool_month else request.session['ldap_log']['pool_month']
     c = connect_to_ldap(request.session)
     if c.bind():
         logger_info.info(l_fct.info_login_ldap_log_message(request))
-        search_base = 'ou=paris,ou=people,'
-        if year != 'all':
-            search_base += 'ou={},'.format(select_year)
-        if month != 'all':
-            search_base += 'ou={},'.format(select_month)
-        search_base += 'dc=42,dc=fr'
-        print(select_year)
         c.search(
-            search_base=search_base,
+            search_base='ou=paris,ou=people,dc=42,dc=fr',
             search_filter='(uid={}*)'.format(l),
             search_scope=ldap3.SUBTREE,
             attributes=[
@@ -87,6 +75,7 @@ def ldap_display(request, year, month, order, letter):
         )
         annuaire = []
         for r in c.response:
+            print(r['attributes']['givenName'][0])
             annuaire.append(
                 {
                     'avatar': base64.b64encode(r['attributes']['jpegPhoto'][0]) if 'jpegPhoto' in r[
@@ -111,8 +100,6 @@ def ldap_display(request, year, month, order, letter):
             'form': LdapForm(),
             'letter': letter,
             'order': order,
-            'month': month,
-            'year': year,
         }
     )
 
