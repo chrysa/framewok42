@@ -5,7 +5,9 @@
         <span>{% trans 'contact'|capfirst %}</span>
         <form action="{% url 'send_contact' %}" method="post">
             {% csrf_token %}
-            <p>{{ formcontact.email.label|capfirst }} : {{ formcontact.email }}</p>
+            {% if user.is_authenticated %}
+                <p>{{ formcontact.email.label|capfirst }} : {{ formcontact.email }}</p>
+            {% endif %}
             <p>{{ formcontact.subject.label|capfirst }} : {{ formcontact.subject }}</p>
             <p>{{ formcontact.message.label|capfirst }} : {{ formcontact.message }}</p>
             <input type="submit" value="{% trans 'send_message' %}" class="btn btn-default navbar-btn pull-right" />

@@ -29,7 +29,7 @@ def send_contact(request):
         if send_mail(
             form.cleaned_data['subject'],
             form.cleaned_data['message'],
-            form.cleaned_data['email'],
+            form.cleaned_data['email'] if 'email' in form.cleaned_data else request.user.email,
             ["greau.anthony@gmail.com"]
         ):
             logger_info.info(_("success_contact") + request.user)
