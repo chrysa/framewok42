@@ -7,10 +7,13 @@ SECRET_KEY = 'umg@=!%oux#wouig$#_g^u+9)lo5=3ocqte106(oi$w$6805c%'
 DEBUG = True
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'agreau@student.42.fr'
-EMAIL_HOST_PASSWORD = 'mCKb0ss#123'
-EMAIL_PORT = 468
-EMAIL_USE_TLS = True
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'greau.anthony'
+EMAIL_HOST_PASSWORD = 'CHry5a1sMyGod'
+DEFAULT_EMAIL_FROM = 'greau.anthony@gmail.com'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 
 APPEND_SLASH = True
 
