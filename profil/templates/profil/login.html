@@ -29,8 +29,6 @@
             </div>
         {%  endfor %}
     {% endif %}
-
-
     {% if type == "classic" %}
         {%  if errors.admin or errors.staff %}
             <form action="{% url 'login_classic' %}" method="post">
