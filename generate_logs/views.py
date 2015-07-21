@@ -60,13 +60,14 @@ def display_log(request, log_type):
                 except:
                     add = False
             if add:
-                log.append(split_ligne)
+                log.append((len(split_ligne),split_ligne))
         if len(log) > 1:
             log.reverse()
     return render(
         request,
         'logs/display_log.html', {
             'type_format': type_format,
+            'all_type_log': [k for k, v in settings.LOGGING['handlers'].items() if k is not 'console'],
             'type_log': log_type,
             'len': len(log),
             'log': log,
