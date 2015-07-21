@@ -191,7 +191,6 @@ class LogoutTests(TestCase):
        UserLang.objects.create(user=unittest_fr, lang='fr')
 
     def test_logout_user(self):
-<<<<<<< HEAD
         self.client.login(username=self.log_user['username'], password=self.log_user['password'])
         reponse = self.client.get(reverse('logout'))
         self.assertEqual(reponse.status_code, 301)
@@ -201,14 +200,3 @@ class LogoutTests(TestCase):
         reponse = self.client.post(reverse('logout'))
         print (reponse.redirect_chain)
         self.assertEqual(reponse.status_code, 200)
-=======
-       self.client.login(username=self.log_user['username'], password=self.log_user['password'])
-       reponse = self.client.get(reverse('logout'))
-       self.assertEqual(reponse.status_code, 301)
-       self.assertTemplateUsed(self.response, 'core/home.html')
-       self.client.logout()
-
-    def test_logout_no_log(self):
-       reponse = self.client.get(reverse('logout'))
-       self.assertEqual(reponse.status_code, 302)
->>>>>>> origin/master
