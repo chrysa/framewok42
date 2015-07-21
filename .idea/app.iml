@@ -12,7 +12,11 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
+<<<<<<< HEAD
+    <orderEntry type="jdk" jdkName="Python 3.4.2 virtualenv at ~/Bureau/42_work/framework/frameworkvenv" jdkType="Python SDK" />
+=======
     <orderEntry type="inheritedJdk" />
+>>>>>>> c6fbd0ed7804ef528a8eb190ab9f4e6c10d65f0c
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
