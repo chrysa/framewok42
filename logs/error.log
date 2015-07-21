@@ -1472,6 +1472,7 @@
 [20/07/2015 15:08:17] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [20/07/2015 15:08:17] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [20/07/2015 15:08:17] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+<<<<<<< HEAD
 [21/07/2015 11:36:44] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
 [21/07/2015 11:36:45] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
 [21/07/2015 11:36:45] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
@@ -1532,3 +1533,105 @@
 [21/07/2015 16:02:43] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [21/07/2015 16:02:43] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [21/07/2015 16:02:43] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+=======
+[20/07/2015 21:29:46] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
+[20/07/2015 21:29:46] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[20/07/2015 21:29:47] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
+[20/07/2015 21:29:47] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[20/07/2015 21:29:47] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[20/07/2015 21:29:48] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[20/07/2015 21:29:49] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[20/07/2015 21:29:49] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[20/07/2015 21:29:49] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[20/07/2015 21:29:49] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:24:39] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
+[21/07/2015 02:24:39] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[21/07/2015 02:24:41] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
+[21/07/2015 02:24:41] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[21/07/2015 02:24:41] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[21/07/2015 02:24:41] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[21/07/2015 02:24:42] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:24:42] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:24:42] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:24:42] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:26:45] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
+[21/07/2015 02:26:45] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[21/07/2015 02:26:46] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
+[21/07/2015 02:26:46] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[21/07/2015 02:26:46] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[21/07/2015 02:26:46] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[21/07/2015 02:26:47] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:26:47] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:26:47] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:26:47] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:37:08] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[21/07/2015 02:37:08] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[21/07/2015 02:37:08] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:37:08] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:37:08] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:37:08] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:38:20] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:38:20] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:38:20] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:38:20] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:38:30] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:38:30] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:38:30] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:38:30] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:38:52] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:38:52] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:38:52] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:38:52] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:38:54] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:38:54] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:38:54] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:38:54] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:39:24] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:39:24] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:39:24] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:39:24] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:39:34] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:39:34] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:39:34] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:39:34] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:39:38] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:39:38] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:39:38] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:39:38] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:39:58] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:39:58] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:39:58] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:39:58] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:40:06] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:40:06] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:40:06] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:40:06] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:40:43] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:40:43] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:40:43] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:40:43] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:40:48] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:40:48] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:40:48] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:40:48] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:41:35] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:41:35] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:41:36] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:41:36] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:41:49] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:41:50] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:41:50] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:41:50] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:42:08] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:42:08] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:42:08] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:42:08] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:42:23] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:42:23] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:42:23] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:42:23] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:42:45] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[21/07/2015 02:42:45] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:42:45] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[21/07/2015 02:42:45] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+>>>>>>> origin/master

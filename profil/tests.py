@@ -17,7 +17,7 @@ class RegisterTests(TestCase):
             'username': "user_test",
             'email': 'user_test@test.fr',
             'password': "test",
-            'password_conf': "test",
+            'password_conf': "test"
         }
         self.unittest_en = {
             'username': 'unittest_en',
@@ -37,6 +37,7 @@ class RegisterTests(TestCase):
     def test_register_url(self):
         reponse = self.client.get(reverse('register'))
         self.assertEqual(reponse.status_code, 200)
+        self.assertTemplateUsed(reponse, 'profil/register.html')
 
     def register_anonymous(self):
         response = self.client.post(reverse('register'), follow=True)
@@ -45,22 +46,17 @@ class RegisterTests(TestCase):
     def test_register_with_blank_datas(self):
         reponse = self.client.post(reverse('register'), {}, follow=True)
         self.assertEqual(reponse.status_code, 200)
-        self.assertFormError(
-            reponse, 'form', 'username', 'Ce champ est obligatoire.')
-        self.assertFormError(
-            reponse, 'form', 'email', 'Ce champ est obligatoire.')
-        self.assertFormError(
-            reponse, 'form', 'password', 'Ce champ est obligatoire.')
-        self.assertFormError(
-            reponse, 'form', 'password_conf', 'Ce champ est obligatoire.')
+        self.assertFormError(reponse, 'form', 'username', 'Ce champ est obligatoire.')
+        self.assertFormError(reponse, 'form', 'email', 'Ce champ est obligatoire.')
+        self.assertFormError(reponse, 'form', 'password', 'Ce champ est obligatoire.')
+        self.assertFormError(reponse, 'form', 'password_conf', 'Ce champ est obligatoire.')
 
     def test_register_user_password_error(self):
         data = self.unittest_fr
         data['password_conf'] = "error"
         reponse = self.client.post(reverse('register'), data, follow=True)
         self.assertEqual(reponse.status_code, 200)
-        self.assertEqual(
-            reponse.context[0]['errors']['pass'], _("error_password"))
+        self.assertEqual(reponse.context[0]['errors']['pass'], _("error_password"))
 
     def test_register_user_already_exist(self):
         data = self.unittest_fr
@@ -68,8 +64,7 @@ class RegisterTests(TestCase):
         data['password_conf'] = self.unittest_fr['password']
         reponse = self.client.post(reverse('register'), data)
         self.assertEqual(reponse.status_code, 200)
-        self.assertEqual(
-            reponse.context[0]['errors']['user'], _("error_user_already_exist"))
+        self.assertEqual(reponse.context[0]['errors']['user'], _("error_user_already_exist"))
 
     def test_register_mail_already_exist(self):
         data = self.unittest_fr
@@ -77,37 +72,27 @@ class RegisterTests(TestCase):
         data['password_conf'] = self.unittest_fr['password']
         reponse = self.client.post(reverse('register'), data)
         self.assertEqual(reponse.status_code, 200)
-        self.assertEqual(
-            reponse.context[0]['errors']['mail'], _("error_mail_already_exist"))
+        self.assertEqual(reponse.context[0]['errors']['mail'], _("error_mail_already_exist"))
 
     def test_register_from_home(self):
-        reponse = self.client.post(
-            reverse('register'), self.register_user, follow=True)
-        self.assertRedirects(reponse, reverse(
-            'home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        reponse = self.client.post(reverse('register'), self.register_user, follow=True)
+        self.assertRedirects(reponse, reverse('home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_register_from_anywhere(self):
         data = self.register_user
-        reponse = self.client.post(
-            reverse('register') + '?next=' + reverse('contact'), data, follow=True,)
-        self.assertRedirects(reponse, reverse('contact'), status_code=301,
-                             target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        reponse = self.client.post(reverse('register') + '?next=' + reverse('contact'), data, follow=True,)
+        self.assertRedirects(reponse, reverse('contact'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_acces_register_when_login_from_home(self):
-        self.client.login(
-            username=self.unittest_fr['username'], password=self.unittest_fr['password'])
+        self.client.login(username=self.unittest_fr['username'], password=self.unittest_fr['password'])
         reponse = self.client.get(reverse('register'), follow=True)
-        self.assertRedirects(reponse, reverse(
-            'home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        self.assertRedirects(reponse, reverse('home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
         self.client.logout()
 
     def test_acces_register_when_login_from_anywhere(self):
-        self.client.login(
-            username=self.unittest_fr['username'], password=self.unittest_fr['password'])
-        reponse = self.client.get(
-            reverse('register'), HTTP_REFERER=reverse('contact'), follow=True)
-        self.assertRedirects(reponse, reverse('contact'), status_code=301,
-                             target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        self.client.login(username=self.unittest_fr['username'], password=self.unittest_fr['password'])
+        reponse = self.client.get(reverse('register'), HTTP_REFERER=reverse('contact'), follow=True)
+        self.assertRedirects(reponse, reverse('contact'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
         self.client.logout()
 
 
@@ -137,8 +122,7 @@ class LoginTests(TestCase):
         unittest_fr = User.objects.create_user(**self.register_user)
         UserLang.objects.create(user=unittest_fr, lang='fr')
         User.objects.create_superuser(**self.admin)
-        staff = User.objects.create(
-            username=self.staff['username'], email=self.staff['email'], is_staff=True)
+        staff = User.objects.create(username=self.staff['username'], email=self.staff['email'], is_staff=True)
         staff.set_password(self.staff['password'])
         staff.save()
 
@@ -151,22 +135,17 @@ class LoginTests(TestCase):
         self.assertEqual(reponse.status_code, 200)
 
     def test_login_home(self):
-        reponse = self.client.post(reverse('login_classic'), {'username': self.register_user[
-                                   'username'], 'password': self.register_user['password']}, follow=True)
-        self.assertRedirects(reponse, reverse(
-            'home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        reponse = self.client.post(reverse('login_classic'), {'username': self.register_user['username'], 'password': self.register_user['password']}, follow=True)
+        self.assertRedirects(reponse, reverse('home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_log_admin_front(self):
-        data = {'username': self.admin[
-            'username'], 'password': self.admin['password']}
+        data = {'username': self.admin['username'], 'password': self.admin['password']}
         reponse = self.client.post(reverse('login_classic'), data, follow=True)
         self.assertEqual(reponse.status_code, 200)
-        self.assertEqual(
-            reponse.context[0]['errors']['admin'], _("admin_cant_log_here"))
+        self.assertEqual(reponse.context[0]['errors']['admin'], _("admin_cant_log_here"))
 
     def test_log_staff_front(self):
-        data = {'username': self.staff[
-            'username'], 'password': self.staff['password']}
+        data = {'username': self.staff['username'], 'password': self.staff['password']}
         reponse = self.client.post(reverse('login_classic'), data, follow=True)
         self.assertEqual(reponse.status_code, 200)
         self.assertEqual(
@@ -177,10 +156,8 @@ class LoginTests(TestCase):
         self.assertRedirects(reponse, reverse('contact'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_login_forum(self):
-        reponse = self.client.post(reverse(
-            'login_classic') + '?next=' + reverse('forum'), self.log_user, follow=True)
-        self.assertRedirects(reponse, reverse(
-            'forum'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        reponse = self.client.post(reverse('login_classic') + '?next=' + reverse('forum'), self.log_user, follow=True)
+        self.assertRedirects(reponse, reverse('forum'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_login_wrong_user(self):
         data = self.log_user
@@ -200,20 +177,21 @@ class LoginTests(TestCase):
 class LogoutTests(TestCase):
 
     def setUp(self):
-        self.client = Client()
-        self.register_user = {
-            'username': "user_test",
-            'email': 'user_test@test.fr',
-            'password': "test",
-        }
-        self.log_user = {
-            'username': self.register_user['username'],
-            'password': self.register_user['password'],
-        }
-        unittest_fr = User.objects.create_user(**self.register_user)
-        UserLang.objects.create(user=unittest_fr, lang='fr')
+       self.client = Client()
+       self.register_user = {
+           'username': "user_test",
+           'email': 'user_test@test.fr',
+           'password': "test",
+       }
+       self.log_user = {
+           'username': self.register_user['username'],
+           'password': self.register_user['password'],
+       }
+       unittest_fr = User.objects.create_user(**self.register_user)
+       UserLang.objects.create(user=unittest_fr, lang='fr')
 
     def test_logout_user(self):
+<<<<<<< HEAD
         self.client.login(username=self.log_user['username'], password=self.log_user['password'])
         reponse = self.client.get(reverse('logout'))
         self.assertEqual(reponse.status_code, 301)
@@ -223,3 +201,14 @@ class LogoutTests(TestCase):
         reponse = self.client.post(reverse('logout'))
         print (reponse.redirect_chain)
         self.assertEqual(reponse.status_code, 200)
+=======
+       self.client.login(username=self.log_user['username'], password=self.log_user['password'])
+       reponse = self.client.get(reverse('logout'))
+       self.assertEqual(reponse.status_code, 301)
+       self.assertTemplateUsed(self.response, 'core/home.html')
+       self.client.logout()
+
+    def test_logout_no_log(self):
+       reponse = self.client.get(reverse('logout'))
+       self.assertEqual(reponse.status_code, 302)
+>>>>>>> origin/master
