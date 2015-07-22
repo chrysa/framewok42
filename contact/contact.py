@@ -5,7 +5,9 @@
 
 :moduleauthor: anthony greau <greau.anthony@gmail.com>
 :created: 01/07/2015
-:update: 21/07/2015
+:update: 21/07/2015:
+:var logger_error: logger error
+:var logger_info: logger info
 """
 import logging
 
@@ -18,8 +20,8 @@ from django.utils.translation import ugettext as _
 from generate_logs.functions import info_load_log_message
 from contact.forms.ContactFrom import ContactForm
 
-logger_info = logging.getLogger('info')
 logger_error = logging.getLogger('error')
+logger_info = logging.getLogger('info')
 
 
 def display(request):

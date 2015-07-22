@@ -19,19 +19,12 @@ class RegisterTests(TestCase):
             'password': "test",
             'password_conf': "test"
         }
-        self.unittest_en = {
-            'username': 'unittest_en',
-            'email': 'unittest_en@unittest.fr',
-            'password': 'unittest'
-        }
         self.unittest_fr = {
             'username': 'unittest_fr',
             'email': 'unittest_fr@unittest.fr',
             'password': 'unittest'
         }
-        unittest_en = User.objects.create_user(**self.unittest_en)
         unittest_fr = User.objects.create_user(**self.unittest_fr)
-        UserLang.objects.create(user=unittest_en, lang='en')
         UserLang.objects.create(user=unittest_fr, lang='fr')
 
     def test_register_url(self):
