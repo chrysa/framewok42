@@ -1,8 +1,18 @@
 #-*-coding:utf-8 -*-
+"""
+:module: contact.contact
+:synopsis: generate contact form
+
+:moduleauthor: anthony greau <greau.anthony@gmail.com>
+:created: 01/07/2015
+:update: 21/07/2015
+"""
 import logging
 
 from django.core.mail import send_mail
+from django.shortcuts import redirect
 from django.shortcuts import render
+from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 
 from generate_logs.functions import info_load_log_message
@@ -13,6 +23,13 @@ logger_error = logging.getLogger('error')
 
 
 def display(request):
+    """
+    display contact form
+
+    :param request: object containt context of request
+    :type request: object
+    :return: HTTPResponse
+    """
     logger_info.info(info_load_log_message(request))
     errors = {}
     success = {}
@@ -39,4 +56,11 @@ def display(request):
                 errors['message'] = _('contact_must_contain_message')
             if not request.user.is_authenticated() and not request.POST['email']:
                 errors['email'] = _('contact_must_contain_email')
-    return render(request, 'contact/contact.html', {'formcontact': ContactForm(), 'errors': errors, 'success': success})
+    return render(
+        request,
+        'contact/contact.html', {
+            'formcontact': form,
+            'errors': errors,
+            'success': success
+        }
+    )

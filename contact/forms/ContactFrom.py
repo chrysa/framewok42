@@ -1,12 +1,14 @@
 #-*-coding:utf-8 -*-
-"""
-:module: contact.forms.ContactForm
-:synopsis: Define ContactForm
 
-:moduleauthor: anthony greau <anthony@gmail.com>
+"""
+:module: contact.form.ContactForm
+:synopsis: generate contact form
+
+:moduleauthor: anthony greau <greau.anthony@gmail.com>
 :created: 01/07/2015
 :update: 21/07/2015
 """
+
 from django import forms
 from django.utils.translation import ugettext as _
 

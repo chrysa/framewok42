@@ -57,7 +57,7 @@ def register_user(request):
                     username=form.cleaned_data['username'],
                     password=form.cleaned_data['password'],
                 )
-                UserLang(user=user, lang=translation.get_language()).save()
+                redir = reverse('home')
                 if 'next' in request.GET and request.GET['next'] != reverse('login'):
                     redir = request.GET['next']
                 login(request, user)

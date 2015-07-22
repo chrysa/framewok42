@@ -17,8 +17,8 @@ def create_user(request, username, email, password, first_name=None, last_name=N
         username=username,
         email=email,
         password=password,
-        first_name=first_name,
-        last_name=last_name
+        first_name=first_name if first_name is not None else '',
+        last_name=last_name if last_name is not None else ''
     )
     user = authenticate(
         username=username,

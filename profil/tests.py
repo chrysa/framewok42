@@ -79,8 +79,7 @@ class RegisterTests(TestCase):
         self.assertRedirects(reponse, reverse('home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_register_from_anywhere(self):
-        data = self.register_user
-        reponse = self.client.post(reverse('register') + '?next=' + reverse('contact'), data, follow=True,)
+        reponse = self.client.post(reverse('register') + '?next=' + reverse('contact'), self.register_user, follow=True,)
         self.assertRedirects(reponse, reverse('contact'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_acces_register_when_login_from_home(self):
@@ -195,8 +194,3 @@ class LogoutTests(TestCase):
         reponse = self.client.get(reverse('logout'))
         self.assertEqual(reponse.status_code, 301)
         self.client.logout()
-
-    def test_logout(self):
-        reponse = self.client.post(reverse('logout'))
-        print (reponse.redirect_chain)
-        self.assertEqual(reponse.status_code, 200)
