@@ -56,7 +56,7 @@ class RegisterTests(TestCase):
         data['password_conf'] = "error"
         reponse = self.client.post(reverse('register'), data, follow=True)
         self.assertEqual(reponse.status_code, 200)
-        self.assertEqual(reponse.context[0]['errors']['pass'], _("error_password"))
+        self.assertEqual(reponse.context[0]['errors']['pass'], _("error_wrong_password"))
 
     def test_register_user_already_exist(self):
         data = self.unittest_fr

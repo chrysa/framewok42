@@ -28,7 +28,7 @@ class AdminResponseIssueForm(forms.Form):
             attrs={
                 'class': 'selector',
                 'class': "form-control",
-                'placeholder': _("assign")
+                'placeholder': _("assign_to")
             }
         ),
     )
@@ -36,7 +36,7 @@ class AdminResponseIssueForm(forms.Form):
         label=_("status"),
         choices=(
             ("open", _("open")),
-            ("progress", _("in progress")),
+            ("progress", _("in_progress")),
             ("close", _("close")),
         ),
         widget=forms.Select(
