@@ -7,9 +7,8 @@ if not os.path.isdir('doc'):
     call('sphinx-quickstart', shell=True)
     f = open("doc/source/conf.py","r+")
     chaine = f.read()
-    result = "import django\n\nsys.path.insert(0, os.path.abspath('../..'))\nos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'framework.settings')\ndjango.setup()"
-    result.join(chaine)
-    result = result.replace("html_theme = 'alabaster'", "html_theme = 'classic'").replace("#html_title = None", "html_title = None")
+    chaine.join("import django\n\nsys.path.insert(0, os.path.abspath('../..'))\nos.environ.setdefault('DJANGO_SETTINGS_MODULE', 'framework.settings')\ndjango.setup()")
+    result = chaine.replace("html_theme = 'alabaster'", "html_theme = 'classic'").replace("#html_title = None", "html_title = None")
     f.write(result)
     f.close()
 
