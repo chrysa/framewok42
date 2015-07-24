@@ -1,4 +1,14 @@
 #-*-coding:utf-8 -*-
+"""
+:module: FORUM.VIEWS
+:synopsis: generate QLL CONTENT OF FORUM
+
+:moduleauthor: anthony greau <greau.anthony@gmail.com>
+:created: 01/07/2015
+:update: 21/07/2015:
+:var logger_error: logger error
+:var logger_info: logger info
+"""
 import datetime
 import logging
 
@@ -20,6 +30,14 @@ logger_error = logging.getLogger('error')
 
 @login_required
 def display_all(request):
+    """display forum's category
+
+    :param request: object contain context of request
+    :type request: object
+    :seealso: django.core.mail.send_mail
+    :seealso: contact.forms.ContactFrom.ContactForm
+    :return: HTTPResponse
+    """
     logger_info.info(info_load_log_message(request))
     return render(
         request,
