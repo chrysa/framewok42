@@ -9,7 +9,7 @@ class Issue(models.Model):
     Autor = models.ForeignKey(User)
     Assign = models.ForeignKey(
         User,
-        related_name=_("assign"),
+        related_name=_("assign_to"),
         null=True,
     )
     Title = models.CharField(

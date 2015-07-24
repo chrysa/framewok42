@@ -16,11 +16,11 @@ class LdapForm(forms.Form, forms.ModelForm):
         ]
 
     login = forms.CharField(
-        label=_("login_user"),
+        label=_("login42"),
         widget=forms.TextInput(
             attrs={
                 'class': "form-control",
-                'placeholder': _("login_user"),
+                'placeholder': _("login42"),
             },
         ),
     )

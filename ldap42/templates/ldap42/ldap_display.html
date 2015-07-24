@@ -32,7 +32,6 @@
             <th>{% trans 'login42'|capfirst %}</th>
             <th>{% trans 'prenom'|capfirst %}</th>
             <th>{% trans 'nom'|capfirst %}</th>
-            <th>{% trans 'birthday'|capfirst %}</th>
             <th>{% trans 'phone'|capfirst %}</th>
         </tr>
         </thead>
@@ -50,7 +49,6 @@
                 <td>{{ user.uid }}</td>
                 <td>{{ user.givenName }}</td>
                 <td>{{ user.sn }}</td>
-                <td></td>
                 <td>{{ user.mobile }}</td>
             </tr>
         {% endfor %}

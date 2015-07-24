@@ -45,7 +45,7 @@ def register_user(request):
                 logger_error.error(l_fct.error_register_mail_exist(request))
                 errors['mail'] = _("error_mail_already_exist")
             if request.POST['password'] != request.POST['password_conf']:
-                errors['pass'] = _("error_password")
+                errors['pass'] = _("error_wrong_password")
             if len(errors) == 0 and form.is_valid():
                 create_user(
                     request,

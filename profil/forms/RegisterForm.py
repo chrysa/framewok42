@@ -46,7 +46,7 @@ class RegisterForm(forms.Form, forms.ModelForm):
     )
     password_conf = forms.CharField(
         required=True,
-        label=_("passeword_conf"),
+        label=_("password_conf"),
         widget=forms.PasswordInput(
             attrs={
                 'class': "form-control",

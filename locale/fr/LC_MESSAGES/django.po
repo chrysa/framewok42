@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-20 13:37+0000\n"
+"POT-Creation-Date: 2015-07-24 11:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,416 +18,420 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: contact/contact.py:35
+#: contact/contact.py:47 contact/tests.py:41 contact/tests.py:48
+#, fuzzy
+#| msgid "contact"
+msgid "contact_success"
+msgstr "contact"
+
+#: contact/contact.py:48
 msgid "success_contact"
-msgstr ""
+msgstr "envoi du mail de contact avec success"
 
-#: contact/contact.py:37
+#: contact/contact.py:50
+#, fuzzy
+#| msgid "contact"
+msgid "contact_fail"
+msgstr "contact"
+
+#: contact/contact.py:51
 msgid "error_contact"
-msgstr ""
+msgstr "echec de l'envoi du mail de contact"
 
-#: contact/forms/ContactFrom.py:8 contact/forms/ContactFrom.py:12
-#: profil/forms/RegisterForm.py:29 profil/forms/RegisterForm.py:33
+#: contact/contact.py:54 contact/tests.py:55 contact/tests.py:64
+msgid "contact_must_contain_subject"
+msgstr "une demande de contact doit contenir un sujet"
+
+#: contact/contact.py:56 contact/tests.py:56 contact/tests.py:65
+msgid "contact_must_contain_message"
+msgstr "une demande de contact doit contenir un message"
+
+#: contact/contact.py:58 contact/tests.py:57
+msgid "contact_must_contain_email"
+msgstr "une demande de contact doit contenir une adresse mail"
+
+#: contact/forms/ContactFrom.py:29 contact/forms/ContactFrom.py:33
+#: contact/tests.py:26 contact/tests.py:33 profil/forms/RegisterForm.py:29
+#: profil/forms/RegisterForm.py:33
 msgid "mail_adress"
-msgstr ""
+msgstr "adresse mail"
 
-#: contact/forms/ContactFrom.py:17 contact/forms/ContactFrom.py:21
+#: contact/forms/ContactFrom.py:38 contact/forms/ContactFrom.py:42
 msgid "subject"
-msgstr ""
+msgstr "sujet"
 
-#: contact/forms/ContactFrom.py:26 contact/forms/ContactFrom.py:30
+#: contact/forms/ContactFrom.py:47 contact/forms/ContactFrom.py:51
 #: forum/forms/CreateTopic.py:28 forum/forms/CreateTopic.py:32
 #: forum/forms/ReplyTopic.py:17
 msgid "message"
-msgstr ""
+msgstr "message"
 
 #: contact/templates/contact/contact.html:5 core/templates/core/base.html:66
 #: core/templates/core/base.html.py:98
 msgid "contact"
-msgstr ""
+msgstr "contact"
 
-#: contact/templates/contact/contact.html:13
+#: contact/templates/contact/contact.html:30
 msgid "send_message"
-msgstr ""
+msgstr "envoi du message"
 
 #: core/templates/core/base.html:50 ldap42/templates/ldap42/loginldap.html:6
 #: profil/templates/profil/login.html:7 profil/templates/profil/login.html:20
 msgid "home"
-msgstr ""
+msgstr "accueil"
 
 #: core/templates/core/base.html:63
 msgid "annuaire"
-msgstr ""
+msgstr "annuaire"
 
 #: core/templates/core/base.html:70 forum/templates/forum/cat.html:5
 #: forum/templates/forum/create_topic.html:5
 #: forum/templates/forum/edit_post.html:5 forum/templates/forum/home.html:5
 #: forum/templates/forum/topic.html:5
 msgid "forum"
-msgstr ""
+msgstr "zone de discussion"
 
 #: core/templates/core/base.html:73 issues/forms/SubmitIssue.py:27
 #: issues/forms/SubmitIssue.py:31
 msgid "issue"
-msgstr ""
+msgstr "problèmes"
 
 #: core/templates/core/base.html:77
-#: generate_logs/templates/logs/display_log.html:4
-#: generate_logs/templates/logs/display_log.html:7
+#: generate_logs/templates/logs/display_log.html:2
 msgid "log"
-msgstr ""
+msgstr "journalisation"
 
 #: core/templates/core/base.html:79
 msgid "logout"
-msgstr ""
+msgstr "se déconnecter"
 
 #: core/templates/core/base.html:83 profil/templates/profil/register.html:47
 msgid "register"
-msgstr ""
+msgstr "s'enregistrer"
 
 #: core/templates/core/base.html:86 ldap42/templates/ldap42/loginldap.html:7
 #: profil/templates/profil/login.html:8 profil/templates/profil/login.html:21
 msgid "login"
-msgstr ""
+msgstr "se connecter"
 
 #: core/templates/core/base.html:91 profil/templates/profil/login.html:13
 msgid "login_classic"
-msgstr ""
+msgstr "conection classique"
 
 #: core/templates/core/base.html:94 profil/templates/profil/login.html:14
 msgid "login_ldap"
-msgstr ""
+msgstr "connection via le ldap"
 
 #: core/templates/core/base.html:103
 msgid "change_lang"
-msgstr ""
+msgstr "langue"
 
 #: core/templates/core/base.html:108
 msgid "current_lang"
-msgstr ""
+msgstr "langue courante"
 
 #: forum/forms/CreateTopic.py:18 forum/forms/CreateTopic.py:22
 #: issues/forms/SubmitIssue.py:18 issues/forms/SubmitIssue.py:22
 #: issues/templates/issues/issue_admin.html:9
 #: issues/templates/issues/issue_user.html:9
 msgid "title"
-msgstr ""
+msgstr "titre"
 
 #: forum/forms/ReplyTopic.py:21
 msgid "reponse"
-msgstr ""
+msgstr "réponse"
 
 #: forum/models.py:13
 msgid "Name"
-msgstr ""
+msgstr "nom"
 
 #: forum/models.py:21
 msgid "categorie_parente"
-msgstr ""
+msgstr "catégorie parente"
 
 #: forum/models.py:22
 msgid "categorie"
-msgstr ""
+msgstr "categorie"
 
 #: forum/templates/forum/cat.html:11
 #: forum/templates/forum/create_topic.html:10
 msgid "new_topic"
-msgstr ""
+msgstr "nouveau sujet"
 
 #: forum/templates/forum/cat.html:32 forum/templates/forum/cat.html.py:34
 msgid "last_mod"
-msgstr ""
+msgstr "dernière modification"
 
 #: forum/templates/forum/cat.html:32 forum/templates/forum/cat.html.py:34
-#: generate_logs/templates/logs/display_log.html:25
-#: generate_logs/templates/logs/display_log.html:39
+#: generate_logs/templates/logs/display_log.html:31
+#: generate_logs/templates/logs/display_log.html:43
 msgid "by"
-msgstr ""
+msgstr "par"
 
 #: forum/templates/forum/cat.html:32 forum/templates/forum/cat.html.py:34
 #: forum/templates/forum/topic.html:22 forum/templates/forum/topic.html:46
 #: forum/templates/forum/topic.html:52
 msgid "at"
-msgstr ""
+msgstr "le"
 
 #: forum/templates/forum/create_topic.html:8
 msgid "edit_topic"
-msgstr ""
+msgstr "edition du sujet"
 
 #: forum/templates/forum/create_topic.html:34
 msgid "create_topic"
-msgstr ""
+msgstr "creation du sujet"
 
 #: forum/templates/forum/edit_post.html:7
 #: forum/templates/forum/edit_post.html:16
 msgid "edit_post"
-msgstr ""
+msgstr "edition du message"
 
 #: forum/templates/forum/home.html:23
 msgid "no_category"
-msgstr ""
+msgstr "aucunes categories"
 
 #: forum/templates/forum/response.html:8
 msgid "response_topic"
-msgstr ""
+msgstr "réponse"
 
 #: forum/templates/forum/topic.html:52
 msgid "modify_by"
-msgstr ""
+msgstr "modifié par"
 
 #: forum/views.py:109
 msgid "save_topic"
-msgstr ""
+msgstr "enregistrer le sujet"
 
 #: forum/views.py:112 forum/views.py:200
 msgid "thread_fail"
-msgstr ""
+msgstr "erreur de creation du sujet"
 
-#: generate_logs/templates/logs/display_log.html:12
+#: generate_logs/templates/logs/display_log.html:18
 msgid "no_logs_register"
-msgstr ""
+msgstr "aucuns logs enregistré"
 
-#: generate_logs/templates/logs/display_log.html:22
 #: generate_logs/templates/logs/display_log.html:28
-#: generate_logs/templates/logs/display_log.html:36
-msgid "day"
-msgstr ""
-
-#: generate_logs/templates/logs/display_log.html:23
-#: generate_logs/templates/logs/display_log.html:29
-#: generate_logs/templates/logs/display_log.html:37
-msgid "hour"
-msgstr ""
-
-#: generate_logs/templates/logs/display_log.html:24
-#: generate_logs/templates/logs/display_log.html:30
-#: generate_logs/templates/logs/display_log.html:38
-msgid "action"
-msgstr ""
-
-#: generate_logs/templates/logs/display_log.html:31
+#: generate_logs/templates/logs/display_log.html:33
 #: generate_logs/templates/logs/display_log.html:40
-msgid "module"
-msgstr ""
+msgid "day"
+msgstr "jour"
 
-#: generate_logs/templates/logs/display_log.html:32
+#: generate_logs/templates/logs/display_log.html:29
+#: generate_logs/templates/logs/display_log.html:34
 #: generate_logs/templates/logs/display_log.html:41
-msgid "ligne"
-msgstr ""
+msgid "hour"
+msgstr "heure"
 
+#: generate_logs/templates/logs/display_log.html:30
 #: generate_logs/templates/logs/display_log.html:35
-msgid "error_level"
-msgstr ""
+#: generate_logs/templates/logs/display_log.html:42
+msgid "action"
+msgstr "action"
 
-#: issues/forms/AdminResponseIssue.py:25 issues/forms/AdminResponseIssue.py:31
-#: issues/models.py:12
+#: generate_logs/templates/logs/display_log.html:36
+#: generate_logs/templates/logs/display_log.html:44
+msgid "module"
+msgstr "module"
+
+#: generate_logs/templates/logs/display_log.html:37
+#: generate_logs/templates/logs/display_log.html:45
+msgid "ligne"
+msgstr "ligne"
+
+#: generate_logs/templates/logs/display_log.html:39
+msgid "error_level"
+msgstr "niveau d'erreur"
+
+#: issues/forms/AdminResponseIssue.py:25
 msgid "assign"
-msgstr ""
+msgstr "assigné à"
+
+#: issues/forms/AdminResponseIssue.py:31 issues/models.py:12
+#: issues/templates/issues/issue.html:9
+#: issues/templates/issues/issue_admin.html:10
+#: issues/templates/issues/issue_user.html:10
+msgid "assign_to"
+msgstr "assigné à"
 
 #: issues/forms/AdminResponseIssue.py:36 issues/forms/AdminResponseIssue.py:46
 #: issues/models.py:30 issues/templates/issues/issue_admin.html:13
 #: issues/templates/issues/issue_user.html:13
 msgid "status"
-msgstr ""
+msgstr "status"
 
 #: issues/forms/AdminResponseIssue.py:38 issues/models.py:28
 #: issues/templates/issues/issue.html:13
 msgid "open"
-msgstr ""
+msgstr "ouvert"
 
-#: issues/forms/AdminResponseIssue.py:39
-msgid "in progress"
-msgstr ""
+#: issues/forms/AdminResponseIssue.py:39 issues/models.py:29
+#: issues/templates/issues/issue.html:15
+msgid "in_progress"
+msgstr "en cours"
 
 #: issues/forms/AdminResponseIssue.py:40 issues/templates/issues/issue.html:17
 msgid "close"
-msgstr ""
+msgstr "fermé"
 
 #: issues/forms/AdminResponseIssue.py:51 issues/forms/AdminResponseIssue.py:55
+#: issues/templates/issues/issue_admin_response.html:45
 msgid "answer"
-msgstr ""
+msgstr "réponse"
 
 #: issues/models.py:17
 msgid "titre"
-msgstr ""
-
-#: issues/models.py:29 issues/templates/issues/issue.html:15
-msgid "in_progress"
-msgstr ""
-
-#: issues/templates/issues/issue.html:9
-msgid "assign_to"
-msgstr ""
+msgstr "titre"
 
 #: issues/templates/issues/issue.html:45
 msgid "reopen_issue"
-msgstr ""
+msgstr "réouvrir le problème"
 
 #: issues/templates/issues/issue_admin.html:3
 #: issues/templates/issues/issue_user.html:3
 msgid "new_issue"
-msgstr ""
-
-#: issues/templates/issues/issue_admin.html:10
-#: issues/templates/issues/issue_user.html:10
-msgid "asign_to"
-msgstr ""
+msgstr "nouveau probleme"
 
 #: issues/templates/issues/issue_admin.html:11
 #: issues/templates/issues/issue_user.html:11
 msgid "createdate"
-msgstr ""
+msgstr "créé le"
 
 #: issues/templates/issues/issue_admin.html:12
 #: issues/templates/issues/issue_user.html:12
 msgid "lastactivity"
-msgstr ""
+msgstr "dernière activité"
 
 #: issues/templates/issues/issue_admin.html:32
 #: issues/templates/issues/issue_user.html:32
 msgid "no_issues"
-msgstr ""
-
-#: issues/templates/issues/issue_admin_response.html:45
-msgid "response_issue"
-msgstr ""
+msgstr "pas de problèmes déclarés"
 
 #: issues/templates/issues/send_issue.html:20
 msgid "submit_issue"
-msgstr ""
+msgstr "soumettre un problème"
 
 #: issues/views.py:65
 msgid "save_error"
-msgstr ""
+msgstr "erreur lors de l'enregistrement"
 
 #: issues/views.py:91
 msgid "update_error"
-msgstr ""
+msgstr "erreur lors de la mise a jour"
 
 #: ldap42/forms/LdapForm.py:19 ldap42/forms/LdapForm.py:23
-msgid "login_user"
-msgstr ""
+#: ldap42/templates/ldap42/ldap_display.html:32
+msgid "login42"
+msgstr "login42"
 
 #: ldap42/forms/LdapForm.py:28 ldap42/forms/LdapForm.py:32
 #: ldap42/templates/ldap42/loginldap.html:33 profil/forms/LogInForm.py:26
 #: profil/forms/LogInForm.py:30 profil/forms/RegisterForm.py:39
-#: profil/forms/RegisterForm.py:43 profil/templates/profil/login.html:51
+#: profil/forms/RegisterForm.py:43 profil/templates/profil/login.html:49
 #: profil/templates/profil/register.html:33
 msgid "password"
-msgstr ""
+msgstr "mot de passse"
 
 #: ldap42/forms/LdapForm.py:38 ldap42/forms/LdapForm.py:49
 #: ldap42/templates/ldap42/loginldap.html:41
 msgid "pool_month"
-msgstr ""
+msgstr "mois de piscine"
 
 #: ldap42/forms/LdapForm.py:40
 msgid "juillet"
-msgstr ""
+msgstr "juillet"
 
 #: ldap42/forms/LdapForm.py:41
 msgid "aout"
-msgstr ""
+msgstr "aout"
 
 #: ldap42/forms/LdapForm.py:42
 msgid "septembre"
-msgstr ""
+msgstr "septembre"
 
 #: ldap42/forms/LdapForm.py:43
 msgid "octobre"
-msgstr ""
+msgstr "octobre"
 
 #: ldap42/forms/LdapForm.py:62 ldap42/forms/LdapForm.py:68
 #: ldap42/templates/ldap42/loginldap.html:45
 msgid "pool_year"
-msgstr ""
-
-#: ldap42/templates/ldap42/ldap_display.html:32
-msgid "login42"
-msgstr ""
+msgstr "année de la piscine"
 
 #: ldap42/templates/ldap42/ldap_display.html:33
 msgid "prenom"
-msgstr ""
+msgstr "prénom"
 
 #: ldap42/templates/ldap42/ldap_display.html:34
 msgid "nom"
-msgstr ""
+msgstr "nom"
 
 #: ldap42/templates/ldap42/ldap_display.html:35
-msgid "birthday"
-msgstr ""
-
-#: ldap42/templates/ldap42/ldap_display.html:36
 msgid "phone"
-msgstr ""
+msgstr "numéro de téléphone"
 
 #: ldap42/templates/ldap42/loginldap.html:8
 msgid "connection_ldap"
-msgstr ""
+msgstr "connection via ldap42"
 
 #: ldap42/templates/ldap42/loginldap.html:50
-#: profil/templates/profil/login.html:58
+#: profil/templates/profil/login.html:56
 msgid "connexion"
-msgstr ""
+msgstr "connection"
 
-#: ldap42/views.py:93 ldap42/views.py:177
+#: ldap42/views.py:92 ldap42/views.py:176
 msgid "bind_error"
-msgstr ""
+msgstr "erreur lors du bind"
 
-#: ldap42/views.py:168 profil/views.py:147
+#: ldap42/views.py:167 profil/views.py:146
 msgid "authenticate error"
-msgstr ""
+msgstr "erreur d'authentification"
 
-#: ldap42/views.py:172 profil/tests.py:199 profil/views.py:151
+#: ldap42/views.py:171 profil/tests.py:59 profil/tests.py:173
+#: profil/views.py:48 profil/views.py:150
 msgid "error_wrong_password"
-msgstr ""
+msgstr "mauvais mot de passe"
 
 #: profil/forms/LogInForm.py:17 profil/forms/LogInForm.py:21
 #: profil/forms/RegisterForm.py:19 profil/forms/RegisterForm.py:23
 msgid "username"
-msgstr ""
+msgstr "nom d'utilisateur"
 
-#: profil/forms/RegisterForm.py:49
-msgid "passeword_conf"
-msgstr ""
-
-#: profil/forms/RegisterForm.py:53 profil/templates/profil/register.html:40
+#: profil/forms/RegisterForm.py:49 profil/forms/RegisterForm.py:53
+#: profil/templates/profil/register.html:40
 msgid "password_conf"
-msgstr ""
+msgstr "confirmation du mot de passe"
 
 #: profil/templates/profil/login.html:22
-msgid "connection_classique"
-msgstr ""
+#, fuzzy
+#| msgid "connection_ldap"
+msgid "connection_classic"
+msgstr "connection via ldap42"
 
-#: profil/tests.py:63 profil/views.py:48
-msgid "error_password"
-msgstr ""
-
-#: profil/tests.py:72 profil/views.py:43
+#: profil/tests.py:67 profil/views.py:43
 msgid "error_user_already_exist"
-msgstr ""
+msgstr "le nom d'utilisateur existe deja"
 
-#: profil/tests.py:81 profil/views.py:46
+#: profil/tests.py:75 profil/views.py:46
 msgid "error_mail_already_exist"
-msgstr ""
+msgstr "l'adressse mail est deja utilisée"
 
-#: profil/tests.py:165 profil/views.py:115
+#: profil/tests.py:144 profil/views.py:114
 msgid "admin_cant_log_here"
-msgstr ""
+msgstr "les admins ne peuvent pas se connecter ici"
 
-#: profil/tests.py:173 profil/views.py:119
+#: profil/tests.py:151 profil/views.py:118
 msgid "staff_cant_log_here"
-msgstr ""
+msgstr "le staff ne peut pas se connecter ici"
 
-#: profil/tests.py:192 profil/views.py:110
+#: profil/tests.py:166 profil/views.py:109
 msgid "error_user_not_exist"
-msgstr ""
+msgstr "le nom d'utilisateur n'existe pas"
 
-#: profil/views.py:70
+#: profil/views.py:69
 msgid "unknow_error_register_form"
-msgstr ""
+msgstr "une erreur inconnue est survenu lors de l'enregistrement"
 
-#: profil/views.py:155
+#: profil/views.py:154
 msgid "unknow error"
-msgstr ""
+msgstr "erreur inconnue"
