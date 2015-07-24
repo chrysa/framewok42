@@ -12,9 +12,7 @@
 import logging
 
 from django.core.mail import send_mail
-from django.shortcuts import redirect
 from django.shortcuts import render
-from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
 
 from generate_logs.functions import info_load_log_message
@@ -25,11 +23,16 @@ logger_info = logging.getLogger('info')
 
 
 def display(request):
-    """
-    display contact form
+    """display contact form
 
-    :param request: object containt context of request
+    :param request: object contain context of request
     :type request: object
+    :var errors: dict of process error
+    :var success: dict of success process
+    :var form: contain struct of contact form
+    :seealso: django.core.mail.send_mail
+    :seealso: generate_logs.functions.info_load_log_message
+    :seealso: contact.forms.ContactFrom.ContactForm
     :return: HTTPResponse
     """
     logger_info.info(info_load_log_message(request))
@@ -43,7 +46,8 @@ def display(request):
                 send_mail(
                     form.cleaned_data['subject'],
                     form.cleaned_data['message'],
-                    form.cleaned_data['email'] if 'email' in form.cleaned_data else request.user.email,
+                    form.cleaned_data[
+                        'email'] if 'email' in form.cleaned_data else request.user.email,
                     ["greau.anthony@gmail.com", ]
                 )
                 success['message'] = _('contact_success')

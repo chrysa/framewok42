@@ -37,7 +37,8 @@ def connect_to_ldap(session):
         auto_bind=True,
         client_strategy='SYNC',
         user='uid={},ou={},ou={},ou=paris,ou=people,dc=42,dc=fr'.format(session['ldap_log']['login'],
-                                                                        session['ldap_log']['pool_month'],
+                                                                        session['ldap_log'][
+                                                                            'pool_month'],
                                                                         session['ldap_log']['pool_year']),
         password=session['ldap_log']['password'],
         authentication=ldap3.SIMPLE,
@@ -86,7 +87,8 @@ def ldap_display(request, order, letter):
                 }
             )
         c.unbind()
-        annuaire.sort(key=itemgetter('uid'), reverse=True if order == 'reverse' else False)
+        annuaire.sort(
+            key=itemgetter('uid'), reverse=True if order == 'reverse' else False)
     else:
         logger_error.info(l_fct.error_ldap_log_message(request, "bind"))
         errors['unknow'] = _("bind_error")
@@ -151,9 +153,11 @@ def login_ldap(request):
                     if user.is_active:
                         login(request, user)
                         userlang = UserLang.objects.get(user=request.user)
-                        logger_info.info(l_fct.info_login_class_log_message(request))
+                        logger_info.info(
+                            l_fct.info_login_class_log_message(request))
                         translation.activate(userlang.lang)
-                        request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
+                        request.session[
+                            translation.LANGUAGE_SESSION_KEY] = userlang.lang
                         redir = reverse('home')
                         if 'next' in request.GET and request.GET['next'] != reverse('login'):
                             redir = request.GET['next']

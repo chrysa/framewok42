@@ -14,7 +14,6 @@ DEFAULT_EMAIL_FROM = 'greau.anthony@gmail.com'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-
 APPEND_SLASH = True
 
 LANGUAGE_CODE = 'fr-FR'

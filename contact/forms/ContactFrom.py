@@ -14,6 +14,7 @@ from django.utils.translation import ugettext as _
 
 
 class ContactForm(forms.Form):
+
     """
     this class define field of contact form
     :param forms.Form: contain all function for define a field

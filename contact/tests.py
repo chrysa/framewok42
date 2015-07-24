@@ -17,16 +17,20 @@ from profil.models import UserLang
 
 
 class ContactTests(TestCase):
+
     """
     this class define all unit test for contact
+
     :param TestCase: librarie of unittest
     :type TestCase: object
     :return: None
     :rtype: None
     """
+
     def setUp(self):
         """
         set up variable and create user for the test
+
         :param self: instance of ContactTests
         :type self: object
         :var self.client: instance of navigation client for test
@@ -46,6 +50,8 @@ class ContactTests(TestCase):
     def test_contact_url_unlog(self):
         """
         test access to url contact not log status
+
+        :var reponse: response of request
         :return: None
         """
         reponse = self.client.get(reverse('contact'))
@@ -56,9 +62,12 @@ class ContactTests(TestCase):
     def test_contact_url_log(self):
         """
         test access to url contact log status
+
+        :var reponse: response of request
         :return: None
         """
-        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        self.client.login(username=self.register_user[
+                          'username'], password=self.register_user['password'])
         reponse = self.client.get(reverse('contact'))
         self.assertNotContains(reponse, _("mail_adress"))
         self.assertTemplateUsed(reponse, 'contact/contact.html')
@@ -68,9 +77,12 @@ class ContactTests(TestCase):
     def send_contact_unlog(self):
         """
         test send contact mail on not log status
+
+        :var reponse: response of request
         :return: None
         """
-        reponse = self.client.get(reverse('contact'),{'email': 'test@test.fr', 'subject': 'mail unit test', 'message': 'message de test'})
+        reponse = self.client.get(reverse('contact'), {
+                                  'email': 'test@test.fr', 'subject': 'mail unit test', 'message': 'message de test'})
         self.assertContains(reponse, _("contact_success"))
         self.assertTemplateUsed(reponse, 'contact/contact.html')
         self.assertEqual(reponse.status_code, 200)
@@ -78,10 +90,14 @@ class ContactTests(TestCase):
     def send_contact_log(self):
         """
         test send contact mail on log status
+
+        :var reponse: response of request
         :return: None
         """
-        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
-        reponse = self.client.get(reverse('contact'), {'subject': 'mail unit test', 'message': 'message de test'})
+        self.client.login(username=self.register_user[
+                          'username'], password=self.register_user['password'])
+        reponse = self.client.get(
+            reverse('contact'), {'subject': 'mail unit test', 'message': 'message de test'})
         self.assertContains(reponse, _("contact_success"))
         self.assertTemplateUsed(reponse, 'contact/contact.html')
         self.assertEqual(reponse.status_code, 200)
@@ -90,6 +106,8 @@ class ContactTests(TestCase):
     def send_contact_unlog_subject_vide(self):
         """
         test send contact mail with blank subject on not log status
+
+        :var reponse: response of request
         :return: None
         """
         reponse = self.client.get(reverse('contact'), {})
@@ -100,6 +118,8 @@ class ContactTests(TestCase):
     def send_contact_unlog_mesage_vide(self):
         """
         test send contact mail with blank subject on not log status
+
+        :var reponse: response of request
         :return: None
         """
         reponse = self.client.get(reverse('contact'), {})
@@ -110,6 +130,8 @@ class ContactTests(TestCase):
     def send_contact_unlog_vide_complet(self):
         """
         test send contact mail with blank form on not log status
+
+        :var reponse: response of request
         :return: None
         """
         reponse = self.client.get(reverse('contact'), {})
@@ -122,9 +144,12 @@ class ContactTests(TestCase):
     def send_contact_log_subject_vide(self):
         """
         test send contact mail with blank subject on log status
+
+        :var reponse: response of request
         :return: None
         """
-        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        self.client.login(username=self.register_user[
+                          'username'], password=self.register_user['password'])
         reponse = self.client.get(reverse('contact'), {})
         self.assertContains(reponse, _('contact_must_contain_subject'))
         self.assertTemplateUsed(reponse, 'contact/contact.html')
@@ -134,9 +159,12 @@ class ContactTests(TestCase):
     def send_contact_log_mesage_vide(self):
         """
         test send contact mail with blank subject on log status
+
+        :var reponse: response of request
         :return: None
         """
-        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        self.client.login(username=self.register_user[
+                          'username'], password=self.register_user['password'])
         reponse = self.client.get(reverse('contact'), {})
         self.assertContains(reponse, _('contact_must_contain_subject'))
         self.assertTemplateUsed(reponse, 'contact/contact.html')
@@ -146,9 +174,12 @@ class ContactTests(TestCase):
     def send_contact_log_vide_complet(self):
         """
         test send contact mail with blank form on log status
+
+        :var reponse: response of request
         :return: None
         """
-        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        self.client.login(username=self.register_user[
+                          'username'], password=self.register_user['password'])
         reponse = self.client.get(reverse('contact'), {})
         self.assertContains(reponse, _('contact_must_contain_subject'))
         self.assertContains(reponse, _('contact_must_contain_message'))
