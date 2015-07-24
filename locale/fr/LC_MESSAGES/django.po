@@ -18,13 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: contact/contact.py:47 contact/tests.py:41 contact/tests.py:48
-#, fuzzy
-#| msgid "contact"
-msgid "contact_success"
-msgstr "contact"
-
-#: contact/contact.py:48
+#: contact/contact.py:47 contact/contact.py:48
 msgid "success_contact"
 msgstr "envoi du mail de contact avec success"
 
@@ -32,11 +26,11 @@ msgstr "envoi du mail de contact avec success"
 #, fuzzy
 #| msgid "contact"
 msgid "contact_fail"
-msgstr "contact"
+msgstr "echec de l'envoi du mail de contact"
 
 #: contact/contact.py:51
 msgid "error_contact"
-msgstr "echec de l'envoi du mail de contact"
+msgstr "erreur de contact"
 
 #: contact/contact.py:54 contact/tests.py:55 contact/tests.py:64
 msgid "contact_must_contain_subject"

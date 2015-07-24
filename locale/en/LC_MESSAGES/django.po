@@ -17,17 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: contact/contact.py:47 contact/tests.py:41 contact/tests.py:48
-msgid "contact_success"
-msgstr ""
-
-#: contact/contact.py:48
+#: contact/contact.py:47 contact/contact.py:48
 msgid "success_contact"
-msgstr ""
+msgstr "send contact mail success"
 
 #: contact/contact.py:50
 msgid "contact_fail"
-msgstr ""
+msgstr "send contact mail failled"
 
 #: contact/contact.py:51
 msgid "error_contact"

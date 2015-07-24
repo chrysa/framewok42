@@ -47,7 +47,7 @@ def display(request):
                     ["greau.anthony@gmail.com", ]
                 )
                 success['message'] = _('contact_success')
-                logger_info.info(_("success_contact") + request.user.username)
+                logger_info.info(_("contact_success") + request.user.username)
             except:
                 errors['message'] = _('contact_fail')
                 logger_error.error(_("error_contact") + request.user.username)
