@@ -14,17 +14,15 @@ from django.utils.translation import ugettext as _
 
 
 class ContactForm(forms.Form):
-
     """
     this class define field of contact form
     :param forms.Form: contain all function for define a field
     :type forms.Form: form object
-    :return: None
-    :rtype: None
-
     :var email: define email field
     :var subject: define subject field
     :var message: define message field
+    :return: None
+    :rtype: None
     """
     email = forms.EmailField(
         label=_("mail_adress"),

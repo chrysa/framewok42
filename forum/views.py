@@ -236,15 +236,7 @@ def edit_topic(request, cat, topic):
     :type cat: slug
     :param topic: slug of topic
     :type topic: slug
-
-    :var topic: topic slug
-    :type topic: slug
-    :var cat: select cat by slug
-    :var form: form for reply
-    :var update: select topic to update and update him
-    :var topic: get the topic
-    :var context: define the context for display topic
-
+    :var cat: select category by slug
     :return: HTTPResponse
     """
     logger_info.info(info_load_log_message(request))
@@ -320,11 +312,10 @@ def edit_post(request, cat, topic, post):
     :var topic: topic slug
     :type topic: slug
     :var cat: select cat by slug
-    :var form: form for reply
-    :var update: select topic to update and update him
-    :var topic: get the topic
+    :var form: form for edit post
+    :var update: select post to update and update him
+    :var post_sel: get the post
     :var context: define the context for display topic
-
     :return: HTTPResponse
     """
     logger_info.info(info_load_log_message(request))
@@ -349,17 +340,12 @@ def edit_post(request, cat, topic, post):
                     ),
                     permanent=True
                 )
-
     else:
         post_sel = models.ForumPost.objects.get(pk=post)
-        post_sel = {
-            'Message': post_sel.Message,
-        }
         context = {
             'cat': cat,
             'topic': topic,
-            'post': post,
-            'form': PostForm(post_sel),
+            'post': post, 'form': PostForm(post_sel.Message),
         }
         return render(
             request,

@@ -110,7 +110,8 @@ function dismissChangeRelatedObjectPopup(win, objId, newRepr, newId) {
         }
     });
     win.close();
-}
+};
+
 function dismissDeleteRelatedObjectPopup(win, objId) {
     objId = html_unescape(objId);
     var id = windowname_to_id(win.name).replace(/^delete_/, '');
@@ -122,7 +123,8 @@ function dismissDeleteRelatedObjectPopup(win, objId) {
         }
     }).trigger('change');
     win.close();
-}
+};
+
 // Kept for backward compatibility
 showAddAnotherPopup = showRelatedObjectPopup;
 dismissAddAnotherPopup = dismissAddRelatedObjectPopup;

@@ -6,6 +6,7 @@
 :moduleauthor: anthony greau <greau.anthony@gmail.com>
 :created: 01/07/2015
 :update: 22/07/2015
+:seealso: profil.models.UserLang
 """
 from django.test import Client
 from django.test import TestCase

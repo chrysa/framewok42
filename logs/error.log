@@ -2189,3 +2189,23 @@
 [24/07/2015 23:52:33] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [24/07/2015 23:52:33] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [24/07/2015 23:52:33] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[25/07/2015 13:13:26] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
+[25/07/2015 13:13:26] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[25/07/2015 13:13:27] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
+[25/07/2015 13:13:27] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[25/07/2015 13:13:27] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[25/07/2015 13:13:27] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[25/07/2015 13:13:27] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[25/07/2015 13:13:27] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[25/07/2015 13:13:28] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[25/07/2015 13:13:28] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[25/07/2015 14:14:41] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
+[25/07/2015 14:14:41] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[25/07/2015 14:14:42] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
+[25/07/2015 14:14:42] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[25/07/2015 14:14:42] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[25/07/2015 14:14:42] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[25/07/2015 14:14:43] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[25/07/2015 14:14:43] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[25/07/2015 14:14:43] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[25/07/2015 14:14:43] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
