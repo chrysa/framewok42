@@ -54,7 +54,7 @@ resettrans:
 
 test:
 	printf '$(BLUE)lancement des tests unitaires$(WHITE)\n' 
-	python manage.py test --verbosity=$(VERBOSITY)
+	python manage.py test --verbosity $(VERBOSITY)
 	
 install:
 	printf '$(BLUE)installation du fichier requirements.txt$(WHITE)\n'
