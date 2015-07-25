@@ -8,6 +8,10 @@
 :update: 21/07/2015:
 :var logger_error: logger error
 :var logger_info: logger info
+:seealso: forum.models
+:seealso: forum.forms.CreateTopic.TopicForm
+:seealso: forum.forms.ReplyTopic.PostForm
+:seealso: generate_logs.functions.info_load_log_message
 """
 import datetime
 import logging
@@ -34,8 +38,6 @@ def display_all(request):
 
     :param request: object contain context of request
     :type request: object
-    :seealso: django.core.mail.send_mail
-    :seealso: contact.forms.ContactFrom.ContactForm
     :return: HTTPResponse
     """
     logger_info.info(info_load_log_message(request))
@@ -50,6 +52,14 @@ def display_all(request):
 
 @login_required
 def display_cat(request, cat):
+    """display category's topic list
+
+    :param request: object contain context of request
+    :type request: object
+    :param cat: slug of categorie
+    :type cat: slug
+    :return: HTTPResponse
+    """
     logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
     if cat is not None:
@@ -69,9 +79,22 @@ def display_cat(request, cat):
 
 @login_required
 def display_topic(request, cat, topic):
+    """display category's topic list
+
+    :param request: object contain context of request
+    :type request: object
+    :param cat: slug of categorie
+    :type cat: slug
+    :param topic: slug of topic
+    :type topic: slug
+    :var cat: get the the selected category
+    :var thr: get the first message of the topic
+    :var post: get lit of related post of thr
+    :return: HTTPResponse
+    """
     logger_info.info(info_load_log_message(request))
-    thr = models.ForumTopic.objects.get(slug=topic)
     cat = models.ForumCat.objects.filter(slug=cat)[0]
+    thr = models.ForumTopic.objects.get(slug=topic)
     if thr is not None:
         post = models.ForumPost.objects.filter(TopicParent=thr)
         return render(

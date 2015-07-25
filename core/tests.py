@@ -31,3 +31,4 @@ class CoreUrlTests(TestCase):
         """
         reponse = self.client.get(reverse('home'))
         self.assertEqual(reponse.status_code, 200)
+        self.assertTemplateUsed(reponse, 'core/home.html')

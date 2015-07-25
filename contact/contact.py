@@ -8,6 +8,9 @@
 :update: 21/07/2015:
 :var logger_error: logger error
 :var logger_info: logger info
+:seealso: django.core.mail.send_mail
+:seealso: generate_logs.functions.info_load_log_message
+:seealso: contact.forms.ContactFrom.ContactForm
 """
 import logging
 
@@ -30,9 +33,6 @@ def display(request):
     :var errors: dict of process error
     :var success: dict of success process
     :var form: contain struct of contact form
-    :seealso: django.core.mail.send_mail
-    :seealso: generate_logs.functions.info_load_log_message
-    :seealso: contact.forms.ContactFrom.ContactForm
     :return: HTTPResponse
     """
     logger_info.info(info_load_log_message(request))
