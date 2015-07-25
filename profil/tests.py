@@ -209,8 +209,19 @@ class LogoutTests(TestCase):
         UserLang.objects.create(user=unittest_fr, lang='fr')
 
     def test_logout_user(self):
-        self.client.login(
-            username=self.log_user['username'], password=self.log_user['password'])
+        self.client.login(username=self.log_user['username'], password=self.log_user['password'])
         reponse = self.client.get(reverse('logout'))
         self.assertEqual(reponse.status_code, 301)
         self.client.logout()
+
+    def test_logout_url_unlog(self):
+        """
+        test access to url contact not log status
+
+        :var reponse: response of request
+        :todo: see how to remove next when referer is logout
+        :return: None
+        """
+        reponse = self.client.get(reverse('logout'))
+        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('logout'))
+

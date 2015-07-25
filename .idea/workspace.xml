@@ -1,51 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3d3b340-1fe3-4999-be9a-8f7ad84406b5" name="Default" comment="start comment forum">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact/forms/ContactFrom.py" afterPath="$PROJECT_DIR$/contact/forms/ContactFrom.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/forms/CreateTopic.py" afterPath="$PROJECT_DIR$/forum/forms/CreateTopic.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/admin/DateTimeShortcuts.js" afterPath="$PROJECT_DIR$/statics/admin/js/admin/DateTimeShortcuts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/LICENSE-JQUERY.txt" afterPath="$PROJECT_DIR$/statics/admin/js/LICENSE-JQUERY.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/admin/RelatedObjectLookups.js" afterPath="$PROJECT_DIR$/statics/admin/js/admin/RelatedObjectLookups.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/forms/ReplyTopic.py" afterPath="$PROJECT_DIR$/forum/forms/ReplyTopic.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/SelectBox.js" afterPath="$PROJECT_DIR$/statics/admin/js/SelectBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/SelectFilter2.js" afterPath="$PROJECT_DIR$/statics/admin/js/SelectFilter2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/actions.js" afterPath="$PROJECT_DIR$/statics/admin/js/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/actions.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/actions.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/admin.py" afterPath="$PROJECT_DIR$/forum/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/base.css" afterPath="$PROJECT_DIR$/statics/admin/css/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/calendar.js" afterPath="$PROJECT_DIR$/statics/admin/js/calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/changelists.css" afterPath="$PROJECT_DIR$/statics/admin/css/changelists.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/collapse.js" afterPath="$PROJECT_DIR$/statics/admin/js/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/collapse.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/collapse.min.js" />
+    <list default="true" id="d3d3b340-1fe3-4999-be9a-8f7ad84406b5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/core/base.html" afterPath="$PROJECT_DIR$/core/templates/core/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/complet.log" afterPath="$PROJECT_DIR$/logs/complet.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/core.js" afterPath="$PROJECT_DIR$/statics/admin/js/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/dashboard.css" afterPath="$PROJECT_DIR$/statics/admin/css/dashboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/django.log" afterPath="$PROJECT_DIR$/logs/django.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/forms.css" afterPath="$PROJECT_DIR$/statics/admin/css/forms.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ressources/gen_doc.py" afterPath="$PROJECT_DIR$/ressources/gen_doc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/hijack/hijack-styles.css" afterPath="$PROJECT_DIR$/statics/hijack/hijack-styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/ie.css" afterPath="$PROJECT_DIR$/statics/admin/css/ie.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/info.log" afterPath="$PROJECT_DIR$/logs/info.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/inlines.js" afterPath="$PROJECT_DIR$/statics/admin/js/inlines.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/inlines.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/inlines.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/jquery.init.js" afterPath="$PROJECT_DIR$/statics/admin/js/jquery.init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/jquery.js" afterPath="$PROJECT_DIR$/statics/admin/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/js/jquery.js" afterPath="$PROJECT_DIR$/statics/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/jquery.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/login.css" afterPath="$PROJECT_DIR$/statics/admin/css/login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/models.py" afterPath="$PROJECT_DIR$/forum/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/prepopulate.js" afterPath="$PROJECT_DIR$/statics/admin/js/prepopulate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/prepopulate.min.js" afterPath="$PROJECT_DIR$/statics/admin/js/prepopulate.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/related-widget-wrapper.js" afterPath="$PROJECT_DIR$/statics/admin/js/related-widget-wrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/rtl.css" afterPath="$PROJECT_DIR$/statics/admin/css/rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact/tests.py" afterPath="$PROJECT_DIR$/contact/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profil/templates/profil/login.html" afterPath="$PROJECT_DIR$/profil/templates/profil/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ldap42/templates/ldap42/loginldap.html" afterPath="$PROJECT_DIR$/ldap42/templates/ldap42/loginldap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/settings.py" afterPath="$PROJECT_DIR$/framework/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/tests.py" afterPath="$PROJECT_DIR$/forum/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/timeparse.js" afterPath="$PROJECT_DIR$/statics/admin/js/timeparse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/js/urlify.js" afterPath="$PROJECT_DIR$/statics/admin/js/urlify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forum/views.py" afterPath="$PROJECT_DIR$/forum/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/admin/css/widgets.css" afterPath="$PROJECT_DIR$/statics/admin/css/widgets.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profil/tests.py" afterPath="$PROJECT_DIR$/profil/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="app.iws" />
@@ -61,9 +27,10 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/app$Test__contact_tests.coverage" NAME="Test: contact.tests Coverage Results" MODIFIED="1437558968023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/app$Test__app.coverage" NAME="Test: app Coverage Results" MODIFIED="1437826479500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/app$Test__app.coverage" NAME="Test: app Coverage Results" MODIFIED="1437830168750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/app$Test__profil_tests.coverage" NAME="Test: profil.tests Coverage Results" MODIFIED="1437562515612" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/app$Test__contact_tests_ContactTests.coverage" NAME="Test: contact.tests.ContactTests Coverage Results" MODIFIED="1437560225391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/app$Test__profil_tests_LogoutTests_test_logout_url_unlog.coverage" NAME="Test: profil.tests.LogoutTests.test_logout_url_unlog Coverage Results" MODIFIED="1437830155877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/app$Test__profil_tests_RegisterTests_test_register_from_anywhere.coverage" NAME="Test: profil.tests.RegisterTests.test_register_from_anywhere Coverage Results" MODIFIED="1437521727369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/app$Test__profil_tests_RegisterTests_test_register_from_home.coverage" NAME="Test: profil.tests.RegisterTests.test_register_from_home Coverage Results" MODIFIED="1437521814458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
@@ -106,45 +73,45 @@
               <ID>DjangoModelDependency</ID>
               <OriginalElement>#app</OriginalElement>
               <nodes>
-                <node x="659.75" y="745.0">profil.models.UserLang</node>
-                <node x="446.25000000000006" y="356.0">django.contrib.auth.models.Group</node>
-                <node x="337.75000000000006" y="668.0">issues.models.Issue</node>
+                <node x="337.75" y="745.0">profil.models.UserLang</node>
+                <node x="372.25" y="356.0">django.contrib.auth.models.Group</node>
+                <node x="511.75" y="668.0">issues.models.Issue</node>
                 <node x="12.75" y="668.0">forum.models.ForumTopic</node>
-                <node x="464.75000000000006" y="0.0">django.contrib.contenttypes.models.ContentType</node>
-                <node x="510.25000000000006" y="545.0">django.contrib.auth.models.User</node>
-                <node x="491.75000000000006" y="167.0">django.contrib.auth.models.Permission</node>
-                <node x="374.0113636363637" y="945.0">forum.models.ForumPost</node>
+                <node x="390.75" y="0.0">django.contrib.contenttypes.models.ContentType</node>
+                <node x="436.25" y="545.0">django.contrib.auth.models.User</node>
+                <node x="417.75" y="167.0">django.contrib.auth.models.Permission</node>
+                <node x="357.19318181818187" y="945.0">forum.models.ForumPost</node>
                 <node x="0.0" y="523.0">forum.models.ForumCat</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Group">
                   <point x="-51.25" y="-25.5" />
-                  <point x="561.5" y="498.0" />
-                  <point x="553.75" y="498.0" />
+                  <point x="487.5" y="498.0" />
+                  <point x="479.75" y="498.0" />
                   <point x="0.0" y="58.5" />
                 </edge>
                 <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Permission">
-                  <point x="51.250000000000014" y="-25.5" />
-                  <point x="664.0" y="498.0" />
-                  <point x="671.75" y="498.0" />
-                  <point x="671.75" y="331.0" />
-                  <point x="673.25" y="331.0" />
-                  <point x="60.500000000000014" y="69.5" />
+                  <point x="51.25" y="-25.5" />
+                  <point x="590.0" y="498.0" />
+                  <point x="597.75" y="498.0" />
+                  <point x="597.75" y="331.0" />
+                  <point x="599.25" y="331.0" />
+                  <point x="60.5" y="69.5" />
                 </edge>
                 <edge source="django.contrib.auth.models.Group" target="django.contrib.auth.models.Permission">
                   <point x="0.0" y="-58.5" />
-                  <point x="553.75" y="331.0" />
-                  <point x="552.25" y="331.0" />
+                  <point x="479.75" y="331.0" />
+                  <point x="478.25" y="331.0" />
                   <point x="-60.5" y="69.5" />
                 </edge>
                 <edge source="forum.models.ForumPost" target="django.contrib.auth.models.User">
                   <point x="56.25" y="-69.5" />
-                  <point x="542.7613636363637" y="920.0" />
+                  <point x="525.9431818181819" y="920.0" />
                   <point x="824.25" y="920.0" />
                   <point x="824.25" y="638.0" />
-                  <point x="689.625" y="638.0" />
-                  <point x="76.87500000000001" y="25.5" />
+                  <point x="615.625" y="638.0" />
+                  <point x="76.87499999999999" y="25.5" />
                 </edge>
                 <edge source="django.contrib.auth.models.Permission" target="django.contrib.contenttypes.models.ContentType">
                   <point x="0.0" y="-69.5" />
@@ -157,31 +124,31 @@
                 <edge source="forum.models.ForumTopic" target="django.contrib.auth.models.User">
                   <point x="76.25" y="-113.5" />
                   <point x="241.5" y="638.0" />
-                  <point x="535.875" y="638.0" />
+                  <point x="461.875" y="638.0" />
                   <point x="-76.875" y="25.5" />
-                </edge>
-                <edge source="profil.models.UserLang" target="django.contrib.auth.models.User">
-                  <point x="0.0" y="-36.5" />
-                  <point x="736.75" y="648.0" />
-                  <point x="638.375" y="648.0" />
-                  <point x="25.625" y="25.5" />
                 </edge>
                 <edge source="forum.models.ForumPost" target="forum.models.ForumTopic">
                   <point x="-56.25" y="-69.5" />
-                  <point x="430.2613636363637" y="920.0" />
+                  <point x="413.44318181818187" y="920.0" />
                   <point x="165.25" y="920.0" />
                   <point x="0.0" y="113.5" />
                 </edge>
-                <edge source="issues.models.Issue" target="django.contrib.auth.models.User">
-                  <point x="0.0" y="-113.5" />
-                  <point x="488.75000000000006" y="648.0" />
-                  <point x="587.125" y="648.0" />
+                <edge source="profil.models.UserLang" target="django.contrib.auth.models.User">
+                  <point x="0.0" y="-36.5" />
+                  <point x="414.75" y="648.0" />
+                  <point x="513.125" y="648.0" />
                   <point x="-25.625" y="25.5" />
                 </edge>
+                <edge source="issues.models.Issue" target="django.contrib.auth.models.User">
+                  <point x="0.0" y="-113.5" />
+                  <point x="662.75" y="648.0" />
+                  <point x="564.375" y="648.0" />
+                  <point x="25.625" y="25.5" />
+                </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="0.8378623188405797" x="-42.825405405405434" y="276.4432432432432" />
+              <settings layout="Hierarchic Group" zoom="0.8378623188405797" x="-277.35081081081086" y="276.4432432432432" />
               <SelectedNodes>
-                <node>django.contrib.auth.models.Group</node>
+                <node>django.contrib.auth.models.Permission</node>
               </SelectedNodes>
               <Categories>
                 <Category>Fields</Category>
@@ -190,31 +157,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="88" column="48" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/forum/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.73214287">
               <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forum/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.98214287">
-              <caret line="75" column="30" selection-start-line="19" selection-start-column="2" selection-end-line="75" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="e#219#249#0" expanded="true" />
               </folding>
@@ -238,10 +195,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/profil/functions.py" />
-        <option value="$PROJECT_DIR$/profil/tests.py" />
         <option value="D:/personnal_work/django_rest_angular/test_app_rest/authentication/serializers.py" />
         <option value="$PROJECT_DIR$/profil/auyhenticate.py" />
-        <option value="$PROJECT_DIR$/profil/views.py" />
         <option value="$PROJECT_DIR$/profil/authenticate.py" />
         <option value="$PROJECT_DIR$/profil/models.py" />
         <option value="$PROJECT_DIR$/locale/en/LC_MESSAGES/django.po" />
@@ -249,7 +204,6 @@
         <option value="$PROJECT_DIR$/core/urls.py" />
         <option value="$PROJECT_DIR$/core/home.py" />
         <option value="$PROJECT_DIR$/core/tests.py" />
-        <option value="$PROJECT_DIR$/framework/settings.py" />
         <option value="$PROJECT_DIR$/doc/source/conf.py" />
         <option value="$PROJECT_DIR$/gen_doc.py" />
         <option value="$PROJECT_DIR$/contact/urls.py" />
@@ -262,6 +216,12 @@
         <option value="$PROJECT_DIR$/forum/forms/ReplyTopic.py" />
         <option value="$PROJECT_DIR$/forum/admin.py" />
         <option value="$PROJECT_DIR$/contact/tests.py" />
+        <option value="$PROJECT_DIR$/core/templates/core/base.html" />
+        <option value="$PROJECT_DIR$/ldap42/templates/ldap42/loginldap.html" />
+        <option value="$PROJECT_DIR$/framework/settings.py" />
+        <option value="$PROJECT_DIR$/profil/templates/profil/login.html" />
+        <option value="$PROJECT_DIR$/profil/views.py" />
+        <option value="$PROJECT_DIR$/profil/tests.py" />
         <option value="$PROJECT_DIR$/forum/tests.py" />
       </list>
     </option>
@@ -346,6 +306,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="forum" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -390,20 +364,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contact" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -434,26 +394,6 @@
       <module name="app" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Test: profil.tests.RegisterTests.test_register_from_home" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="app" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="profil.tests.RegisterTests.test_register_from_home" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
@@ -514,6 +454,26 @@
       <module name="app" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="TARGET" value="profil.tests" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test: profil.tests.LogoutTests.test_logout_url_unlog" type="DjangoTestsConfigurationType" factoryName="Django tests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="app" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="profil.tests.LogoutTests.test_logout_url_unlog" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
@@ -776,18 +736,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.app" />
       <item index="1" class="java.lang.String" itemvalue="Django tests.Test: app" />
-      <item index="2" class="java.lang.String" itemvalue="Django tests.Test: profil.tests.RegisterTests.test_register_from_home" />
-      <item index="3" class="java.lang.String" itemvalue="Django tests.Test: contact.tests" />
-      <item index="4" class="java.lang.String" itemvalue="Django tests.Test: contact.tests.ContactTests" />
-      <item index="5" class="java.lang.String" itemvalue="Django tests.Test: profil.tests" />
+      <item index="2" class="java.lang.String" itemvalue="Django tests.Test: contact.tests" />
+      <item index="3" class="java.lang.String" itemvalue="Django tests.Test: contact.tests.ContactTests" />
+      <item index="4" class="java.lang.String" itemvalue="Django tests.Test: profil.tests" />
+      <item index="5" class="java.lang.String" itemvalue="Django tests.Test: profil.tests.LogoutTests.test_logout_url_unlog" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Django tests.Test: app" />
-        <item index="1" class="java.lang.String" itemvalue="Django tests.Test: profil.tests" />
-        <item index="2" class="java.lang.String" itemvalue="Django tests.Test: contact.tests.ContactTests" />
-        <item index="3" class="java.lang.String" itemvalue="Django tests.Test: contact.tests" />
-        <item index="4" class="java.lang.String" itemvalue="Django tests.Test: profil.tests.RegisterTests.test_register_from_home" />
+        <item index="1" class="java.lang.String" itemvalue="Django tests.Test: profil.tests.LogoutTests.test_logout_url_unlog" />
+        <item index="2" class="java.lang.String" itemvalue="Django tests.Test: profil.tests" />
+        <item index="3" class="java.lang.String" itemvalue="Django tests.Test: contact.tests.ContactTests" />
+        <item index="4" class="java.lang.String" itemvalue="Django tests.Test: contact.tests" />
       </list>
     </recent_temporary>
   </component>
@@ -844,7 +804,13 @@
       <option name="project" value="LOCAL" />
       <updated>1437821218982</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="comment forum OK &#10;">
+      <created>1437826497980</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1437826497980</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -857,9 +823,9 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32743362" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46454766" sideWeight="0.50884956" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43948656" sideWeight="0.50884956" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327551" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24022005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24022005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965687" sideWeight="0.49115044" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -913,7 +879,8 @@
     <MESSAGE value="correctif code translate&#10;" />
     <MESSAGE value="generate doc" />
     <MESSAGE value="start comment forum" />
-    <option name="LAST_COMMIT_MESSAGE" value="start comment forum" />
+    <MESSAGE value="comment forum OK &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment forum OK &#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -922,48 +889,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/contact/forms/ContactFrom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact/contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact/forms/ContactFrom.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contact/contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contact/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1003,13 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25113636">
           <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/profil/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -1100,13 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profil/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1605667">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profil/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11643836">
@@ -1170,14 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0880829">
-          <caret line="3" column="70" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1218,95 +1121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://DjangoModelDependency/#app">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DjangoModelDependency</ID>
-          <OriginalElement>#app</OriginalElement>
-          <nodes>
-            <node x="659.75" y="745.0">profil.models.UserLang</node>
-            <node x="446.25000000000006" y="356.0">django.contrib.auth.models.Group</node>
-            <node x="337.75000000000006" y="668.0">issues.models.Issue</node>
-            <node x="12.75" y="668.0">forum.models.ForumTopic</node>
-            <node x="464.75000000000006" y="0.0">django.contrib.contenttypes.models.ContentType</node>
-            <node x="510.25000000000006" y="545.0">django.contrib.auth.models.User</node>
-            <node x="491.75000000000006" y="167.0">django.contrib.auth.models.Permission</node>
-            <node x="374.0113636363637" y="945.0">forum.models.ForumPost</node>
-            <node x="0.0" y="523.0">forum.models.ForumCat</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Group">
-              <point x="-51.25" y="-25.5" />
-              <point x="561.5" y="498.0" />
-              <point x="553.75" y="498.0" />
-              <point x="0.0" y="58.5" />
-            </edge>
-            <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Permission">
-              <point x="51.250000000000014" y="-25.5" />
-              <point x="664.0" y="498.0" />
-              <point x="671.75" y="498.0" />
-              <point x="671.75" y="331.0" />
-              <point x="673.25" y="331.0" />
-              <point x="60.500000000000014" y="69.5" />
-            </edge>
-            <edge source="django.contrib.auth.models.Group" target="django.contrib.auth.models.Permission">
-              <point x="0.0" y="-58.5" />
-              <point x="553.75" y="331.0" />
-              <point x="552.25" y="331.0" />
-              <point x="-60.5" y="69.5" />
-            </edge>
-            <edge source="forum.models.ForumPost" target="django.contrib.auth.models.User">
-              <point x="56.25" y="-69.5" />
-              <point x="542.7613636363637" y="920.0" />
-              <point x="824.25" y="920.0" />
-              <point x="824.25" y="638.0" />
-              <point x="689.625" y="638.0" />
-              <point x="76.87500000000001" y="25.5" />
-            </edge>
-            <edge source="django.contrib.auth.models.Permission" target="django.contrib.contenttypes.models.ContentType">
-              <point x="0.0" y="-69.5" />
-              <point x="0.0" y="58.5" />
-            </edge>
-            <edge source="forum.models.ForumTopic" target="forum.models.ForumCat">
-              <point x="-76.25" y="-113.5" />
-              <point x="0.0" y="47.5" />
-            </edge>
-            <edge source="forum.models.ForumTopic" target="django.contrib.auth.models.User">
-              <point x="76.25" y="-113.5" />
-              <point x="241.5" y="638.0" />
-              <point x="535.875" y="638.0" />
-              <point x="-76.875" y="25.5" />
-            </edge>
-            <edge source="profil.models.UserLang" target="django.contrib.auth.models.User">
-              <point x="0.0" y="-36.5" />
-              <point x="736.75" y="648.0" />
-              <point x="638.375" y="648.0" />
-              <point x="25.625" y="25.5" />
-            </edge>
-            <edge source="forum.models.ForumPost" target="forum.models.ForumTopic">
-              <point x="-56.25" y="-69.5" />
-              <point x="430.2613636363637" y="920.0" />
-              <point x="165.25" y="920.0" />
-              <point x="0.0" y="113.5" />
-            </edge>
-            <edge source="issues.models.Issue" target="django.contrib.auth.models.User">
-              <point x="0.0" y="-113.5" />
-              <point x="488.75000000000006" y="648.0" />
-              <point x="587.125" y="648.0" />
-              <point x="-25.625" y="25.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.8378623188405797" x="-42.825405405405434" y="276.4432432432432" />
-          <SelectedNodes>
-            <node>django.contrib.auth.models.Group</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forum/templates/forum/topic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.27537796">
@@ -1344,7 +1158,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="e#343#375#0" expanded="true" />
+            <element signature="e#343#375#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1362,16 +1176,8 @@
         <state vertical-scroll-proportion="0.16071428">
           <caret line="9" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#248#272#0" expanded="true" />
+            <element signature="e#248#272#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forum/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1380,18 +1186,191 @@
         <state vertical-scroll-proportion="0.12079832">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="8" selection-end-column="32" />
           <folding>
-            <element signature="e#224#254#0" expanded="true" />
+            <element signature="e#224#254#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ldap42/templates/ldap42/loginldap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33045357">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ldap42/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profil/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/core/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36008918">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profil/templates/profil/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.038462">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DjangoModelDependency/#app">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DjangoModelDependency</ID>
+          <OriginalElement>#app</OriginalElement>
+          <nodes>
+            <node x="337.75" y="745.0">profil.models.UserLang</node>
+            <node x="372.25" y="356.0">django.contrib.auth.models.Group</node>
+            <node x="511.75" y="668.0">issues.models.Issue</node>
+            <node x="12.75" y="668.0">forum.models.ForumTopic</node>
+            <node x="390.75" y="0.0">django.contrib.contenttypes.models.ContentType</node>
+            <node x="436.25" y="545.0">django.contrib.auth.models.User</node>
+            <node x="417.75" y="167.0">django.contrib.auth.models.Permission</node>
+            <node x="357.19318181818187" y="945.0">forum.models.ForumPost</node>
+            <node x="0.0" y="523.0">forum.models.ForumCat</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Group">
+              <point x="-51.25" y="-25.5" />
+              <point x="487.5" y="498.0" />
+              <point x="479.75" y="498.0" />
+              <point x="0.0" y="58.5" />
+            </edge>
+            <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Permission">
+              <point x="51.25" y="-25.5" />
+              <point x="590.0" y="498.0" />
+              <point x="597.75" y="498.0" />
+              <point x="597.75" y="331.0" />
+              <point x="599.25" y="331.0" />
+              <point x="60.5" y="69.5" />
+            </edge>
+            <edge source="django.contrib.auth.models.Group" target="django.contrib.auth.models.Permission">
+              <point x="0.0" y="-58.5" />
+              <point x="479.75" y="331.0" />
+              <point x="478.25" y="331.0" />
+              <point x="-60.5" y="69.5" />
+            </edge>
+            <edge source="forum.models.ForumPost" target="django.contrib.auth.models.User">
+              <point x="56.25" y="-69.5" />
+              <point x="525.9431818181819" y="920.0" />
+              <point x="824.25" y="920.0" />
+              <point x="824.25" y="638.0" />
+              <point x="615.625" y="638.0" />
+              <point x="76.87499999999999" y="25.5" />
+            </edge>
+            <edge source="django.contrib.auth.models.Permission" target="django.contrib.contenttypes.models.ContentType">
+              <point x="0.0" y="-69.5" />
+              <point x="0.0" y="58.5" />
+            </edge>
+            <edge source="forum.models.ForumTopic" target="forum.models.ForumCat">
+              <point x="-76.25" y="-113.5" />
+              <point x="0.0" y="47.5" />
+            </edge>
+            <edge source="forum.models.ForumTopic" target="django.contrib.auth.models.User">
+              <point x="76.25" y="-113.5" />
+              <point x="241.5" y="638.0" />
+              <point x="461.875" y="638.0" />
+              <point x="-76.875" y="25.5" />
+            </edge>
+            <edge source="forum.models.ForumPost" target="forum.models.ForumTopic">
+              <point x="-56.25" y="-69.5" />
+              <point x="413.44318181818187" y="920.0" />
+              <point x="165.25" y="920.0" />
+              <point x="0.0" y="113.5" />
+            </edge>
+            <edge source="profil.models.UserLang" target="django.contrib.auth.models.User">
+              <point x="0.0" y="-36.5" />
+              <point x="414.75" y="648.0" />
+              <point x="513.125" y="648.0" />
+              <point x="-25.625" y="25.5" />
+            </edge>
+            <edge source="issues.models.Issue" target="django.contrib.auth.models.User">
+              <point x="0.0" y="-113.5" />
+              <point x="662.75" y="648.0" />
+              <point x="564.375" y="648.0" />
+              <point x="25.625" y="25.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8378623188405797" x="-277.35081081081086" y="276.4432432432432" />
+          <SelectedNodes>
+            <node>django.contrib.auth.models.Permission</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profil/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9285714">
+          <caret line="221" column="56" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profil/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8035714">
+          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/forum/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.98214287">
-          <caret line="75" column="30" selection-start-line="19" selection-start-column="2" selection-end-line="75" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#219#249#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forum/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.73214287">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

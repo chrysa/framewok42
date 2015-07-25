@@ -8,9 +8,9 @@ DEBUG = True
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'greau.anthony'
-EMAIL_HOST_PASSWORD = 'CHry5a1sMyGod'
-DEFAULT_EMAIL_FROM = 'greau.anthony@gmail.com'
+EMAIL_HOST_USER = 'agreau'
+EMAIL_HOST_PASSWORD = 'mCKb0ss#123'
+DEFAULT_EMAIL_FROM = 'agreau@student.42.fr'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 

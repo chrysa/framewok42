@@ -16,6 +16,8 @@
     {% endif %}
     {%  if errors.admin or errors.staff %}
         <form action="{% url 'login_ldap' %}" method="post">
+    {%  elif request.GET.next == url_logout %}
+       <form action="{% url 'login_classic' %}?next={{ url_home }}" method="post">
     {%  elif equest.GET.next %}
         <form action="{{ request.META.HTTP_REFERER }}" method="post">
     {%  else  %}
