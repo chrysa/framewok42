@@ -1,7 +1,7 @@
 #-*-coding:utf-8 -*-
 """
-:module: FORUM.VIEWS
-:synopsis: generate QLL CONTENT OF FORUM
+:module: forum.views
+:synopsis: generate all content of forum
 
 :moduleauthor: anthony greau <greau.anthony@gmail.com>
 :created: 01/07/2015
@@ -117,9 +117,22 @@ def display_topic(request, cat, topic):
 
 @login_required
 def create_topic(request, cat):
+    """create new topic
+
+    :param request: object contain context of request
+    :type request: object
+    :param cat: slug of categorie
+    :type cat: slug
+    :var cat: categorie object selected by slug
+    :var form: form for create topic
+    :var create: new topic
+    :var topic: get the new topic
+    :var context: define the context for display page
+    :return: HTTPResponse
+    """
     logger_info.info(info_load_log_message(request))
-    form = TopicForm(request.POST)
     cat = models.ForumCat.objects.get(slug=cat)
+    form = TopicForm(request.POST)
     if form.is_valid():
         try:
             create = models.ForumTopic(
@@ -167,6 +180,18 @@ def create_topic(request, cat):
 
 @login_required
 def reply_topic(request, cat, topic):
+    """save new reply
+
+    :param request: object contain context of request
+    :type request: object
+    :param cat: slug of categorie
+    :type cat: slug
+    :var topic: topic slug
+    :type topic: slug
+    :var form: form for topic reply
+    :var top: get the new topic
+    :return: HTTPResponse
+    """
     logger_info.info(info_load_log_message(request))
     form = PostForm(request.POST)
     top = models.ForumTopic.objects.get(slug=topic)
@@ -203,6 +228,25 @@ def reply_topic(request, cat, topic):
 
 @login_required
 def edit_topic(request, cat, topic):
+    """display process for edit topic
+
+    :param request: object contain context of request
+    :type request: object
+    :param cat: slug of categorie
+    :type cat: slug
+    :param topic: slug of topic
+    :type topic: slug
+
+    :var topic: topic slug
+    :type topic: slug
+    :var cat: select cat by slug
+    :var form: form for reply
+    :var update: select topic to update and update him
+    :var topic: get the topic
+    :var context: define the context for display topic
+
+    :return: HTTPResponse
+    """
     logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
     if request.POST:
@@ -267,6 +311,22 @@ def edit_topic(request, cat, topic):
 
 @login_required
 def edit_post(request, cat, topic, post):
+    """display process for edit post
+
+    :param request: object contain context of request
+    :type request: object
+    :param cat: slug of categorie
+    :type cat: slug
+    :var topic: topic slug
+    :type topic: slug
+    :var cat: select cat by slug
+    :var form: form for reply
+    :var update: select topic to update and update him
+    :var topic: get the topic
+    :var context: define the context for display topic
+
+    :return: HTTPResponse
+    """
     logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
     if request.POST:
