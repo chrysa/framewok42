@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-24 11:20+0000\n"
+"POT-Creation-Date: 2015-07-25 20:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,48 +17,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: contact/contact.py:47 contact/contact.py:48
-msgid "success_contact"
-msgstr "send contact mail success"
+#: contact/contact.py:53 contact/contact.py:54 contact/tests.py:85
+#: contact/tests.py:100
+msgid "contact_success"
+msgstr ""
 
-#: contact/contact.py:50
+#: contact/contact.py:56
 msgid "contact_fail"
-msgstr "send contact mail failled"
+msgstr ""
 
-#: contact/contact.py:51
+#: contact/contact.py:57
 msgid "error_contact"
 msgstr ""
 
-#: contact/contact.py:54 contact/tests.py:55 contact/tests.py:64
+#: contact/contact.py:60 contact/tests.py:113 contact/tests.py:137
+#: contact/tests.py:153 contact/tests.py:168 contact/tests.py:183
 msgid "contact_must_contain_subject"
 msgstr ""
 
-#: contact/contact.py:56 contact/tests.py:56 contact/tests.py:65
+#: contact/contact.py:62 contact/tests.py:125 contact/tests.py:138
+#: contact/tests.py:184
 msgid "contact_must_contain_message"
 msgstr ""
 
-#: contact/contact.py:58 contact/tests.py:57
+#: contact/contact.py:64 contact/tests.py:139
 msgid "contact_must_contain_email"
 msgstr ""
 
-#: contact/forms/ContactFrom.py:29 contact/forms/ContactFrom.py:33
-#: contact/tests.py:26 contact/tests.py:33 profil/forms/RegisterForm.py:29
+#: contact/forms/ContactFrom.py:28 contact/forms/ContactFrom.py:32
+#: contact/tests.py:59 contact/tests.py:72 profil/forms/RegisterForm.py:29
 #: profil/forms/RegisterForm.py:33
 msgid "mail_adress"
 msgstr ""
 
-#: contact/forms/ContactFrom.py:38 contact/forms/ContactFrom.py:42
+#: contact/forms/ContactFrom.py:37 contact/forms/ContactFrom.py:41
 msgid "subject"
 msgstr ""
 
-#: contact/forms/ContactFrom.py:47 contact/forms/ContactFrom.py:51
-#: forum/forms/CreateTopic.py:28 forum/forms/CreateTopic.py:32
-#: forum/forms/ReplyTopic.py:17
+#: contact/forms/ContactFrom.py:46 contact/forms/ContactFrom.py:50
+#: forum/forms/CreateTopic.py:48 forum/forms/CreateTopic.py:52
+#: forum/forms/ReplyTopic.py:37
 msgid "message"
 msgstr ""
 
-#: contact/templates/contact/contact.html:5 core/templates/core/base.html:66
-#: core/templates/core/base.html.py:98
+#: contact/templates/contact/contact.html:5 core/templates/core/base.html:67
+#: core/templates/core/base.html.py:99
 msgid "contact"
 msgstr ""
 
@@ -66,81 +69,81 @@ msgstr ""
 msgid "send_message"
 msgstr ""
 
-#: core/templates/core/base.html:50 ldap42/templates/ldap42/loginldap.html:6
+#: core/templates/core/base.html:51 ldap42/templates/ldap42/loginldap.html:6
 #: profil/templates/profil/login.html:7 profil/templates/profil/login.html:20
 msgid "home"
 msgstr ""
 
-#: core/templates/core/base.html:63
+#: core/templates/core/base.html:64
 msgid "annuaire"
 msgstr ""
 
-#: core/templates/core/base.html:70 forum/templates/forum/cat.html:5
+#: core/templates/core/base.html:71 forum/templates/forum/cat.html:5
 #: forum/templates/forum/create_topic.html:5
 #: forum/templates/forum/edit_post.html:5 forum/templates/forum/home.html:5
 #: forum/templates/forum/topic.html:5
 msgid "forum"
 msgstr ""
 
-#: core/templates/core/base.html:73 issues/forms/SubmitIssue.py:27
+#: core/templates/core/base.html:74 issues/forms/SubmitIssue.py:27
 #: issues/forms/SubmitIssue.py:31
 msgid "issue"
 msgstr ""
 
-#: core/templates/core/base.html:77
+#: core/templates/core/base.html:78
 #: generate_logs/templates/logs/display_log.html:2
 msgid "log"
 msgstr ""
 
-#: core/templates/core/base.html:79
+#: core/templates/core/base.html:80
 msgid "logout"
 msgstr ""
 
-#: core/templates/core/base.html:83 profil/templates/profil/register.html:47
+#: core/templates/core/base.html:84 profil/templates/profil/register.html:47
 msgid "register"
 msgstr ""
 
-#: core/templates/core/base.html:86 ldap42/templates/ldap42/loginldap.html:7
+#: core/templates/core/base.html:87 ldap42/templates/ldap42/loginldap.html:7
 #: profil/templates/profil/login.html:8 profil/templates/profil/login.html:21
 msgid "login"
 msgstr ""
 
-#: core/templates/core/base.html:91 profil/templates/profil/login.html:13
+#: core/templates/core/base.html:92 profil/templates/profil/login.html:13
 msgid "login_classic"
 msgstr ""
 
-#: core/templates/core/base.html:94 profil/templates/profil/login.html:14
+#: core/templates/core/base.html:95 profil/templates/profil/login.html:14
 msgid "login_ldap"
 msgstr ""
 
-#: core/templates/core/base.html:103
+#: core/templates/core/base.html:104
 msgid "change_lang"
 msgstr ""
 
-#: core/templates/core/base.html:108
+#: core/templates/core/base.html:109
 msgid "current_lang"
 msgstr ""
 
-#: forum/forms/CreateTopic.py:18 forum/forms/CreateTopic.py:22
+#: forum/forms/CreateTopic.py:38 forum/forms/CreateTopic.py:42
 #: issues/forms/SubmitIssue.py:18 issues/forms/SubmitIssue.py:22
 #: issues/templates/issues/issue_admin.html:9
 #: issues/templates/issues/issue_user.html:9
 msgid "title"
 msgstr ""
 
-#: forum/forms/ReplyTopic.py:21
+#: forum/forms/ReplyTopic.py:41
 msgid "reponse"
 msgstr ""
 
-#: forum/models.py:13
+#: forum/models.py:30
 msgid "Name"
 msgstr ""
 
-#: forum/models.py:21
+#: forum/models.py:52
 msgid "categorie_parente"
 msgstr ""
 
-#: forum/models.py:22
+#: forum/models.py:53
 msgid "categorie"
 msgstr ""
 
@@ -178,7 +181,7 @@ msgstr ""
 msgid "edit_post"
 msgstr ""
 
-#: forum/templates/forum/home.html:23
+#: forum/templates/forum/home.html:23 forum/tests.py:101
 msgid "no_category"
 msgstr ""
 
@@ -190,11 +193,23 @@ msgstr ""
 msgid "modify_by"
 msgstr ""
 
-#: forum/views.py:109
+#: forum/tests.py:155 forum/views.py:169
+msgid "topic_must_contain_title"
+msgstr ""
+
+#: forum/tests.py:171 forum/views.py:171
+msgid "topic_must_contain_message"
+msgstr ""
+
+#: forum/views.py:165
 msgid "save_topic"
 msgstr ""
 
-#: forum/views.py:112 forum/views.py:200
+#: forum/views.py:166
+msgid "topic_fail"
+msgstr ""
+
+#: forum/views.py:280
 msgid "thread_fail"
 msgstr ""
 
@@ -316,7 +331,7 @@ msgid "login42"
 msgstr ""
 
 #: ldap42/forms/LdapForm.py:28 ldap42/forms/LdapForm.py:32
-#: ldap42/templates/ldap42/loginldap.html:33 profil/forms/LogInForm.py:26
+#: ldap42/templates/ldap42/loginldap.html:35 profil/forms/LogInForm.py:26
 #: profil/forms/LogInForm.py:30 profil/forms/RegisterForm.py:39
 #: profil/forms/RegisterForm.py:43 profil/templates/profil/login.html:49
 #: profil/templates/profil/register.html:33
@@ -324,7 +339,7 @@ msgid "password"
 msgstr ""
 
 #: ldap42/forms/LdapForm.py:38 ldap42/forms/LdapForm.py:49
-#: ldap42/templates/ldap42/loginldap.html:41
+#: ldap42/templates/ldap42/loginldap.html:43
 msgid "pool_month"
 msgstr ""
 
@@ -345,7 +360,7 @@ msgid "octobre"
 msgstr ""
 
 #: ldap42/forms/LdapForm.py:62 ldap42/forms/LdapForm.py:68
-#: ldap42/templates/ldap42/loginldap.html:45
+#: ldap42/templates/ldap42/loginldap.html:47
 msgid "pool_year"
 msgstr ""
 
@@ -365,20 +380,20 @@ msgstr ""
 msgid "connection_ldap"
 msgstr ""
 
-#: ldap42/templates/ldap42/loginldap.html:50
+#: ldap42/templates/ldap42/loginldap.html:52
 #: profil/templates/profil/login.html:56
 msgid "connexion"
 msgstr ""
 
-#: ldap42/views.py:92 ldap42/views.py:176
+#: ldap42/views.py:94 ldap42/views.py:180
 msgid "bind_error"
 msgstr ""
 
-#: ldap42/views.py:167 profil/views.py:146
+#: ldap42/views.py:171 profil/views.py:146
 msgid "authenticate error"
 msgstr ""
 
-#: ldap42/views.py:171 profil/tests.py:59 profil/tests.py:173
+#: ldap42/views.py:175 profil/tests.py:52 profil/tests.py:171
 #: profil/views.py:48 profil/views.py:150
 msgid "error_wrong_password"
 msgstr ""
@@ -397,23 +412,23 @@ msgstr ""
 msgid "connection_classic"
 msgstr ""
 
-#: profil/tests.py:67 profil/views.py:43
+#: profil/tests.py:61 profil/views.py:43
 msgid "error_user_already_exist"
 msgstr ""
 
-#: profil/tests.py:75 profil/views.py:46
+#: profil/tests.py:70 profil/views.py:46
 msgid "error_mail_already_exist"
 msgstr ""
 
-#: profil/tests.py:144 profil/views.py:114
+#: profil/tests.py:143 profil/views.py:114
 msgid "admin_cant_log_here"
 msgstr ""
 
-#: profil/tests.py:151 profil/views.py:118
+#: profil/tests.py:149 profil/views.py:118
 msgid "staff_cant_log_here"
 msgstr ""
 
-#: profil/tests.py:166 profil/views.py:109
+#: profil/tests.py:163 profil/views.py:109
 msgid "error_user_not_exist"
 msgstr ""
 

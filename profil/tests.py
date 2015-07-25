@@ -160,8 +160,8 @@ class LoginTests(TestCase):
         data = self.log_user
         data['username'] = "wrong_user"
         reponse = self.client.post(reverse('login_classic'), data)
-        self.assertEqual(reponse.status_code, 200)
         self.assertContains(reponse, _("error_user_not_exist"))
+        self.assertEqual(reponse.status_code, 200)
 
     def test_login_wrong_password(self):
         data = self.log_user

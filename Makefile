@@ -53,16 +53,19 @@ resettrans:
 	make transall
 
 test:
-	printf '$(BLUE)lancement des tests unitaires$(WHITE)\n' 
+	printf '$(BLUE)suppression des fichiers .mo$(WHITE)\n'
+	find . -name '*.mo' -exec rm -rf {} \;
+	printf '$(BLUE)lancement des tests unitaires$(WHITE)\n'
 	python manage.py test --verbosity $(VERBOSITY)
-	
+	make trans
+
 install:
 	printf '$(BLUE)installation du fichier requirements.txt$(WHITE)\n'
 	pip install -r requirements.txt
 	
 uninstall:
 	printf '$(BLUE)desinstallation du fichier requirements.txt$(WHITE)\n'
-	pip uninstall -r requirements.txt
+	pip uninstall --yes -r requirements.txt
 
 reinstall: uninstall install clean
 
@@ -84,6 +87,6 @@ launch: clean install static migrate validate test transall
 	python manage.py runserver --verbosity=$(VERBOSITY) 0.0.0.0:$(PORT)
 	make clean
 
-doc: clean static migrate validate test transall
+doc: clean migrate validate static test transall
 	printf '$(BLUE)génération de la documentation$(WHITE)\n'
 	python -c "from ressources.gen_doc import gen_doc ; gen_doc()"
