@@ -67,8 +67,7 @@ class ContactTests(TestCase):
         :var reponse: response of request
         :return: None
         """
-        self.client.login(username=self.register_user[
-                          'username'], password=self.register_user['password'])
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         reponse = self.client.get(reverse('contact'))
         self.assertNotContains(reponse, _("mail_adress"))
         self.assertTemplateUsed(reponse, 'contact/contact.html')
@@ -82,8 +81,7 @@ class ContactTests(TestCase):
         :var reponse: response of request
         :return: None
         """
-        reponse = self.client.get(reverse('contact'), {
-                                  'email': 'test@test.fr', 'subject': 'mail unit test', 'message': 'message de test'})
+        reponse = self.client.get(reverse('contact'), {'email': 'test@test.fr', 'subject': 'mail unit test', 'message': 'message de test'})
         self.assertContains(reponse, _("contact_success"))
         self.assertTemplateUsed(reponse, 'contact/contact.html')
         self.assertEqual(reponse.status_code, 200)

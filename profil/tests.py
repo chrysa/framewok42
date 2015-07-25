@@ -75,14 +75,11 @@ class RegisterTests(TestCase):
             reponse.context[0]['errors']['mail'], _("error_mail_already_exist"))
 
     def test_register_from_home(self):
-        reponse = self.client.post(
-            reverse('register'), self.register_user, follow=True)
-        self.assertRedirects(reponse, reverse(
-            'home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        reponse = self.client.post(reverse('register'), self.register_user, follow=True)
+        self.assertRedirects(reponse, reverse('home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_register_from_anywhere(self):
-        reponse = self.client.post(reverse(
-            'register') + '?next=' + reverse('contact'), self.register_user, follow=True,)
+        reponse = self.client.post(reverse('register') + '?next=' + reverse('contact'), self.register_user, follow=True,)
         self.assertRedirects(reponse, reverse('contact'), status_code=301,
                              target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
@@ -90,17 +87,13 @@ class RegisterTests(TestCase):
         self.client.login(
             username=self.unittest_fr['username'], password=self.unittest_fr['password'])
         reponse = self.client.get(reverse('register'), follow=True)
-        self.assertRedirects(reponse, reverse(
-            'home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        self.assertRedirects(reponse, reverse('home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
         self.client.logout()
 
     def test_acces_register_when_login_from_anywhere(self):
-        self.client.login(
-            username=self.unittest_fr['username'], password=self.unittest_fr['password'])
-        reponse = self.client.get(
-            reverse('register'), HTTP_REFERER=reverse('contact'), follow=True)
-        self.assertRedirects(reponse, reverse('contact'), status_code=301,
-                             target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        self.client.login(username=self.unittest_fr['username'], password=self.unittest_fr['password'])
+        reponse = self.client.get(reverse('register'), HTTP_REFERER=reverse('contact'), follow=True)
+        self.assertRedirects(reponse, reverse('contact'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
         self.client.logout()
 
 
@@ -144,38 +137,30 @@ class LoginTests(TestCase):
         self.assertEqual(reponse.status_code, 200)
 
     def test_login_home(self):
-        reponse = self.client.post(reverse('login_classic'), {'username': self.register_user[
-                                   'username'], 'password': self.register_user['password']}, follow=True)
+        reponse = self.client.post(reverse('login_classic'), {'username': self.register_user['username'], 'password': self.register_user['password']}, follow=True)
         self.assertRedirects(reponse, reverse(
             'home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_log_admin_front(self):
-        data = {'username': self.admin[
-            'username'], 'password': self.admin['password']}
+        data = {'username': self.admin['username'], 'password': self.admin['password']}
         reponse = self.client.post(reverse('login_classic'), data, follow=True)
         self.assertEqual(reponse.status_code, 200)
         self.assertEqual(
             reponse.context[0]['errors']['admin'], _("admin_cant_log_here"))
 
     def test_log_staff_front(self):
-        data = {'username': self.staff[
-            'username'], 'password': self.staff['password']}
+        data = {'username': self.staff['username'], 'password': self.staff['password']}
         reponse = self.client.post(reverse('login_classic'), data, follow=True)
         self.assertEqual(reponse.status_code, 200)
-        self.assertEqual(
-            reponse.context[0]['errors']['staff'], _("staff_cant_log_here"))
+        self.assertEqual(reponse.context[0]['errors']['staff'], _("staff_cant_log_here"))
 
     def test_login_contact(self):
-        reponse = self.client.post(reverse(
-            'login_classic') + '?next=' + reverse('contact'), self.log_user, follow=True)
-        self.assertRedirects(reponse, reverse('contact'), status_code=301,
-                             target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        reponse = self.client.post(reverse('login_classic') + '?next=' + reverse('contact'), self.log_user, follow=True)
+        self.assertRedirects(reponse, reverse('contact'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_login_forum(self):
-        reponse = self.client.post(reverse(
-            'login_classic') + '?next=' + reverse('forum'), self.log_user, follow=True)
-        self.assertRedirects(reponse, reverse(
-            'forum'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
+        reponse = self.client.post(reverse('login_classic') + '?next=' + reverse('forum'), self.log_user, follow=True)
+        self.assertRedirects(reponse, reverse('forum'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
     def test_login_wrong_user(self):
         data = self.log_user

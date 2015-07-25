@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/app.iml" filepath="$PROJECT_DIR$/.idea/app.iml" />
-      <module fileurl="file://D:/personnal_work/django_rest_angular/test_app_rest/.idea/test_app_rest.iml" filepath="D:/personnal_work/django_rest_angular/test_app_rest/.idea/test_app_rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/framework42.iml" filepath="$PROJECT_DIR$/.idea/framework42.iml" />
     </modules>
   </component>
 </project>
