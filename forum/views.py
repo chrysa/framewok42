@@ -61,8 +61,8 @@ def display_cat(request, cat):
     :return: HTTPResponse
     """
     logger_info.info(info_load_log_message(request))
-    cat = models.ForumCat.objects.get(slug=cat)
-    if cat is not None:
+    try:
+        cat = models.ForumCat.objects.get(slug=cat)
         last_mod = models.ForumTopic.objects.filter(CatParent=cat).order_by(
             'LastReply').order_by('CreateDate').reverse()
         return render(
@@ -73,8 +73,8 @@ def display_cat(request, cat):
                 'last_mod': last_mod,
             }
         )
-    else:
-        display_all(request)
+    except:
+        return display_all(request)
 
 
 @login_required
@@ -93,26 +93,25 @@ def display_topic(request, cat, topic):
     :return: HTTPResponse
     """
     logger_info.info(info_load_log_message(request))
-    cat = models.ForumCat.objects.filter(slug=cat)[0]
-    thr = models.ForumTopic.objects.get(slug=topic)
-    if thr is not None:
-        post = models.ForumPost.objects.filter(TopicParent=thr)
-        return render(
-            request,
-            "forum/topic.html",
-            {
-                'cat': cat,
-                'topic': thr,
-                'posts': post,
-                'reply': PostForm(),
-            }
-        )
-    else:
-        cat = models.ForumCat.objects.filter(slug=cat)
-        if cat is not None:
-            display_cat(request, cat)
-        else:
-            display_all(request)
+    try:
+        cat = models.ForumCat.objects.filter(slug=cat)[0]
+        try:
+            thr = models.ForumTopic.objects.get(slug=topic)
+            post = models.ForumPost.objects.filter(TopicParent=thr)
+            return render(
+                request,
+                "forum/topic.html",
+                {
+                    'cat': cat,
+                    'topic': thr,
+                    'posts': post,
+                    'reply': PostForm(),
+                }
+            )
+        except:
+            return display_cat(request, cat)
+    except:
+        return display_all(request)
 
 
 @login_required
@@ -133,44 +132,47 @@ def create_topic(request, cat):
     logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
     form = TopicForm(request.POST)
-    if form.is_valid():
-        try:
-            create = models.ForumTopic(
-                CatParent=cat,
-                Title=form.cleaned_data['Title'],
-                Autor=request.user,
-                Message=form.cleaned_data['Message'],
-            ).save()
-            if create is None:
-                topic = models.ForumTopic.objects.filter(
-                    Title=form.cleaned_data['Title']
-                ).filter(
-                    Autor=request.user
-                ).filter(
-                    Message=form.cleaned_data['Message']
-                )[0]
-                return redirect(
-                    reverse(
-                        'topic_cat',
-                        kwargs={
-                            'cat': cat.slug,
-                            'topic': topic.slug,
-                        }
-                    ),
-                    permanent=True
-                )
-        except:
-            logger_error.error(_('save_topic'))
-            context = {
-                'cat': cat,
-                'error': _('thread_fail'),
-                'form': form,
-            }
-    else:
-        context = {
-            'cat': cat,
-            'form': form,
-        }
+    error = {}
+    if request.method == 'POST':
+        if form.is_valid():
+            try:
+                create = models.ForumTopic(
+                    CatParent=cat,
+                    Title=form.cleaned_data['Title'],
+                    Autor=request.user,
+                    Message=form.cleaned_data['Message'],
+                ).save()
+                if create is None:
+                    topic = models.ForumTopic.objects.filter(
+                        Title=form.cleaned_data['Title']
+                    ).filter(
+                        Autor=request.user
+                    ).filter(
+                        Message=form.cleaned_data['Message']
+                    )[0]
+                    return redirect(
+                        reverse(
+                            'topic_cat',
+                            kwargs={
+                                'cat': cat.slug,
+                                'topic': topic.slug,
+                            }
+                        ),
+                        permanent=True
+                    )
+            except:
+                logger_error.error(_('save_topic'))
+                error['save_topic'] = _('topic_fail')
+        else:
+            if not request.POST['Title']:
+                error['no_title'] = _("topic_must_contain_title")
+            if not request.POST['Message']:
+                error['no_title'] = _("topic_must_contain_message")
+    context = {
+        'cat': cat,
+        'form': form,
+        'error': error,
+    }
     return render(
         request,
         "forum/create_topic.html",
@@ -241,7 +243,7 @@ def edit_topic(request, cat, topic):
     """
     logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
-    if request.POST:
+    if request.metho == 'POST':
         form = TopicForm(request.POST)
         if form.is_valid():
             update = models.ForumTopic.objects.filter(
