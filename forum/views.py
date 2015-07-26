@@ -21,6 +21,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
+
 from django.utils.text import slugify
 
 from forum import models
@@ -43,8 +44,7 @@ def display_all(request):
     logger_info.info(info_load_log_message(request))
     return render(
         request,
-        "forum/home.html",
-        {
+        "forum/home.html", {
             'cat': models.ForumCat.objects.all().order_by('Name'),
         }
     )
@@ -63,12 +63,12 @@ def display_cat(request, cat):
     logger_info.info(info_load_log_message(request))
     try:
         cat = models.ForumCat.objects.get(slug=cat)
-        last_mod = models.ForumTopic.objects.filter(CatParent=cat).order_by(
-            'LastReply').order_by('CreateDate').reverse()
+        last_mod = models.ForumTopic.objects.filter(
+            CatParent=cat
+        ).order_by('LastReply').order_by('CreateDate').reverse()
         return render(
             request,
-            "forum/cat.html",
-            {
+            "forum/cat.html", {
                 'cat': cat,
                 'last_mod': last_mod,
             }
@@ -100,8 +100,7 @@ def display_topic(request, cat, topic):
             post = models.ForumPost.objects.filter(TopicParent=thr)
             return render(
                 request,
-                "forum/topic.html",
-                {
+                "forum/topic.html", {
                     'cat': cat,
                     'topic': thr,
                     'posts': post,
@@ -242,24 +241,104 @@ def edit_topic(request, cat, topic):
     :return: HTTPResponse
     """
     logger_info.info(info_load_log_message(request))
-    cat = models.ForumCat.objects.get(slug=cat)
-    if request.method == 'POST':
+    try:
+        cat = models.ForumCat.objects.get(slug=cat)
+        wrong_cat = 0
+    except:
+        wrong_cat = 1
+    try:
+        models.ForumTopic.objects.get(slug=topic)
+        wrong_topic = 0
+    except:
+        wrong_topic = 1
+    if not wrong_cat and not wrong_topic and request.method == 'POST':
         form = TopicForm(request.POST)
         if form.is_valid():
-            update = models.ForumTopic.objects.filter(slug=topic).update(Title=form.cleaned_data['Title'], Autor=request.user, slug=slugify(form.cleaned_data['Title']), Message=form.cleaned_data['Message'], LastModified=datetime.datetime.now())
+            update = models.ForumTopic.objects.filter(slug=topic).update(
+                Title=form.cleaned_data['Title'],
+                Autor=request.user,
+                slug=slugify(form.cleaned_data['Title']),
+                Message=form.cleaned_data['Message'],
+                LastModified=datetime.datetime.now()
+            )
             if update is not None:
-                topic = models.ForumTopic.objects.filter(Title=form.cleaned_data['Title']).filter(Autor=request.user).filter(Message=form.cleaned_data['Message'])[0]
-                return redirect(reverse('topic_cat', kwargs={'cat': cat.slug, 'topic': topic.slug}), permanent=True)
+                topic = models.ForumTopic.objects.filter(
+                    Title=form.cleaned_data['Title']
+                ).filter(
+                    Autor=request.user
+                ).filter(
+                    Message=form.cleaned_data['Message']
+                )
+                return redirect(
+                    reverse(
+                        'topic_cat',
+                        kwargs={
+                            'cat': cat.slug,
+                            'topic': topic[0].slug
+                        }
+                    ),
+                    permanent=True
+                )
             else:
-                context = {'cat': cat, 'error': _('thread_fail'), 'form': form}
+                context = {
+                    'cat': cat,
+                    'error': _('thread_fail'),
+                    'form': form
+                }
         else:
-            context = {'cat': cat, 'form': form}
+            top = models.ForumTopic.objects.get(slug=topic)
+            form = TopicForm(
+                {
+                    'Title': top.Title,
+                    'Message': top.Message
+                }
+            )
+            context = {
+                'cat': cat,
+                'form': form
+            }
+    elif wrong_cat and wrong_topic:
+        return redirect(
+            reverse('forum'),
+            permanent=True
+        )
+    elif wrong_cat:
+        top = models.ForumTopic.objects.get(slug=topic)
+        return redirect(
+            reverse(
+                'edit_topic', kwargs={
+                    'cat': top.CatParent.slug,
+                    'topic': top.slug
+                }
+            ),
+            permanent=True
+        )
+    elif wrong_topic:
+        return redirect(
+            reverse(
+                'cat', kwargs={
+                    'cat': cat
+                }
+            ),
+            permanent=True
+        )
     else:
         top = models.ForumTopic.objects.get(slug=topic)
-        topic = {'Title': top.Title, 'Message': top.Message}
+        topic = {
+            'Title': top.Title,
+            'Message': top.Message
+        }
         form = TopicForm(topic)
-        context = {'cat': cat, 'form': form, 'edit': 1}
-    return render(request, "forum/create_topic.html", context)
+        context = {
+            'cat': cat,
+            'form': form,
+            'edit': 1
+        }
+    return render(
+        request,
+        "forum/create_topic.html",
+        context
+    )
 
 
 @login_required

@@ -7,7 +7,6 @@
 :created: 01/07/2015
 :update: 21/07/2015:
 """
-import datetime
 
 from django.db import models
 from django.contrib.auth.models import User
@@ -21,7 +20,7 @@ class ForumCat(models.Model):
 
     :param models.Model: contain all function for define a storage
     :type models.Model: models object
-    :var name: content the name of the category
+    :var Name: content the name of the category
     :var slug: content the slug of the category
     :return: ForumCat object
     :rtype: object
@@ -80,6 +79,3 @@ class ForumPost(models.Model):
     Message = models.TextField()
     CreateDate = models.DateTimeField(auto_now_add=True)
     LastModified = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.Title

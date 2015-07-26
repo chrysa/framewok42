@@ -66,7 +66,11 @@ class ForumTests(TestCase):
             'Message': 'test_reponse',
         }
         self.edit_topic = {
-            'Message': 'edit topic',
+            'Title': 'edit topic title',
+            'Message': 'edit topic message',
+        }
+        self.edit_post = {
+            'Message': 'edit post',
         }
         new_user = User.objects.create_user(**self.register_user)
         UserLang.objects.create(user=new_user, lang='fr')
@@ -78,14 +82,15 @@ class ForumTests(TestCase):
             Autor=User.objects.get(username=self.register_user['username']),
             Message=self.ref_topic['Message']
         ).save()
-        self.inexisting_cat = 'inexisting_cat'
-        self.inexisting_topic = 'inexisting_topic'
+        self.inexisting_cat = 'inexisting-cat'
+        self.inexisting_topic = 'inexisting-topic'
         self.cat_slug = ForumCat.objects.get(Name=self.cat[0]).slug
         self.topic_slug = ForumTopic.objects.get(CatParent=ForumCat.objects.get(Name=self.cat[0])).slug
         ForumPost(
             TopicParent=ForumTopic.objects.get(
                 slug=self.topic_slug
             ),
+            Message=self.ref_response['Message'],
             Autor=User.objects.get(username=self.register_user['username']),
         ).save()
 
@@ -334,7 +339,112 @@ class ForumTests(TestCase):
         reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), self.edit_topic, follow=True)
         self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}))
 
-# edit topic
-# edit topic inexistant
+    def test_edit_topic_title_message(self):
+        """
+        test to edit at a topic
+
+        :var reponse: response of request
+        :return: None
+        """
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}),
+                                   self.edit_topic, follow=True)
+        self.assertContains(reponse, self.edit_topic['Message'])
+        self.assertContains(reponse, self.edit_topic['Title'])
+        self.assertTemplateUsed(reponse, 'forum/topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_edit_topic_title(self):
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        dump_title = self.edit_topic['Title']
+        self.edit_topic['Title'] = self.ref_topic['Title']
+        reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}),
+                                   self.edit_topic, follow=True)
+        self.assertContains(reponse, self.ref_topic['Title'])
+        self.assertContains(reponse, self.edit_topic['Message'])
+        self.assertTemplateUsed(reponse, 'forum/topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.edit_topic['Title'] = dump_title
+        self.client.logout()
+
+    def test_edit_topic_message(self):
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        dump_mess = self.edit_topic['Message']
+        self.edit_topic['Message'] = self.ref_topic['Message']
+        reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}),
+                                   self.edit_topic, follow=True)
+        self.assertContains(reponse, self.edit_topic['Title'])
+        self.assertContains(reponse, self.ref_topic['Message'])
+        self.assertTemplateUsed(reponse, 'forum/topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.edit_topic['Message'] = dump_mess
+        self.client.logout()
+
+    def test_edit_topic_blank_title(self):
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        dump_title = self.edit_topic['Title']
+        self.edit_topic['Title'] = ''
+        reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}),
+                                   self.edit_topic, follow=True)
+        self.assertContains(reponse, self.ref_topic['Title'])
+        self.assertContains(reponse, self.ref_topic['Message'])
+        self.assertTemplateUsed(reponse, 'forum/create_topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.edit_topic['Title'] = dump_title
+        self.client.logout()
+
+    def test_edit_topic_blank_message(self):
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        dump_mess = self.edit_topic['Message']
+        self.edit_topic['Message'] = ''
+        reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}),
+                                   self.edit_topic, follow=True)
+        self.assertContains(reponse, self.ref_topic['Title'])
+        self.assertContains(reponse, self.ref_topic['Message'])
+        self.assertTemplateUsed(reponse, 'forum/create_topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.edit_topic['Message'] = dump_mess
+        self.client.logout()
+
+    def test_edit_inexisting_cat(self):
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.inexisting_cat, 'topic': self.topic_slug}),
+                                   self.edit_topic, follow=True)
+        self.assertContains(reponse, self.ref_topic['Title'])
+        self.assertContains(reponse, self.ref_topic['Message'])
+        self.assertTemplateUsed(reponse, 'forum/create_topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_edit_inexisting_topic(self):
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.inexisting_topic}),
+                                   self.edit_topic, follow=True)
+        self.assertTemplateUsed(reponse, 'forum/cat.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_edit_inexisting_cat_topic(self):
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(
+            reverse('edit_topic', kwargs={'cat': self.inexisting_cat, 'topic': self.inexisting_topic}), self.edit_topic,
+            follow=True)
+        self.assertContains(reponse, self.cat[0])
+        self.assertTemplateUsed(reponse, 'forum/home.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_edit_post_unlog(self):
+        post = ForumPost.objects.get(Message=self.ref_response['Message'])
+        reponse = self.client.post(
+            reverse('edit_post', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug, 'post': post.pk}),
+            self.edit_post, follow=True)
+        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('edit_post', kwargs={'cat': self.cat_slug,
+                                                                                                 'topic': self.topic_slug,
+                                                                                                 'post': post.pk}))
+
 # edit post
-# edit post inexistant
+# edit post blank mesage
+# edit inexistant post
+# edit inexistant post with inexisting cat

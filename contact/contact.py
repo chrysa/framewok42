@@ -41,13 +41,11 @@ def display(request):
     form = ContactForm(request.POST)
     if request.method == 'POST':
         if request.POST['subject'] and request.POST['message'] and request.POST['email'] and form.is_valid():
-            print('plop')
             try:
                 send_mail(
                     form.cleaned_data['subject'],
                     form.cleaned_data['message'],
-                    form.cleaned_data[
-                        'email'] if 'email' in form.cleaned_data else request.user.email,
+                    form.cleaned_data['email'] if 'email' in form.cleaned_data else request.user.email,
                     ["greau.anthony@gmail.com", ]
                 )
                 success['message'] = _('contact_success')
