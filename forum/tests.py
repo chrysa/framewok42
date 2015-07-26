@@ -78,6 +78,8 @@ class ForumTests(TestCase):
             Autor=User.objects.get(username=self.register_user['username']),
             Message=self.ref_topic['Message']
         ).save()
+        self.inexisting_cat = 'inexisting_cat'
+        self.inexisting_topic = 'inexisting_topic'
         self.cat_slug = ForumCat.objects.get(Name=self.cat[0]).slug
         self.topic_slug = ForumTopic.objects.get(CatParent=ForumCat.objects.get(Name=self.cat[0])).slug
         ForumPost(
@@ -86,9 +88,6 @@ class ForumTests(TestCase):
             ),
             Autor=User.objects.get(username=self.register_user['username']),
         ).save()
-        self.inexisting_cat = 'inexisting_cat'
-        self.inexisting_topic = 'inexisting_topic'
-
 
     def test_forum_url_unlog(self):
         """
@@ -335,6 +334,7 @@ class ForumTests(TestCase):
         reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), self.edit_topic, follow=True)
         self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}))
 
-
 # edit topic
+# edit topic inexistant
 # edit post
+# edit post inexistant

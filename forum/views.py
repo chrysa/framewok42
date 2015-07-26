@@ -246,61 +246,20 @@ def edit_topic(request, cat, topic):
     if request.method == 'POST':
         form = TopicForm(request.POST)
         if form.is_valid():
-            update = models.ForumTopic.objects.filter(
-                slug=topic
-            ).update(
-                Title=form.cleaned_data['Title'],
-                Autor=request.user,
-                slug=slugify(form.cleaned_data['Title']),
-                Message=form.cleaned_data['Message'],
-                LastModified=datetime.datetime.now()
-            )
+            update = models.ForumTopic.objects.filter(slug=topic).update(Title=form.cleaned_data['Title'], Autor=request.user, slug=slugify(form.cleaned_data['Title']), Message=form.cleaned_data['Message'], LastModified=datetime.datetime.now())
             if update is not None:
-                topic = models.ForumTopic.objects.filter(
-                    Title=form.cleaned_data['Title']
-                ).filter(
-                    Autor=request.user
-                ).filter(
-                    Message=form.cleaned_data['Message']
-                )[0]
-                return redirect(
-                    reverse(
-                        'topic_cat',
-                        kwargs={
-                            'cat': cat.slug,
-                            'topic': topic.slug,
-                        }
-                    ),
-                    permanent=True
-                )
+                topic = models.ForumTopic.objects.filter(Title=form.cleaned_data['Title']).filter(Autor=request.user).filter(Message=form.cleaned_data['Message'])[0]
+                return redirect(reverse('topic_cat', kwargs={'cat': cat.slug, 'topic': topic.slug}), permanent=True)
             else:
-                context = {
-                    'cat': cat,
-                    'error': _('thread_fail'),
-                    'form': form,
-                }
+                context = {'cat': cat, 'error': _('thread_fail'), 'form': form}
         else:
-            context = {
-                'cat': cat,
-                'form': form,
-            }
+            context = {'cat': cat, 'form': form}
     else:
         top = models.ForumTopic.objects.get(slug=topic)
-        topic = {
-            'Title': top.Title,
-            'Message': top.Message,
-        }
+        topic = {'Title': top.Title, 'Message': top.Message}
         form = TopicForm(topic)
-        context = {
-            'cat': cat,
-            'form': form,
-            'edit': 1,
-        }
-    return render(
-        request,
-        "forum/create_topic.html",
-        context,
-    )
+        context = {'cat': cat, 'form': form, 'edit': 1}
+    return render(request, "forum/create_topic.html", context)
 
 
 @login_required

@@ -31247,3 +31247,282 @@ AttributeError: 'WSGIRequest' object has no attribute 'metho'
 [ERROR] :: [26/07/2015 02:35:15] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [ERROR] :: [26/07/2015 02:35:15] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
 [INFO] :: [26/07/2015 02:35:15] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 11:38:59] :: [views:display_cat:info] [63] :: chargement de la page /forum/inexisting_cat/ par user_test
+[INFO] :: [26/07/2015 11:38:59] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/ par user_test
+[INFO] :: [26/07/2015 11:39:10] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 11:39:10] :: [contact:display:info] [38] :: chargement de la page /contact par AnonymousUser
+[INFO] :: [26/07/2015 11:39:10] :: [home:index:info] [30] :: chargement de la page / par AnonymousUser
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_cat:info] [63] :: chargement de la page /forum/cat1/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_cat:info] [63] :: chargement de la page /forum/inexisting_cat/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/ref-topic/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_topic:info] [95] :: chargement de la page /forum/inexisting_cat/ref-topic/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/ref-topic/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_cat:info] [63] :: chargement de la page /forum/cat1/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_topic:info] [95] :: chargement de la page /forum/inexisting_cat/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/test-topic/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:39:11] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 11:39:11] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:39:12] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:39:12] :: [views:reply_topic:info] [197] :: chargement de la page /forum/cat1/reply/ref-topic/ par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/ref-topic/ par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 11:39:12] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
+[INFO] :: [26/07/2015 11:39:12] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 11:39:12] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[INFO] :: [26/07/2015 11:39:12] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 11:39:12] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 11:39:12] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 11:39:12] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [home:index:info] [30] :: chargement de la page / par user_test
+[INFO] :: [26/07/2015 11:39:12] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 11:39:12] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:39:13] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 11:39:13] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
+[INFO] :: [26/07/2015 11:39:13] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 11:39:13] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[INFO] :: [26/07/2015 11:39:13] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:39:13] :: [views:logout_user:info] [169] :: chargement de la page /profil/logout par user_test
+[INFO] :: [26/07/2015 11:39:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par unittest_fr
+[ERROR] :: [26/07/2015 11:39:13] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[INFO] :: [26/07/2015 11:39:13] :: [contact:display:info] [38] :: chargement de la page /contact par unittest_fr
+[INFO] :: [26/07/2015 11:39:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par unittest_fr
+[ERROR] :: [26/07/2015 11:39:13] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[INFO] :: [26/07/2015 11:39:13] :: [home:index:info] [30] :: chargement de la page / par unittest_fr
+[INFO] :: [26/07/2015 11:39:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 11:39:13] :: [functions:create_user:info] [28] :: creation du compte AnonymousUser
+[INFO] :: [26/07/2015 11:39:13] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 11:39:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 11:39:13] :: [functions:create_user:info] [28] :: creation du compte AnonymousUser
+[INFO] :: [26/07/2015 11:39:13] :: [home:index:info] [30] :: chargement de la page / par user_test
+[INFO] :: [26/07/2015 11:39:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 11:39:13] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[INFO] :: [26/07/2015 11:39:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 11:39:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 11:39:13] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[INFO] :: [26/07/2015 11:39:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 11:39:13] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[ERROR] :: [26/07/2015 11:39:13] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[INFO] :: [26/07/2015 11:39:13] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 11:40:03] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 11:40:03] :: [contact:display:info] [38] :: chargement de la page /contact par AnonymousUser
+[INFO] :: [26/07/2015 11:40:03] :: [home:index:info] [30] :: chargement de la page / par AnonymousUser
+[INFO] :: [26/07/2015 11:40:03] :: [views:display_cat:info] [63] :: chargement de la page /forum/cat1/ par user_test
+[INFO] :: [26/07/2015 11:40:03] :: [views:display_cat:info] [63] :: chargement de la page /forum/inexisting_cat/ par user_test
+[INFO] :: [26/07/2015 11:40:03] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/ par user_test
+[INFO] :: [26/07/2015 11:40:03] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/ref-topic/ par user_test
+[INFO] :: [26/07/2015 11:40:03] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_topic:info] [95] :: chargement de la page /forum/inexisting_cat/ref-topic/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/ref-topic/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_cat:info] [63] :: chargement de la page /forum/cat1/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_topic:info] [95] :: chargement de la page /forum/inexisting_cat/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/test-topic/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:40:04] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:40:04] :: [views:reply_topic:info] [197] :: chargement de la page /forum/cat1/reply/ref-topic/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/ref-topic/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 11:40:04] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 11:40:04] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
+[INFO] :: [26/07/2015 11:40:05] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 11:40:05] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[INFO] :: [26/07/2015 11:40:05] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 11:40:05] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 11:40:05] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 11:40:05] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 11:40:05] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 11:40:05] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 11:40:05] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 11:40:05] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 11:40:05] :: [home:index:info] [30] :: chargement de la page / par user_test
+[INFO] :: [26/07/2015 11:40:05] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 11:40:05] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:40:05] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 11:40:05] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
+[INFO] :: [26/07/2015 11:40:05] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 11:40:05] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[INFO] :: [26/07/2015 11:40:05] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 11:40:05] :: [views:logout_user:info] [169] :: chargement de la page /profil/logout par user_test
+[INFO] :: [26/07/2015 11:40:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par unittest_fr
+[ERROR] :: [26/07/2015 11:40:05] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[INFO] :: [26/07/2015 11:40:05] :: [contact:display:info] [38] :: chargement de la page /contact par unittest_fr
+[INFO] :: [26/07/2015 11:40:05] :: [views:register_user:info] [27] :: chargement de la page /profil/register par unittest_fr
+[ERROR] :: [26/07/2015 11:40:05] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[INFO] :: [26/07/2015 11:40:05] :: [home:index:info] [30] :: chargement de la page / par unittest_fr
+[INFO] :: [26/07/2015 11:40:06] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 11:40:06] :: [functions:create_user:info] [28] :: creation du compte AnonymousUser
+[INFO] :: [26/07/2015 11:40:06] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 11:40:06] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 11:40:06] :: [functions:create_user:info] [28] :: creation du compte AnonymousUser
+[INFO] :: [26/07/2015 11:40:06] :: [home:index:info] [30] :: chargement de la page / par user_test
+[INFO] :: [26/07/2015 11:40:06] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 11:40:06] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[INFO] :: [26/07/2015 11:40:06] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 11:40:06] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 11:40:06] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[INFO] :: [26/07/2015 11:40:06] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 11:40:06] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[ERROR] :: [26/07/2015 11:40:06] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[INFO] :: [26/07/2015 11:40:06] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 14:25:23] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 14:25:23] :: [contact:display:info] [38] :: chargement de la page /contact par AnonymousUser
+[INFO] :: [26/07/2015 14:25:23] :: [home:index:info] [30] :: chargement de la page / par AnonymousUser
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_cat:info] [63] :: chargement de la page /forum/cat1/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_cat:info] [63] :: chargement de la page /forum/inexisting_cat/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_topic:info] [95] :: chargement de la page /forum/inexisting_cat/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_cat:info] [63] :: chargement de la page /forum/cat1/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_topic:info] [95] :: chargement de la page /forum/inexisting_cat/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/test-topic/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:25:24] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 14:25:24] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [views:edit_topic:info] [244] :: chargement de la page /forum/cat1/edit/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:25:25] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:25:25] :: [views:reply_topic:info] [197] :: chargement de la page /forum/cat1/reply/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 14:25:25] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
+[INFO] :: [26/07/2015 14:25:25] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 14:25:25] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[INFO] :: [26/07/2015 14:25:25] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 14:25:25] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 14:25:25] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 14:25:25] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 14:25:25] :: [home:index:info] [30] :: chargement de la page / par user_test
+[INFO] :: [26/07/2015 14:25:26] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 14:25:26] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:25:26] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 14:25:26] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
+[INFO] :: [26/07/2015 14:25:26] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 14:25:26] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[INFO] :: [26/07/2015 14:25:26] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:25:26] :: [views:logout_user:info] [169] :: chargement de la page /profil/logout par user_test
+[INFO] :: [26/07/2015 14:25:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par unittest_fr
+[ERROR] :: [26/07/2015 14:25:26] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[INFO] :: [26/07/2015 14:25:26] :: [contact:display:info] [38] :: chargement de la page /contact par unittest_fr
+[INFO] :: [26/07/2015 14:25:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par unittest_fr
+[ERROR] :: [26/07/2015 14:25:26] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[INFO] :: [26/07/2015 14:25:26] :: [home:index:info] [30] :: chargement de la page / par unittest_fr
+[INFO] :: [26/07/2015 14:25:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 14:25:26] :: [functions:create_user:info] [28] :: creation du compte AnonymousUser
+[INFO] :: [26/07/2015 14:25:26] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 14:25:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 14:25:26] :: [functions:create_user:info] [28] :: creation du compte AnonymousUser
+[INFO] :: [26/07/2015 14:25:26] :: [home:index:info] [30] :: chargement de la page / par user_test
+[INFO] :: [26/07/2015 14:25:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 14:25:26] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[INFO] :: [26/07/2015 14:25:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 14:25:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 14:25:26] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[INFO] :: [26/07/2015 14:25:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 14:25:26] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[ERROR] :: [26/07/2015 14:25:26] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[INFO] :: [26/07/2015 14:25:26] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 14:29:28] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 14:29:28] :: [contact:display:info] [38] :: chargement de la page /contact par AnonymousUser
+[INFO] :: [26/07/2015 14:29:28] :: [home:index:info] [30] :: chargement de la page / par AnonymousUser
+[INFO] :: [26/07/2015 14:29:28] :: [views:display_cat:info] [63] :: chargement de la page /forum/cat1/ par user_test
+[INFO] :: [26/07/2015 14:29:28] :: [views:display_cat:info] [63] :: chargement de la page /forum/inexisting_cat/ par user_test
+[INFO] :: [26/07/2015 14:29:28] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_topic:info] [95] :: chargement de la page /forum/inexisting_cat/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_cat:info] [63] :: chargement de la page /forum/cat1/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_topic:info] [95] :: chargement de la page /forum/inexisting_cat/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_all:info] [43] :: chargement de la page /forum/inexisting_cat/inexisting_topic/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/test-topic/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:29:29] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:create_topic:info] [132] :: chargement de la page /forum/cat1/create/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:29:29] :: [views:reply_topic:info] [197] :: chargement de la page /forum/cat1/reply/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_topic:info] [95] :: chargement de la page /forum/cat1/ref-topic/ par user_test
+[INFO] :: [26/07/2015 14:29:29] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 14:29:30] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 14:29:30] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 14:29:30] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 14:29:30] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 14:29:30] :: [views:display_all:info] [43] :: chargement de la page /forum/ par user_test
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [131] :: connection classique par user_test
+[INFO] :: [26/07/2015 14:29:30] :: [home:index:info] [30] :: chargement de la page / par user_test
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[INFO] :: [26/07/2015 14:29:30] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 14:29:30] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
+[INFO] :: [26/07/2015 14:29:30] :: [views:login_user:info] [93] :: chargement de la page /profil/local par AnonymousUser
+[ERROR] :: [26/07/2015 14:29:30] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[INFO] :: [26/07/2015 14:29:30] :: [views:select_login:info] [82] :: chargement de la page /profil/login par AnonymousUser
+[INFO] :: [26/07/2015 14:29:30] :: [views:logout_user:info] [169] :: chargement de la page /profil/logout par user_test
+[INFO] :: [26/07/2015 14:29:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par unittest_fr
+[ERROR] :: [26/07/2015 14:29:31] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[INFO] :: [26/07/2015 14:29:31] :: [contact:display:info] [38] :: chargement de la page /contact par unittest_fr
+[INFO] :: [26/07/2015 14:29:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par unittest_fr
+[ERROR] :: [26/07/2015 14:29:31] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[INFO] :: [26/07/2015 14:29:31] :: [home:index:info] [30] :: chargement de la page / par unittest_fr
+[INFO] :: [26/07/2015 14:29:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 14:29:31] :: [functions:create_user:info] [28] :: creation du compte AnonymousUser
+[INFO] :: [26/07/2015 14:29:31] :: [contact:display:info] [38] :: chargement de la page /contact par user_test
+[INFO] :: [26/07/2015 14:29:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 14:29:31] :: [functions:create_user:info] [28] :: creation du compte AnonymousUser
+[INFO] :: [26/07/2015 14:29:31] :: [home:index:info] [30] :: chargement de la page / par user_test
+[INFO] :: [26/07/2015 14:29:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 14:29:31] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[INFO] :: [26/07/2015 14:29:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[INFO] :: [26/07/2015 14:29:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 14:29:31] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[INFO] :: [26/07/2015 14:29:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
+[ERROR] :: [26/07/2015 14:29:31] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[ERROR] :: [26/07/2015 14:29:31] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[INFO] :: [26/07/2015 14:29:31] :: [views:register_user:info] [27] :: chargement de la page /profil/register par AnonymousUser
