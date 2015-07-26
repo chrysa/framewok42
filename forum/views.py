@@ -225,7 +225,7 @@ def reply_topic(request, cat, topic):
                 permanent=True
             )
         else:
-            display_all(request)
+            return display_all(request)
 
 
 @login_required
@@ -243,7 +243,7 @@ def edit_topic(request, cat, topic):
     """
     logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
-    if request.metho == 'POST':
+    if request.method == 'POST':
         form = TopicForm(request.POST)
         if form.is_valid():
             update = models.ForumTopic.objects.filter(

@@ -7,10 +7,8 @@
 :created: 01/07/2015
 :update: 22/07/2015
 :seealso: forum.models.ForumCat
-<<<<<<< Temporary merge branch 1
-=======
 :seealso: forum.models.ForumTopic
->>>>>>> Temporary merge branch 2
+:seealso: forum.models.ForumPost
 :seealso: profil.models.UserLang
 """
 from django.test import Client
@@ -20,6 +18,8 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 
 from forum.models import ForumCat
+from forum.models import ForumTopic
+from forum.models import ForumPost
 from profil.models import UserLang
 
 
@@ -32,7 +32,6 @@ class ForumTests(TestCase):
     :return: None
     :rtype: None
     """
-
     def setUp(self):
         """
         set up variable and create user for the test
@@ -51,18 +50,45 @@ class ForumTests(TestCase):
             'email': 'user_test@test.fr',
             'password': "test",
         }
-        self.cat = ['cat1', 'cat2',]
-<<<<<<< Temporary merge branch 1
-=======
-        self.create_topic = {
-            'Title': 'test cat',
+        self.cat = ['cat1', 'cat2', ]
+        self.ref_topic = {
+            'Title': 'ref topic',
             'Message': 'content test',
         }
->>>>>>> Temporary merge branch 2
+        self.create_topic = {
+            'Title': 'test topic',
+            'Message': 'content test',
+        }
+        self.ref_response = {
+            'Message': 'ref_reponse',
+        }
+        self.test_response = {
+            'Message': 'test_reponse',
+        }
+        self.edit_topic = {
+            'Message': 'edit topic',
+        }
         new_user = User.objects.create_user(**self.register_user)
         UserLang.objects.create(user=new_user, lang='fr')
         for cat in self.cat:
             ForumCat(Name=cat).save()
+        ForumTopic(
+            CatParent=ForumCat.objects.get(Name=self.cat[0]),
+            Title=self.ref_topic['Title'],
+            Autor=User.objects.get(username=self.register_user['username']),
+            Message=self.ref_topic['Message']
+        ).save()
+        self.cat_slug = ForumCat.objects.get(Name=self.cat[0]).slug
+        self.topic_slug = ForumTopic.objects.get(CatParent=ForumCat.objects.get(Name=self.cat[0])).slug
+        ForumPost(
+            TopicParent=ForumTopic.objects.get(
+                slug=self.topic_slug
+            ),
+            Autor=User.objects.get(username=self.register_user['username']),
+        ).save()
+        self.inexisting_cat = 'inexisting_cat'
+        self.inexisting_topic = 'inexisting_topic'
+
 
     def test_forum_url_unlog(self):
         """
@@ -87,16 +113,13 @@ class ForumTests(TestCase):
         self.assertEqual(reponse.status_code, 200)
         self.client.logout()
 
-    def test_no_cat(self):
-<<<<<<< Temporary merge branch 1
-=======
+    def test_without_cat(self):
         """
         test where any categorys are define
 
         :var reponse: response of request
         :return: None
         """
->>>>>>> Temporary merge branch 2
         for cat in self.cat:
             ForumCat.objects.get(Name=cat).delete()
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
@@ -107,34 +130,75 @@ class ForumTests(TestCase):
         self.client.logout()
         for cat in self.cat:
             ForumCat(Name=cat).save()
-<<<<<<< Temporary merge branch 1
-# create topic
-=======
 
-    def create_topic_access_url(self):
+    def test_with_cat(self):
         """
-        test access to url for create topic
+        test where categorys are define
 
         :var reponse: response of request
         :return: None
         """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
-        reponse = self.client.get(reverse('create_topic', kwargs={'cat': ForumCat.objects.get(slug=self.cat[0]).slug}))
+        reponse = self.client.get(reverse('forum'))
+        self.assertNotContains(reponse, _("no_category"))
+        self.assertContains(reponse, self.cat[0])
+        self.assertTemplateUsed(reponse, 'forum/home.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_acces_existing_cat(self):
+        """
+        test access to existing category
+
+        :var reponse: response of request
+        :return: None
+        """
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.get(reverse('cat', kwargs={'cat': self.cat[0]}))
+        self.assertContains(reponse, self.cat[0])
+        self.assertContains(reponse, self.ref_topic['Title'])
+        self.assertTemplateUsed(reponse, 'forum/cat.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_acces_not_existing_cat(self):
+        """
+        test access to category who aren't define
+
+        :var reponse: response of request
+        :return: None
+        """
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.get(reverse('cat', kwargs={'cat': self.inexisting_cat}))
+        self.assertContains(reponse, self.cat[0])
+        self.assertTemplateUsed(reponse, 'forum/home.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_create_topic_access_url(self):
+        """
+        test access to url for create topic if user log
+
+        :var reponse: response of request
+        :return: None
+        """
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.get(reverse('create_topic', kwargs={'cat': self.cat_slug}))
         self.assertTemplateUsed(reponse, 'forum/create_topic.html')
         self.assertEqual(reponse.status_code, 200)
         self.client.logout()
 
-    def create_topic_access_url_unlog(self):
+    def test_create_topic_access_url_unlog(self):
         """
-        test access to url for create topic
+        test access to url for create topic if any user log
 
         :var reponse: response of request
         :return: None
         """
         reponse = self.client.get(reverse('create_topic', kwargs={'cat': ForumCat.objects.get(slug=self.cat[0]).slug}))
-        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('forum'))
+        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('create_topic', kwargs={'cat': self.cat_slug}))
 
-    def create_topic(self):
+    def test_create_topic(self):
         """
         test create topic
 
@@ -142,22 +206,135 @@ class ForumTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
-        reponse = self.client.post(reverse('create_topic', kwargs={'cat': ForumCat.objects.get(slug=self.cat[0]).slug}), self.create_topic, follow=True)
+        reponse = self.client.post(reverse('create_topic', kwargs={'cat': ForumCat.objects.get(slug=self.cat_slug)}), self.create_topic, follow=True)
         self.assertTemplateUsed(reponse, 'forum/topic.html')
         self.assertEqual(reponse.status_code, 200)
         self.client.logout()
 
-# create topic sans message
-# create topic sans titre
->>>>>>> Temporary merge branch 2
+    def test_create_topic_without_title(self):
+        """
+        test create topic without title
+
+        :var reponse: response of request
+        :return: None
+        """
+        create_topic = self.create_topic
+        create_topic['Title'] = ''
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(reverse('create_topic', kwargs={'cat': ForumCat.objects.get(slug=self.cat_slug)}), create_topic, follow=True)
+        self.assertContains(reponse, _("topic_must_contain_title"))
+        self.assertTemplateUsed(reponse, 'forum/create_topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_create_topic_without_message(self):
+        """
+        test create topic without message
+
+        :var reponse: response of request
+        :return: None
+        """
+        create_topic = self.create_topic
+        create_topic['Message'] = ''
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(reverse('create_topic', kwargs={'cat': self.cat_slug}), create_topic, follow=True)
+        self.assertContains(reponse, _("topic_must_contain_message"))
+        self.assertTemplateUsed(reponse, 'forum/create_topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_acces_to_topic(self):
+        """
+        test access to topic
+
+        :var reponse: response of request
+        :return: None
+        """
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), follow=True)
+        self.assertContains(reponse, self.ref_topic['Title'])
+        self.assertContains(reponse, self.ref_topic['Message'])
+        self.assertTemplateUsed(reponse, 'forum/topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_acces_to_topic_unlog(self):
+        """
+        test access to topic unlog
+
+        :var reponse: response of request
+        :return: None
+        """
+        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), follow=True)
+        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}))
+
+    def test_acces_to_topic_with_inexisting_cat(self):
+        """
+        test access to topic with wrong cat
+
+        :var reponse: response of request
+        :return: None
+        """
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.inexisting_cat, 'topic': self.topic_slug}), follow=True)
+        self.assertContains(reponse, self.cat[0])
+        self.assertTemplateUsed(reponse, 'forum/home.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_acces_to_topic_with_inexisting_topic(self):
+        """
+        test access to a wrong topic
+
+        :var reponse: response of request
+        :return: None
+        """
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.inexisting_topic}), follow=True)
+        self.assertContains(reponse, self.cat[0])
+        self.assertContains(reponse, self.ref_topic['Title'])
+        self.assertTemplateUsed(reponse, 'forum/cat.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_acces_to_topic_with_inexisting_topic_cat_and_topic(self):
+        """
+        test access to topic with wrong cat and a wrong topic
+
+        :var reponse: response of request
+        :return: None
+        """
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.inexisting_cat, 'topic': self.inexisting_topic}), follow=True)
+        self.assertContains(reponse, self.cat[0])
+        self.assertTemplateUsed(reponse, 'forum/home.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_response_topic(self):
+        """
+        test to response at a topic
+
+        :var reponse: response of request
+        :return: None
+        """
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(reverse('send_reply', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), self.test_response, HTTP_REFERER=reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), follow=True)
+        self.assertContains(reponse, self.test_response['Message'])
+        self.assertTemplateUsed(reponse, 'forum/topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_edit_topic_unlog(self):
+        """
+        test to edit at a topic unlog
+
+        :var reponse: response of request
+        :return: None
+        """
+        reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), self.edit_topic, follow=True)
+        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}))
+
+
 # edit topic
-# access topic
-# access inexistant topic
-# edit inexistant topic
-# response topic
 # edit post
-<<<<<<< Temporary merge branch 1
-# edit inexitant post
-=======
-# edit inexitant post
->>>>>>> Temporary merge branch 2
