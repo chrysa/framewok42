@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 """
 :module: core.urls
 :synopsis: root URL for core
@@ -10,6 +10,7 @@
 """
 from django.conf.urls import patterns
 from django.conf.urls import url
+
 from core import home
 
 urlpatterns = patterns('',

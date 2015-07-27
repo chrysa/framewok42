@@ -1,15 +1,15 @@
-{%  extends 'core/base.html' %}
+{% extends 'core/base.html' %}
 {% load i18n %}
 {% block content %}
     <ol class="breadcrumb">
-      <li class="active">{% trans 'forum' %}</li>
+        <li class="active">{% trans 'forum' %}</li>
     </ol>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="jumbotron">
                 <div class="container">
                     <div class="row">
-                        {%  if cat %}
+                        {% if cat %}
                             {% for c in cat %}
                                 <div class="col-md-3">
                                     <a href="{{ c.slug }}">{{ c.Name }}</a>
@@ -18,13 +18,13 @@
                                     </div>
                                     <div class="row">
                                 {% endif %}
-                            {%  endfor %}
-                        {%  else %}
-                            <div class="alert alert-info" role="alert">{%  trans "no_category" %}</div>
-                        {%  endif %}
-                    </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="alert alert-info" role="alert">{% trans "no_category" %}</div>
+                        {% endif %}
+                        </div>
                 </div>
             </div>
         </div>
     </div>
-{%  endblock %}
+{% endblock %}

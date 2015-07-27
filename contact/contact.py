@@ -1,11 +1,11 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 """
 :module: contact.contact
 :synopsis: generate contact form
 
 :moduleauthor: anthony greau <greau.anthony@gmail.com>
 :created: 01/07/2015
-:update: 21/07/2015:
+:update: 27/07/2015:
 :var logger_error: logger error
 :var logger_info: logger info
 :seealso: django.core.mail.send_mail
@@ -32,20 +32,24 @@ def display(request):
     :type request: object
     :var errors: dict of process error
     :var success: dict of success process
+    :var dump: dump to request.POST for set email whaen user log
     :var form: contain struct of contact form
     :return: HTTPResponse
     """
     logger_info.info(info_load_log_message(request))
     errors = {}
     success = {}
-    form = ContactForm(request.POST)
     if request.method == 'POST':
-        if request.POST['subject'] and request.POST['message'] and request.POST['email'] and form.is_valid():
+        dump = request.POST.copy()
+        if 'email' not in dump:
+            dump.appendlist('email', request.user.email)
+        form = ContactForm(dump)
+        if form.is_valid():
             try:
                 send_mail(
                     form.cleaned_data['subject'],
                     form.cleaned_data['message'],
-                    form.cleaned_data['email'] if 'email' in form.cleaned_data else request.user.email,
+                    form.cleaned_data['email'],
                     ["greau.anthony@gmail.com", ]
                 )
                 success['message'] = _('contact_success')
@@ -63,7 +67,7 @@ def display(request):
     return render(
         request,
         'contact/contact.html', {
-            'formcontact': form,
+            'formcontact': ContactForm(request.POST),
             'errors': errors,
             'success': success
         }

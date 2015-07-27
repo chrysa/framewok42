@@ -12,6 +12,7 @@
 :todo: personalise admin panel
 """
 from django.contrib import admin
+
 from forum.models import ForumCat
 from forum.models import ForumPost
 from forum.models import ForumTopic

@@ -32,6 +32,7 @@ class ForumTests(TestCase):
     :return: None
     :rtype: None
     """
+
     def setUp(self):
         """
         set up variable and create user for the test
@@ -201,7 +202,8 @@ class ForumTests(TestCase):
         :return: None
         """
         reponse = self.client.get(reverse('create_topic', kwargs={'cat': ForumCat.objects.get(slug=self.cat[0]).slug}))
-        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('create_topic', kwargs={'cat': self.cat_slug}))
+        self.assertRedirects(reponse,
+                             reverse('login') + '?next=' + reverse('create_topic', kwargs={'cat': self.cat_slug}))
 
     def test_create_topic(self):
         """
@@ -211,7 +213,8 @@ class ForumTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
-        reponse = self.client.post(reverse('create_topic', kwargs={'cat': ForumCat.objects.get(slug=self.cat_slug)}), self.create_topic, follow=True)
+        reponse = self.client.post(reverse('create_topic', kwargs={'cat': ForumCat.objects.get(slug=self.cat_slug)}),
+                                   self.create_topic, follow=True)
         self.assertTemplateUsed(reponse, 'forum/topic.html')
         self.assertEqual(reponse.status_code, 200)
         self.client.logout()
@@ -226,7 +229,8 @@ class ForumTests(TestCase):
         create_topic = self.create_topic
         create_topic['Title'] = ''
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
-        reponse = self.client.post(reverse('create_topic', kwargs={'cat': ForumCat.objects.get(slug=self.cat_slug)}), create_topic, follow=True)
+        reponse = self.client.post(reverse('create_topic', kwargs={'cat': ForumCat.objects.get(slug=self.cat_slug)}),
+                                   create_topic, follow=True)
         self.assertContains(reponse, _("topic_must_contain_title"))
         self.assertTemplateUsed(reponse, 'forum/create_topic.html')
         self.assertEqual(reponse.status_code, 200)
@@ -256,7 +260,8 @@ class ForumTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
-        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), follow=True)
+        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}),
+                                   follow=True)
         self.assertContains(reponse, self.ref_topic['Title'])
         self.assertContains(reponse, self.ref_topic['Message'])
         self.assertTemplateUsed(reponse, 'forum/topic.html')
@@ -270,8 +275,10 @@ class ForumTests(TestCase):
         :var reponse: response of request
         :return: None
         """
-        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), follow=True)
-        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}))
+        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}),
+                                   follow=True)
+        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('topic_cat', kwargs={'cat': self.cat_slug,
+                                                                                                 'topic': self.topic_slug}))
 
     def test_acces_to_topic_with_inexisting_cat(self):
         """
@@ -281,7 +288,8 @@ class ForumTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
-        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.inexisting_cat, 'topic': self.topic_slug}), follow=True)
+        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.inexisting_cat, 'topic': self.topic_slug}),
+                                   follow=True)
         self.assertContains(reponse, self.cat[0])
         self.assertTemplateUsed(reponse, 'forum/home.html')
         self.assertEqual(reponse.status_code, 200)
@@ -295,7 +303,8 @@ class ForumTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
-        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.inexisting_topic}), follow=True)
+        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.inexisting_topic}),
+                                   follow=True)
         self.assertContains(reponse, self.cat[0])
         self.assertContains(reponse, self.ref_topic['Title'])
         self.assertTemplateUsed(reponse, 'forum/cat.html')
@@ -310,7 +319,8 @@ class ForumTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
-        reponse = self.client.post(reverse('topic_cat', kwargs={'cat': self.inexisting_cat, 'topic': self.inexisting_topic}), follow=True)
+        reponse = self.client.post(
+            reverse('topic_cat', kwargs={'cat': self.inexisting_cat, 'topic': self.inexisting_topic}), follow=True)
         self.assertContains(reponse, self.cat[0])
         self.assertTemplateUsed(reponse, 'forum/home.html')
         self.assertEqual(reponse.status_code, 200)
@@ -324,7 +334,10 @@ class ForumTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
-        reponse = self.client.post(reverse('send_reply', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), self.test_response, HTTP_REFERER=reverse('topic_cat', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), follow=True)
+        reponse = self.client.post(reverse('send_reply', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}),
+                                   self.test_response, HTTP_REFERER=reverse('topic_cat', kwargs={'cat': self.cat_slug,
+                                                                                                 'topic': self.topic_slug}),
+                                   follow=True)
         self.assertContains(reponse, self.test_response['Message'])
         self.assertTemplateUsed(reponse, 'forum/topic.html')
         self.assertEqual(reponse.status_code, 200)
@@ -337,8 +350,10 @@ class ForumTests(TestCase):
         :var reponse: response of request
         :return: None
         """
-        reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}), self.edit_topic, follow=True)
-        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}))
+        reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug}),
+                                   self.edit_topic, follow=True)
+        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('edit_topic', kwargs={'cat': self.cat_slug,
+                                                                                                  'topic': self.topic_slug}))
 
     def test_edit_topic_title_message(self):
         """

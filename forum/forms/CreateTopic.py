@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 """
 :module: forum.forms.CreateTopic
 :synopsis: generate the forum for create a new topic
@@ -27,6 +27,7 @@ class TopicForm(forms.Form, forms.ModelForm):
     :return: None
     :rtype: None
     """
+
     class Meta:
         model = ForumTopic
         fields = [

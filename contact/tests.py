@@ -18,7 +18,6 @@ from profil.models import UserLang
 
 
 class ContactTests(TestCase):
-
     """
     this class define all unit test for contact
 
@@ -81,7 +80,8 @@ class ContactTests(TestCase):
         :var reponse: response of request
         :return: None
         """
-        reponse = self.client.get(reverse('contact'), {'email': 'test@test.fr', 'subject': 'mail unit test', 'message': 'message de test'})
+        reponse = self.client.get(reverse('contact'),
+                                  {'email': 'test@test.fr', 'subject': 'mail unit test', 'message': 'message de test'})
         self.assertContains(reponse, _("contact_success"))
         self.assertTemplateUsed(reponse, 'contact/contact.html')
         self.assertEqual(reponse.status_code, 200)
@@ -94,7 +94,7 @@ class ContactTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user[
-                          'username'], password=self.register_user['password'])
+            'username'], password=self.register_user['password'])
         reponse = self.client.get(
             reverse('contact'), {'subject': 'mail unit test', 'message': 'message de test'})
         self.assertContains(reponse, _("contact_success"))
@@ -148,7 +148,7 @@ class ContactTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user[
-                          'username'], password=self.register_user['password'])
+            'username'], password=self.register_user['password'])
         reponse = self.client.get(reverse('contact'), {})
         self.assertContains(reponse, _('contact_must_contain_subject'))
         self.assertTemplateUsed(reponse, 'contact/contact.html')
@@ -163,7 +163,7 @@ class ContactTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user[
-                          'username'], password=self.register_user['password'])
+            'username'], password=self.register_user['password'])
         reponse = self.client.get(reverse('contact'), {})
         self.assertContains(reponse, _('contact_must_contain_subject'))
         self.assertTemplateUsed(reponse, 'contact/contact.html')
@@ -178,7 +178,7 @@ class ContactTests(TestCase):
         :return: None
         """
         self.client.login(username=self.register_user[
-                          'username'], password=self.register_user['password'])
+            'username'], password=self.register_user['password'])
         reponse = self.client.get(reverse('contact'), {})
         self.assertContains(reponse, _('contact_must_contain_subject'))
         self.assertContains(reponse, _('contact_must_contain_message'))

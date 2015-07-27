@@ -5255,3 +5255,35 @@
 [27/07/2015 13:53:55] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [27/07/2015 13:53:55] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [27/07/2015 13:53:55] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[27/07/2015 14:31:01] :: [views:login_user:error] [113] :: un admin a essaye de se connecter depuis le front comme un boulet
+[27/07/2015 14:31:01] :: [views:login_user:error] [117] :: un membre dus taff a essaye de se connecter depuis le front comme un boulet
+[27/07/2015 14:31:02] :: [views:login_user:error] [149] :: connection avec un mauvais password par user_test
+[27/07/2015 14:31:02] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[27/07/2015 14:31:03] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[27/07/2015 14:31:03] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[27/07/2015 14:31:03] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[27/07/2015 14:31:04] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[27/07/2015 14:31:04] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[27/07/2015 14:31:04] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:04:18] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par chrysa
+[27/07/2015 17:34:30] :: [contact:display:error] [59] :: error_contactchrysa

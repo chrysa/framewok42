@@ -7,7 +7,6 @@ from django.conf import settings
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
@@ -26,7 +25,8 @@ class Migration(migrations.Migration):
                 ('CreateDate', models.DateTimeField(auto_now_add=True)),
                 ('LastActivity', models.DateTimeField(auto_now_add=True)),
                 ('Status', models.CharField(choices=[
-                 ('open', 'open'), ('progress', 'in_progress'), ('close', 'status')], max_length=20, default='open')),
+                    ('open', 'open'), ('progress', 'in_progress'), ('close', 'status')], max_length=20,
+                    default='open')),
                 ('Assign', models.ForeignKey(
                     related_name='assign', null=True, to=settings.AUTH_USER_MODEL)),
                 ('Autor', models.ForeignKey(to=settings.AUTH_USER_MODEL)),

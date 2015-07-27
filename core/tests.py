@@ -12,7 +12,6 @@ from django.core.urlresolvers import reverse
 
 
 class CoreUrlTests(TestCase):
-
     """
     this class define all unit test for core
 

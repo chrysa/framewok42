@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -7,10 +7,11 @@ SECRET_KEY = 'umg@=!%oux#wouig$#_g^u+9)lo5=3ocqte106(oi$w$6805c%'
 DEBUG = True
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = 'agreau'
-EMAIL_HOST_PASSWORD = 'mCKb0ss#123'
-DEFAULT_EMAIL_FROM = 'agreau@student.42.fr'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'greau.anthony@gmail.com'
+DEFAULT_EMAIL_FROM = 'greau.anthony@gmail.com'
+EMAIL_HOST_PASSWORD = 'uxavvwvlhvkkdapo'
+EMAIL_USE_TLS = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
@@ -74,39 +75,39 @@ LANGUAGES = (
 )
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-) + ADDITIONALS_APPS + APP_PERSO
+                     'django.contrib.admin',
+                     'django.contrib.auth',
+                     'django.contrib.contenttypes',
+                     'django.contrib.sessions',
+                     'django.contrib.messages',
+                     'django.contrib.staticfiles',
+                 ) + ADDITIONALS_APPS + APP_PERSO
 
 MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
-) + ADDITIONALS_MIDDLEWARE
+                         'django.contrib.sessions.middleware.SessionMiddleware',
+                         'django.middleware.common.CommonMiddleware',
+                         'django.middleware.csrf.CsrfViewMiddleware',
+                         'django.contrib.auth.middleware.AuthenticationMiddleware',
+                         'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+                         'django.contrib.messages.middleware.MessageMiddleware',
+                         'django.middleware.clickjacking.XFrameOptionsMiddleware',
+                         'django.middleware.security.SecurityMiddleware',
+                         'django.middleware.locale.LocaleMiddleware',
+                     ) + ADDITIONALS_MIDDLEWARE
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.template.context_processors.debug",
-    "django.template.context_processors.i18n",
-    "django.template.context_processors.media",
-    "django.template.context_processors.static",
-    "django.template.context_processors.tz",
-    "django.contrib.messages.context_processors.messages"
-) + ADDITIONNALS_TEMPLATE_CONTEXT_PROCESSORS
+                                  "django.contrib.auth.context_processors.auth",
+                                  "django.template.context_processors.debug",
+                                  "django.template.context_processors.i18n",
+                                  "django.template.context_processors.media",
+                                  "django.template.context_processors.static",
+                                  "django.template.context_processors.tz",
+                                  "django.contrib.messages.context_processors.messages"
+                              ) + ADDITIONNALS_TEMPLATE_CONTEXT_PROCESSORS
 
 ROOT_URLCONF = 'framework.urls'
 
@@ -240,8 +241,8 @@ LOGGING = {
 STATICFILES_DIRS = ()
 
 for a in APP_PERSO:
-    static = os.path.join(os.path.join(BASE_DIR, a),  'statics')
-    template = os.path.join(os.path.join(BASE_DIR, a),  'templates')
+    static = os.path.join(os.path.join(BASE_DIR, a), 'statics')
+    template = os.path.join(os.path.join(BASE_DIR, a), 'templates')
     if os.path.isdir(static):
         STATICFILES_DIRS = STATICFILES_DIRS + (static,)
     if os.path.isdir(template):

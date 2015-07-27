@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 
 import base64
 import logging
@@ -14,7 +14,9 @@ from django.contrib.auth import hashers
 from django.contrib.auth import login
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
+
 from django.contrib.auth.models import User
+
 from django.utils.translation import ugettext as _
 
 from generate_logs import functions as l_fct

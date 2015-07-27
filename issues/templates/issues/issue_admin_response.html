@@ -10,19 +10,20 @@
                     <footer><cite title="Source Title">{{ issue.Autor }}</cite> - {{ issue.CreateDate }}</footer>
                 </blockquote>
             </div>
-            {%  if issue.Answer %}
+            {% if issue.Answer %}
                 <div class="row">
                     <div class="col-md-12">
                         <blockquote>
-                            <p>{{  issue.Answer }}</p>
-                            <footer><cite title="Source Title">{{ issue.Assign }}</cite> - {{ issue.LastActivity }}</footer>
+                            <p>{{ issue.Answer }}</p>
+                            <footer><cite title="Source Title">{{ issue.Assign }}</cite> - {{ issue.LastActivity }}
+                            </footer>
                         </blockquote>
                     </div>
                 </div>
-            {%  endif %}
+            {% endif %}
         </div>
     </div>
-    {%  if error %}
+    {% if error %}
         <div class="alert alert-danger" role="alert">
             {{ error }}
         </div>
@@ -42,7 +43,7 @@
             {{ form.answer }}
         </div>
         <div class="form-group">
-            <input type="submit" value="{% trans 'answer'|capfirst %}" class="btn btn-primary btn-lg btn-block" />
+            <input type="submit" value="{% trans 'answer'|capfirst %}" class="btn btn-primary btn-lg btn-block"/>
         </div>
     </form>
 {% endblock %}

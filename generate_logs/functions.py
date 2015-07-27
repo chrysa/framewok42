@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 
 
 def error_ldap_log_message(request, type):
@@ -6,7 +6,8 @@ def error_ldap_log_message(request, type):
 
 
 def error_load_log_message(request):
-    return 'user deja connecte essai de charger de la page ' + str(request.META['PATH_INFO']) + ' par ' + str(request.user)
+    return 'user deja connecte essai de charger de la page ' + str(request.META['PATH_INFO']) + ' par ' + str(
+        request.user)
 
 
 def error_inexistant_user_log_message(request):

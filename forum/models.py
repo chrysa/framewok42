@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 """
 :module: forum.models
 :synopsis: define storage models for forum

@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 """
 :module: forum.views
 :synopsis: generate all content of forum
@@ -20,7 +20,9 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
+
 from django.utils.translation import ugettext as _
+
 from django.utils.text import slugify
 
 from forum import models

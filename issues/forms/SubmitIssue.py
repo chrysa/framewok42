@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 from django import forms
 from django.utils.translation import ugettext as _
 
@@ -6,7 +6,6 @@ from issues.models import Issue
 
 
 class IssueForm(forms.Form):
-
     class Meta:
         model = Issue
         fields = [

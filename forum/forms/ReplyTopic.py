@@ -1,4 +1,4 @@
-#-*-coding:utf-8 -*-
+# -*-coding:utf-8 -*-
 """
 :module: forum.forms.ReplyTopic
 :synopsis: generate the forum for reply of a topic
