@@ -84,6 +84,7 @@ class ForumTests(TestCase):
         ).save()
         self.inexisting_cat = 'inexisting-cat'
         self.inexisting_topic = 'inexisting-topic'
+        self.inexisting_post = '100'
         self.cat_slug = ForumCat.objects.get(Name=self.cat[0]).slug
         self.topic_slug = ForumTopic.objects.get(CatParent=ForumCat.objects.get(Name=self.cat[0])).slug
         ForumPost(
@@ -444,7 +445,38 @@ class ForumTests(TestCase):
                                                                                                  'topic': self.topic_slug,
                                                                                                  'post': post.pk}))
 
-# edit post
-# edit post blank mesage
-# edit inexistant post
-# edit inexistant post with inexisting cat
+    def test_edit_post(self):
+        post = ForumPost.objects.get(Message=self.ref_response['Message'])
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(
+            reverse('edit_post', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug, 'post': post.pk}),
+            self.edit_post, follow=True)
+        self.assertContains(reponse, self.edit_post['Message'])
+        self.assertTemplateUsed(reponse, 'forum/topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+
+    def test_edit_post_blank(self):
+        post = ForumPost.objects.get(Message=self.ref_response['Message'])
+        dump_mess = self.ref_response['Message']
+        self.ref_response['Message'] = ''
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(
+            reverse('edit_post', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug, 'post': post.pk}),
+            self.ref_response, follow=True)
+        self.assertContains(reponse, _('post_must_contain_message'))
+        self.assertContains(reponse, dump_mess)
+        self.assertTemplateUsed(reponse, 'forum/edit_post.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()
+        self.ref_response['Message'] = dump_mess
+
+    def test_edit_post_blank(self):
+        self.client.login(username=self.register_user['username'], password=self.register_user['password'])
+        reponse = self.client.post(
+            reverse('edit_post', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug, 'post': self.inexisting_post}),
+            self.ref_response, follow=True)
+        self.assertContains(reponse, self.ref_response['Message'])
+        self.assertTemplateUsed(reponse, 'forum/topic.html')
+        self.assertEqual(reponse.status_code, 200)
+        self.client.logout()

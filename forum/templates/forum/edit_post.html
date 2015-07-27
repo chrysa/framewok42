@@ -6,6 +6,11 @@
         <li><a href="{%  url 'cat' cat.slug %}">{{ cat.Name }}</a></li>
         <li class="active">{% trans "edit_post" %}</li>
     </ol>
+    {% if error %}
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+    {% endif %}
     <form action="{%  url 'edit_post' cat.slug topic post %}" method="post">
         {% csrf_token %}
         <div class="form-group">

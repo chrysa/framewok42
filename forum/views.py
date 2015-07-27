@@ -21,7 +21,6 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
-
 from django.utils.text import slugify
 
 from forum import models
@@ -123,6 +122,7 @@ def create_topic(request, cat):
     :type cat: slug
     :var cat: categorie object selected by slug
     :var form: form for create topic
+    :var errors: dict of process error
     :var create: new topic
     :var topic: get the new topic
     :var context: define the context for display page
@@ -351,6 +351,7 @@ def edit_post(request, cat, topic, post):
     :type cat: slug
     :var topic: topic slug
     :type topic: slug
+    :var errors: dict of process error
     :var cat: select cat by slug
     :var form: form for edit post
     :var update: select post to update and update him
@@ -358,37 +359,44 @@ def edit_post(request, cat, topic, post):
     :var context: define the context for display topic
     :return: HTTPResponse
     """
+    error = {}
     logger_info.info(info_load_log_message(request))
     cat = models.ForumCat.objects.get(slug=cat)
     if request.POST:
         form = PostForm(request.POST)
-        if form.is_valid():
-            update = models.ForumPost.objects.filter(
-                pk=post
-            ).update(
-                Message=form.cleaned_data['Message'],
-                LastModified=datetime.datetime.now()
-            )
-            if update is not None:
-                return redirect(
-                    reverse(
-                        'topic_cat',
-                        kwargs={
-                            'cat': cat.slug,
-                            'topic': topic,
-                        }
-                    ),
-                    permanent=True
+        if request.POST['Message'] is not None and form.is_valid():
+            try:
+                update = models.ForumPost.objects.filter(
+                    pk=post
+                ).update(
+                    Message=form.cleaned_data['Message'],
+                    LastModified=datetime.datetime.now()
                 )
+                if update is not None:
+                    return redirect(
+                        reverse(
+                            'topic_cat',
+                            kwargs={
+                                'cat': cat.slug,
+                                'topic': topic,
+                            }
+                        ),
+                        permanent=True
+                    )
+            except:
+                return display_topic(request, cat, topic)
+        else:
+            post_sel = models.ForumPost.objects.get(pk=post)
+            error['Message'] = _('post_must_contain_message')
     else:
         post_sel = models.ForumPost.objects.get(pk=post)
-        context = {
+    return render(
+        request,
+        "forum/edit_post.html", {
             'cat': cat,
             'topic': topic,
-            'post': post, 'form': PostForm(post_sel.Message),
-        }
-        return render(
-            request,
-            "forum/edit_post.html",
-            context,
-        )
+            'post': post,
+            'error': error,
+            'form': PostForm({'Message': post_sel.Message}),
+        },
+    )
