@@ -41,6 +41,8 @@ STATIC_ROOT = 'statics/'
 
 ALLOWED_HOSTS = ['*']
 
+ADMINS = (('Chrysa', 'greau.anthony@gmail.com'),)
+
 APP_PERSO = (
     'contact',
     'core',

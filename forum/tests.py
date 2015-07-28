@@ -345,7 +345,7 @@ class ForumTests(TestCase):
 
     def test_edit_topic_unlog(self):
         """
-        test to edit at a topic unlog
+        test to edit a topic when no user log
 
         :var reponse: response of request
         :return: None
@@ -357,7 +357,7 @@ class ForumTests(TestCase):
 
     def test_edit_topic_title_message(self):
         """
-        test to edit at a topic
+        test to edit a topic
 
         :var reponse: response of request
         :return: None
@@ -372,6 +372,12 @@ class ForumTests(TestCase):
         self.client.logout()
 
     def test_edit_topic_title(self):
+        """
+        test to edit a title's topic
+
+        :var reponse: response of request
+        :return: None
+        """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         dump_title = self.edit_topic['Title']
         self.edit_topic['Title'] = self.ref_topic['Title']
@@ -385,6 +391,12 @@ class ForumTests(TestCase):
         self.client.logout()
 
     def test_edit_topic_message(self):
+        """
+        test to edit a message's topic
+
+        :var reponse: response of request
+        :return: None
+        """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         dump_mess = self.edit_topic['Message']
         self.edit_topic['Message'] = self.ref_topic['Message']
@@ -398,6 +410,12 @@ class ForumTests(TestCase):
         self.client.logout()
 
     def test_edit_topic_blank_title(self):
+        """
+        test to edit a topic with blank mtitle
+
+        :var reponse: response of request
+        :return: None
+        """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         dump_title = self.edit_topic['Title']
         self.edit_topic['Title'] = ''
@@ -411,6 +429,12 @@ class ForumTests(TestCase):
         self.client.logout()
 
     def test_edit_topic_blank_message(self):
+        """
+        test to edit a topic with blank message
+
+        :var reponse: response of request
+        :return: None
+        """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         dump_mess = self.edit_topic['Message']
         self.edit_topic['Message'] = ''
@@ -423,7 +447,7 @@ class ForumTests(TestCase):
         self.edit_topic['Message'] = dump_mess
         self.client.logout()
 
-    def test_edit_inexisting_cat(self):
+    def test_edit_topic_inexisting_cat(self):
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.inexisting_cat, 'topic': self.topic_slug}),
                                    self.edit_topic, follow=True)

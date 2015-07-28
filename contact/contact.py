@@ -14,6 +14,7 @@
 """
 import logging
 
+from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
 from django.utils.translation import ugettext as _
@@ -46,11 +47,14 @@ def display(request):
         form = ContactForm(dump)
         if form.is_valid():
             try:
+                admins = []
+                for admin in settings.ADMINS:
+                    admins.append(admin[1])
                 send_mail(
                     form.cleaned_data['subject'],
                     form.cleaned_data['message'],
                     form.cleaned_data['email'],
-                    ["greau.anthony@gmail.com", ]
+                    admins
                 )
                 success['message'] = _('contact_success')
                 logger_info.info(_("contact_success") + request.user.username)
