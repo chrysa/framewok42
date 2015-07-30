@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:/Github/django-struct/django_struct_app/.idea/django_struct_app.iml" filepath="D:/Github/django-struct/django_struct_app/.idea/django_struct_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../personal_work/cv/cv_app/.idea/cv_app.iml" filepath="$PROJECT_DIR$/../../../personal_work/cv/cv_app/.idea/cv_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/framework42.iml" filepath="$PROJECT_DIR$/.idea/framework42.iml" />
-      <module fileurl="file://D:/personnal_work/framework_perso/framework_perso_app/.idea/framework_perso_app.iml" filepath="D:/personnal_work/framework_perso/framework_perso_app/.idea/framework_perso_app.iml" />
-      <module fileurl="file://D:/personnal_work/grabbeur/grappeur_app/.idea/grappeur_app.iml" filepath="D:/personnal_work/grabbeur/grappeur_app/.idea/grappeur_app.iml" />
-      <module fileurl="file://D:/personnal_work/django_rest_angular/test_app_rest/.idea/test_app_rest.iml" filepath="D:/personnal_work/django_rest_angular/test_app_rest/.idea/test_app_rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../personal_work/test_rest/test_rest_app/.idea/test_rest_app.iml" filepath="$PROJECT_DIR$/../../../personal_work/test_rest/test_rest_app/.idea/test_rest_app.iml" />
     </modules>
   </component>
 </project>

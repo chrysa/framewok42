@@ -448,6 +448,12 @@ class ForumTests(TestCase):
         self.client.logout()
 
     def test_edit_topic_inexisting_cat(self):
+        """
+        test to edit a topic with wro,g category
+
+        :var reponse: response of request
+        :return: None
+        """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.inexisting_cat, 'topic': self.topic_slug}),
                                    self.edit_topic, follow=True)
@@ -458,6 +464,12 @@ class ForumTests(TestCase):
         self.client.logout()
 
     def test_edit_inexisting_topic(self):
+        """
+        test to edit a topic with wrong topic
+
+        :var reponse: response of request
+        :return: None
+        """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         reponse = self.client.post(reverse('edit_topic', kwargs={'cat': self.cat_slug, 'topic': self.inexisting_topic}),
                                    self.edit_topic, follow=True)
@@ -466,6 +478,12 @@ class ForumTests(TestCase):
         self.client.logout()
 
     def test_edit_inexisting_cat_topic(self):
+        """
+        test to edit a topic with wrong cat and topic
+
+        :var reponse: response of request
+        :return: None
+        """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         reponse = self.client.post(
             reverse('edit_topic', kwargs={'cat': self.inexisting_cat, 'topic': self.inexisting_topic}), self.edit_topic,
@@ -476,6 +494,12 @@ class ForumTests(TestCase):
         self.client.logout()
 
     def test_edit_post_unlog(self):
+        """
+        test to edit a post with unlog user
+
+        :var reponse: response of request
+        :return: None
+        """
         post = ForumPost.objects.get(Message=self.ref_response['Message'])
         reponse = self.client.post(
             reverse('edit_post', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug, 'post': post.pk}),
@@ -485,6 +509,12 @@ class ForumTests(TestCase):
                                                                                                  'post': post.pk}))
 
     def test_edit_post(self):
+        """
+        test to edit a post
+
+        :var reponse: response of request
+        :return: None
+        """
         post = ForumPost.objects.get(Message=self.ref_response['Message'])
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         reponse = self.client.post(
@@ -496,6 +526,12 @@ class ForumTests(TestCase):
         self.client.logout()
 
     def test_edit_post_blank(self):
+        """
+        test to edit a post with blank message
+
+        :var reponse: response of request
+        :return: None
+        """
         post = ForumPost.objects.get(Message=self.ref_response['Message'])
         dump_mess = self.ref_response['Message']
         self.ref_response['Message'] = ''
@@ -510,7 +546,13 @@ class ForumTests(TestCase):
         self.client.logout()
         self.ref_response['Message'] = dump_mess
 
-    def test_edit_post_blank(self):
+    def test_edit_inexistant_post(self):
+        """
+        test to edit a wrong topic
+
+        :var reponse: response of request
+        :return: None
+        """
         self.client.login(username=self.register_user['username'], password=self.register_user['password'])
         reponse = self.client.post(
             reverse('edit_post', kwargs={'cat': self.cat_slug, 'topic': self.topic_slug, 'post': self.inexisting_post}),
@@ -519,3 +561,4 @@ class ForumTests(TestCase):
         self.assertTemplateUsed(reponse, 'forum/topic.html')
         self.assertEqual(reponse.status_code, 200)
         self.client.logout()
+
