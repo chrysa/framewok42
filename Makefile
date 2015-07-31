@@ -90,3 +90,6 @@ launch: clean install static migrate validate test transall
 doc: clean migrate validate static test transall
 	printf '$(BLUE)génération de la documentation$(WHITE)\n'
 	python -c "from ressources.gen_doc import gen_doc ; gen_doc()"
+
+reset: reinstall fclan
+	rm -rf doc

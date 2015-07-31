@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../../personal_work/cv/cv_app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../../personal_work/framework_perso/framework_perso_app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../../personal_work/grabbeur/grabbeur_app" vcs="Git" />
-  </component>
-</project>
