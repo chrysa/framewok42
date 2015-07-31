@@ -1,13 +1,27 @@
 # -*-coding:utf-8 -*-
+"""
+:module: issues.views
+:synopsis: generate all content of issues
+
+:moduleauthor: anthony greau <greau.anthony@gmail.com>
+:created: 01/07/2015
+:update: 30/07/2015
+:var logger_error: logger error
+:var logger_info: logger info
+:seealso: issues.models.Issue
+:seealso: forum.forms.CreateTopic.TopicForm
+:seealso: generate_logs.functions.info_load_log_message
+:seealso: issues.forms.AdminResponseIssue.AdminResponseIssueForm
+:seealso: from issues.forms.SubmitIssue.IssueForm
+:todo: gerer edition depuis ux
+"""
 import datetime
 import logging
 
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.core.urlresolvers import reverse
-
 from django.contrib.auth.decorators import login_required
-
 from django.contrib.auth.models import User
 
 from issues.models import Issue
@@ -20,16 +34,19 @@ logger_info = logging.getLogger('info')
 
 @login_required
 def index(request):
+    """display the issues about the user connected
+
+    :param request: object contain context of request
+    :type request: object
+    :var issues: contain issues to display
+    :return: HTTPResponse
+    """
     logger_info.info(info_load_log_message(request))
-    if request.user.is_superuser:
-        context = {
-            'issues': Issue.objects.all(),
-        }
+    if request.user.is_superuser or request.user.is_staff:
+        issues = Issue.objects.all()
     else:
-        context = {
-            'issues': Issue.objects.filter(Autor=request.user),
-        }
-    return render(request, 'issues/home.html', context)
+        issues = Issue.objects.filter(Autor=request.user)
+    return render(request, 'issues/home.html', {'issues': issues})
 
 
 @login_required

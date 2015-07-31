@@ -5,7 +5,7 @@
 
 :moduleauthor: anthony greau <greau.anthony@gmail.com>
 :created: 01/07/2015
-:update: 21/07/2015:
+:update: 21/07/2015
 :seealso: forum.moodels.ForumPost
 """
 from django import forms

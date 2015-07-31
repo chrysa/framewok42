@@ -10,6 +10,7 @@
 :seealso: forum.models.ForumTopic
 :seealso: forum.models.ForumPost
 :seealso: profil.models.UserLang
+:todo: test admin
 """
 from django.test import Client
 from django.test import TestCase
@@ -27,7 +28,7 @@ class ForumTests(TestCase):
     """
     this class define all unit test for forum
 
-    :param TestCase: librarie of unittest
+    :param TestCase: librairy of unittest
     :type TestCase: object
     :return: None
     :rtype: None

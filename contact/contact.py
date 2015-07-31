@@ -5,7 +5,7 @@
 
 :moduleauthor: anthony greau <greau.anthony@gmail.com>
 :created: 01/07/2015
-:update: 27/07/2015:
+:update: 27/07/2015
 :var logger_error: logger error
 :var logger_info: logger info
 :seealso: django.core.mail.send_mail

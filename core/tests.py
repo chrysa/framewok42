@@ -15,7 +15,7 @@ class CoreUrlTests(TestCase):
     """
     this class define all unit test for core
 
-    :param TestCase: librarie of unittest
+    :param TestCase: librairy of unittest
     :type TestCase: object
     :return: None
     :rtype: None
