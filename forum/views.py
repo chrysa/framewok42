@@ -18,6 +18,7 @@ import logging
 
 from django.shortcuts import redirect
 from django.shortcuts import render
+from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 
@@ -207,7 +208,7 @@ def reply_topic(request, cat, topic):
         models.ForumTopic.objects.filter(
             slug=topic
         ).update(
-            LastReply=datetime.datetime.now()
+            LastReply=timezone.now()
         )
         return redirect(
             request.META['HTTP_REFERER'],
@@ -261,7 +262,7 @@ def edit_topic(request, cat, topic):
                 Autor=request.user,
                 slug=slugify(form.cleaned_data['Title']),
                 Message=form.cleaned_data['Message'],
-                LastModified=datetime.datetime.now()
+                LastModified=timezone.now()
             )
             if update is not None:
                 topic = models.ForumTopic.objects.filter(
@@ -372,7 +373,7 @@ def edit_post(request, cat, topic, post):
                     pk=post
                 ).update(
                     Message=form.cleaned_data['Message'],
-                    LastModified=datetime.datetime.now()
+                    LastModified=timezone.now()
                 )
                 if update is not None:
                     return redirect(

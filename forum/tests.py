@@ -10,7 +10,6 @@
 :seealso: forum.models.ForumTopic
 :seealso: forum.models.ForumPost
 :seealso: profil.models.UserLang
-:todo: test admin
 """
 from django.test import Client
 from django.test import TestCase

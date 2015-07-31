@@ -6,7 +6,8 @@ from django.contrib.auth.models import User
 
 from profil.models import UserLang
 
-class IssuesTests(TestCase):
+
+class LogsTests(TestCase):
     def setUp(self):
         self.client = Client()
         self.register_user = {
@@ -23,5 +24,14 @@ class IssuesTests(TestCase):
         User.objects.create_user(**self.admin_datas)
         User.objects.filter(username=self.admin_datas['username']).update(is_staff=True, is_superuser=True)
 
+#acces url list not log
+#acces url list user log
+#acces url list admin log
+#acces url spe not log
+#acces url spe user log
+#acces url spe admin log
     def test_co_admin(self):
         reponse = self.client.post(reverse('admin:index'), self.admin_datas, follow=True)
+
+#test aces par type de categorie
+#test aces par categorie inexistante

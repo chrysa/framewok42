@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-31 00:27+0000\n"
+"POT-Creation-Date: 2015-07-31 20:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: contact/contact.py:59 contact/contact.py:60 contact/tests.py:85
-#: contact/tests.py:100
+#: contact/contact.py:59 contact/contact.py:60 contact/tests/tests_send.py:59
+#: contact/tests/tests_send.py:74
 msgid "contact_success"
 msgstr ""
 
@@ -31,23 +31,24 @@ msgstr ""
 msgid "error_contact"
 msgstr ""
 
-#: contact/contact.py:66 contact/tests.py:113 contact/tests.py:137
-#: contact/tests.py:153 contact/tests.py:168 contact/tests.py:183
+#: contact/contact.py:66 contact/tests/tests_send.py:87
+#: contact/tests/tests_send.py:111 contact/tests/tests_send.py:127
+#: contact/tests/tests_send.py:142 contact/tests/tests_send.py:157
 msgid "contact_must_contain_subject"
 msgstr ""
 
-#: contact/contact.py:68 contact/tests.py:125 contact/tests.py:138
-#: contact/tests.py:184
+#: contact/contact.py:68 contact/tests/tests_send.py:99
+#: contact/tests/tests_send.py:112 contact/tests/tests_send.py:158
 msgid "contact_must_contain_message"
 msgstr ""
 
-#: contact/contact.py:70 contact/tests.py:139
+#: contact/contact.py:70 contact/tests/tests_send.py:113
 msgid "contact_must_contain_email"
 msgstr ""
 
 #: contact/forms/ContactFrom.py:28 contact/forms/ContactFrom.py:32
-#: contact/tests.py:58 contact/tests.py:71 profil/forms/RegisterForm.py:28
-#: profil/forms/RegisterForm.py:32
+#: contact/tests/tests_urls.py:58 contact/tests/tests_urls.py:71
+#: profil/forms/RegisterForm.py:28 profil/forms/RegisterForm.py:32
 msgid "mail_adress"
 msgstr ""
 
@@ -182,7 +183,7 @@ msgstr ""
 msgid "edit_post"
 msgstr ""
 
-#: forum/templates/forum/home.html:23 forum/tests.py:134 forum/tests.py:150
+#: forum/templates/forum/home.html:23 forum/tests.py:133 forum/tests.py:149
 msgid "no_category"
 msgstr ""
 
@@ -194,15 +195,15 @@ msgstr ""
 msgid "modify_by"
 msgstr ""
 
-#: forum/tests.py:235 forum/views.py:169
+#: forum/tests.py:234 forum/views.py:169
 msgid "topic_must_contain_title"
 msgstr ""
 
-#: forum/tests.py:251 forum/views.py:171
+#: forum/tests.py:250 forum/views.py:171
 msgid "topic_must_contain_message"
 msgstr ""
 
-#: forum/tests.py:543 forum/views.py:392
+#: forum/tests.py:542 forum/views.py:392
 msgid "post_must_contain_message"
 msgstr ""
 
@@ -322,11 +323,11 @@ msgstr ""
 msgid "submit_issue"
 msgstr ""
 
-#: issues/views.py:82
+#: issues/views.py:81
 msgid "save_error"
 msgstr ""
 
-#: issues/views.py:108
+#: issues/views.py:107
 msgid "update_error"
 msgstr ""
 

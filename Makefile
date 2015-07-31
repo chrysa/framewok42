@@ -17,13 +17,22 @@ YELLOW = \033[33m
 .SILENT:
 
 .DEFAULT:
-	printf ''
+	printf "I don't know '$<' \n\n"
+	make help
 
-module: 
-	printf '$(BLUE)ajout du/des module(s) $(CYAN)$(filter-out $@,$(MAKECMDGOALS))$(WHITE)\n' 
-	$(foreach mod, $(filter-out $@, $(MAKECMDGOALS)), python manage.py startapp $(mod))
+$(NAME): help
 
-migrate: validate
+
+help:
+	printf 'List of available commands \n'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'module' 'create architecture of modules'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'db' 'synchronise database'
+
+
+module:
+	$(foreach mod, $(filter-out $@, $(MAKECMDGOALS)), printf '$(BLUE)création du module $(CYAN)$(filter-out $@,$(MAKECMDGOALS))$(WHITE)\n' && python manage.py startapp $(mod) && touch $(mod)/urls.py && echo "# -*-coding:utf-8 -*-\nfrom django.conf.urls import patterns\nfrom django.conf.urls import url" >> $(mod)/urls.py)
+
+db: validate
 	printf '$(BLUE)recuperation des changements$(WHITE)\n'
 	python manage.py makemigrations
 	printf '$(BLUE)migration de la base de données$(WHITE)\n'
@@ -57,15 +66,23 @@ test:
 	find . -name '*.mo' -exec rm -rf {} \;
 	printf '$(BLUE)lancement des tests unitaires$(WHITE)\n'
 	python manage.py test --verbosity $(VERBOSITY)
-	make trans
+	make transall
 
-install:
-	printf '$(BLUE)installation du fichier requirements.txt$(WHITE)\n'
-	pip install -r requirements.txt
+install_dev:
+	printf '$(BLUE)installation du fichier ressources/requirements/requirements_dev.txt$(WHITE)\n'
+	pip install -r ressources/requirements/requirements_dev.txt
+
+install_prod:
+	printf '$(BLUE)installation du fichier ressources/requirements/requirements.txt$(WHITE)\n'
+	pip install -r ressources/requirements/requirements.txt
 	
-uninstall:
-	printf '$(BLUE)desinstallation du fichier requirements.txt$(WHITE)\n'
-	pip uninstall --yes -r requirements.txt
+uninstall_dev:
+	printf '$(BLUE)desinstallation du fichier ressources/requirements/requirements_dev.txt$(WHITE)\n'
+	pip uninstall --yes -r ressources/requirements/requirements_dev.txt
+	
+uninstall_prod:
+	printf '$(BLUE)desinstallation du fichier ressources/requirements/requirements_prod.txt$(WHITE)\n'
+	pip uninstall --yes -r ressources/requirements/requirements_prod.txt
 
 reinstall: uninstall install clean
 
@@ -80,6 +97,8 @@ fclean:
 	pip freeze > plop
 	pip uninstall -r plop
 	rm plop
+	printf '$(BLUE)suppression des fichiers .mo$(WHITE)\n'
+	find . -name '*.mo' -exec rm -rf {} \;
 	make clean
 
 launch: clean install static migrate validate test transall
@@ -90,6 +109,3 @@ launch: clean install static migrate validate test transall
 doc: clean migrate validate static test transall
 	printf '$(BLUE)génération de la documentation$(WHITE)\n'
 	python -c "from ressources.gen_doc import gen_doc ; gen_doc()"
-
-reset: reinstall fclan
-	rm -rf doc

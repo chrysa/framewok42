@@ -12,8 +12,7 @@
 :seealso: forum.forms.CreateTopic.TopicForm
 :seealso: generate_logs.functions.info_load_log_message
 :seealso: issues.forms.AdminResponseIssue.AdminResponseIssueForm
-:seealso: from issues.forms.SubmitIssue.IssueForm
-:todo: gerer edition depuis ux
+:seealso: from issues.forms.SubmitIssue.IssueFor
 """
 import datetime
 import logging
