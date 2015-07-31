@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DjangoModelDependency</ID>
+  <OriginalElement>#app</OriginalElement>
+  <nodes>
+    <node x="659.75" y="745.0">profil.models.UserLang</node>
+    <node x="446.25000000000006" y="356.0">django.contrib.auth.models.Group</node>
+    <node x="337.75000000000006" y="668.0">issues.models.Issue</node>
+    <node x="12.75" y="668.0">forum.models.ForumTopic</node>
+    <node x="464.75000000000006" y="0.0">django.contrib.contenttypes.models.ContentType</node>
+    <node x="510.25000000000006" y="545.0">django.contrib.auth.models.User</node>
+    <node x="491.75000000000006" y="167.0">django.contrib.auth.models.Permission</node>
+    <node x="374.0113636363637" y="945.0">forum.models.ForumPost</node>
+    <node x="0.0" y="523.0">forum.models.ForumCat</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Group">
+      <point x="-51.25" y="-25.5" />
+      <point x="561.5" y="498.0" />
+      <point x="553.75" y="498.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="django.contrib.auth.models.User" target="django.contrib.auth.models.Permission">
+      <point x="51.250000000000014" y="-25.5" />
+      <point x="664.0" y="498.0" />
+      <point x="671.75" y="498.0" />
+      <point x="671.75" y="331.0" />
+      <point x="673.25" y="331.0" />
+      <point x="60.500000000000014" y="69.5" />
+    </edge>
+    <edge source="django.contrib.auth.models.Group" target="django.contrib.auth.models.Permission">
+      <point x="0.0" y="-58.5" />
+      <point x="553.75" y="331.0" />
+      <point x="552.25" y="331.0" />
+      <point x="-60.5" y="69.5" />
+    </edge>
+    <edge source="forum.models.ForumPost" target="django.contrib.auth.models.User">
+      <point x="56.25" y="-69.5" />
+      <point x="542.7613636363637" y="920.0" />
+      <point x="824.25" y="920.0" />
+      <point x="824.25" y="638.0" />
+      <point x="689.625" y="638.0" />
+      <point x="76.87500000000001" y="25.5" />
+    </edge>
+    <edge source="django.contrib.auth.models.Permission" target="django.contrib.contenttypes.models.ContentType">
+      <point x="0.0" y="-69.5" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="forum.models.ForumTopic" target="forum.models.ForumCat">
+      <point x="-76.25" y="-113.5" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="forum.models.ForumTopic" target="django.contrib.auth.models.User">
+      <point x="76.25" y="-113.5" />
+      <point x="241.5" y="638.0" />
+      <point x="535.875" y="638.0" />
+      <point x="-76.875" y="25.5" />
+    </edge>
+    <edge source="profil.models.UserLang" target="django.contrib.auth.models.User">
+      <point x="0.0" y="-36.5" />
+      <point x="736.75" y="648.0" />
+      <point x="638.375" y="648.0" />
+      <point x="25.625" y="25.5" />
+    </edge>
+    <edge source="forum.models.ForumPost" target="forum.models.ForumTopic">
+      <point x="-56.25" y="-69.5" />
+      <point x="430.2613636363637" y="920.0" />
+      <point x="165.25" y="920.0" />
+      <point x="0.0" y="113.5" />
+    </edge>
+    <edge source="issues.models.Issue" target="django.contrib.auth.models.User">
+      <point x="0.0" y="-113.5" />
+      <point x="488.75000000000006" y="648.0" />
+      <point x="587.125" y="648.0" />
+      <point x="-25.625" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8378623188405797" x="412.5" y="542.0" />
+  <SelectedNodes>
+    <node>django.contrib.auth.models.Group</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+</Diagram>
+

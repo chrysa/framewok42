@@ -27507,3 +27507,71 @@
 [31/07/2015 20:48:08] :: chargement de la page /forum/cat1/ref-topic/ par user_test
 [31/07/2015 20:48:08] :: chargement de la page /forum/ par user_test
 [31/07/2015 20:48:08] :: chargement de la page /forum/ par user_test
+[31/07/2015 22:54:12] :: chargement de la page /issue/ par user_test
+[31/07/2015 22:54:12] :: chargement de la page /profil/login par AnonymousUser
+[31/07/2015 22:54:12] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 22:54:12] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 22:54:12] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 22:54:12] :: connection classique par user_test
+[31/07/2015 22:54:12] :: chargement de la page /contact par user_test
+[31/07/2015 22:54:12] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 22:54:12] :: connection classique par user_test
+[31/07/2015 22:54:12] :: chargement de la page /forum/ par user_test
+[31/07/2015 22:54:13] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 22:54:13] :: connection classique par user_test
+[31/07/2015 22:54:13] :: chargement de la page / par user_test
+[31/07/2015 22:54:13] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 22:54:13] :: chargement de la page /profil/login par AnonymousUser
+[31/07/2015 22:54:13] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 22:54:13] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 22:54:13] :: chargement de la page /profil/login par AnonymousUser
+[31/07/2015 22:54:13] :: chargement de la page /profil/logout par user_test
+[31/07/2015 22:54:13] :: chargement de la page /profil/register par unittest_fr
+[31/07/2015 22:54:13] :: chargement de la page /contact par unittest_fr
+[31/07/2015 22:54:13] :: chargement de la page /profil/register par unittest_fr
+[31/07/2015 22:54:13] :: chargement de la page / par unittest_fr
+[31/07/2015 22:54:13] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 22:54:13] :: creation du compte AnonymousUser
+[31/07/2015 22:54:13] :: chargement de la page /contact par user_test
+[31/07/2015 22:54:13] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 22:54:13] :: creation du compte AnonymousUser
+[31/07/2015 22:54:13] :: chargement de la page / par user_test
+[31/07/2015 22:54:13] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 22:54:13] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 22:54:14] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 22:54:14] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 22:54:14] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 23:02:12] :: chargement de la page /issue/ par user_test
+[31/07/2015 23:02:12] :: chargement de la page /profil/login par AnonymousUser
+[31/07/2015 23:02:13] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 23:02:13] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 23:02:13] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 23:02:13] :: connection classique par user_test
+[31/07/2015 23:02:13] :: chargement de la page /contact par user_test
+[31/07/2015 23:02:13] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 23:02:13] :: connection classique par user_test
+[31/07/2015 23:02:13] :: chargement de la page /forum/ par user_test
+[31/07/2015 23:02:13] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 23:02:13] :: connection classique par user_test
+[31/07/2015 23:02:13] :: chargement de la page / par user_test
+[31/07/2015 23:02:13] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 23:02:13] :: chargement de la page /profil/login par AnonymousUser
+[31/07/2015 23:02:14] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 23:02:14] :: chargement de la page /profil/local par AnonymousUser
+[31/07/2015 23:02:14] :: chargement de la page /profil/login par AnonymousUser
+[31/07/2015 23:02:14] :: chargement de la page /profil/logout par user_test
+[31/07/2015 23:02:14] :: chargement de la page /profil/register par unittest_fr
+[31/07/2015 23:02:14] :: chargement de la page /contact par unittest_fr
+[31/07/2015 23:02:14] :: chargement de la page /profil/register par unittest_fr
+[31/07/2015 23:02:14] :: chargement de la page / par unittest_fr
+[31/07/2015 23:02:14] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 23:02:14] :: creation du compte AnonymousUser
+[31/07/2015 23:02:14] :: chargement de la page /contact par user_test
+[31/07/2015 23:02:14] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 23:02:14] :: creation du compte AnonymousUser
+[31/07/2015 23:02:14] :: chargement de la page / par user_test
+[31/07/2015 23:02:14] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 23:02:14] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 23:02:14] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 23:02:15] :: chargement de la page /profil/register par AnonymousUser
+[31/07/2015 23:02:15] :: chargement de la page /profil/register par AnonymousUser

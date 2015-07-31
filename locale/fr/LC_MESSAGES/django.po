@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-31 20:39+0000\n"
+"POT-Creation-Date: 2015-07-31 22:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,7 +183,8 @@ msgstr ""
 msgid "edit_post"
 msgstr ""
 
-#: forum/templates/forum/home.html:23 forum/tests.py:133 forum/tests.py:149
+#: forum/templates/forum/home.html:23 forum/tests/tests_cateory.py:111
+#: forum/tests/tests_cateory.py:127
 msgid "no_category"
 msgstr ""
 
@@ -195,27 +196,27 @@ msgstr ""
 msgid "modify_by"
 msgstr ""
 
-#: forum/tests.py:234 forum/views.py:169
-msgid "topic_must_contain_title"
-msgstr ""
-
-#: forum/tests.py:250 forum/views.py:171
-msgid "topic_must_contain_message"
-msgstr ""
-
-#: forum/tests.py:542 forum/views.py:392
+#: forum/tests/tests_posts.py:146 forum/views.py:393
 msgid "post_must_contain_message"
 msgstr ""
 
-#: forum/views.py:165
-msgid "save_topic"
+#: forum/tests/tests_topics.py:127 forum/views.py:170
+msgid "topic_must_contain_title"
+msgstr ""
+
+#: forum/tests/tests_topics.py:143 forum/views.py:172
+msgid "topic_must_contain_message"
 msgstr ""
 
 #: forum/views.py:166
+msgid "save_topic"
+msgstr ""
+
+#: forum/views.py:167
 msgid "topic_fail"
 msgstr ""
 
-#: forum/views.py:287
+#: forum/views.py:288
 msgid "thread_fail"
 msgstr ""
 

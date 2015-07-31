@@ -14,6 +14,8 @@ RED = \033[31m
 WHITE = \033[00m
 YELLOW = \033[33m
 
+.PHONY: clean doc fclean install_dev install_prod launch reinstall resettrans static test transall uninstall_dev uninstall_prod validate
+
 .SILENT:
 
 .DEFAULT:
@@ -22,12 +24,23 @@ YELLOW = \033[33m
 
 $(NAME): help
 
-
 help:
 	printf 'List of available commands \n'
-	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'module' 'create architecture of modules'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'clean' 'delete compiled and temporary files'
 	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'db' 'synchronise database'
-
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'doc' 'generate doc'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'fclean' 'uninstall all installed python package requirements_dev.txt rm *.mo and compileded files'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'install_dev' 'install all package list in ressources/requirements/requirements_dev.txt'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'install_prod' 'install all package list in ressources/requirements/requirements_prod.txt'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'launch' 'launch application after sync database, collectstatics, launch test and translate application'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'module' 'create architecture of modules'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'resettrans' 'delete all traductions files'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'static' 'collect statics'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'test' 'launch unit test'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'transall' 'translate applications'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'uninstall_dev' 'uninstall all package list in ressources/requirements/requirements_prod.txt'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'uninstall_prod' 'install all package list in ressources/requirements/requirements_prod.txt'
+	printf '$(BLUE)%s$(WHITE)\t\t%s\n' 'validate' 'valid applications models'
 
 module:
 	$(foreach mod, $(filter-out $@, $(MAKECMDGOALS)), printf '$(BLUE)création du module $(CYAN)$(filter-out $@,$(MAKECMDGOALS))$(WHITE)\n' && python manage.py startapp $(mod) && touch $(mod)/urls.py && echo "# -*-coding:utf-8 -*-\nfrom django.conf.urls import patterns\nfrom django.conf.urls import url" >> $(mod)/urls.py)
@@ -73,9 +86,9 @@ install_dev:
 	pip install -r ressources/requirements/requirements_dev.txt
 
 install_prod:
-	printf '$(BLUE)installation du fichier ressources/requirements/requirements.txt$(WHITE)\n'
-	pip install -r ressources/requirements/requirements.txt
-	
+	printf '$(BLUE)installation du fichier ressources/requirements/requirements_prod.txt$(WHITE)\n'
+	pip install -r ressources/requirements/requirements_prod.txt
+
 uninstall_dev:
 	printf '$(BLUE)desinstallation du fichier ressources/requirements/requirements_dev.txt$(WHITE)\n'
 	pip uninstall --yes -r ressources/requirements/requirements_dev.txt
@@ -84,13 +97,9 @@ uninstall_prod:
 	printf '$(BLUE)desinstallation du fichier ressources/requirements/requirements_prod.txt$(WHITE)\n'
 	pip uninstall --yes -r ressources/requirements/requirements_prod.txt
 
-reinstall: uninstall install clean
-
 clean:
 	printf '$(BLUE)suppression des fichiers .pyc$(WHITE)\n'
 	find .. -name '*.pyc' -exec rm -rf {} \; 
-	printf '$(BLUE)suppression des fichiers ~$(WHITE)\n'
-	find .. -name '*~' -exec rm -rf {} \; 
 
 fclean:
 	printf '$(BLUE)suppression de tous les paquets python installé$(WHITE)\n'
