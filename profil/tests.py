@@ -1,5 +1,7 @@
-# ajouter test de gestion de langue
-
+"""
+:todo: internationalisation
+:todo: logout staff et admin
+"""
 from django.test import Client
 from django.test import TestCase
 from django.core.urlresolvers import reverse
@@ -31,7 +33,7 @@ class RegisterTests(TestCase):
         self.assertEqual(reponse.status_code, 200)
         self.assertTemplateUsed(reponse, 'profil/register.html')
 
-    def register_anonymous(self):
+    def test_register_anonymous(self):
         response = self.client.post(reverse('register'), follow=True)
         self.assertRedirects(response, reverse('home'))
 

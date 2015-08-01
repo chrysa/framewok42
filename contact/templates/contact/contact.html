@@ -13,11 +13,13 @@
             </div>
         {% else %}
             {% if errors %}
-                {% for k, v in errors.items %}
-                    <div class="alert alert-danger" role="alert">
-                        {{ v }}
-                    </div>
-                {% endfor %}
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                        {% for k, v in errors.items %}
+                            <li>{{ v }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
             {% endif %}
             <form action="{% url 'contact' %}" method="post">
                 {% csrf_token %}

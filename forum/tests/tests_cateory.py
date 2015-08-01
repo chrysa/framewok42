@@ -11,6 +11,7 @@
 :seealso: forum.models.ForumPost
 :seealso: profil.models.UserLang
 :todo: clean unit test
+:todo: internationalisation
 """
 from django.test import Client
 from django.test import TestCase

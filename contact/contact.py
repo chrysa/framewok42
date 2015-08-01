@@ -18,7 +18,6 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
 from django.utils.translation import ugettext as _
-
 from generate_logs.functions import info_load_log_message
 from contact.forms.ContactFrom import ContactForm
 
@@ -60,7 +59,7 @@ def display(request):
                 logger_info.info(_("contact_success") + request.user.username)
             except:
                 errors['message'] = _('contact_fail')
-                logger_error.error(_("error_contact") + request.user.username)
+                logger_error.error(_("contact_fail") + request.user.username)
         else:
             if not request.POST['subject']:
                 errors['subject'] = _('contact_must_contain_subject')

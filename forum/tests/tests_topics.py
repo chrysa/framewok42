@@ -12,6 +12,7 @@
 :seealso: profil.models.UserLang
 :todo: test with inexisting topic
 :todo: clean unit test
+:todo: internationalisation
 """
 from django.test import Client
 from django.test import TestCase
