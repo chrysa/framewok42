@@ -18,7 +18,7 @@ from django.core.urlresolvers import reverse
 
 class ContactTests(TestCase):
     """
-    this class define all unit test for contact
+    this class define all unit tests for contact
 
     :param TestCase: librairy of unittest
     :type TestCase: object
@@ -28,28 +28,28 @@ class ContactTests(TestCase):
 
     def setUp(self):
         """
-        set up variable and create user for the test
+        set up variable and create user for the tests
 
         :param self: instance of ContactTests
         :type self: object
-        :var self.client: instance of navigation client for test
+        :var self.client: instance of navigation client for tests
         :var self.register: dict for create new user
         :return: None
         """
         self.client = Client()
-        self.message = {'email': 'test@test.fr', 'subject': 'mail unit test', 'message': 'message de test'}
-        self.message_blank_mail = {'email': '', 'subject': 'mail unit test', 'message': 'message de test'}
-        self.message_blank_subject = {'email': 'test@test.fr', 'subject': '', 'message': 'message de test'}
-        self.message_blank_message = {'email': 'test@test.fr', 'subject': 'mail unit test', 'message': ''}
-        self.message_blank_email_subject = {'email': '', 'subject': '', 'message': 'message de test'}
-        self.message_blank_email_message = {'email': '', 'subject': 'mail unit test', 'message': ''}
-        self.message_blank_subject_message = {'email': 'test@test.fr', 'subject': '', 'message': ''}
+        self.message = {'email': 'tests@tests.fr', 'subject': 'mail unit tests', 'message': 'message de tests'}
+        self.message_blank_mail = {'email': '', 'subject': 'mail unit tests', 'message': 'message de tests'}
+        self.message_blank_subject = {'email': 'tests@tests.fr', 'subject': '', 'message': 'message de tests'}
+        self.message_blank_message = {'email': 'tests@tests.fr', 'subject': 'mail unit tests', 'message': ''}
+        self.message_blank_email_subject = {'email': '', 'subject': '', 'message': 'message de tests'}
+        self.message_blank_email_message = {'email': '', 'subject': 'mail unit tests', 'message': ''}
+        self.message_blank_subject_message = {'email': 'tests@tests.fr', 'subject': '', 'message': ''}
         self.message_all_blank = {'email': '', 'subject': '', 'message': ''}
         activate('fr')
 
     def test_send_contact_unlog(self):
         """
-        test send contact mail on not log status
+        tests send contact mail on not log status
 
         :var reponse: response of request
         :return: None
@@ -67,7 +67,7 @@ class ContactTests(TestCase):
 
     def test_send_contact_unlog_blank_subject(self):
         """
-        test send contact mail with blank subject on not log status
+        tests send contact mail with blank subject on not log status
 
         :var reponse: response of request
         :return: None
@@ -79,7 +79,7 @@ class ContactTests(TestCase):
 
     def test_send_contact_unlog_blank_message(self):
         """
-        test send contact mail with blank subject on not log status
+        tests send contact mail with blank subject on not log status
 
         :var reponse: response of request
         :return: None
@@ -112,7 +112,7 @@ class ContactTests(TestCase):
 
     def test_send_contact_unlog_all_blank(self):
         """
-        test send contact mail with blank form on not log status
+        tests send contact mail with blank form on not log status
 
         :var reponse: response of request
         :return: None

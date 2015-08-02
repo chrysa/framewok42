@@ -22,7 +22,6 @@ from django.shortcuts import render
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-
 from issues.models import Issue
 from generate_logs.functions import info_load_log_message
 from issues.forms.AdminResponseIssue import AdminResponseIssueForm
@@ -46,7 +45,6 @@ def index(request):
     else:
         issues = Issue.objects.filter(Autor=request.user)
     return render(request, 'issues/home.html', {'issues': issues})
-
 
 @login_required
 def new_issue(request):
@@ -82,7 +80,6 @@ def new_issue(request):
     context['form'] = form
     return render(request, 'issues/send_issue.html', context)
 
-
 @login_required
 def respond_issue(request, issue):
     logger_info.info(info_load_log_message(request))
@@ -116,7 +113,6 @@ def respond_issue(request, issue):
     context['issue'] = SelectIssue
     return render(request, 'issues/issue_admin_response.html', context)
 
-
 @login_required
 def view_issue(request, issue):
     logger_info.info(info_load_log_message(request))
@@ -124,7 +120,6 @@ def view_issue(request, issue):
         'issue': Issue.objects.get(slug=issue),
     }
     return render(request, 'issues/issue.html', context)
-
 
 @login_required
 def reopen_issue(request, issue):

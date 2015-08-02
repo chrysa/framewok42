@@ -10,7 +10,7 @@
 :seealso: forum.models.ForumTopic
 :seealso: forum.models.ForumPost
 :seealso: profil.models.UserLang
-:todo: clean unit test
+:todo: clean unit tests
 :todo: internationalisation
 """
 from django.test import Client
@@ -27,7 +27,7 @@ from profil.models import UserLang
 
 class ForumTests(TestCase):
     """
-    this class define all unit test for forum
+    this class define all unit tests for forum
 
     :param TestCase: librairy of unittest
     :type TestCase: object
@@ -37,11 +37,11 @@ class ForumTests(TestCase):
 
     def setUp(self):
         """
-        set up variable and create user for the test
+        set up variable and create user for the tests
 
         :param self: instance of ContactTests
         :type self: object
-        :var self.client: instance of navigation client for test
+        :var self.client: instance of navigation client for tests
         :var self.register_user: dict for create new user
         :var self.create_topic: dict of datas for create topic
         :var new_user: instance of user contain new_user
@@ -50,17 +50,17 @@ class ForumTests(TestCase):
         self.client = Client()
         self.register_user = {
             'username': "user_test",
-            'email': 'user_test@test.fr',
-            'password': "test",
+            'email': 'user_test@tests.fr',
+            'password': "tests",
         }
         self.cat = ['cat1', 'cat2', ]
         self.ref_topic = {
             'Title': 'ref topic',
-            'Message': 'content test',
+            'Message': 'content tests',
         }
         self.create_topic = {
-            'Title': 'test topic',
-            'Message': 'content test',
+            'Title': 'tests topic',
+            'Message': 'content tests',
         }
         self.ref_response = {
             'Message': 'ref_reponse',
@@ -100,7 +100,7 @@ class ForumTests(TestCase):
 
     def test_edit_post_unlog(self):
         """
-        test to edit a post with unlog user
+        tests to edit a post with unlog user
 
         :var reponse: response of request
         :return: None
@@ -115,7 +115,7 @@ class ForumTests(TestCase):
 
     def test_edit_post(self):
         """
-        test to edit a post
+        tests to edit a post
 
         :var reponse: response of request
         :return: None
@@ -132,7 +132,7 @@ class ForumTests(TestCase):
 
     def test_edit_post_blank(self):
         """
-        test to edit a post with blank message
+        tests to edit a post with blank message
 
         :var reponse: response of request
         :return: None
@@ -153,7 +153,7 @@ class ForumTests(TestCase):
 
     def test_edit_inexistant_post(self):
         """
-        test to edit a wrong topic
+        tests to edit a wrong topic
 
         :var reponse: response of request
         :return: None

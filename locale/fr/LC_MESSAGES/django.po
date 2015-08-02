@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-01 19:22+0000\n"
+"POT-Creation-Date: 2015-08-01 22:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,28 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: contact/contact.py:59 contact/contact.py:60
-#: contact/tests/test_send_contact_log.py:73
-#: contact/tests/tests_send_contact_unlog.py:56
+#: contact/contact.py:58 contact/contact.py:59
+#: contact/tests/test_send_contact_log.py:62
+#: contact/tests/tests_send_contact_unlog.py:58
 msgid "contact_success"
 msgstr "envoi du message de contact réussi"
 
-#: contact/contact.py:62 contact/contact.py:63
+#: contact/contact.py:61 contact/contact.py:62
 msgid "contact_fail"
 msgstr "erreur inconnue lors de l'envoi"
 
-#: contact/contact.py:66 contact/tests/test_send_contact_log.py:86
-#: contact/tests/tests_send_contact_unlog.py:68
-#: contact/tests/tests_send_contact_unlog.py:92
+#: contact/contact.py:65 contact/tests/test_send_contact_log.py:75
+#: contact/tests/test_send_contact_log.py:88
+#: contact/tests/test_send_contact_log.py:101
+#: contact/tests/tests_send_contact_unlog.py:76
+#: contact/tests/tests_send_contact_unlog.py:95
+#: contact/tests/tests_send_contact_unlog.py:108
+#: contact/tests/tests_send_contact_unlog.py:121
 msgid "contact_must_contain_subject"
 msgstr "le formulaire de contact doit contenir un sujet"
 
-#: contact/contact.py:68 contact/tests/tests_send_contact_unlog.py:80
-#: contact/tests/tests_send_contact_unlog.py:93
+#: contact/contact.py:67 contact/tests/test_send_contact_log.py:102
+#: contact/tests/tests_send_contact_unlog.py:88
+#: contact/tests/tests_send_contact_unlog.py:102
+#: contact/tests/tests_send_contact_unlog.py:109
+#: contact/tests/tests_send_contact_unlog.py:122
 msgid "contact_must_contain_message"
 msgstr "le formulaire de contact doit contenir un message"
 
-#: contact/contact.py:70 contact/tests/tests_send_contact_unlog.py:94
+#: contact/contact.py:69 contact/tests/tests_send_contact_unlog.py:64
+#: contact/tests/tests_send_contact_unlog.py:94
+#: contact/tests/tests_send_contact_unlog.py:101
+#: contact/tests/tests_send_contact_unlog.py:123
 msgid "contact_must_contain_email"
 msgstr "le formulaire de contact doit contenir une adresse mail"
 
@@ -64,7 +74,7 @@ msgstr "message"
 msgid "contact"
 msgstr "contact"
 
-#: contact/templates/contact/contact.html:30
+#: contact/templates/contact/contact.html:32
 msgid "send_message"
 msgstr "envoi du message de contact"
 
@@ -397,7 +407,7 @@ msgstr ""
 msgid "authenticate error"
 msgstr ""
 
-#: ldap42/views.py:177 profil/tests.py:53 profil/tests.py:178
+#: ldap42/views.py:177 profil/tests.py:49 profil/tests.py:174
 #: profil/views.py:48 profil/views.py:150
 msgid "error_wrong_password"
 msgstr ""
@@ -416,23 +426,23 @@ msgstr ""
 msgid "connection_classic"
 msgstr ""
 
-#: profil/tests.py:62 profil/views.py:43
+#: profil/tests.py:58 profil/views.py:43
 msgid "error_user_already_exist"
 msgstr ""
 
-#: profil/tests.py:71 profil/views.py:46
+#: profil/tests.py:67 profil/views.py:46
 msgid "error_mail_already_exist"
 msgstr ""
 
-#: profil/tests.py:148 profil/views.py:114
+#: profil/tests.py:144 profil/views.py:114
 msgid "admin_cant_log_here"
 msgstr ""
 
-#: profil/tests.py:154 profil/views.py:118
+#: profil/tests.py:150 profil/views.py:118
 msgid "staff_cant_log_here"
 msgstr ""
 
-#: profil/tests.py:170 profil/views.py:109
+#: profil/tests.py:166 profil/views.py:109
 msgid "error_user_not_exist"
 msgstr ""
 

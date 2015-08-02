@@ -17,4 +17,5 @@ in progress
 
 todo
 =====================
-    rectactoring ldap module with specifique backend
+    rectactoring ldap module with specific backend
+    config sphinx

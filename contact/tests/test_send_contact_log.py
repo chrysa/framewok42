@@ -21,7 +21,7 @@ from profil.models import UserLang
 
 class ContactTests(TestCase):
     """
-    this class define all unit test for contact
+    this class define all unit tests for contact
 
     :param TestCase: librairy of unittest
     :type TestCase: object
@@ -31,20 +31,20 @@ class ContactTests(TestCase):
 
     def setUp(self):
         """
-        set up variable and create user for the test
+        set up variable and create user for the tests
 
         :param self: instance of ContactTests
         :type self: object
-        :var self.client: instance of navigation client for test
+        :var self.client: instance of navigation client for tests
         :var self.register: dict for create new user
         :var new_user: instance of user contain new_user
         :return: None
         """
         self.client = Client()
-        self.register_user = {'username': "user_test", 'email': 'user_test@test.fr', 'password': "test"}
-        self.message_test = {'subject': 'mail unit test', 'message': 'message de test'}
-        self.message_test_blank_subject = {'subject': '', 'message': 'message de test'}
-        self.message_test_blank_message = {'subject': 'mail unit test', 'message': ''}
+        self.register_user = {'username': "user_test", 'email': 'user_test@tests.fr', 'password': "tests"}
+        self.message_test = {'subject': 'mail unit tests', 'message': 'message de tests'}
+        self.message_test_blank_subject = {'subject': '', 'message': 'message de tests'}
+        self.message_test_blank_message = {'subject': 'mail unit tests', 'message': ''}
         self.message_test_blank_subject_message = {'subject': '', 'message': ''}
         new_user = User.objects.create_user(**self.register_user)
         UserLang.objects.create(user=new_user, lang='fr')
@@ -53,7 +53,7 @@ class ContactTests(TestCase):
 
     def test_send_contact_log(self):
         """
-        test send contact mail on log status
+        tests send contact mail on log status
 
         :var reponse: response of request
         :return: None
@@ -66,7 +66,7 @@ class ContactTests(TestCase):
 
     def test_send_contact_log_subject_blank(self):
         """
-        test send contact mail with blank subject on log status
+        tests send contact mail with blank subject on log status
 
         :var reponse: response of request
         :return: None
@@ -79,7 +79,7 @@ class ContactTests(TestCase):
 
     def test_send_contact_log_message_blank(self):
         """
-        test send contact mail with blank subject on log status
+        tests send contact mail with blank subject on log status
 
         :var reponse: response of request
         :return: None
@@ -92,7 +92,7 @@ class ContactTests(TestCase):
 
     def test_send_contact_log_blank_subject_message(self):
         """
-        test send contact mail with blank form on log status
+        tests send contact mail with blank form on log status
 
         :var reponse: response of request
         :return: None

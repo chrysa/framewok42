@@ -53,17 +53,17 @@ db: validate
 
 validate:
 	printf '$(BLUE)validation de la base de données$(WHITE)\n' 
-	python manage.py validate
+	python manage.py check
 
 static:
 	printf '$(BLUE)suppression des anciens fichiers statics$(WHITE)\n' 
 	rm -rf statics
 	printf '$(BLUE)collect des nouveax fichiers statics$(WHITE)\n' 
-	python manage.py collectstatic --noinput
+	python manage.py collectstatic -n -v 0 --noinput
 
 transall:
 	printf '$(BLUE)récupération des fichers de traduction$(WHITE)\n' 
-	$(foreach lang, $(shell ls locale), python manage.py makemessages --verbosity=$(VERBOSITY) -l $(lang);)	
+	$(foreach lang, $(shell ls locale), python manage.py makemessages -l $(lang);)	
 	printf '$(BLUE)compilation des fichiers de traduction$(WHITE)\n' 
 	python manage.py compilemessages
 
@@ -75,11 +75,8 @@ resettrans:
 	make transall
 
 test:
-	printf '$(BLUE)suppression des fichiers .mo$(WHITE)\n'
-	find . -name '*.mo' -exec rm -rf {} \;
 	printf '$(BLUE)lancement des tests unitaires$(WHITE)\n'
 	python manage.py test --verbosity $(VERBOSITY)
-	make transall
 
 install_dev:
 	printf '$(BLUE)installation du fichier ressources/requirements/requirements_dev.txt$(WHITE)\n'
@@ -110,11 +107,11 @@ fclean:
 	find . -name '*.mo' -exec rm -rf {} \;
 	make clean
 
-launch: clean install static migrate validate test transall
+launch: clean install static validate test transall
 	printf '$(BLUE)lancement du serveur$(WHITE)\n' 
 	python manage.py runserver --verbosity=$(VERBOSITY) 0.0.0.0:$(PORT)
 	make clean
 
-doc: clean migrate validate static test transall
+doc: clean validate static transall test
 	printf '$(BLUE)génération de la documentation$(WHITE)\n'
 	python -c "from ressources.gen_doc import gen_doc ; gen_doc()"

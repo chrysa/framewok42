@@ -16,9 +16,9 @@ class RegisterTests(TestCase):
         self.client = Client()
         self.register_user = {
             'username': "user_test",
-            'email': 'user_test@test.fr',
-            'password': "test",
-            'password_conf': "test"
+            'email': 'user_test@tests.fr',
+            'password': "tests",
+            'password_conf': "tests"
         }
         self.unittest_fr = {
             'username': 'unittest_fr',
@@ -32,10 +32,6 @@ class RegisterTests(TestCase):
         reponse = self.client.get(reverse('register'))
         self.assertEqual(reponse.status_code, 200)
         self.assertTemplateUsed(reponse, 'profil/register.html')
-
-    def test_register_anonymous(self):
-        response = self.client.post(reverse('register'), follow=True)
-        self.assertRedirects(response, reverse('home'))
 
     def test_register_with_blank_datas(self):
         reponse = self.client.post(reverse('register'), {}, follow=True)
@@ -107,8 +103,8 @@ class LoginTests(TestCase):
         }
         self.register_user = {
             'username': "user_test",
-            'email': 'user_test@test.fr',
-            'password': "test",
+            'email': 'user_test@tests.fr',
+            'password': "tests",
         }
         self.staff = {
             'username': "staff",
@@ -137,7 +133,7 @@ class LoginTests(TestCase):
 
     def test_login_home(self):
         reponse = self.client.post(reverse('login_classic'), {'username': self.register_user['username'],
-                                                              'password': self.register_user['password']}, follow=True)
+                                                           'password': self.register_user['password']}, follow=True)
         self.assertRedirects(reponse, reverse(
             'home'), status_code=301, target_status_code=200, host=None, msg_prefix='', fetch_redirect_response=True)
 
@@ -183,8 +179,8 @@ class LogoutTests(TestCase):
         self.client = Client()
         self.register_user = {
             'username': "user_test",
-            'email': 'user_test@test.fr',
-            'password': "test",
+            'email': 'user_test@tests.fr',
+            'password': "tests",
         }
         self.log_user = {
             'username': self.register_user['username'],
@@ -201,7 +197,7 @@ class LogoutTests(TestCase):
 
     def test_logout_url_unlog(self):
         """
-        test access to url contact not log status
+        tests access to url contact not log status
 
         :var reponse: response of request
         :todo: see how to remove next when referer is logout

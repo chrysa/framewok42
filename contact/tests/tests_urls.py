@@ -19,7 +19,7 @@ from profil.models import UserLang
 
 class ContactTests(TestCase):
     """
-    this class define all unit test for contact
+    this class define all unit tests for contact
 
     :param TestCase: librairy of unittest
     :type TestCase: object
@@ -29,11 +29,11 @@ class ContactTests(TestCase):
 
     def setUp(self):
         """
-        set up variable and create user for the test
+        set up variable and create user for the tests
 
         :param self: instance of ContactTests
         :type self: object
-        :var self.client: instance of navigation client for test
+        :var self.client: instance of navigation client for tests
         :var self.register: dict for create new user
         :var new_user: instance of user contain new_user
         :return: None
@@ -41,15 +41,15 @@ class ContactTests(TestCase):
         self.client = Client()
         self.register_user = {
             'username': "user_test",
-            'email': 'user_test@test.fr',
-            'password': "test",
+            'email': 'user_test@tests.fr',
+            'password': "tests",
         }
         new_user = User.objects.create_user(**self.register_user)
         UserLang.objects.create(user=new_user, lang='fr')
 
     def test_contact_url_unlog(self):
         """
-        test access to url contact not log status
+        tests access to url contact not log status
 
         :var reponse: response of request
         :return: None
@@ -61,7 +61,7 @@ class ContactTests(TestCase):
 
     def test_contact_url_log(self):
         """
-        test access to url contact log status
+        tests access to url contact log status
 
         :var reponse: response of request
         :return: None
