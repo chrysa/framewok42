@@ -7761,3 +7761,26 @@
 [02/08/2015 14:00:29] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [02/08/2015 14:00:29] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [02/08/2015 14:00:29] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[03/08/2015 15:40:05] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas paradlin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:50:54] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin
+[03/08/2015 15:51:59] :: [views:login_user:error] [95] :: user deja connecte essai de charger de la page /profil/local par admin

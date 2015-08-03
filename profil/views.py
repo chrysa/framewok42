@@ -108,14 +108,6 @@ def login_user(request):
                     l_fct.error_inexistant_user_log_message(request))
                 errors['user'] = _("error_user_not_exist")
             else:
-                if user_exist[0].is_superuser:
-                    logger_error.error(
-                        l_fct.error_login_admin_front_log_message())
-                    errors['admin'] = _("admin_cant_log_here")
-                elif user_exist[0].is_staff:
-                    logger_error.error(
-                        l_fct.error_login_staff_front_log_message())
-                    errors['staff'] = _("staff_cant_log_here")
                 if len(errors) == 0:
                     if 'user' not in errors:
                         user = authenticate(
@@ -125,13 +117,17 @@ def login_user(request):
                         if user is not None:
                             if user.is_active:
                                 login(request, user)
-                                userlang = UserLang.objects.get(
-                                    user=request.user)
-                                logger_info.info(
-                                    l_fct.info_login_class_log_message(request))
+                                if request.user.is_staff or request.user.is_superuser:
+                                    try:
+                                        userlang = UserLang.objects.get(user=request.user)
+                                    except:
+                                        UserLang(user=user, lang=translation.get_language()).save()
+                                        userlang = UserLang.objects.get(user=request.user)
+                                else:
+                                    userlang = UserLang.objects.get(user=request.user)
+                                logger_info.info(l_fct.info_login_class_log_message(request))
                                 translation.activate(userlang.lang)
-                                request.session[
-                                    translation.LANGUAGE_SESSION_KEY] = userlang.lang
+                                request.session[translation.LANGUAGE_SESSION_KEY] = userlang.lang
                                 request.session['ldap_connection'] = False
                                 redir = reverse('home')
                                 if 'next' in request.GET and request.GET['next'] != reverse('login'):
@@ -167,12 +163,11 @@ def login_user(request):
 @login_required
 def logout_user(request):
     logger_info.info(l_fct.info_load_log_message(request))
-    if (request.user.is_staff or request.user.is_superuser) is not True:
-        cur_language = translation.get_language()
-        userlang = UserLang.objects.get(user=request.user)
-        if userlang.lang is not cur_language:
-            userlang.lang = cur_language
-            userlang.save()
+    cur_language = translation.get_language()
+    userlang = UserLang.objects.get(user=request.user)
+    if userlang.lang is not cur_language:
+        userlang.lang = cur_language
+        userlang.save()
     redir = request.META[
         'HTTP_REFERER'] if "HTTP_REFERER" in request.META else reverse('home')
     if logout(request):
