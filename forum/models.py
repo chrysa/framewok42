@@ -25,7 +25,7 @@ class ForumCat(models.Model):
     :return: ForumCat object
     :rtype: object
     """
-    Name = models.CharField(max_length=100)
+    Name = models.CharField(max_length=50)
     slug = AutoSlugField(populate_from=_('Name'))
 
     def __str__(self):
@@ -49,7 +49,7 @@ class ForumTopic(models.Model):
     :rtype: object
     """
     CatParent = models.ForeignKey(ForumCat, related_name=_("categorie_parente"))
-    Title = models.CharField(max_length=100, default=_('categorie'))
+    Title = models.CharField(max_length=50)
     slug = AutoSlugField(populate_from='Title')
     Autor = models.ForeignKey(User)
     Message = models.TextField()
