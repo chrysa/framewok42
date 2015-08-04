@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>contact.tests package</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="None" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">framework</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="contact-tests-package">
+<h1>contact.tests package<a class="headerlink" href="#contact-tests-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-contact.tests.test_send_contact_log">
+<span id="contact-tests-test-send-contact-log-module"></span><h2>contact.tests.test_send_contact_log module<a class="headerlink" href="#module-contact.tests.test_send_contact_log" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">contact.tests.test_send</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">unit testing sending contact for contact apps</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">01/08/2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">profil.models.UserLang</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">todo:</th><td class="field-body">doc</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="contact.tests.test_send_contact_log.ContactTests">
+<em class="property">class </em><code class="descclassname">contact.tests.test_send_contact_log.</code><code class="descname">ContactTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/test_send_contact_log.html#ContactTests"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.test_send_contact_log.ContactTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>this class define all unit tests for contact</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>TestCase</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; librairy of unittest</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/constants.html#None" title="(in Python v2.7)">None</a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="contact.tests.test_send_contact_log.ContactTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/test_send_contact_log.html#ContactTests.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.test_send_contact_log.ContactTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>set up variable and create user for the tests</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; instance of ContactTests</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>self.client</strong> &#8211; instance of navigation client for tests</li>
+<li><strong>self.register</strong> &#8211; dict for create new user</li>
+<li><strong>new_user</strong> &#8211; instance of user contain new_user</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.test_send_contact_log.ContactTests.test_send_contact_log">
+<code class="descname">test_send_contact_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/test_send_contact_log.html#ContactTests.test_send_contact_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.test_send_contact_log.ContactTests.test_send_contact_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests send contact mail on log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.test_send_contact_log.ContactTests.test_send_contact_log_blank_subject_message">
+<code class="descname">test_send_contact_log_blank_subject_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/test_send_contact_log.html#ContactTests.test_send_contact_log_blank_subject_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.test_send_contact_log.ContactTests.test_send_contact_log_blank_subject_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests send contact mail with blank form on log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.test_send_contact_log.ContactTests.test_send_contact_log_message_blank">
+<code class="descname">test_send_contact_log_message_blank</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/test_send_contact_log.html#ContactTests.test_send_contact_log_message_blank"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.test_send_contact_log.ContactTests.test_send_contact_log_message_blank" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests send contact mail with blank subject on log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.test_send_contact_log.ContactTests.test_send_contact_log_subject_blank">
+<code class="descname">test_send_contact_log_subject_blank</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/test_send_contact_log.html#ContactTests.test_send_contact_log_subject_blank"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.test_send_contact_log.ContactTests.test_send_contact_log_subject_blank" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests send contact mail with blank subject on log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-contact.tests.tests_send_contact_unlog">
+<span id="contact-tests-tests-send-contact-unlog-module"></span><h2>contact.tests.tests_send_contact_unlog module<a class="headerlink" href="#module-contact.tests.tests_send_contact_unlog" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">contact.tests.test_send</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">unit testing sending contact for contact apps</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">01/08/2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">profil.models.UserLang</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">todo:</th><td class="field-body">doc</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="contact.tests.tests_send_contact_unlog.ContactTests">
+<em class="property">class </em><code class="descclassname">contact.tests.tests_send_contact_unlog.</code><code class="descname">ContactTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_send_contact_unlog.html#ContactTests"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_send_contact_unlog.ContactTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>this class define all unit tests for contact</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>TestCase</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; librairy of unittest</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/constants.html#None" title="(in Python v2.7)">None</a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="contact.tests.tests_send_contact_unlog.ContactTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_send_contact_unlog.html#ContactTests.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_send_contact_unlog.ContactTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>set up variable and create user for the tests</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; instance of ContactTests</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>self.client</strong> &#8211; instance of navigation client for tests</li>
+<li><strong>self.register</strong> &#8211; dict for create new user</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog">
+<code class="descname">test_send_contact_unlog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_send_contact_unlog.html#ContactTests.test_send_contact_unlog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests send contact mail on not log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_all_blank">
+<code class="descname">test_send_contact_unlog_all_blank</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_send_contact_unlog.html#ContactTests.test_send_contact_unlog_all_blank"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_all_blank" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests send contact mail with blank form on not log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_email_message">
+<code class="descname">test_send_contact_unlog_blank_email_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_send_contact_unlog.html#ContactTests.test_send_contact_unlog_blank_email_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_email_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_email_subject">
+<code class="descname">test_send_contact_unlog_blank_email_subject</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_send_contact_unlog.html#ContactTests.test_send_contact_unlog_blank_email_subject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_email_subject" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_mail">
+<code class="descname">test_send_contact_unlog_blank_mail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_send_contact_unlog.html#ContactTests.test_send_contact_unlog_blank_mail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_mail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_message">
+<code class="descname">test_send_contact_unlog_blank_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_send_contact_unlog.html#ContactTests.test_send_contact_unlog_blank_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests send contact mail with blank subject on not log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_subject">
+<code class="descname">test_send_contact_unlog_blank_subject</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_send_contact_unlog.html#ContactTests.test_send_contact_unlog_blank_subject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_subject" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests send contact mail with blank subject on not log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_subject_message">
+<code class="descname">test_send_contact_unlog_blank_subject_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_send_contact_unlog.html#ContactTests.test_send_contact_unlog_blank_subject_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_subject_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-contact.tests.tests_urls">
+<span id="contact-tests-tests-urls-module"></span><h2>contact.tests.tests_urls module<a class="headerlink" href="#module-contact.tests.tests_urls" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">contact.tests.tests_urls</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">unit testing urls for contact apps</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">31/07/2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">profil.models.UserLang</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="contact.tests.tests_urls.ContactTests">
+<em class="property">class </em><code class="descclassname">contact.tests.tests_urls.</code><code class="descname">ContactTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_urls.html#ContactTests"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_urls.ContactTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>this class define all unit tests for contact</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>TestCase</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; librairy of unittest</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/constants.html#None" title="(in Python v2.7)">None</a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="contact.tests.tests_urls.ContactTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_urls.html#ContactTests.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_urls.ContactTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>set up variable and create user for the tests</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; instance of ContactTests</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>self.client</strong> &#8211; instance of navigation client for tests</li>
+<li><strong>self.register</strong> &#8211; dict for create new user</li>
+<li><strong>new_user</strong> &#8211; instance of user contain new_user</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.tests_urls.ContactTests.test_contact_url_log">
+<code class="descname">test_contact_url_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_urls.html#ContactTests.test_contact_url_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_urls.ContactTests.test_contact_url_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to url contact log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="contact.tests.tests_urls.ContactTests.test_contact_url_unlog">
+<code class="descname">test_contact_url_unlog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/contact/tests/tests_urls.html#ContactTests.test_contact_url_unlog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#contact.tests.tests_urls.ContactTests.test_contact_url_unlog" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to url contact not log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-contact.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-contact.tests" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">contact.tests package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-contact.tests.test_send_contact_log">contact.tests.test_send_contact_log module</a></li>
+<li><a class="reference internal" href="#module-contact.tests.tests_send_contact_unlog">contact.tests.tests_send_contact_unlog module</a></li>
+<li><a class="reference internal" href="#module-contact.tests.tests_urls">contact.tests.tests_urls module</a></li>
+<li><a class="reference internal" href="#module-contact.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/contact.tests.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">framework</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, agreau.
+      Last updated on Aug 04, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

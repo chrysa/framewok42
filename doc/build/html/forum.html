@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>forum package</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="None" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">framework</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="forum-package">
+<h1>forum package<a class="headerlink" href="#forum-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="forum.forms.html">forum.forms package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forum.forms.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.forms.html#module-forum.forms.CreateTopic">forum.forms.CreateTopic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.forms.html#module-forum.forms.ReplyTopic">forum.forms.ReplyTopic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.forms.html#module-forum.forms">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="forum.migrations.html">forum.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forum.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.migrations.html#module-forum.migrations.0001_initial">forum.migrations.0001_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.migrations.html#module-forum.migrations.0002_auto_20150725_2028">forum.migrations.0002_auto_20150725_2028 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.migrations.html#module-forum.migrations.0003_auto_20150725_2054">forum.migrations.0003_auto_20150725_2054 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.migrations.html#module-forum.migrations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="forum.tests.html">forum.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forum.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.tests.html#module-forum.tests.tests_cateory">forum.tests.tests_cateory module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.tests.html#module-forum.tests.tests_posts">forum.tests.tests_posts module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.tests.html#module-forum.tests.tests_topics">forum.tests.tests_topics module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.tests.html#module-forum.tests.tests_urls">forum.tests.tests_urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forum.tests.html#module-forum.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-forum.admin">
+<span id="forum-admin-module"></span><h2>forum.admin module<a class="headerlink" href="#module-forum.admin" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">forum.admin</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">define admin panel for forum</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">21/07/2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.moodels.ForumCat</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">forum.moodels.ForumPost</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.moodels.ForumTopic</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">todo:</th><td class="field-body">personalise admin panel</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-forum.models">
+<span id="forum-models-module"></span><h2>forum.models module<a class="headerlink" href="#module-forum.models" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">forum.models</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">define storage models for forum</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">21/07/2015</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="forum.models.ForumCat">
+<em class="property">class </em><code class="descclassname">forum.models.</code><code class="descname">ForumCat</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/models.html#ForumCat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.models.ForumCat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>define the storage of category</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>models.Model</strong> (<em>models object</em>) &#8211; contain all function for define a storage</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>Name</strong> &#8211; content the name of the category</li>
+<li><strong>slug</strong> &#8211; content the slug of the category</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ForumCat object</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)">object</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="exception">
+<dt id="forum.models.ForumCat.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#forum.models.ForumCat.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="forum.models.ForumCat.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descclassname">ForumCat.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#forum.models.ForumCat.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="forum.models.ForumCat.categorie_parente">
+<code class="descclassname">ForumCat.</code><code class="descname">categorie_parente</code><a class="headerlink" href="#forum.models.ForumCat.categorie_parente" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.models.ForumCat.objects">
+<code class="descclassname">ForumCat.</code><code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#forum.models.ForumCat.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="forum.models.ForumPost">
+<em class="property">class </em><code class="descclassname">forum.models.</code><code class="descname">ForumPost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/models.html#ForumPost"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.models.ForumPost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>define the storage of post</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>models.Model</strong> (<em>models object</em>) &#8211; contain all function for define a storage</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="#forum.models.ForumPost.TopicParent" title="forum.models.ForumPost.TopicParent"><strong>TopicParent</strong></a> &#8211; content the object of the parent topic</li>
+<li><a class="reference internal" href="#forum.models.ForumPost.Autor" title="forum.models.ForumPost.Autor"><strong>Autor</strong></a> &#8211; user object of the autor</li>
+<li><strong>Message</strong> &#8211; content of the post</li>
+<li><strong>CreateDate</strong> &#8211; create date of the post</li>
+<li><strong>LastModified</strong> &#8211; last modify date of the post</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ForumPost object</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)">object</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="forum.models.ForumPost.Autor">
+<code class="descname">Autor</code><a class="headerlink" href="#forum.models.ForumPost.Autor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="forum.models.ForumPost.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#forum.models.ForumPost.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="forum.models.ForumPost.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descclassname">ForumPost.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#forum.models.ForumPost.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="forum.models.ForumPost.TopicParent">
+<code class="descclassname">ForumPost.</code><code class="descname">TopicParent</code><a class="headerlink" href="#forum.models.ForumPost.TopicParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.models.ForumPost.get_next_by_CreateDate">
+<code class="descclassname">ForumPost.</code><code class="descname">get_next_by_CreateDate</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forum.models.ForumPost.get_next_by_CreateDate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.models.ForumPost.get_next_by_LastModified">
+<code class="descclassname">ForumPost.</code><code class="descname">get_next_by_LastModified</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forum.models.ForumPost.get_next_by_LastModified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.models.ForumPost.get_previous_by_CreateDate">
+<code class="descclassname">ForumPost.</code><code class="descname">get_previous_by_CreateDate</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forum.models.ForumPost.get_previous_by_CreateDate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.models.ForumPost.get_previous_by_LastModified">
+<code class="descclassname">ForumPost.</code><code class="descname">get_previous_by_LastModified</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forum.models.ForumPost.get_previous_by_LastModified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.models.ForumPost.objects">
+<code class="descclassname">ForumPost.</code><code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#forum.models.ForumPost.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="forum.models.ForumTopic">
+<em class="property">class </em><code class="descclassname">forum.models.</code><code class="descname">ForumTopic</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/models.html#ForumTopic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.models.ForumTopic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>define the storage of topics</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>models.Model</strong> (<em>models object</em>) &#8211; contain all function for define a storage</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="#forum.models.ForumTopic.CatParent" title="forum.models.ForumTopic.CatParent"><strong>CatParent</strong></a> &#8211; content the object of the parent category</li>
+<li><strong>Title</strong> &#8211; title of topic</li>
+<li><strong>slug</strong> &#8211; access slug of the topic</li>
+<li><a class="reference internal" href="#forum.models.ForumPost.Autor" title="forum.models.ForumPost.Autor"><strong>Autor</strong></a> &#8211; user object of the autor</li>
+<li><strong>Message</strong> &#8211; content of the topic</li>
+<li><strong>CreateDate</strong> &#8211; create date of the topic</li>
+<li><strong>LastModified</strong> &#8211; last modify date of the topic</li>
+<li><strong>LastReply</strong> &#8211; last reply date of the topic</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ForumTopic object</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)">object</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="forum.models.ForumTopic.Autor">
+<code class="descname">Autor</code><a class="headerlink" href="#forum.models.ForumTopic.Autor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.models.ForumTopic.CatParent">
+<code class="descname">CatParent</code><a class="headerlink" href="#forum.models.ForumTopic.CatParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="forum.models.ForumTopic.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#forum.models.ForumTopic.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="forum.models.ForumTopic.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descclassname">ForumTopic.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#forum.models.ForumTopic.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="forum.models.ForumTopic.forumpost_set">
+<code class="descclassname">ForumTopic.</code><code class="descname">forumpost_set</code><a class="headerlink" href="#forum.models.ForumTopic.forumpost_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.models.ForumTopic.get_next_by_CreateDate">
+<code class="descclassname">ForumTopic.</code><code class="descname">get_next_by_CreateDate</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forum.models.ForumTopic.get_next_by_CreateDate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.models.ForumTopic.get_next_by_LastModified">
+<code class="descclassname">ForumTopic.</code><code class="descname">get_next_by_LastModified</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forum.models.ForumTopic.get_next_by_LastModified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.models.ForumTopic.get_next_by_LastReply">
+<code class="descclassname">ForumTopic.</code><code class="descname">get_next_by_LastReply</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forum.models.ForumTopic.get_next_by_LastReply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.models.ForumTopic.get_previous_by_CreateDate">
+<code class="descclassname">ForumTopic.</code><code class="descname">get_previous_by_CreateDate</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forum.models.ForumTopic.get_previous_by_CreateDate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.models.ForumTopic.get_previous_by_LastModified">
+<code class="descclassname">ForumTopic.</code><code class="descname">get_previous_by_LastModified</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forum.models.ForumTopic.get_previous_by_LastModified" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.models.ForumTopic.get_previous_by_LastReply">
+<code class="descclassname">ForumTopic.</code><code class="descname">get_previous_by_LastReply</code><span class="sig-paren">(</span><em>*moreargs</em>, <em>**morekwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#forum.models.ForumTopic.get_previous_by_LastReply" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.models.ForumTopic.objects">
+<code class="descclassname">ForumTopic.</code><code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#forum.models.ForumTopic.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-forum.urls">
+<span id="forum-urls-module"></span><h2>forum.urls module<a class="headerlink" href="#module-forum.urls" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">forum.urls</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">root URL for forum</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">21/07/2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">var urlpatterns:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">rooting of urls</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-forum.views">
+<span id="forum-views-module"></span><h2>forum.views module<a class="headerlink" href="#module-forum.views" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">forum.views</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">generate all content of forum</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">21/07/2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">var logger_error:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">logger error</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">var logger_info:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">logger info</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.models</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">forum.forms.CreateTopic.TopicForm</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.forms.ReplyTopic.PostForm</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">generate_logs.functions.info_load_log_message</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="forum.views.create_topic">
+<code class="descclassname">forum.views.</code><code class="descname">create_topic</code><span class="sig-paren">(</span><em>request</em>, <em>cat</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/views.html#create_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.views.create_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>create new topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
+<li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>cat</strong> &#8211; categorie object selected by slug</li>
+<li><strong>form</strong> &#8211; form for create topic</li>
+<li><strong>errors</strong> &#8211; dict of process error</li>
+<li><strong>create</strong> &#8211; new topic</li>
+<li><strong>topic</strong> &#8211; get the new topic</li>
+<li><strong>context</strong> &#8211; define the context for display page</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">HTTPResponse</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="forum.views.display_all">
+<code class="descclassname">forum.views.</code><code class="descname">display_all</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/views.html#display_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.views.display_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>display forum&#8217;s category</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">HTTPResponse</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="forum.views.display_cat">
+<code class="descclassname">forum.views.</code><code class="descname">display_cat</code><span class="sig-paren">(</span><em>request</em>, <em>cat</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/views.html#display_cat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.views.display_cat" title="Permalink to this definition">¶</a></dt>
+<dd><p>display category&#8217;s topic list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
+<li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">HTTPResponse</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="forum.views.display_topic">
+<code class="descclassname">forum.views.</code><code class="descname">display_topic</code><span class="sig-paren">(</span><em>request</em>, <em>cat</em>, <em>topic</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/views.html#display_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.views.display_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>display category&#8217;s topic list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
+<li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
+<li><strong>topic</strong> (<em>slug</em>) &#8211; slug of topic</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>cat</strong> &#8211; get the the selected category</li>
+<li><strong>thr</strong> &#8211; get the first message of the topic</li>
+<li><strong>post</strong> &#8211; get lit of related post of thr</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">HTTPResponse</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="forum.views.edit_post">
+<code class="descclassname">forum.views.</code><code class="descname">edit_post</code><span class="sig-paren">(</span><em>request</em>, <em>cat</em>, <em>topic</em>, <em>post</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/views.html#edit_post"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.views.edit_post" title="Permalink to this definition">¶</a></dt>
+<dd><p>display process for edit post</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
+<li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>topic</strong> &#8211; topic slug</li>
+<li><strong>errors</strong> &#8211; dict of process error</li>
+<li><strong>cat</strong> &#8211; select cat by slug</li>
+<li><strong>form</strong> &#8211; form for edit post</li>
+<li><strong>update</strong> &#8211; select post to update and update him</li>
+<li><strong>post_sel</strong> &#8211; get the post</li>
+<li><strong>context</strong> &#8211; define the context for display topic</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">HTTPResponse</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="forum.views.edit_topic">
+<code class="descclassname">forum.views.</code><code class="descname">edit_topic</code><span class="sig-paren">(</span><em>request</em>, <em>cat</em>, <em>topic</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/views.html#edit_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.views.edit_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>display process for edit topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
+<li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
+<li><strong>topic</strong> (<em>slug</em>) &#8211; slug of topic</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><p class="first"><strong>cat</strong> &#8211; select category by slug</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">HTTPResponse</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="forum.views.reply_topic">
+<code class="descclassname">forum.views.</code><code class="descname">reply_topic</code><span class="sig-paren">(</span><em>request</em>, <em>cat</em>, <em>topic</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/views.html#reply_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.views.reply_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>save new reply</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
+<li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>topic</strong> &#8211; topic slug</li>
+<li><strong>form</strong> &#8211; form for topic reply</li>
+<li><strong>top</strong> &#8211; get the new topic</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">HTTPResponse</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-forum">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-forum" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">forum package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-forum.admin">forum.admin module</a></li>
+<li><a class="reference internal" href="#module-forum.models">forum.models module</a></li>
+<li><a class="reference internal" href="#module-forum.urls">forum.urls module</a></li>
+<li><a class="reference internal" href="#module-forum.views">forum.views module</a></li>
+<li><a class="reference internal" href="#module-forum">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/forum.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">framework</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, agreau.
+      Last updated on Aug 04, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

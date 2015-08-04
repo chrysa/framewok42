@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-01 22:36+0000\n"
+"POT-Creation-Date: 2015-08-04 13:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -331,11 +331,11 @@ msgstr ""
 msgid "submit_issue"
 msgstr ""
 
-#: issues/views.py:81
+#: issues/views.py:79
 msgid "save_error"
 msgstr ""
 
-#: issues/views.py:107
+#: issues/views.py:104
 msgid "update_error"
 msgstr ""
 
@@ -403,12 +403,12 @@ msgstr ""
 msgid "bind_error"
 msgstr ""
 
-#: ldap42/views.py:173 profil/views.py:146
+#: ldap42/views.py:173 profil/views.py:142
 msgid "authenticate error"
 msgstr ""
 
-#: ldap42/views.py:177 profil/tests.py:49 profil/tests.py:174
-#: profil/views.py:48 profil/views.py:150
+#: ldap42/views.py:177 profil/tests.py:49 profil/tests.py:162
+#: profil/views.py:48 profil/views.py:146
 msgid "error_wrong_password"
 msgstr ""
 
@@ -434,15 +434,7 @@ msgstr ""
 msgid "error_mail_already_exist"
 msgstr ""
 
-#: profil/tests.py:144 profil/views.py:114
-msgid "admin_cant_log_here"
-msgstr ""
-
-#: profil/tests.py:150 profil/views.py:118
-msgid "staff_cant_log_here"
-msgstr ""
-
-#: profil/tests.py:166 profil/views.py:109
+#: profil/tests.py:154 profil/views.py:109
 msgid "error_user_not_exist"
 msgstr ""
 
@@ -450,6 +442,6 @@ msgstr ""
 msgid "unknow_error_register_form"
 msgstr ""
 
-#: profil/views.py:154
+#: profil/views.py:150
 msgid "unknow error"
 msgstr ""

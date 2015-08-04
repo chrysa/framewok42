@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>generate_logs.tests.tests_views_logs</title>
+    
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="None" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">framework</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for generate_logs.tests.tests_views_logs</h1><div class="highlight"><pre>
+<span class="c"># -*-coding:utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">:module: generate_logs.tests.tests_views_logs</span>
+<span class="sd">:synopsis: unit testing urls for generate_logs app</span>
+
+<span class="sd">:moduleauthor: anthony greau &lt;greau.anthony@gmail.com&gt;</span>
+<span class="sd">:created: 01/07/2015</span>
+<span class="sd">:update: 04/08/2015</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+<span class="kn">from</span> <span class="nn">django.test</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">from</span> <span class="nn">django.test</span> <span class="kn">import</span> <span class="n">TestCase</span>
+<span class="kn">from</span> <span class="nn">django.core.urlresolvers</span> <span class="kn">import</span> <span class="n">reverse</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+
+<span class="kn">from</span> <span class="nn">profil.models</span> <span class="kn">import</span> <span class="n">UserLang</span>
+
+
+<div class="viewcode-block" id="GenerateLogsUrlTests"><a class="viewcode-back" href="../../../generate_logs.tests.html#generate_logs.tests.tests_views_logs.GenerateLogsUrlTests">[docs]</a><span class="k">class</span> <span class="nc">GenerateLogsUrlTests</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    this class define all unit tests for generate_logs view_logs</span>
+
+<span class="sd">    :param TestCase: librairy of unittest</span>
+<span class="sd">    :type TestCase: object</span>
+<span class="sd">    :return: None</span>
+<span class="sd">    :rtype: None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="GenerateLogsUrlTests.setUp"><a class="viewcode-back" href="../../../generate_logs.tests.html#generate_logs.tests.tests_views_logs.GenerateLogsUrlTests.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        set up variable and create user for the tests</span>
+
+<span class="sd">        :param self: instance of ContactTests</span>
+<span class="sd">        :type self: object</span>
+<span class="sd">        :var self.client: instance of navigation client for tests</span>
+<span class="sd">        :var self.register_user: dict for create new user</span>
+<span class="sd">        :var self.register_admin: dict for create new admin</span>
+<span class="sd">        :var self.register_staff: dict for create new staff member</span>
+<span class="sd">        :var new_user: instance of user contain new_user</span>
+<span class="sd">        :var new_staff: instance of user contain new_staff</span>
+<span class="sd">        :var new_admin: instance of user contain new_admin</span>
+<span class="sd">        :var wrong_type: wrong type long</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_user</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;username&#39;</span><span class="p">:</span> <span class="s">&quot;user_test&quot;</span><span class="p">,</span> <span class="s">&#39;email&#39;</span><span class="p">:</span> <span class="s">&#39;user_test@tests.fr&#39;</span><span class="p">,</span> <span class="s">&#39;password&#39;</span><span class="p">:</span> <span class="s">&quot;tests&quot;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_admin</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;username&#39;</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span><span class="p">,</span> <span class="s">&#39;email&#39;</span><span class="p">:</span> <span class="s">&#39;admin@admin.fr&#39;</span><span class="p">,</span> <span class="s">&#39;password&#39;</span><span class="p">:</span> <span class="s">&quot;admin&quot;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_staff</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;username&#39;</span><span class="p">:</span> <span class="s">&quot;staff&quot;</span><span class="p">,</span> <span class="s">&#39;email&#39;</span><span class="p">:</span> <span class="s">&#39;staff@staff.fr&#39;</span><span class="p">,</span> <span class="s">&#39;password&#39;</span><span class="p">:</span> <span class="s">&quot;staff&quot;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wrong_type</span> <span class="o">=</span> <span class="s">&#39;wrong_type&#39;</span>
+        <span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">)</span>
+        <span class="n">UserLang</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">new_user</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s">&#39;fr&#39;</span><span class="p">)</span>
+        <span class="n">new_admin</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">register_admin</span><span class="p">)</span>
+        <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_admin</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">is_staff</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">is_superuser</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">UserLang</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">new_admin</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s">&#39;fr&#39;</span><span class="p">)</span>
+        <span class="n">new_staff</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">register_staff</span><span class="p">)</span>
+        <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_staff</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">is_staff</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">UserLang</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">new_staff</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s">&#39;fr&#39;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="GenerateLogsUrlTests.tests_view_logs"><a class="viewcode-back" href="../../../generate_logs.tests.html#generate_logs.tests.tests_views_logs.GenerateLogsUrlTests.tests_view_logs">[docs]</a>    <span class="k">def</span> <span class="nf">tests_view_logs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        tests display of logs</span>
+
+<span class="sd">        :var reponse: response of request</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_admin</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">],</span> <span class="n">password</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_admin</span><span class="p">[</span><span class="s">&#39;password&#39;</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">settings</span><span class="o">.</span><span class="n">LOGGING</span><span class="p">[</span><span class="s">&#39;handlers&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;view_log&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;log_type&#39;</span><span class="p">:</span> <span class="n">k</span><span class="p">}),</span> <span class="n">HTTP_REFERER</span><span class="o">=</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;forum&#39;</span><span class="p">),</span>
+                                      <span class="n">follow</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">is</span> <span class="ow">not</span> <span class="s">&#39;console&#39;</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">assertTemplateUsed</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="s">&#39;logs/display_log.html&#39;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">reponse</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;list_logs&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="GenerateLogsUrlTests.tests_view_logs_wrong_type"><a class="viewcode-back" href="../../../generate_logs.tests.html#generate_logs.tests.tests_views_logs.GenerateLogsUrlTests.tests_view_logs_wrong_type">[docs]</a>    <span class="k">def</span> <span class="nf">tests_view_logs_wrong_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        tests display of logs with wrong type</span>
+
+<span class="sd">        :var reponse: response of request</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_admin</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">],</span> <span class="n">password</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_admin</span><span class="p">[</span><span class="s">&#39;password&#39;</span><span class="p">])</span>
+        <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;view_log&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;log_type&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">wrong_type</span><span class="p">}),</span> <span class="n">follow</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;list_logs&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">framework</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, agreau.
+      Last updated on Aug 04, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

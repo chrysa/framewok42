@@ -1,0 +1,939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>forum.tests package</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="None" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">framework</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="forum-tests-package">
+<h1>forum.tests package<a class="headerlink" href="#forum-tests-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-forum.tests.tests_cateory">
+<span id="forum-tests-tests-cateory-module"></span><h2>forum.tests.tests_cateory module<a class="headerlink" href="#module-forum.tests.tests_cateory" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">forum.tests.tests_category</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">unit testing category for forum app</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">22/07/2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumCat</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumTopic</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumPost</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">profil.models.UserLang</td>
+</tr>
+<tr class="field-even field"><th class="field-name">todo:</th><td class="field-body">clean unit tests</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">todo:</th><td class="field-body">internationalisation</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="forum.tests.tests_cateory.ForumTests">
+<em class="property">class </em><code class="descclassname">forum.tests.tests_cateory.</code><code class="descname">ForumTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_cateory.html#ForumTests"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_cateory.ForumTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>this class define all unit tests for forum</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>TestCase</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; librairy of unittest</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/constants.html#None" title="(in Python v2.7)">None</a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="forum.tests.tests_cateory.ForumTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_cateory.html#ForumTests.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_cateory.ForumTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>set up variable and create user for the tests</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; instance of ContactTests</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>self.client</strong> &#8211; instance of navigation client for tests</li>
+<li><strong>self.register_user</strong> &#8211; dict for create new user</li>
+<li><strong>self.create_topic</strong> &#8211; dict of datas for create topic</li>
+<li><strong>new_user</strong> &#8211; instance of user contain new_user</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_cateory.ForumTests.test_acces_to_topic_with_inexisting_cat">
+<code class="descname">test_acces_to_topic_with_inexisting_cat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_cateory.html#ForumTests.test_acces_to_topic_with_inexisting_cat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_cateory.ForumTests.test_acces_to_topic_with_inexisting_cat" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to topic with wrong cat</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_cateory.ForumTests.test_acces_to_topic_with_inexisting_topic">
+<code class="descname">test_acces_to_topic_with_inexisting_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_cateory.html#ForumTests.test_acces_to_topic_with_inexisting_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_cateory.ForumTests.test_acces_to_topic_with_inexisting_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to a wrong topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_cateory.ForumTests.test_acces_to_topic_with_inexisting_topic_cat_and_topic">
+<code class="descname">test_acces_to_topic_with_inexisting_topic_cat_and_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_cateory.html#ForumTests.test_acces_to_topic_with_inexisting_topic_cat_and_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_cateory.ForumTests.test_acces_to_topic_with_inexisting_topic_cat_and_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to topic with wrong cat and a wrong topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_cateory.ForumTests.test_with_cat">
+<code class="descname">test_with_cat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_cateory.html#ForumTests.test_with_cat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_cateory.ForumTests.test_with_cat" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests where categorys are define</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_cateory.ForumTests.test_without_cat">
+<code class="descname">test_without_cat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_cateory.html#ForumTests.test_without_cat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_cateory.ForumTests.test_without_cat" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests where any categorys are define</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-forum.tests.tests_posts">
+<span id="forum-tests-tests-posts-module"></span><h2>forum.tests.tests_posts module<a class="headerlink" href="#module-forum.tests.tests_posts" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">forum.tests.tests_posts</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">unit testing posts for forum app</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">30/07/2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumCat</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumTopic</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumPost</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">profil.models.UserLang</td>
+</tr>
+<tr class="field-even field"><th class="field-name">todo:</th><td class="field-body">clean unit tests</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">todo:</th><td class="field-body">internationalisation</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="forum.tests.tests_posts.ForumTests">
+<em class="property">class </em><code class="descclassname">forum.tests.tests_posts.</code><code class="descname">ForumTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_posts.html#ForumTests"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_posts.ForumTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>this class define all unit tests for forum</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>TestCase</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; librairy of unittest</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/constants.html#None" title="(in Python v2.7)">None</a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="forum.tests.tests_posts.ForumTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_posts.html#ForumTests.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_posts.ForumTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>set up variable and create user for the tests</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; instance of ContactTests</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>self.client</strong> &#8211; instance of navigation client for tests</li>
+<li><strong>self.register_user</strong> &#8211; dict for create new user</li>
+<li><strong>self.create_topic</strong> &#8211; dict of datas for create topic</li>
+<li><strong>new_user</strong> &#8211; instance of user contain new_user</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_posts.ForumTests.test_edit_inexistant_post">
+<code class="descname">test_edit_inexistant_post</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_posts.html#ForumTests.test_edit_inexistant_post"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_posts.ForumTests.test_edit_inexistant_post" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a wrong topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_posts.ForumTests.test_edit_post">
+<code class="descname">test_edit_post</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_posts.html#ForumTests.test_edit_post"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_posts.ForumTests.test_edit_post" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a post</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_posts.ForumTests.test_edit_post_blank">
+<code class="descname">test_edit_post_blank</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_posts.html#ForumTests.test_edit_post_blank"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_posts.ForumTests.test_edit_post_blank" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a post with blank message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_posts.ForumTests.test_edit_post_unlog">
+<code class="descname">test_edit_post_unlog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_posts.html#ForumTests.test_edit_post_unlog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_posts.ForumTests.test_edit_post_unlog" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a post with unlog user</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-forum.tests.tests_topics">
+<span id="forum-tests-tests-topics-module"></span><h2>forum.tests.tests_topics module<a class="headerlink" href="#module-forum.tests.tests_topics" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">forum.tests_topics</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">unit testing for forum app</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">30/07/2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumCat</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumTopic</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumPost</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">profil.models.UserLang</td>
+</tr>
+<tr class="field-even field"><th class="field-name">todo:</th><td class="field-body">tests with inexisting topic</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">todo:</th><td class="field-body">clean unit tests</td>
+</tr>
+<tr class="field-even field"><th class="field-name">todo:</th><td class="field-body">internationalisation</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="forum.tests.tests_topics.ForumTests">
+<em class="property">class </em><code class="descclassname">forum.tests.tests_topics.</code><code class="descname">ForumTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>this class define all unit tests for forum</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>TestCase</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; librairy of unittest</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/constants.html#None" title="(in Python v2.7)">None</a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>set up variable and create user for the tests</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; instance of ContactTests</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>self.client</strong> &#8211; instance of navigation client for tests</li>
+<li><strong>self.register_user</strong> &#8211; dict for create new user</li>
+<li><strong>self.create_topic</strong> &#8211; dict of datas for create topic</li>
+<li><strong>new_user</strong> &#8211; instance of user contain new_user</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_create_topic">
+<code class="descname">test_create_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_create_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_create_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests create topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_create_topic_without_message">
+<code class="descname">test_create_topic_without_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_create_topic_without_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_create_topic_without_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests create topic without message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_create_topic_without_title">
+<code class="descname">test_create_topic_without_title</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_create_topic_without_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_create_topic_without_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests create topic without title</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_edit_inexisting_cat_topic">
+<code class="descname">test_edit_inexisting_cat_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_edit_inexisting_cat_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_edit_inexisting_cat_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a topic with wrong cat and topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_edit_inexisting_topic">
+<code class="descname">test_edit_inexisting_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_edit_inexisting_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_edit_inexisting_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a topic with wrong topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_edit_topic_blank_message">
+<code class="descname">test_edit_topic_blank_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_edit_topic_blank_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_edit_topic_blank_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a topic with blank message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_edit_topic_blank_title">
+<code class="descname">test_edit_topic_blank_title</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_edit_topic_blank_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_edit_topic_blank_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a topic with blank mtitle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_edit_topic_inexisting_cat">
+<code class="descname">test_edit_topic_inexisting_cat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_edit_topic_inexisting_cat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_edit_topic_inexisting_cat" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a topic with wro,g category</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_edit_topic_message">
+<code class="descname">test_edit_topic_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_edit_topic_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_edit_topic_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a message&#8217;s topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_edit_topic_title">
+<code class="descname">test_edit_topic_title</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_edit_topic_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_edit_topic_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a title&#8217;s topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_edit_topic_title_message">
+<code class="descname">test_edit_topic_title_message</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_edit_topic_title_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_edit_topic_title_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_edit_topic_unlog">
+<code class="descname">test_edit_topic_unlog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_edit_topic_unlog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_edit_topic_unlog" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a topic when no user log</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_topics.ForumTests.test_response_topic">
+<code class="descname">test_response_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_topics.html#ForumTests.test_response_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_topics.ForumTests.test_response_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to response at a topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-forum.tests.tests_urls">
+<span id="forum-tests-tests-urls-module"></span><h2>forum.tests.tests_urls module<a class="headerlink" href="#module-forum.tests.tests_urls" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">forum.tests.tests_urls</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">unit testing urls for forum app</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">30/07/2015</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumCat</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumTopic</td>
+</tr>
+<tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.models.ForumPost</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">seealso:</th><td class="field-body">profil.models.UserLang</td>
+</tr>
+<tr class="field-even field"><th class="field-name">todo:</th><td class="field-body">tests acces to topic</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">todo:</th><td class="field-body">tests acces to inexisting topic</td>
+</tr>
+<tr class="field-even field"><th class="field-name">todo:</th><td class="field-body">clean unit tests</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="forum.tests.tests_urls.ForumTests">
+<em class="property">class </em><code class="descclassname">forum.tests.tests_urls.</code><code class="descname">ForumTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<p>this class define all unit tests for forum</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>TestCase</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; librairy of unittest</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/constants.html#None" title="(in Python v2.7)">None</a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>set up variable and create user for the tests</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; instance of ContactTests</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><strong>self.client</strong> &#8211; instance of navigation client for tests</li>
+<li><strong>self.register_user</strong> &#8211; dict for create new user</li>
+<li><strong>self.create_topic</strong> &#8211; dict of datas for create topic</li>
+<li><strong>new_user</strong> &#8211; instance of user contain new_user</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.test_acces_existing_cat">
+<code class="descname">test_acces_existing_cat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.test_acces_existing_cat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.test_acces_existing_cat" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to existing category</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.test_acces_not_existing_cat">
+<code class="descname">test_acces_not_existing_cat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.test_acces_not_existing_cat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.test_acces_not_existing_cat" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to category who aren&#8217;t define</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.test_acces_to_topic">
+<code class="descname">test_acces_to_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.test_acces_to_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.test_acces_to_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.test_acces_to_topic_unlog">
+<code class="descname">test_acces_to_topic_unlog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.test_acces_to_topic_unlog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.test_acces_to_topic_unlog" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to topic unlog</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.test_create_topic_access_url">
+<code class="descname">test_create_topic_access_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.test_create_topic_access_url"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.test_create_topic_access_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to url for create topic if user log</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.test_create_topic_access_url_unlog">
+<code class="descname">test_create_topic_access_url_unlog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.test_create_topic_access_url_unlog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.test_create_topic_access_url_unlog" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to url for create topic if any user log</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.test_edit_topic_unlog">
+<code class="descname">test_edit_topic_unlog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.test_edit_topic_unlog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.test_edit_topic_unlog" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to edit a topic when no user log</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.test_forum_url_log">
+<code class="descname">test_forum_url_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.test_forum_url_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.test_forum_url_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to url contact log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.test_forum_url_unlog">
+<code class="descname">test_forum_url_unlog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.test_forum_url_unlog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.test_forum_url_unlog" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests access to url contact not log status</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="forum.tests.tests_urls.ForumTests.test_response_topic">
+<code class="descname">test_response_topic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/tests/tests_urls.html#ForumTests.test_response_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.tests.tests_urls.ForumTests.test_response_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>tests to response at a topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><strong>reponse</strong> &#8211; response of request</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-forum.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-forum.tests" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">forum.tests package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-forum.tests.tests_cateory">forum.tests.tests_cateory module</a></li>
+<li><a class="reference internal" href="#module-forum.tests.tests_posts">forum.tests.tests_posts module</a></li>
+<li><a class="reference internal" href="#module-forum.tests.tests_topics">forum.tests.tests_topics module</a></li>
+<li><a class="reference internal" href="#module-forum.tests.tests_urls">forum.tests.tests_urls module</a></li>
+<li><a class="reference internal" href="#module-forum.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/forum.tests.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">framework</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, agreau.
+      Last updated on Aug 04, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>
