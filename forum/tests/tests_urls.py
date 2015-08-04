@@ -90,13 +90,8 @@ class ForumTests(TestCase):
         self.inexisting_post = '100'
         self.cat_slug = ForumCat.objects.get(Name=self.cat[0]).slug
         self.topic_slug = ForumTopic.objects.get(CatParent=ForumCat.objects.get(Name=self.cat[0])).slug
-        ForumPost(
-            TopicParent=ForumTopic.objects.get(
-                slug=self.topic_slug
-            ),
-            Message=self.ref_response['Message'],
-            Autor=User.objects.get(username=self.register_user['username']),
-        ).save()
+        ForumPost(TopicParent=ForumTopic.objects.get(slug=self.topic_slug), Message=self.ref_response['Message'],
+                  Autor=User.objects.get(username=self.register_user['username'])).save()
 
     def test_forum_url_unlog(self):
         """

@@ -13,15 +13,6 @@ def error_load_log_message(request):
 def error_inexistant_user_log_message(request):
     return 'connection avec un user qui n\'existe pas par' + request.POST['username']
 
-
-def error_login_admin_front_log_message():
-    return 'un admin a essaye de se connecter depuis le front comme un boulet'
-
-
-def error_login_staff_front_log_message():
-    return 'un membre dus taff a essaye de se connecter depuis le front comme un boulet'
-
-
 def error_login_log_message(request):
     return 'authenticate error pour par ' + str(request.POST['username'])
 
