@@ -19,9 +19,11 @@ import logging
 
 from django.shortcuts import redirect
 from django.shortcuts import render
+from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+
 from issues.models import Issue
 from generate_logs.functions import info_load_log_message
 from issues.forms.AdminResponseIssue import AdminResponseIssueForm
@@ -124,11 +126,13 @@ def view_issue(request, issue):
 @login_required
 def reopen_issue(request, issue):
     logger_info.info(info_load_log_message(request))
-    Issue.objects.filter(
+    issue = Issue.objects.filter(
         slug=issue
-    ).update(
-        Status="open",
     )
+    if issue.Status == 'close':
+        issue.update(
+            Status="open",
+        )
     return redirect(
         reverse('list_issue'),
         permanent=True
