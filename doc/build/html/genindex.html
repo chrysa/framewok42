@@ -208,8 +208,6 @@
   <dt><a href="contact.tests.html#module-contact.tests.tests_urls">contact.tests.tests_urls (module)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="contact.html#module-contact.urls">contact.urls (module)</a>
   </dt>
@@ -218,20 +216,24 @@
   <dt><a href="contact.forms.html#contact.forms.ContactFrom.ContactForm">ContactForm (class in contact.forms.ContactFrom)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactTests">ContactTests (class in contact.tests.test_send_contact_log)</a>
+  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactLogTests">ContactLogTests (class in contact.tests.test_send_contact_log)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactTests">(class in contact.tests.tests_send_contact_unlog)</a>
+      
+  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests">ContactUnlogTests (class in contact.tests.tests_send_contact_unlog)</a>
   </dt>
 
-        
-  <dt><a href="contact.tests.html#contact.tests.tests_urls.ContactTests">(class in contact.tests.tests_urls)</a>
+      
+  <dt><a href="contact.tests.html#contact.tests.tests_urls.ContactUrlLogTests">ContactUrlLogTests (class in contact.tests.tests_urls)</a>
   </dt>
 
-      </dl></dd>
+      
+  <dt><a href="contact.tests.html#contact.tests.tests_urls.ContactUrlUnLogTests">ContactUrlUnLogTests (class in contact.tests.tests_urls)</a>
+  </dt>
+
       
   <dt><a href="core.html#module-core">core (module)</a>
   </dt>
@@ -524,12 +526,12 @@
   <dt><a href="forum.html#module-forum.urls">forum.urls (module)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="forum.html#module-forum.views">forum.views (module)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="forum.html#forum.models.ForumCat">ForumCat (class in forum.models)</a>
   </dt>
@@ -571,10 +573,6 @@
   <dt><a href="forum.tests.html#forum.tests.tests_topics.ForumTests">(class in forum.tests.tests_topics)</a>
   </dt>
 
-        
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests">(class in forum.tests.tests_urls)</a>
-  </dt>
-
       </dl></dd>
       
   <dt><a href="forum.html#forum.models.ForumTopic">ForumTopic (class in forum.models)</a>
@@ -586,6 +584,14 @@
 
       
   <dt><a href="forum.html#forum.models.ForumTopic.MultipleObjectsReturned">ForumTopic.MultipleObjectsReturned</a>
+  </dt>
+
+      
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests">ForumUrlLogTests (class in forum.tests.tests_urls)</a>
+  </dt>
+
+      
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests">ForumUrlUnLogTests (class in forum.tests.tests_urls)</a>
   </dt>
 
       
@@ -647,17 +653,19 @@
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests">GenerateLogsUrlTests (class in generate_logs.tests.tests_urls)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests">GenerateLogsUrlLogTests (class in generate_logs.tests.tests_urls)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_views_logs.GenerateLogsUrlTests">(class in generate_logs.tests.tests_views_logs)</a>
+      
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_views_logs.GenerateLogsUrlTests">GenerateLogsUrlTests (class in generate_logs.tests.tests_views_logs)</a>
   </dt>
 
-      </dl></dd>
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlUnlogTests">GenerateLogsUrlUnlogTests (class in generate_logs.tests.tests_urls)</a>
+  </dt>
+
       
   <dt><a href="forum.html#forum.models.ForumPost.get_next_by_CreateDate">get_next_by_CreateDate() (forum.models.ForumPost method)</a>
   </dt>
@@ -848,12 +856,6 @@
   <dt><a href="issues.html#issues.pre_tests.IssuesTests">IssuesTests (class in issues.pre_tests)</a>
   </dt>
 
-      <dd><dl>
-        
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.IssuesTests">(class in issues.tests.tests_urls)</a>
-  </dt>
-
-      </dl></dd>
   </dl></td>
 </tr></table>
 
@@ -896,8 +898,6 @@
   <dt><a href="ldap42.html#ldap42.views.ldap_display">ldap_display() (in module ldap42.views)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="ldap42.forms.html#ldap42.forms.LdapForm.LdapForm">LdapForm (class in ldap42.forms.LdapForm)</a>
   </dt>
@@ -906,6 +906,38 @@
   <dt><a href="ldap42.forms.html#ldap42.forms.LdapForm.LdapForm.Meta">LdapForm.Meta (class in ldap42.forms.LdapForm)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="forum.html#forum.admin.PostAdmin.list_display">list_display (forum.admin.PostAdmin attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="forum.html#forum.admin.TopicAdmin.list_display">(forum.admin.TopicAdmin attribute)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="forum.html#forum.admin.PostAdmin.list_display_links">list_display_links (forum.admin.PostAdmin attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="forum.html#forum.admin.TopicAdmin.list_display_links">(forum.admin.TopicAdmin attribute)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="forum.html#forum.admin.PostAdmin.list_filter">list_filter (forum.admin.PostAdmin attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="forum.html#forum.admin.TopicAdmin.list_filter">(forum.admin.TopicAdmin attribute)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="ldap42.html#ldap42.views.login_ldap">login_ldap() (in module ldap42.views)</a>
   </dt>
@@ -949,6 +981,14 @@
   </dt>
 
       <dd><dl>
+        
+  <dt><a href="forum.html#forum.admin.PostAdmin.media">(forum.admin.PostAdmin attribute)</a>
+  </dt>
+
+        
+  <dt><a href="forum.html#forum.admin.TopicAdmin.media">(forum.admin.TopicAdmin attribute)</a>
+  </dt>
+
         
   <dt><a href="forum.forms.html#forum.forms.CreateTopic.TopicForm.media">(forum.forms.CreateTopic.TopicForm attribute)</a>
   </dt>
@@ -1082,8 +1122,6 @@
   </dt>
 
       </dl></dd>
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="forum.migrations.html#forum.migrations.0001_initial.Migration.operations">operations (forum.migrations.0001_initial.Migration attribute)</a>
   </dt>
@@ -1119,11 +1157,27 @@
 
       </dl></dd>
   </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="forum.html#forum.admin.PostAdmin.ordering">ordering (forum.admin.PostAdmin attribute)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="forum.html#forum.admin.TopicAdmin.ordering">(forum.admin.TopicAdmin attribute)</a>
+  </dt>
+
+      </dl></dd>
+  </dl></td>
 </tr></table>
 
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="forum.html#forum.admin.PostAdmin">PostAdmin (class in forum.admin)</a>
+  </dt>
+
       
   <dt><a href="forum.forms.html#forum.forms.ReplyTopic.PostForm">PostForm (class in forum.forms.ReplyTopic)</a>
   </dt>
@@ -1233,22 +1287,30 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="profil.html#profil.views.select_login">select_login() (in module profil.views)</a>
-  </dt>
-
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactTests.setUp">setUp() (contact.tests.test_send_contact_log.ContactTests method)</a>
+  <dt><a href="forum.html#forum.admin.PostAdmin.search_fields">search_fields (forum.admin.PostAdmin attribute)</a>
   </dt>
 
       <dd><dl>
         
-  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactTests.setUp">(contact.tests.tests_send_contact_unlog.ContactTests method)</a>
+  <dt><a href="forum.html#forum.admin.TopicAdmin.search_fields">(forum.admin.TopicAdmin attribute)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="profil.html#profil.views.select_login">select_login() (in module profil.views)</a>
+  </dt>
+
+      
+  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactLogTests.setUp">setUp() (contact.tests.test_send_contact_log.ContactLogTests method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.setUp">(contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
         
-  <dt><a href="contact.tests.html#contact.tests.tests_urls.ContactTests.setUp">(contact.tests.tests_urls.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_urls.ContactUrlLogTests.setUp">(contact.tests.tests_urls.ContactUrlLogTests method)</a>
   </dt>
 
         
@@ -1264,11 +1326,15 @@
   </dt>
 
         
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.setUp">(forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.setUp">(forum.tests.tests_urls.ForumUrlLogTests method)</a>
   </dt>
 
         
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.setUp">(generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests.setUp">(forum.tests.tests_urls.ForumUrlUnLogTests method)</a>
+  </dt>
+
+        
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.setUp">(generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
         
@@ -1280,7 +1346,7 @@
   </dt>
 
         
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.IssuesTests.setUp">(issues.tests.tests_urls.IssuesTests method)</a>
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsLog.setUp">(issues.tests.tests_urls.UrlIssuesTestsLog method)</a>
   </dt>
 
         
@@ -1297,17 +1363,33 @@
 
       </dl></dd>
   </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="forum.html#forum.admin.PostAdmin.short_message">short_message() (forum.admin.PostAdmin method)</a>
+  </dt>
+
+      <dd><dl>
+        
+  <dt><a href="forum.html#forum.admin.TopicAdmin.short_message">(forum.admin.TopicAdmin method)</a>
+  </dt>
+
+      </dl></dd>
+      
+  <dt><a href="forum.html#forum.admin.TopicAdmin.short_title">short_title() (forum.admin.TopicAdmin method)</a>
+  </dt>
+
+  </dl></td>
 </tr></table>
 
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.test_acces_existing_cat">test_acces_existing_cat() (forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_acces_existing_cat">test_acces_existing_cat() (forum.tests.tests_urls.ForumUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.test_acces_not_existing_cat">test_acces_not_existing_cat() (forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_acces_not_existing_cat">test_acces_not_existing_cat() (forum.tests.tests_urls.ForumUrlLogTests method)</a>
   </dt>
 
       
@@ -1319,13 +1401,19 @@
   </dt>
 
       
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.test_acces_to_topic">test_acces_to_topic() (forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_acces_to_topic">test_acces_to_topic() (forum.tests.tests_urls.ForumUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.test_acces_to_topic_unlog">test_acces_to_topic_unlog() (forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_acces_to_topic_unlog">test_acces_to_topic_unlog() (forum.tests.tests_urls.ForumUrlLogTests method)</a>
   </dt>
 
+      <dd><dl>
+        
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests.test_acces_to_topic_unlog">(forum.tests.tests_urls.ForumUrlUnLogTests method)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="forum.tests.html#forum.tests.tests_cateory.ForumTests.test_acces_to_topic_with_inexisting_cat">test_acces_to_topic_with_inexisting_cat() (forum.tests.tests_cateory.ForumTests method)</a>
   </dt>
@@ -1343,11 +1431,11 @@
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.tests_urls.ContactTests.test_contact_url_log">test_contact_url_log() (contact.tests.tests_urls.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_urls.ContactUrlLogTests.test_contact_url_log">test_contact_url_log() (contact.tests.tests_urls.ContactUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.tests_urls.ContactTests.test_contact_url_unlog">test_contact_url_unlog() (contact.tests.tests_urls.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_urls.ContactUrlUnLogTests.test_contact_url_unlog">test_contact_url_unlog() (contact.tests.tests_urls.ContactUrlUnLogTests method)</a>
   </dt>
 
       
@@ -1355,13 +1443,19 @@
   </dt>
 
       
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.test_create_topic_access_url">test_create_topic_access_url() (forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_create_topic_access_url">test_create_topic_access_url() (forum.tests.tests_urls.ForumUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.test_create_topic_access_url_unlog">test_create_topic_access_url_unlog() (forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_create_topic_access_url_unlog">test_create_topic_access_url_unlog() (forum.tests.tests_urls.ForumUrlLogTests method)</a>
   </dt>
 
+      <dd><dl>
+        
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests.test_create_topic_access_url_unlog">(forum.tests.tests_urls.ForumUrlUnLogTests method)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="forum.tests.html#forum.tests.tests_topics.ForumTests.test_create_topic_without_message">test_create_topic_without_message() (forum.tests.tests_topics.ForumTests method)</a>
   </dt>
@@ -1424,48 +1518,58 @@
 
       <dd><dl>
         
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.test_edit_topic_unlog">(forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_edit_topic_unlog">(forum.tests.tests_urls.ForumUrlLogTests method)</a>
+  </dt>
+
+        
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests.test_edit_topic_unlog">(forum.tests.tests_urls.ForumUrlUnLogTests method)</a>
   </dt>
 
       </dl></dd>
       
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.test_forum_url_log">test_forum_url_log() (forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_forum_url_log">test_forum_url_log() (forum.tests.tests_urls.ForumUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.test_forum_url_unlog">test_forum_url_unlog() (forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_forum_url_unlog">test_forum_url_unlog() (forum.tests.tests_urls.ForumUrlLogTests method)</a>
   </dt>
 
+      <dd><dl>
+        
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests.test_forum_url_unlog">(forum.tests.tests_urls.ForumUrlUnLogTests method)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="core.tests.html#core.tests.tests_urls.CoreUrlTests.test_home_url">test_home_url() (core.tests.tests_urls.CoreUrlTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.test_list_logs_url_log_admin_from_forum">test_list_logs_url_log_admin_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.test_list_logs_url_log_admin_from_forum">test_list_logs_url_log_admin_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.test_list_logs_url_log_admin_from_home">test_list_logs_url_log_admin_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.test_list_logs_url_log_admin_from_home">test_list_logs_url_log_admin_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.test_list_logs_url_log_staff_from_forum">test_list_logs_url_log_staff_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.test_list_logs_url_log_staff_from_forum">test_list_logs_url_log_staff_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.test_list_logs_url_log_staff_from_home">test_list_logs_url_log_staff_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.test_list_logs_url_log_staff_from_home">test_list_logs_url_log_staff_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.test_list_logs_url_log_user_from_forum">test_list_logs_url_log_user_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.test_list_logs_url_log_user_from_forum">test_list_logs_url_log_user_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.test_list_logs_url_log_user_from_home">test_list_logs_url_log_user_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.test_list_logs_url_log_user_from_home">test_list_logs_url_log_user_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.test_list_logs_url_unlog_from_home">test_list_logs_url_unlog_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlUnlogTests.test_list_logs_url_unlog_from_home">test_list_logs_url_unlog_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlUnlogTests method)</a>
   </dt>
 
       
@@ -1540,56 +1644,56 @@
 
       <dd><dl>
         
-  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumTests.test_response_topic">(forum.tests.tests_urls.ForumTests method)</a>
+  <dt><a href="forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_response_topic">(forum.tests.tests_urls.ForumUrlLogTests method)</a>
   </dt>
 
       </dl></dd>
       
-  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactTests.test_send_contact_log">test_send_contact_log() (contact.tests.test_send_contact_log.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactLogTests.test_send_contact_log">test_send_contact_log() (contact.tests.test_send_contact_log.ContactLogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactTests.test_send_contact_log_blank_subject_message">test_send_contact_log_blank_subject_message() (contact.tests.test_send_contact_log.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactLogTests.test_send_contact_log_blank_subject_message">test_send_contact_log_blank_subject_message() (contact.tests.test_send_contact_log.ContactLogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactTests.test_send_contact_log_message_blank">test_send_contact_log_message_blank() (contact.tests.test_send_contact_log.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactLogTests.test_send_contact_log_message_blank">test_send_contact_log_message_blank() (contact.tests.test_send_contact_log.ContactLogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactTests.test_send_contact_log_subject_blank">test_send_contact_log_subject_blank() (contact.tests.test_send_contact_log.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.test_send_contact_log.ContactLogTests.test_send_contact_log_subject_blank">test_send_contact_log_subject_blank() (contact.tests.test_send_contact_log.ContactLogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog">test_send_contact_unlog() (contact.tests.tests_send_contact_unlog.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog">test_send_contact_unlog() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_all_blank">test_send_contact_unlog_all_blank() (contact.tests.tests_send_contact_unlog.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_all_blank">test_send_contact_unlog_all_blank() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_email_message">test_send_contact_unlog_blank_email_message() (contact.tests.tests_send_contact_unlog.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_blank_email_message">test_send_contact_unlog_blank_email_message() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_email_subject">test_send_contact_unlog_blank_email_subject() (contact.tests.tests_send_contact_unlog.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_blank_email_subject">test_send_contact_unlog_blank_email_subject() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_mail">test_send_contact_unlog_blank_mail() (contact.tests.tests_send_contact_unlog.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_blank_mail">test_send_contact_unlog_blank_mail() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_message">test_send_contact_unlog_blank_message() (contact.tests.tests_send_contact_unlog.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_blank_message">test_send_contact_unlog_blank_message() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_subject">test_send_contact_unlog_blank_subject() (contact.tests.tests_send_contact_unlog.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_blank_subject">test_send_contact_unlog_blank_subject() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
       
-  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactTests.test_send_contact_unlog_blank_subject_message">test_send_contact_unlog_blank_subject_message() (contact.tests.tests_send_contact_unlog.ContactTests method)</a>
+  <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_blank_subject_message">test_send_contact_unlog_blank_subject_message() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
       
@@ -1602,14 +1706,24 @@
 
       <dd><dl>
         
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.IssuesTests.test_url_list_issue_unlog">(issues.tests.tests_urls.IssuesTests method)</a>
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsLog.test_url_list_issue_unlog">(issues.tests.tests_urls.UrlIssuesTestsLog method)</a>
+  </dt>
+
+        
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsUnLog.test_url_list_issue_unlog">(issues.tests.tests_urls.UrlIssuesTestsUnLog method)</a>
   </dt>
 
       </dl></dd>
       
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.IssuesTests.test_url_list_issue_user_log">test_url_list_issue_user_log() (issues.tests.tests_urls.IssuesTests method)</a>
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsLog.test_url_new_issue_unlog">test_url_new_issue_unlog() (issues.tests.tests_urls.UrlIssuesTestsLog method)</a>
   </dt>
 
+      <dd><dl>
+        
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsUnLog.test_url_new_issue_unlog">(issues.tests.tests_urls.UrlIssuesTestsUnLog method)</a>
+  </dt>
+
+      </dl></dd>
       
   <dt><a href="forum.tests.html#forum.tests.tests_cateory.ForumTests.test_with_cat">test_with_cat() (forum.tests.tests_cateory.ForumTests method)</a>
   </dt>
@@ -1623,39 +1737,43 @@
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.tests_view_logs_log_admin_from_forum">tests_view_logs_log_admin_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.tests_view_logs_log_admin_from_forum">tests_view_logs_log_admin_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.tests_view_logs_log_admin_from_home">tests_view_logs_log_admin_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.tests_view_logs_log_admin_from_home">tests_view_logs_log_admin_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.tests_view_logs_log_staff_from_forum">tests_view_logs_log_staff_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.tests_view_logs_log_staff_from_forum">tests_view_logs_log_staff_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.tests_view_logs_log_staff_from_home">tests_view_logs_log_staff_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.tests_view_logs_log_staff_from_home">tests_view_logs_log_staff_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.tests_view_logs_log_user_from_forum">tests_view_logs_log_user_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.tests_view_logs_log_user_from_forum">tests_view_logs_log_user_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.tests_view_logs_log_user_from_home">tests_view_logs_log_user_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlLogTests.tests_view_logs_log_user_from_home">tests_view_logs_log_user_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlLogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.tests_view_logs_unlog_from_forum">tests_view_logs_unlog_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlUnlogTests.tests_view_logs_unlog_from_forum">tests_view_logs_unlog_from_forum() (generate_logs.tests.tests_urls.GenerateLogsUrlUnlogTests method)</a>
   </dt>
 
       
-  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlTests.tests_view_logs_unlog_from_home">tests_view_logs_unlog_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlTests method)</a>
+  <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_urls.GenerateLogsUrlUnlogTests.tests_view_logs_unlog_from_home">tests_view_logs_unlog_from_home() (generate_logs.tests.tests_urls.GenerateLogsUrlUnlogTests method)</a>
   </dt>
 
       
   <dt><a href="generate_logs.tests.html#generate_logs.tests.tests_views_logs.GenerateLogsUrlTests.tests_view_logs_wrong_type">tests_view_logs_wrong_type() (generate_logs.tests.tests_views_logs.GenerateLogsUrlTests method)</a>
+  </dt>
+
+      
+  <dt><a href="forum.html#forum.admin.TopicAdmin">TopicAdmin (class in forum.admin)</a>
   </dt>
 
       
@@ -1677,6 +1795,14 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsLog">UrlIssuesTestsLog (class in issues.tests.tests_urls)</a>
+  </dt>
+
+      
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsUnLog">UrlIssuesTestsUnLog (class in issues.tests.tests_urls)</a>
+  </dt>
+
+      
   <dt><a href="profil.html#profil.models.UserLang.user">user (profil.models.UserLang attribute)</a>
   </dt>
 
@@ -1684,12 +1810,12 @@
   <dt><a href="issues.forms.html#issues.forms.AdminResponseIssue.AdminResponseIssueForm.USER_LIST">USER_LIST (issues.forms.AdminResponseIssue.AdminResponseIssueForm attribute)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="profil.html#profil.models.UserLang">UserLang (class in profil.models)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="profil.html#profil.models.UserLang.DoesNotExist">UserLang.DoesNotExist</a>
   </dt>
@@ -1768,7 +1894,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, agreau.
-      Last updated on Aug 04, 2015.
+      Last updated on Aug 05, 2015.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

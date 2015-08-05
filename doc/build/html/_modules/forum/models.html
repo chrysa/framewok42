@@ -75,7 +75,7 @@
 <span class="sd">    :return: ForumCat object</span>
 <span class="sd">    :rtype: object</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">Name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">Name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
     <span class="n">slug</span> <span class="o">=</span> <span class="n">AutoSlugField</span><span class="p">(</span><span class="n">populate_from</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s">&#39;Name&#39;</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -99,7 +99,7 @@
 <span class="sd">    :rtype: object</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">CatParent</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">ForumCat</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s">&quot;categorie_parente&quot;</span><span class="p">))</span>
-    <span class="n">Title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s">&#39;categorie&#39;</span><span class="p">))</span>
+    <span class="n">Title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
     <span class="n">slug</span> <span class="o">=</span> <span class="n">AutoSlugField</span><span class="p">(</span><span class="n">populate_from</span><span class="o">=</span><span class="s">&#39;Title&#39;</span><span class="p">)</span>
     <span class="n">Autor</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">)</span>
     <span class="n">Message</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
@@ -168,7 +168,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, agreau.
-      Last updated on Aug 04, 2015.
+      Last updated on Aug 05, 2015.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

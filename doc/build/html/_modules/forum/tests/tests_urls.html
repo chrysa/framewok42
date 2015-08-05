@@ -75,7 +75,7 @@
 <span class="kn">from</span> <span class="nn">profil.models</span> <span class="kn">import</span> <span class="n">UserLang</span>
 
 
-<div class="viewcode-block" id="ForumTests"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests">[docs]</a><span class="k">class</span> <span class="nc">ForumTests</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlUnLogTests"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests">[docs]</a><span class="k">class</span> <span class="nc">ForumUrlUnLogTests</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    this class define all unit tests for forum</span>
 
@@ -83,9 +83,10 @@
 <span class="sd">    :type TestCase: object</span>
 <span class="sd">    :return: None</span>
 <span class="sd">    :rtype: None</span>
+<span class="sd">    :todo: tester les inexistants</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="ForumTests.setUp"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlUnLogTests.setUp"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        set up variable and create user for the tests</span>
 
@@ -98,43 +99,21 @@
 <span class="sd">        :return: None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">register_user</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s">&#39;username&#39;</span><span class="p">:</span> <span class="s">&quot;user_test&quot;</span><span class="p">,</span>
-            <span class="s">&#39;email&#39;</span><span class="p">:</span> <span class="s">&#39;user_test@tests.fr&#39;</span><span class="p">,</span>
-            <span class="s">&#39;password&#39;</span><span class="p">:</span> <span class="s">&quot;tests&quot;</span><span class="p">,</span>
-        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_user</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;username&#39;</span><span class="p">:</span> <span class="s">&quot;user_test&quot;</span><span class="p">,</span> <span class="s">&#39;email&#39;</span><span class="p">:</span> <span class="s">&#39;user_test@tests.fr&#39;</span><span class="p">,</span> <span class="s">&#39;password&#39;</span><span class="p">:</span> <span class="s">&quot;tests&quot;</span><span class="p">}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cat</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;cat1&#39;</span><span class="p">,</span> <span class="s">&#39;cat2&#39;</span><span class="p">,</span> <span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ref_topic</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s">&#39;Title&#39;</span><span class="p">:</span> <span class="s">&#39;ref topic&#39;</span><span class="p">,</span>
-            <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;content tests&#39;</span><span class="p">,</span>
-        <span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">create_topic</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s">&#39;Title&#39;</span><span class="p">:</span> <span class="s">&#39;tests topic&#39;</span><span class="p">,</span>
-            <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;content tests&#39;</span><span class="p">,</span>
-        <span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ref_response</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;ref_reponse&#39;</span><span class="p">,</span>
-        <span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">test_response</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;test_reponse&#39;</span><span class="p">,</span>
-        <span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">edit_topic</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s">&#39;Title&#39;</span><span class="p">:</span> <span class="s">&#39;edit topic title&#39;</span><span class="p">,</span>
-            <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;edit topic message&#39;</span><span class="p">,</span>
-        <span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">edit_post</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;edit post&#39;</span><span class="p">,</span>
-        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ref_topic</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Title&#39;</span><span class="p">:</span> <span class="s">&#39;ref topic&#39;</span><span class="p">,</span> <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;content tests&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_topic</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Title&#39;</span><span class="p">:</span> <span class="s">&#39;tests topic&#39;</span><span class="p">,</span> <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;content tests&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ref_response</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;ref_reponse&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_response</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;test_reponse&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edit_topic</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Title&#39;</span><span class="p">:</span> <span class="s">&#39;edit topic title&#39;</span><span class="p">,</span> <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;edit topic message&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edit_post</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;edit post&#39;</span><span class="p">}</span>
         <span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">)</span>
         <span class="n">UserLang</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">new_user</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s">&#39;fr&#39;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat</span><span class="p">:</span>
             <span class="n">ForumCat</span><span class="p">(</span><span class="n">Name</span><span class="o">=</span><span class="n">cat</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
-        <span class="n">ForumTopic</span><span class="p">(</span>
-            <span class="n">CatParent</span><span class="o">=</span><span class="n">ForumCat</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
-            <span class="n">Title</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ref_topic</span><span class="p">[</span><span class="s">&#39;Title&#39;</span><span class="p">],</span>
-            <span class="n">Autor</span><span class="o">=</span><span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">]),</span>
-            <span class="n">Message</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ref_topic</span><span class="p">[</span><span class="s">&#39;Message&#39;</span><span class="p">]</span>
-        <span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">ForumTopic</span><span class="p">(</span><span class="n">CatParent</span><span class="o">=</span><span class="n">ForumCat</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">Title</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ref_topic</span><span class="p">[</span><span class="s">&#39;Title&#39;</span><span class="p">],</span>
+                   <span class="n">Autor</span><span class="o">=</span><span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">]),</span>
+                   <span class="n">Message</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ref_topic</span><span class="p">[</span><span class="s">&#39;Message&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inexisting_cat</span> <span class="o">=</span> <span class="s">&#39;inexisting-cat&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inexisting_topic</span> <span class="o">=</span> <span class="s">&#39;inexisting-topic&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inexisting_post</span> <span class="o">=</span> <span class="s">&#39;100&#39;</span>
@@ -143,7 +122,7 @@
         <span class="n">ForumPost</span><span class="p">(</span><span class="n">TopicParent</span><span class="o">=</span><span class="n">ForumTopic</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">topic_slug</span><span class="p">),</span> <span class="n">Message</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ref_response</span><span class="p">[</span><span class="s">&#39;Message&#39;</span><span class="p">],</span>
                   <span class="n">Autor</span><span class="o">=</span><span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">]))</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="ForumTests.test_forum_url_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.test_forum_url_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_forum_url_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlUnLogTests.test_forum_url_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests.test_forum_url_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_forum_url_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        tests access to url contact not log status</span>
 
@@ -153,7 +132,100 @@
         <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;forum&#39;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;forum&#39;</span><span class="p">))</span>
 </div>
-<div class="viewcode-block" id="ForumTests.test_forum_url_log"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.test_forum_url_log">[docs]</a>    <span class="k">def</span> <span class="nf">test_forum_url_log</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlUnLogTests.test_create_topic_access_url_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests.test_create_topic_access_url_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_create_topic_access_url_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        tests access to url for create topic if any user log</span>
+
+<span class="sd">        :var reponse: response of request</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;create_topic&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;cat&#39;</span><span class="p">:</span> <span class="n">ForumCat</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">slug</span><span class="p">}))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span>
+                             <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;create_topic&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;cat&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_slug</span><span class="p">}))</span>
+</div>
+<div class="viewcode-block" id="ForumUrlUnLogTests.test_acces_to_topic_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests.test_acces_to_topic_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_acces_to_topic_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        tests access to topic unlog</span>
+
+<span class="sd">        :var reponse: response of request</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;topic_cat&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;cat&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_slug</span><span class="p">,</span> <span class="s">&#39;topic&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">topic_slug</span><span class="p">}),</span>
+                                   <span class="n">follow</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;topic_cat&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;cat&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_slug</span><span class="p">,</span>
+                                                                                                 <span class="s">&#39;topic&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">topic_slug</span><span class="p">}))</span>
+</div>
+<div class="viewcode-block" id="ForumUrlUnLogTests.test_edit_topic_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlUnLogTests.test_edit_topic_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_edit_topic_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        tests to edit a topic when no user log</span>
+
+<span class="sd">        :var reponse: response of request</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;edit_topic&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;cat&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_slug</span><span class="p">,</span> <span class="s">&#39;topic&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">topic_slug</span><span class="p">}),</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">edit_topic</span><span class="p">,</span> <span class="n">follow</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;edit_topic&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;cat&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_slug</span><span class="p">,</span>
+                                                                                                  <span class="s">&#39;topic&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">topic_slug</span><span class="p">}))</span>
+
+</div></div>
+<div class="viewcode-block" id="ForumUrlLogTests"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests">[docs]</a><span class="k">class</span> <span class="nc">ForumUrlLogTests</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    this class define all unit tests for forum</span>
+
+<span class="sd">    :param TestCase: librairy of unittest</span>
+<span class="sd">    :type TestCase: object</span>
+<span class="sd">    :return: None</span>
+<span class="sd">    :rtype: None</span>
+<span class="sd">    :todo: tester les inexistants</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="ForumUrlLogTests.setUp"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        set up variable and create user for the tests</span>
+
+<span class="sd">        :param self: instance of ContactTests</span>
+<span class="sd">        :type self: object</span>
+<span class="sd">        :var self.client: instance of navigation client for tests</span>
+<span class="sd">        :var self.register_user: dict for create new user</span>
+<span class="sd">        :var self.create_topic: dict of datas for create topic</span>
+<span class="sd">        :var new_user: instance of user contain new_user</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_user</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;username&#39;</span><span class="p">:</span> <span class="s">&quot;user_test&quot;</span><span class="p">,</span> <span class="s">&#39;email&#39;</span><span class="p">:</span> <span class="s">&#39;user_test@tests.fr&#39;</span><span class="p">,</span> <span class="s">&#39;password&#39;</span><span class="p">:</span> <span class="s">&quot;tests&quot;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cat</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;cat1&#39;</span><span class="p">,</span> <span class="s">&#39;cat2&#39;</span><span class="p">,</span> <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ref_topic</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Title&#39;</span><span class="p">:</span> <span class="s">&#39;ref topic&#39;</span><span class="p">,</span> <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;content tests&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_topic</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Title&#39;</span><span class="p">:</span> <span class="s">&#39;tests topic&#39;</span><span class="p">,</span> <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;content tests&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ref_response</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;ref_reponse&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_response</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;test_reponse&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edit_topic</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Title&#39;</span><span class="p">:</span> <span class="s">&#39;edit topic title&#39;</span><span class="p">,</span> <span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;edit topic message&#39;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">edit_post</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;Message&#39;</span><span class="p">:</span> <span class="s">&#39;edit post&#39;</span><span class="p">}</span>
+        <span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">)</span>
+        <span class="n">UserLang</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">new_user</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s">&#39;fr&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat</span><span class="p">:</span>
+            <span class="n">ForumCat</span><span class="p">(</span><span class="n">Name</span><span class="o">=</span><span class="n">cat</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="n">ForumTopic</span><span class="p">(</span><span class="n">CatParent</span><span class="o">=</span><span class="n">ForumCat</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">Title</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ref_topic</span><span class="p">[</span><span class="s">&#39;Title&#39;</span><span class="p">],</span>
+                   <span class="n">Autor</span><span class="o">=</span><span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">]),</span>
+                   <span class="n">Message</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ref_topic</span><span class="p">[</span><span class="s">&#39;Message&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inexisting_cat</span> <span class="o">=</span> <span class="s">&#39;inexisting-cat&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inexisting_topic</span> <span class="o">=</span> <span class="s">&#39;inexisting-topic&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inexisting_post</span> <span class="o">=</span> <span class="s">&#39;100&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cat_slug</span> <span class="o">=</span> <span class="n">ForumCat</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">slug</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">topic_slug</span> <span class="o">=</span> <span class="n">ForumTopic</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">CatParent</span><span class="o">=</span><span class="n">ForumCat</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span><span class="o">.</span><span class="n">slug</span>
+        <span class="n">ForumPost</span><span class="p">(</span><span class="n">TopicParent</span><span class="o">=</span><span class="n">ForumTopic</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">slug</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">topic_slug</span><span class="p">),</span> <span class="n">Message</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ref_response</span><span class="p">[</span><span class="s">&#39;Message&#39;</span><span class="p">],</span>
+                  <span class="n">Autor</span><span class="o">=</span><span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">]))</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="ForumUrlLogTests.test_forum_url_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_forum_url_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_forum_url_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        tests access to url contact not log status</span>
+
+<span class="sd">        :var reponse: response of request</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;forum&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;forum&#39;</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="ForumUrlLogTests.test_forum_url_log"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_forum_url_log">[docs]</a>    <span class="k">def</span> <span class="nf">test_forum_url_log</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        tests access to url contact log status</span>
 
@@ -166,7 +238,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">reponse</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="ForumTests.test_acces_existing_cat"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.test_acces_existing_cat">[docs]</a>    <span class="k">def</span> <span class="nf">test_acces_existing_cat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlLogTests.test_acces_existing_cat"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_acces_existing_cat">[docs]</a>    <span class="k">def</span> <span class="nf">test_acces_existing_cat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        tests access to existing category</span>
 
@@ -181,7 +253,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">reponse</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="ForumTests.test_acces_not_existing_cat"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.test_acces_not_existing_cat">[docs]</a>    <span class="k">def</span> <span class="nf">test_acces_not_existing_cat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlLogTests.test_acces_not_existing_cat"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_acces_not_existing_cat">[docs]</a>    <span class="k">def</span> <span class="nf">test_acces_not_existing_cat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        tests access to category who aren&#39;t define</span>
 
@@ -195,7 +267,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">reponse</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="ForumTests.test_create_topic_access_url"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.test_create_topic_access_url">[docs]</a>    <span class="k">def</span> <span class="nf">test_create_topic_access_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlLogTests.test_create_topic_access_url"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_create_topic_access_url">[docs]</a>    <span class="k">def</span> <span class="nf">test_create_topic_access_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        tests access to url for create topic if user log</span>
 
@@ -208,7 +280,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">reponse</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="ForumTests.test_create_topic_access_url_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.test_create_topic_access_url_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_create_topic_access_url_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlLogTests.test_create_topic_access_url_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_create_topic_access_url_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_create_topic_access_url_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        tests access to url for create topic if any user log</span>
 
@@ -219,7 +291,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span>
                              <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;create_topic&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;cat&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_slug</span><span class="p">}))</span>
 </div>
-<div class="viewcode-block" id="ForumTests.test_acces_to_topic"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.test_acces_to_topic">[docs]</a>    <span class="k">def</span> <span class="nf">test_acces_to_topic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlLogTests.test_acces_to_topic"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_acces_to_topic">[docs]</a>    <span class="k">def</span> <span class="nf">test_acces_to_topic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        tests access to topic</span>
 
@@ -235,7 +307,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">reponse</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="ForumTests.test_acces_to_topic_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.test_acces_to_topic_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_acces_to_topic_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlLogTests.test_acces_to_topic_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_acces_to_topic_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_acces_to_topic_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        tests access to topic unlog</span>
 
@@ -247,7 +319,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;topic_cat&#39;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;cat&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">cat_slug</span><span class="p">,</span>
                                                                                                  <span class="s">&#39;topic&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">topic_slug</span><span class="p">}))</span>
 </div>
-<div class="viewcode-block" id="ForumTests.test_response_topic"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.test_response_topic">[docs]</a>    <span class="k">def</span> <span class="nf">test_response_topic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlLogTests.test_response_topic"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_response_topic">[docs]</a>    <span class="k">def</span> <span class="nf">test_response_topic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        tests to response at a topic</span>
 
@@ -264,7 +336,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">reponse</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="ForumTests.test_edit_topic_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumTests.test_edit_topic_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_edit_topic_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ForumUrlLogTests.test_edit_topic_unlog"><a class="viewcode-back" href="../../../forum.tests.html#forum.tests.tests_urls.ForumUrlLogTests.test_edit_topic_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_edit_topic_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        tests to edit a topic when no user log</span>
 
@@ -314,7 +386,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, agreau.
-      Last updated on Aug 04, 2015.
+      Last updated on Aug 05, 2015.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

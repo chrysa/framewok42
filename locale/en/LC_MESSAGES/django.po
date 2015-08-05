@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-04 13:47+0000\n"
+"POT-Creation-Date: 2015-08-05 03:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgid "contact_must_contain_email"
 msgstr ""
 
 #: contact/forms/ContactFrom.py:28 contact/forms/ContactFrom.py:32
-#: contact/tests/tests_urls.py:58 contact/tests/tests_urls.py:71
+#: contact/tests/tests_urls.py:38 contact/tests/tests_urls.py:79
 #: profil/forms/RegisterForm.py:28 profil/forms/RegisterForm.py:32
 msgid "mail_adress"
 msgstr ""
@@ -151,10 +151,6 @@ msgstr ""
 msgid "categorie_parente"
 msgstr ""
 
-#: forum/models.py:52
-msgid "categorie"
-msgstr ""
-
 #: forum/templates/forum/cat.html:11
 #: forum/templates/forum/create_topic.html:10
 msgid "new_topic"
@@ -189,8 +185,8 @@ msgstr ""
 msgid "edit_post"
 msgstr ""
 
-#: forum/templates/forum/home.html:23 forum/tests/tests_cateory.py:112
-#: forum/tests/tests_cateory.py:128
+#: forum/templates/forum/home.html:23 forum/tests/tests_cateory.py:85
+#: forum/tests/tests_cateory.py:101
 msgid "no_category"
 msgstr ""
 
@@ -202,15 +198,15 @@ msgstr ""
 msgid "modify_by"
 msgstr ""
 
-#: forum/tests/tests_posts.py:147 forum/views.py:393
+#: forum/tests/tests_posts.py:120 forum/views.py:393
 msgid "post_must_contain_message"
 msgstr ""
 
-#: forum/tests/tests_topics.py:128 forum/views.py:170
+#: forum/tests/tests_topics.py:101 forum/views.py:170
 msgid "topic_must_contain_title"
 msgstr ""
 
-#: forum/tests/tests_topics.py:144 forum/views.py:172
+#: forum/tests/tests_topics.py:117 forum/views.py:172
 msgid "topic_must_contain_message"
 msgstr ""
 
