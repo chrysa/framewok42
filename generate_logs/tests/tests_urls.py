@@ -16,7 +16,50 @@ from django.contrib.auth.models import User
 from profil.models import UserLang
 
 
-class GenerateLogsUrlTests(TestCase):
+class GenerateLogsUrlUnlogTests(TestCase):
+    """
+    this class define all unit tests for generate_logs urls
+
+    :param TestCase: librairy of unittest
+    :type TestCase: object
+    :return: None
+    :rtype: None
+    """
+
+    def test_list_logs_url_unlog_from_home(self):
+        """
+        tests access to list log when nobody is logged
+
+        :var reponse: response of request
+        :return: None
+        """
+        reponse = self.client.get(reverse('list_logs'))
+        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('list_logs'))
+
+    def tests_view_logs_unlog_from_home(self):
+        """
+        tests access to selected log type when nobody is logged
+
+        :var reponse: response of request
+        :return: None
+        """
+        for k, v in settings.LOGGING['handlers'].items():
+            reponse = self.client.get(reverse('view_log', kwargs={'log_type': k}))
+            self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('view_log', kwargs={'log_type': k}))
+
+    def tests_view_logs_unlog_from_forum(self):
+        """
+        tests access to selected log type when nobody is logged
+
+        :var reponse: response of request
+        :return: None
+        """
+        for k, v in settings.LOGGING['handlers'].items():
+            reponse = self.client.get(reverse('view_log', kwargs={'log_type': k}))
+            self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('view_log', kwargs={'log_type': k}))
+
+
+class GenerateLogsUrlLogTests(TestCase):
     """
     this class define all unit tests for generate_logs urls
 
@@ -53,16 +96,6 @@ class GenerateLogsUrlTests(TestCase):
         new_staff = User.objects.create_user(**self.register_staff)
         User.objects.filter(username=self.register_staff['username']).update(is_staff=True)
         UserLang.objects.create(user=new_staff, lang='fr')
-
-    def test_list_logs_url_unlog_from_home(self):
-        """
-        tests access to list log when nobody is logged
-
-        :var reponse: response of request
-        :return: None
-        """
-        reponse = self.client.get(reverse('list_logs'))
-        self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('list_logs'))
 
     def test_list_logs_url_log_user_from_home(self):
         """
@@ -147,28 +180,6 @@ class GenerateLogsUrlTests(TestCase):
         self.assertTemplateUsed(reponse, 'logs/index.html')
         self.assertEqual(reponse.status_code, 200)
         self.client.logout()
-
-    def tests_view_logs_unlog_from_home(self):
-        """
-        tests access to selected log type when nobody is logged
-
-        :var reponse: response of request
-        :return: None
-        """
-        for k, v in settings.LOGGING['handlers'].items():
-            reponse = self.client.get(reverse('view_log', kwargs={'log_type': k}))
-            self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('view_log', kwargs={'log_type': k}))
-
-    def tests_view_logs_unlog_from_forum(self):
-        """
-        tests access to selected log type when nobody is logged
-
-        :var reponse: response of request
-        :return: None
-        """
-        for k, v in settings.LOGGING['handlers'].items():
-            reponse = self.client.get(reverse('view_log', kwargs={'log_type': k}))
-            self.assertRedirects(reponse, reverse('login') + '?next=' + reverse('view_log', kwargs={'log_type': k}))
 
     def tests_view_logs_log_user_from_home(self):
         """

@@ -48,55 +48,28 @@ class ForumTests(TestCase):
         :return: None
         """
         self.client = Client()
-        self.register_user = {
-            'username': "user_test",
-            'email': 'user_test@tests.fr',
-            'password': "tests",
-        }
+        self.register_user = {'username': "user_test", 'email': 'user_test@tests.fr', 'password': "tests"}
         self.cat = ['cat1', 'cat2', ]
-        self.ref_topic = {
-            'Title': 'ref topic',
-            'Message': 'content tests',
-        }
-        self.create_topic = {
-            'Title': 'tests topic',
-            'Message': 'content tests',
-        }
-        self.ref_response = {
-            'Message': 'ref_reponse',
-        }
-        self.test_response = {
-            'Message': 'test_reponse',
-        }
-        self.edit_topic = {
-            'Title': 'edit topic title',
-            'Message': 'edit topic message',
-        }
-        self.edit_post = {
-            'Message': 'edit post',
-        }
+        self.ref_topic = {'Title': 'ref topic', 'Message': 'content tests'}
+        self.create_topic = {'Title': 'tests topic', 'Message': 'content tests'}
+        self.ref_response = {'Message': 'ref_reponse'}
+        self.test_response = {'Message': 'test_reponse'}
+        self.edit_topic = {'Title': 'edit topic title', 'Message': 'edit topic message'}
+        self.edit_post = {'Message': 'edit post'}
         new_user = User.objects.create_user(**self.register_user)
         UserLang.objects.create(user=new_user, lang='fr')
         for cat in self.cat:
             ForumCat(Name=cat).save()
-        ForumTopic(
-            CatParent=ForumCat.objects.get(Name=self.cat[0]),
-            Title=self.ref_topic['Title'],
-            Autor=User.objects.get(username=self.register_user['username']),
-            Message=self.ref_topic['Message']
-        ).save()
+        ForumTopic(CatParent=ForumCat.objects.get(Name=self.cat[0]), Title=self.ref_topic['Title'],
+                   Autor=User.objects.get(username=self.register_user['username']),
+                   Message=self.ref_topic['Message']).save()
         self.inexisting_cat = 'inexisting-cat'
         self.inexisting_topic = 'inexisting-topic'
         self.inexisting_post = '100'
         self.cat_slug = ForumCat.objects.get(Name=self.cat[0]).slug
         self.topic_slug = ForumTopic.objects.get(CatParent=ForumCat.objects.get(Name=self.cat[0])).slug
-        ForumPost(
-            TopicParent=ForumTopic.objects.get(
-                slug=self.topic_slug
-            ),
-            Message=self.ref_response['Message'],
-            Autor=User.objects.get(username=self.register_user['username']),
-        ).save()
+        ForumPost(TopicParent=ForumTopic.objects.get(slug=self.topic_slug), Message=self.ref_response['Message'],
+                  Autor=User.objects.get(username=self.register_user['username'])).save()
 
     def test_without_cat(self):
         """

@@ -8300,3 +8300,102 @@
 [04/08/2015 15:31:08] :: [views:register_user:error] [42] :: error register unittest_fr already exist
 [04/08/2015 15:31:08] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
 >>>>>>> 17ffbf3893870b93791ad9241e729e4512ef51c7
+[05/08/2015 03:39:55] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 03:40:58] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 03:42:03] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 03:42:07] :: [views:login_user:error] [145] :: connection avec un mauvais password par user_test
+[05/08/2015 03:42:07] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[05/08/2015 03:42:07] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 03:42:07] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 03:42:07] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 03:42:08] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 03:42:08] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 03:42:08] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 03:53:53] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 03:54:56] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 03:56:00] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 03:57:00] :: [views:login_user:error] [145] :: connection avec un mauvais password par user_test
+[05/08/2015 03:57:01] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[05/08/2015 03:57:01] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 03:57:01] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 03:57:02] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 03:57:02] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 03:57:02] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 03:57:02] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 03:57:17] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 03:58:22] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 03:59:29] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:00:35] :: [views:login_user:error] [145] :: connection avec un mauvais password par user_test
+[05/08/2015 04:00:35] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[05/08/2015 04:00:35] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:00:36] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:00:36] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:00:36] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:00:36] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:00:36] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:02:01] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:03:06] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:04:11] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:04:15] :: [views:login_user:error] [145] :: connection avec un mauvais password par user_test
+[05/08/2015 04:04:15] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[05/08/2015 04:04:16] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:04:16] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:04:16] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:04:16] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:04:16] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:04:16] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:04:26] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:05:29] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:06:34] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:07:38] :: [views:login_user:error] [145] :: connection avec un mauvais password par user_test
+[05/08/2015 04:07:38] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[05/08/2015 04:07:38] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:07:38] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:07:39] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:07:39] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:07:39] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:07:39] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:07:59] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:09:02] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:10:09] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:11:14] :: [views:login_user:error] [145] :: connection avec un mauvais password par user_test
+[05/08/2015 04:11:15] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[05/08/2015 04:11:15] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:11:15] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:11:15] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:11:15] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:11:15] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:11:15] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:12:56] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:13:50] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:14:44] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:14:51] :: [views:login_user:error] [145] :: connection avec un mauvais password par user_test
+[05/08/2015 04:14:52] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[05/08/2015 04:14:52] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:14:52] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:14:52] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:14:52] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:14:52] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:14:52] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:15:27] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:15:34] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:16:23] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:16:30] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:17:21] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:17:27] :: [views:display_log:error] [105] :: error_load_log_info
+[05/08/2015 04:18:15] :: [views:login_user:error] [145] :: connection avec un mauvais password par user_test
+[05/08/2015 04:18:15] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[05/08/2015 04:18:15] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:18:15] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:18:16] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:18:16] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:18:16] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:18:16] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:18:18] :: [views:login_user:error] [145] :: connection avec un mauvais password par user_test
+[05/08/2015 04:18:18] :: [views:login_user:error] [108] :: connection avec un user qui n'existe pas parwrong_user
+[05/08/2015 04:18:19] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:18:19] :: [views:register_user:error] [29] :: user deja connecte essai de charger de la page /profil/register par unittest_fr
+[05/08/2015 04:18:19] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist
+[05/08/2015 04:18:19] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:18:19] :: [views:register_user:error] [42] :: error register unittest_fr already exist
+[05/08/2015 04:18:19] :: [views:register_user:error] [45] :: error register unittest_fr@unittest.fr already exist

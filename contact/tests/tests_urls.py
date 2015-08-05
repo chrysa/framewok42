@@ -17,7 +17,30 @@ from django.contrib.auth.models import User
 from profil.models import UserLang
 
 
-class ContactTests(TestCase):
+class ContactUrlUnLogTests(TestCase):
+    """
+    this class define all unit tests for contact
+
+    :param TestCase: librairy of unittest
+    :type TestCase: object
+    :return: None
+    :rtype: None
+    """
+
+    def test_contact_url_unlog(self):
+        """
+        tests access to url contact not log status
+
+        :var reponse: response of request
+        :return: None
+        """
+        reponse = self.client.get(reverse('contact'))
+        self.assertContains(reponse, _("mail_adress"))
+        self.assertTemplateUsed(reponse, 'contact/contact.html')
+        self.assertEqual(reponse.status_code, 200)
+
+
+class ContactUrlLogTests(TestCase):
     """
     this class define all unit tests for contact
 
@@ -39,25 +62,10 @@ class ContactTests(TestCase):
         :return: None
         """
         self.client = Client()
-        self.register_user = {
-            'username': "user_test",
-            'email': 'user_test@tests.fr',
-            'password': "tests",
-        }
+        self.register_user = {'username': "user_test", 'email': 'user_test@tests.fr', 'password': "tests"}
         new_user = User.objects.create_user(**self.register_user)
         UserLang.objects.create(user=new_user, lang='fr')
 
-    def test_contact_url_unlog(self):
-        """
-        tests access to url contact not log status
-
-        :var reponse: response of request
-        :return: None
-        """
-        reponse = self.client.get(reverse('contact'))
-        self.assertContains(reponse, _("mail_adress"))
-        self.assertTemplateUsed(reponse, 'contact/contact.html')
-        self.assertEqual(reponse.status_code, 200)
 
     def test_contact_url_log(self):
         """

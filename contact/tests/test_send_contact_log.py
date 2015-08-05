@@ -19,7 +19,7 @@ from django.utils.translation import ugettext as _
 from profil.models import UserLang
 
 
-class ContactTests(TestCase):
+class ContactLogTests(TestCase):
     """
     this class define all unit tests for contact
 
