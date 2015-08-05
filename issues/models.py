@@ -1,3 +1,12 @@
+# -*-coding:utf-8 -*-
+"""
+:module: Issues.models
+:synopsis: define storage models for issues
+
+:moduleauthor: anthony greau <greau.anthony@gmail.com>
+:created: 01/07/2015
+:update: 05/08/2015
+"""
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
@@ -6,6 +15,16 @@ from autoslug import AutoSlugField
 
 
 class Issue(models.Model):
+    """define the storage of category
+
+    :param models.Model: contain all function for define a storage
+    :type models.Model: models object
+    :var Autor: User object contain autor of request
+    :var Assign: User object contain staff member in charge
+
+    :return: Issue object
+    :rtype: object
+    """
     Autor = models.ForeignKey(User)
     Assign = models.ForeignKey(
         User,

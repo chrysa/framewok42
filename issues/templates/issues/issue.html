@@ -1,6 +1,10 @@
 {% extends "core/base.html" %}
 {% load i18n %}
 {% block content %}
+    <ol class="breadcrumb">
+        <li><a href="{% url 'list_issue' %}">{% trans 'list_issue' %}</a></li>
+        <li class="active">{{ issue.Title }}</li>
+    </ol>
     <div class="jumbotron">
         <div class="container">
             <div class="row">
