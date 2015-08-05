@@ -21,7 +21,12 @@ class Issue(models.Model):
     :type models.Model: models object
     :var Autor: User object contain autor of request
     :var Assign: User object contain staff member in charge
-
+    :var Title: Title of Issue
+    :var UserRequest: Content of Issue
+    :var Answer: Staff response to UserRequest
+    :var CreateDate: Create date of issue
+    :var LastActivity: date of last activity
+    :var Status: status of issue (open/in progress/close)
     :return: Issue object
     :rtype: object
     """
@@ -45,7 +50,7 @@ class Issue(models.Model):
         choices=(
             ("open", _("open")),
             ("progress", _("in_progress")),
-            ("close", _("status")),
+            ("close", _("clos")),
         )
     )
 
