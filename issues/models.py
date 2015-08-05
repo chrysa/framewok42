@@ -13,8 +13,7 @@ class Issue(models.Model):
         null=True,
     )
     Title = models.CharField(
-        max_length=100,
-        default=_('titre')
+        max_length=100
     )
     slug = AutoSlugField(populate_from='Title')
     UserRequest = models.TextField()

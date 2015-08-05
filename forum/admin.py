@@ -44,8 +44,8 @@ class PostAdmin(admin.ModelAdmin):
     ordering = ['CreateDate', 'LastModified']
     list_display = ('TopicParent', 'Autor', 'short_message', 'CreateDate', 'LastModified')
     list_display_links = ('TopicParent', 'Autor', 'short_message', 'CreateDate', 'LastModified')
-    list_filter = ('TopicParent', 'Autor')
-    search_fields = ['Autor', 'Message', 'CreateDate', 'LastModified']
+    list_filter = ('Autor', 'CreateDate', 'LastModified')
+    search_fields = ['Autor', 'CreateDate', 'LastModified']
 
     def short_message(self, Post):
         if len(Post.Message) > 40:
