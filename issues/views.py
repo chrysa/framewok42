@@ -129,14 +129,20 @@ def respond_issue(request, issue):
 
 @login_required
 def view_issue(request, issue):
-    issue = Issue.objects.get(slug=issue)[0]
-    if request.user == issue.Autor or (request.user.is_staff or request.user.is_superuser) is True:
-        logger_info.info(info_load_log_message(request))
-        context = {
-            'issue': issue,
-        }
-        return render(request, 'issues/issue.html', context)
-    else:
+    try:
+        issue = Issue.objects.get(slug=issue)
+        if request.user == issue.Autor or request.user.is_staff or request.user.is_superuser:
+            logger_info.info(info_load_log_message(request))
+            context = {
+                'issue': issue,
+            }
+            return render(request, 'issues/issue.html', context)
+        else:
+            return redirect(
+                reverse('list_issue'),
+                permanent=True
+            )
+    except:
         return redirect(
             reverse('list_issue'),
             permanent=True
@@ -145,18 +151,29 @@ def view_issue(request, issue):
 
 @login_required
 def reopen_issue(request, issue):
-    issue = Issue.objects.filter(slug=issue)
-    if request.user == issue.Autor or (request.user.is_staff or request.user.is_superuser) is True:
-        logger_info.info(info_load_log_message(request))
-        if issue.Status == 'close':
-            issue.update(
-                Status="open",
+    try:
+        issue = Issue.objects.filter(slug=issue)[0]
+        if request.user == issue.Autor or request.user.is_staff or request.user.is_superuser:
+            logger_info.info(info_load_log_message(request))
+            if issue.Status == 'close':
+                issue.update(
+                    Status="open",
+                )
+            return redirect(
+                reverse(
+                    'view_issue',
+                    kwargs={
+                        'issue': issue.slug,
+                    }
+                ),
+                permanent=True
             )
-        return redirect(
-            reverse('list_issue'),
-            permanent=True
-        )
-    else:
+        else:
+            return redirect(
+                reverse('list_issue'),
+                permanent=True
+            )
+    except:
         return redirect(
             reverse('list_issue'),
             permanent=True

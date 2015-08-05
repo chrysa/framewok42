@@ -50,7 +50,7 @@ class Issue(models.Model):
         choices=(
             ("open", _("open")),
             ("progress", _("in_progress")),
-            ("close", _("clos")),
+            ("close", _("close")),
         )
     )
 
