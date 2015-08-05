@@ -69,7 +69,7 @@ class UrlIssuesTestsLog(TestCase):
     def setUp(self):
         self.client = Client()
         self.register_user = {'username': "user_test", 'email': 'user_test@tests.fr', 'password': "tests"}
-        self.register_admin = {'username': 'admin', 'password': 'admin'}
+        self.register_admin = {'username': 'admin', 'email': 'admin@admin.fr', 'password': 'admin'}
         new_user = User.objects.create_user(**self.register_user)
         UserLang.objects.create(user=new_user, lang='fr')
         new_admin = User.objects.create_user(**self.register_admin)

@@ -11,6 +11,14 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+    contact
+    core
+    forum
+    framework
+    generate_logs
+    issues
+    ldap42
+    profil
 
 
 Indices and tables

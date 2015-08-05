@@ -95,7 +95,7 @@
 </tr>
 <tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">21/07/2015</td>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">04/08/2015</td>
 </tr>
 <tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">forum.moodels.ForumCat</td>
 </tr>
@@ -107,6 +107,93 @@
 </tr>
 </tbody>
 </table>
+<dl class="class">
+<dt id="forum.admin.PostAdmin">
+<em class="property">class </em><code class="descclassname">forum.admin.</code><code class="descname">PostAdmin</code><span class="sig-paren">(</span><em>model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/admin.html#PostAdmin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.admin.PostAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="attribute">
+<dt id="forum.admin.PostAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ('TopicParent', 'Autor', 'short_message', 'CreateDate', 'LastModified')</em><a class="headerlink" href="#forum.admin.PostAdmin.list_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.admin.PostAdmin.list_display_links">
+<code class="descname">list_display_links</code><em class="property"> = ('TopicParent', 'Autor', 'short_message', 'CreateDate', 'LastModified')</em><a class="headerlink" href="#forum.admin.PostAdmin.list_display_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.admin.PostAdmin.list_filter">
+<code class="descname">list_filter</code><em class="property"> = ('TopicParent', 'Autor')</em><a class="headerlink" href="#forum.admin.PostAdmin.list_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.admin.PostAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#forum.admin.PostAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.admin.PostAdmin.ordering">
+<code class="descname">ordering</code><em class="property"> = ['CreateDate', 'LastModified']</em><a class="headerlink" href="#forum.admin.PostAdmin.ordering" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.admin.PostAdmin.search_fields">
+<code class="descname">search_fields</code><em class="property"> = ['Autor', 'Message', 'CreateDate', 'LastModified']</em><a class="headerlink" href="#forum.admin.PostAdmin.search_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.admin.PostAdmin.short_message">
+<code class="descname">short_message</code><span class="sig-paren">(</span><em>Post</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/admin.html#PostAdmin.short_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.admin.PostAdmin.short_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="forum.admin.TopicAdmin">
+<em class="property">class </em><code class="descclassname">forum.admin.</code><code class="descname">TopicAdmin</code><span class="sig-paren">(</span><em>model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/admin.html#TopicAdmin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.admin.TopicAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="attribute">
+<dt id="forum.admin.TopicAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ('CatParent', 'Autor', 'short_title', 'short_message', 'CreateDate', 'LastModified')</em><a class="headerlink" href="#forum.admin.TopicAdmin.list_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.admin.TopicAdmin.list_display_links">
+<code class="descname">list_display_links</code><em class="property"> = ('CatParent', 'Autor', 'short_title', 'short_message', 'CreateDate', 'LastModified')</em><a class="headerlink" href="#forum.admin.TopicAdmin.list_display_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.admin.TopicAdmin.list_filter">
+<code class="descname">list_filter</code><em class="property"> = ('CatParent', 'Autor')</em><a class="headerlink" href="#forum.admin.TopicAdmin.list_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.admin.TopicAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#forum.admin.TopicAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.admin.TopicAdmin.ordering">
+<code class="descname">ordering</code><em class="property"> = ['CreateDate', 'LastModified']</em><a class="headerlink" href="#forum.admin.TopicAdmin.ordering" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="forum.admin.TopicAdmin.search_fields">
+<code class="descname">search_fields</code><em class="property"> = ['Autor', 'Title', 'Message', 'CreateDate', 'LastModified']</em><a class="headerlink" href="#forum.admin.TopicAdmin.search_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.admin.TopicAdmin.short_message">
+<code class="descname">short_message</code><span class="sig-paren">(</span><em>Topic</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/admin.html#TopicAdmin.short_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.admin.TopicAdmin.short_message" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="forum.admin.TopicAdmin.short_title">
+<code class="descname">short_title</code><span class="sig-paren">(</span><em>Topic</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/forum/admin.html#TopicAdmin.short_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#forum.admin.TopicAdmin.short_title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-forum.models">
 <span id="forum-models-module"></span><h2>forum.models module<a class="headerlink" href="#module-forum.models" title="Permalink to this headline">¶</a></h2>
@@ -190,7 +277,7 @@
 </tr>
 <tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
 <li><a class="reference internal" href="#forum.models.ForumPost.TopicParent" title="forum.models.ForumPost.TopicParent"><strong>TopicParent</strong></a> &#8211; content the object of the parent topic</li>
-<li><a class="reference internal" href="#forum.models.ForumPost.Autor" title="forum.models.ForumPost.Autor"><strong>Autor</strong></a> &#8211; user object of the autor</li>
+<li><a class="reference internal" href="#forum.models.ForumTopic.Autor" title="forum.models.ForumTopic.Autor"><strong>Autor</strong></a> &#8211; user object of the autor</li>
 <li><strong>Message</strong> &#8211; content of the post</li>
 <li><strong>CreateDate</strong> &#8211; create date of the post</li>
 <li><strong>LastModified</strong> &#8211; last modify date of the post</li>
@@ -270,7 +357,7 @@
 <li><a class="reference internal" href="#forum.models.ForumTopic.CatParent" title="forum.models.ForumTopic.CatParent"><strong>CatParent</strong></a> &#8211; content the object of the parent category</li>
 <li><strong>Title</strong> &#8211; title of topic</li>
 <li><strong>slug</strong> &#8211; access slug of the topic</li>
-<li><a class="reference internal" href="#forum.models.ForumPost.Autor" title="forum.models.ForumPost.Autor"><strong>Autor</strong></a> &#8211; user object of the autor</li>
+<li><a class="reference internal" href="#forum.models.ForumTopic.Autor" title="forum.models.ForumTopic.Autor"><strong>Autor</strong></a> &#8211; user object of the autor</li>
 <li><strong>Message</strong> &#8211; content of the topic</li>
 <li><strong>CreateDate</strong> &#8211; create date of the topic</li>
 <li><strong>LastModified</strong> &#8211; last modify date of the topic</li>
@@ -651,7 +738,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, agreau.
-      Last updated on Aug 04, 2015.
+      Last updated on Aug 05, 2015.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

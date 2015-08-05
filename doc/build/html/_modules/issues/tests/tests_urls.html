@@ -74,44 +74,58 @@
 <span class="kn">from</span> <span class="nn">profil.models</span> <span class="kn">import</span> <span class="n">UserLang</span>
 
 
-<div class="viewcode-block" id="IssuesTests"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.IssuesTests">[docs]</a><span class="k">class</span> <span class="nc">IssuesTests</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    this class define all unit tests for issues</span>
-
-<span class="sd">    :param TestCase: librairy of unittest</span>
-<span class="sd">    :type TestCase: object</span>
-<span class="sd">    :return: None</span>
-<span class="sd">    :rtype: None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-<div class="viewcode-block" id="IssuesTests.setUp"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.IssuesTests.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        set up variable and create user for the tests</span>
-
-<span class="sd">        :param self: instance of ContactTests</span>
-<span class="sd">        :type self: object</span>
-<span class="sd">        :var self.client: instance of navigation client for tests</span>
-<span class="sd">        :var self.register_user: dict for create new user</span>
-<span class="sd">        :return: None</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">register_user</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;username&#39;</span><span class="p">:</span> <span class="s">&quot;user_test&quot;</span><span class="p">,</span> <span class="s">&#39;email&#39;</span><span class="p">:</span> <span class="s">&#39;user_test@tests.fr&#39;</span><span class="p">,</span> <span class="s">&#39;password&#39;</span><span class="p">:</span> <span class="s">&quot;tests&quot;</span><span class="p">}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">admin_datas</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;username&#39;</span><span class="p">:</span> <span class="s">&#39;admin&#39;</span><span class="p">,</span> <span class="s">&#39;password&#39;</span><span class="p">:</span> <span class="s">&#39;admin&#39;</span><span class="p">}</span>
-        <span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">)</span>
-        <span class="n">UserLang</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">new_user</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s">&#39;fr&#39;</span><span class="p">)</span>
-        <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">admin_datas</span><span class="p">)</span>
-        <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">admin_datas</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">is_staff</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">is_superuser</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</div>
-<div class="viewcode-block" id="IssuesTests.test_url_list_issue_unlog"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.IssuesTests.test_url_list_issue_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_url_list_issue_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="UrlIssuesTestsUnLog"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsUnLog">[docs]</a><span class="k">class</span> <span class="nc">UrlIssuesTestsUnLog</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+<div class="viewcode-block" id="UrlIssuesTestsUnLog.test_url_list_issue_unlog"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsUnLog.test_url_list_issue_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_url_list_issue_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;list_issue&#39;</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;list_issue&#39;</span><span class="p">))</span>
+
+    <span class="c"># def test_url_respond_issue_unlog(self):</span>
+    <span class="c">#     reponse = self.client.get(reverse(&#39;respond_issue&#39;))</span>
+    <span class="c">#     self.assertRedirects(reponse, reverse(&#39;login&#39;) + &#39;?next=&#39; + reverse(&#39;respond_issue&#39;))</span>
+
+    <span class="c"># def test_url_reopen_issue_unlog(self):</span>
+    <span class="c">#     reponse = self.client.get(reverse(&#39;reopen_issue&#39;))</span>
+    <span class="c">#     self.assertRedirects(reponse, reverse(&#39;login&#39;) + &#39;?next=&#39; + reverse(&#39;reopen_issue&#39;))</span>
+
+    <span class="c"># def test_url_view_issue_unlog(self):</span>
+    <span class="c">#     reponse = self.client.get(reverse(&#39;view_issue&#39;))</span>
+    <span class="c">#     self.assertRedirects(reponse, reverse(&#39;login&#39;) + &#39;?next=&#39; + reverse(&#39;view_issue&#39;))</span>
 </div>
-<div class="viewcode-block" id="IssuesTests.test_url_list_issue_user_log"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.IssuesTests.test_url_list_issue_user_log">[docs]</a>    <span class="k">def</span> <span class="nf">test_url_list_issue_user_log</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">],</span> <span class="n">password</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">[</span><span class="s">&#39;password&#39;</span><span class="p">])</span>
+<div class="viewcode-block" id="UrlIssuesTestsUnLog.test_url_new_issue_unlog"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsUnLog.test_url_new_issue_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_url_new_issue_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;new_issue&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;new_issue&#39;</span><span class="p">))</span>
+
+</div></div>
+<div class="viewcode-block" id="UrlIssuesTestsLog"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsLog">[docs]</a><span class="k">class</span> <span class="nc">UrlIssuesTestsLog</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+<div class="viewcode-block" id="UrlIssuesTestsLog.setUp"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsLog.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_user</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;username&#39;</span><span class="p">:</span> <span class="s">&quot;user_test&quot;</span><span class="p">,</span> <span class="s">&#39;email&#39;</span><span class="p">:</span> <span class="s">&#39;user_test@tests.fr&#39;</span><span class="p">,</span> <span class="s">&#39;password&#39;</span><span class="p">:</span> <span class="s">&quot;tests&quot;</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">register_admin</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;username&#39;</span><span class="p">:</span> <span class="s">&#39;admin&#39;</span><span class="p">,</span> <span class="s">&#39;email&#39;</span><span class="p">:</span> <span class="s">&#39;admin@admin.fr&#39;</span><span class="p">,</span> <span class="s">&#39;password&#39;</span><span class="p">:</span> <span class="s">&#39;admin&#39;</span><span class="p">}</span>
+        <span class="n">new_user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">register_user</span><span class="p">)</span>
+        <span class="n">UserLang</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">new_user</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s">&#39;fr&#39;</span><span class="p">)</span>
+        <span class="n">new_admin</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">register_admin</span><span class="p">)</span>
+        <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">register_admin</span><span class="p">[</span><span class="s">&#39;username&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">is_staff</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">is_superuser</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">UserLang</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">new_admin</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s">&#39;fr&#39;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="UrlIssuesTestsLog.test_url_list_issue_unlog"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsLog.test_url_list_issue_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_url_list_issue_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;list_issue&#39;</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertTemplateUsed</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="s">&#39;issues/home.html&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">reponse</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">logout</span><span class="p">()</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;list_issue&#39;</span><span class="p">))</span>
+
+    <span class="c"># def test_url_respond_issue_unlog(self):</span>
+    <span class="c">#     reponse = self.client.get(reverse(&#39;respond_issue&#39;))</span>
+    <span class="c">#     self.assertRedirects(reponse, reverse(&#39;login&#39;) + &#39;?next=&#39; + reverse(&#39;respond_issue&#39;))</span>
+
+    <span class="c"># def test_url_reopen_issue_unlog(self):</span>
+    <span class="c">#     reponse = self.client.get(reverse(&#39;reopen_issue&#39;))</span>
+    <span class="c">#     self.assertRedirects(reponse, reverse(&#39;login&#39;) + &#39;?next=&#39; + reverse(&#39;reopen_issue&#39;))</span>
+
+    <span class="c"># def test_url_view_issue_unlog(self):</span>
+    <span class="c">#     reponse = self.client.get(reverse(&#39;view_issue&#39;))</span>
+    <span class="c">#     self.assertRedirects(reponse, reverse(&#39;login&#39;) + &#39;?next=&#39; + reverse(&#39;view_issue&#39;))</span>
+</div>
+<div class="viewcode-block" id="UrlIssuesTestsLog.test_url_new_issue_unlog"><a class="viewcode-back" href="../../../issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsLog.test_url_new_issue_unlog">[docs]</a>    <span class="k">def</span> <span class="nf">test_url_new_issue_unlog</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">reponse</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s">&#39;new_issue&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertRedirects</span><span class="p">(</span><span class="n">reponse</span><span class="p">,</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;login&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;?next=&#39;</span> <span class="o">+</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&#39;new_issue&#39;</span><span class="p">))</span></div></div>
 </pre></div>
 
           </div>
@@ -151,7 +165,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, agreau.
-      Last updated on Aug 04, 2015.
+      Last updated on Aug 05, 2015.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

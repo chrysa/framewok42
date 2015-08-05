@@ -18,7 +18,7 @@ Contents:
     generate_logs
     issues
     ldap42
-    profile
+    profil
 
 
 Indices and tables
