@@ -3,7 +3,7 @@
 :module: contact.contact
 :synopsis: generate contact form
 
-:moduleauthor: anthony greau <greau.anthony@gmail.com>
+:moduleauthor: anthony geau <greau.anthony@gmail.com>
 :created: 01/07/2015
 :update: 27/07/2015
 :var logger_error: logger error
@@ -18,6 +18,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
 from django.utils.translation import ugettext as _
+
 from generate_logs.functions import info_load_log_message
 from contact.forms.ContactFrom import ContactForm
 

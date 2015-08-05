@@ -1,0 +1,56 @@
+[05/08/2015 17:26:18] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /issue/reopen/test-issue/
+Traceback (most recent call last):
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\framework42\issues\views.py", line 132, in reopen_issue
+    if issue.Status == 'close':
+AttributeError: 'QuerySet' object has no attribute 'Status'
+[05/08/2015 17:28:14] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /issue/reopen/test-issue/
+Traceback (most recent call last):
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\framework42\issues\views.py", line 132, in reopen_issue
+    if issue.Status == 'close':
+AttributeError: 'QuerySet' object has no attribute 'Status'
+[05/08/2015 17:28:33] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /issue/reopen/test-issue/
+Traceback (most recent call last):
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\framework42\issues\views.py", line 132, in reopen_issue
+    if issue.Status == 'close':
+AttributeError: 'QuerySet' object has no attribute 'Status'
+[05/08/2015 17:29:01] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /issue/reopen/test-issue/
+Traceback (most recent call last):
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\framework42\issues\views.py", line 132, in reopen_issue
+    if issue.Status == 'close':
+AttributeError: 'QuerySet' object has no attribute 'Status'
+[05/08/2015 17:44:04] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /issue/respond/test-issue/
+Traceback (most recent call last):
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\framework42\issues\views.py", line 89, in respond_issue
+    if (request.user.is_staff or request.user.is_supersuer) is not True:
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\utils\functional.py", line 227, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'is_supersuer'
+[05/08/2015 18:07:18] :: [base:handle_uncaught_exception:django.request] [256] :: Internal Server Error: /issue/respond/test-issue/
+Traceback (most recent call last):
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\42_work\framework\framework42_venv\lib\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\42_work\framework\framework42\issues\views.py", line 122, in respond_issue
+    reverse('view_issue', kwargs={'issue': self.issue.slug}),
+NameError: name 'self' is not defined

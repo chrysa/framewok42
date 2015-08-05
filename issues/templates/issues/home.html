@@ -1,7 +1,7 @@
 {% extends "core/base.html" %}
 {% load i18n %}
 {% block content %}
-    {% if request.user.is_superuser %}
+    {% if request.user.is_superuser or request.user.is_staff %}
         {% include 'issues/issue_admin.html' with issues=issues %}
     {% else %}
         {% include 'issues/issue_user.html' with issues=issues %}

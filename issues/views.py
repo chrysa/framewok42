@@ -48,6 +48,7 @@ def index(request):
         issues = Issue.objects.filter(Autor=request.user)
     return render(request, 'issues/home.html', {'issues': issues})
 
+
 @login_required
 def new_issue(request):
     logger_info.info(info_load_log_message(request))
@@ -82,58 +83,81 @@ def new_issue(request):
     context['form'] = form
     return render(request, 'issues/send_issue.html', context)
 
+
 @login_required
 def respond_issue(request, issue):
-    logger_info.info(info_load_log_message(request))
-    context = {}
     SelectIssue = Issue.objects.get(slug=issue)
-    if request.POST:
-        form = AdminResponseIssueForm(request.POST)
-        if form.is_valid():
-            Issue.objects.filter(
-                slug=issue
-            ).update(
-                Assign=User.objects.get(username=form.cleaned_data['assign']),
-                Answer=form.cleaned_data['answer'],
-                Status=form.cleaned_data['status'],
-                LastActivity=datetime.datetime.now()
-            )
-            return redirect(
-                request.META['HTTP_REFERER'],
-                permanent=True
-            )
-        else:
-            context['error'] = _('update_error')
-    form = AdminResponseIssueForm(
-        {
-            'assign': SelectIssue.Assign,
-            'status': SelectIssue.Status,
-            'answer': SelectIssue.Answer,
-        }
-    )
-    context['form'] = form
-    context['issue'] = SelectIssue
-    return render(request, 'issues/issue_admin_response.html', context)
+    if (request.user.is_staff or request.user.is_superuser) is True:
+        logger_info.info(info_load_log_message(request))
+        context = {}
+        if request.POST:
+            form = AdminResponseIssueForm(request.POST)
+            if form.is_valid():
+                Issue.objects.filter(
+                    slug=issue
+                ).update(
+                    Assign=User.objects.get(username=form.cleaned_data['assign']),
+                    Answer=form.cleaned_data['answer'],
+                    Status=form.cleaned_data['status'],
+                    LastActivity=datetime.datetime.now()
+                )
+                return redirect(
+                    request.META['HTTP_REFERER'],
+                    permanent=True
+                )
+            else:
+                context['error'] = _('update_error')
+        form = AdminResponseIssueForm(
+            {
+                'assign': SelectIssue.Assign,
+                'status': SelectIssue.Status,
+                'answer': SelectIssue.Answer,
+            }
+        )
+        context['form'] = form
+        context['issue'] = SelectIssue
+        return render(request, 'issues/issue_admin_response.html', context)
+    else:
+        return redirect(
+            reverse(
+                'view_issue', kwargs={
+                    'issue': SelectIssue.slug
+                }
+            ),
+            permanent=True
+        )
 
 @login_required
 def view_issue(request, issue):
-    logger_info.info(info_load_log_message(request))
-    context = {
-        'issue': Issue.objects.get(slug=issue),
-    }
-    return render(request, 'issues/issue.html', context)
+    issue = Issue.objects.get(slug=issue)[0]
+    if request.user == issue.Autor or (request.user.is_staff or request.user.is_superuser) is True:
+        logger_info.info(info_load_log_message(request))
+        context = {
+            'issue': issue,
+        }
+        return render(request, 'issues/issue.html', context)
+    else:
+        return redirect(
+            reverse('list_issue'),
+            permanent=True
+        )
+
 
 @login_required
 def reopen_issue(request, issue):
-    logger_info.info(info_load_log_message(request))
-    issue = Issue.objects.filter(
-        slug=issue
-    )
-    if issue.Status == 'close':
-        issue.update(
-            Status="open",
+    issue = Issue.objects.filter(slug=issue)
+    if request.user == issue.Autor or (request.user.is_staff or request.user.is_superuser) is True:
+        logger_info.info(info_load_log_message(request))
+        if issue.Status == 'close':
+            issue.update(
+                Status="open",
+            )
+        return redirect(
+            reverse('list_issue'),
+            permanent=True
         )
-    return redirect(
-        reverse('list_issue'),
-        permanent=True
-    )
+    else:
+        return redirect(
+            reverse('list_issue'),
+            permanent=True
+        )
