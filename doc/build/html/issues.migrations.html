@@ -23,7 +23,6 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="None" href="index.html" /> 
   </head>
   <body role="document">
@@ -63,7 +62,7 @@
 
 <dl class="attribute">
 <dt id="issues.migrations.0001_initial.Migration.operations">
-<code class="descname">operations</code><em class="property"> = [&lt;CreateModel  fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('Title', &lt;django.db.models.fields.CharField&gt;), ('slug', &lt;autoslug.fields.AutoSlugField&gt;), ('UserRequest', &lt;django.db.models.fields.TextField&gt;), ('Answer', &lt;django.db.models.fields.TextField&gt;), ('CreateDate', &lt;django.db.models.fields.DateTimeField&gt;), ('LastActivity', &lt;django.db.models.fields.DateTimeField&gt;), ('Status', &lt;django.db.models.fields.CharField&gt;), ('Assign', &lt;django.db.models.fields.related.ForeignKey&gt;), ('Autor', &lt;django.db.models.fields.related.ForeignKey&gt;)], name='Issue'&gt;]</em><a class="headerlink" href="#issues.migrations.0001_initial.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<code class="descname">operations</code><em class="property"> = [&lt;CreateModel  name='Issue', fields=[('id', &lt;django.db.models.fields.AutoField&gt;), ('Title', &lt;django.db.models.fields.CharField&gt;), ('slug', &lt;autoslug.fields.AutoSlugField&gt;), ('UserRequest', &lt;django.db.models.fields.TextField&gt;), ('Answer', &lt;django.db.models.fields.TextField&gt;), ('CreateDate', &lt;django.db.models.fields.DateTimeField&gt;), ('LastActivity', &lt;django.db.models.fields.DateTimeField&gt;), ('Status', &lt;django.db.models.fields.CharField&gt;), ('Assign', &lt;django.db.models.fields.related.ForeignKey&gt;), ('Autor', &lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;]</em><a class="headerlink" href="#issues.migrations.0001_initial.Migration.operations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -82,7 +81,7 @@
 
 <dl class="attribute">
 <dt id="issues.migrations.0002_auto_20150724_1324.Migration.operations">
-<code class="descname">operations</code><em class="property"> = [&lt;AlterField  model_name='issue', field=&lt;django.db.models.fields.related.ForeignKey&gt;, name='Assign'&gt;]</em><a class="headerlink" href="#issues.migrations.0002_auto_20150724_1324.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<code class="descname">operations</code><em class="property"> = [&lt;AlterField  name='Assign', field=&lt;django.db.models.fields.related.ForeignKey&gt;, model_name='issue'&gt;]</em><a class="headerlink" href="#issues.migrations.0002_auto_20150724_1324.Migration.operations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -148,7 +147,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, agreau.
-      Last updated on Aug 05, 2015.
+      Last updated on Aug 06, 2015.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

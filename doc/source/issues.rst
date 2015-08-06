@@ -29,14 +29,6 @@ issues.models module
     :undoc-members:
     :show-inheritance:
 
-issues.pre_tests module
------------------------
-
-.. automodule:: issues.pre_tests
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 issues.urls module
 ------------------
 

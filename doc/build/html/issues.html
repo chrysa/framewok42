@@ -23,7 +23,6 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="None" href="index.html" /> 
   </head>
   <body role="document">
@@ -83,15 +82,15 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">forum.admin</td>
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">issues.admin</td>
 </tr>
-<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">define admin panel for forum</td>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">define admin panel for issues</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
 </tr>
 <tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">21/07/2015</td>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">05/08/2015</td>
 </tr>
 <tr class="field-even field"><th class="field-name">seealso:</th><td class="field-body">issues.moodels.Issue</td>
 </tr>
@@ -99,13 +98,108 @@
 </tr>
 </tbody>
 </table>
+<dl class="class">
+<dt id="issues.admin.IssueAdmin">
+<em class="property">class </em><code class="descclassname">issues.admin.</code><code class="descname">IssueAdmin</code><span class="sig-paren">(</span><em>model</em>, <em>admin_site</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/admin.html#IssueAdmin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.admin.IssueAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="attribute">
+<dt id="issues.admin.IssueAdmin.list_display">
+<code class="descname">list_display</code><em class="property"> = ('Autor', 'Assign', 'short_title', 'short_userrequest', 'short_answer', 'CreateDate', 'LastActivity', 'Status')</em><a class="headerlink" href="#issues.admin.IssueAdmin.list_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="issues.admin.IssueAdmin.list_display_links">
+<code class="descname">list_display_links</code><em class="property"> = ('Autor', 'Assign', 'short_title', 'short_userrequest', 'short_answer', 'CreateDate', 'LastActivity', 'Status')</em><a class="headerlink" href="#issues.admin.IssueAdmin.list_display_links" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="issues.admin.IssueAdmin.list_filter">
+<code class="descname">list_filter</code><em class="property"> = ('Autor', 'Assign', 'CreateDate', 'LastActivity', 'Status')</em><a class="headerlink" href="#issues.admin.IssueAdmin.list_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="issues.admin.IssueAdmin.media">
+<code class="descname">media</code><a class="headerlink" href="#issues.admin.IssueAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="issues.admin.IssueAdmin.ordering">
+<code class="descname">ordering</code><em class="property"> = ['CreateDate', 'LastActivity', 'Status']</em><a class="headerlink" href="#issues.admin.IssueAdmin.ordering" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="issues.admin.IssueAdmin.search_fields">
+<code class="descname">search_fields</code><em class="property"> = ['Autor', 'Assign', 'CreateDate', 'LastActivity', 'Status']</em><a class="headerlink" href="#issues.admin.IssueAdmin.search_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="issues.admin.IssueAdmin.short_answer">
+<code class="descname">short_answer</code><span class="sig-paren">(</span><em>Issue</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/admin.html#IssueAdmin.short_answer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.admin.IssueAdmin.short_answer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="issues.admin.IssueAdmin.short_title">
+<code class="descname">short_title</code><span class="sig-paren">(</span><em>Issue</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/admin.html#IssueAdmin.short_title"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.admin.IssueAdmin.short_title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="issues.admin.IssueAdmin.short_userrequest">
+<code class="descname">short_userrequest</code><span class="sig-paren">(</span><em>Issue</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/admin.html#IssueAdmin.short_userrequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.admin.IssueAdmin.short_userrequest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-issues.models">
 <span id="issues-models-module"></span><h2>issues.models module<a class="headerlink" href="#module-issues.models" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">Issues.models</td>
+</tr>
+<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">define storage models for issues</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">05/08/2015</td>
+</tr>
+</tbody>
+</table>
 <dl class="class">
 <dt id="issues.models.Issue">
-<em class="property">class </em><code class="descclassname">issues.models.</code><code class="descname">Issue</code><span class="sig-paren">(</span><em>id</em>, <em>Autor</em>, <em>Assign</em>, <em>Title</em>, <em>slug</em>, <em>UserRequest</em>, <em>Answer</em>, <em>CreateDate</em>, <em>LastActivity</em>, <em>Status</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/models.html#Issue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.models.Issue" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">issues.models.</code><code class="descname">Issue</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/models.html#Issue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.models.Issue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></code></p>
+<p>define the storage of category</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>models.Model</strong> (<em>models object</em>) &#8211; contain all function for define a storage</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="forum.html#forum.models.ForumPost.Autor" title="forum.models.ForumPost.Autor"><strong>Autor</strong></a> &#8211; User object contain autor of request</li>
+<li><a class="reference internal" href="#issues.models.Issue.Assign" title="issues.models.Issue.Assign"><strong>Assign</strong></a> &#8211; User object contain staff member in charge</li>
+<li><strong>Title</strong> &#8211; Title of Issue</li>
+<li><strong>UserRequest</strong> &#8211; Content of Issue</li>
+<li><strong>Answer</strong> &#8211; Staff response to UserRequest</li>
+<li><strong>CreateDate</strong> &#8211; Create date of issue</li>
+<li><strong>LastActivity</strong> &#8211; date of last activity</li>
+<li><strong>Status</strong> &#8211; status of issue (open/in progress/close)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Issue object</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">object</p>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="issues.models.Issue.Assign">
 <code class="descname">Assign</code><a class="headerlink" href="#issues.models.Issue.Assign" title="Permalink to this definition">¶</a></dt>
@@ -156,85 +250,6 @@
 <dl class="attribute">
 <dt id="issues.models.Issue.objects">
 <code class="descclassname">Issue.</code><code class="descname">objects</code><em class="property"> = &lt;django.db.models.manager.Manager object&gt;</em><a class="headerlink" href="#issues.models.Issue.objects" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="module-issues.pre_tests">
-<span id="issues-pre-tests-module"></span><h2>issues.pre_tests module<a class="headerlink" href="#module-issues.pre_tests" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">module:</th><td class="field-body">issues.tests</td>
-</tr>
-<tr class="field-even field"><th class="field-name">synopsis:</th><td class="field-body">unit testing for issues app</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">moduleauthor:</th><td class="field-body">anthony greau &lt;<a class="reference external" href="mailto:greau&#46;anthony&#37;&#52;&#48;gmail&#46;com">greau<span>&#46;</span>anthony<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</td>
-</tr>
-<tr class="field-even field"><th class="field-name">created:</th><td class="field-body">01/07/2015</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">update:</th><td class="field-body">30/07/2015</td>
-</tr>
-<tr class="field-even field"><th class="field-name">todo:</th><td class="field-body">tests admin</td>
-</tr>
-</tbody>
-</table>
-<dl class="class">
-<dt id="issues.pre_tests.IssuesTests">
-<em class="property">class </em><code class="descclassname">issues.pre_tests.</code><code class="descname">IssuesTests</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/pre_tests.html#IssuesTests"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.pre_tests.IssuesTests" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.test.testcases.TestCase</span></code></p>
-<p>this class define all unit tests for issues</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>TestCase</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; librairy of unittest</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/library/constants.html#None" title="(in Python v2.7)">None</a></td>
-</tr>
-</tbody>
-</table>
-<dl class="method">
-<dt id="issues.pre_tests.IssuesTests.setUp">
-<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/pre_tests.html#IssuesTests.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.pre_tests.IssuesTests.setUp" title="Permalink to this definition">¶</a></dt>
-<dd><p>set up variable and create user for the tests</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>self</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; instance of ContactTests</p>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
-<li><strong>self.client</strong> &#8211; instance of navigation client for tests</li>
-<li><strong>self.register_user</strong> &#8211; dict for create new user</li>
-</ul>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="issues.pre_tests.IssuesTests.test_co_admin">
-<code class="descname">test_co_admin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/pre_tests.html#IssuesTests.test_co_admin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.pre_tests.IssuesTests.test_co_admin" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="issues.pre_tests.IssuesTests.test_url_list_issue_log">
-<code class="descname">test_url_list_issue_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/pre_tests.html#IssuesTests.test_url_list_issue_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.pre_tests.IssuesTests.test_url_list_issue_log" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="issues.pre_tests.IssuesTests.test_url_list_issue_unlog">
-<code class="descname">test_url_list_issue_unlog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/issues/pre_tests.html#IssuesTests.test_url_list_issue_unlog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#issues.pre_tests.IssuesTests.test_url_list_issue_unlog" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -304,7 +319,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>request</strong> (<em>object</em>) &#8211; object contain context of request</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><a class="reference internal" href="#module-issues" title="issues"><strong>issues</strong></a> &#8211; contain issues to display</td>
 </tr>
@@ -353,7 +368,6 @@
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-issues.admin">issues.admin module</a></li>
 <li><a class="reference internal" href="#module-issues.models">issues.models module</a></li>
-<li><a class="reference internal" href="#module-issues.pre_tests">issues.pre_tests module</a></li>
 <li><a class="reference internal" href="#module-issues.urls">issues.urls module</a></li>
 <li><a class="reference internal" href="#module-issues.views">issues.views module</a></li>
 <li><a class="reference internal" href="#module-issues">Module contents</a></li>
@@ -399,7 +413,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, agreau.
-      Last updated on Aug 05, 2015.
+      Last updated on Aug 06, 2015.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

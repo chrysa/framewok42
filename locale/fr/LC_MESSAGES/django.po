@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-05 03:12+0000\n"
+"POT-Creation-Date: 2015-08-06 00:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: contact/contact.py:58 contact/contact.py:59
+#: contact/contact.py:59 contact/contact.py:60
 #: contact/tests/test_send_contact_log.py:62
 #: contact/tests/tests_send_contact_unlog.py:58
 msgid "contact_success"
 msgstr "envoi du message de contact réussi"
 
-#: contact/contact.py:61 contact/contact.py:62
+#: contact/contact.py:62 contact/contact.py:63
 msgid "contact_fail"
 msgstr "erreur inconnue lors de l'envoi"
 
-#: contact/contact.py:65 contact/tests/test_send_contact_log.py:75
+#: contact/contact.py:66 contact/tests/test_send_contact_log.py:75
 #: contact/tests/test_send_contact_log.py:88
 #: contact/tests/test_send_contact_log.py:101
 #: contact/tests/tests_send_contact_unlog.py:76
@@ -38,7 +38,7 @@ msgstr "erreur inconnue lors de l'envoi"
 msgid "contact_must_contain_subject"
 msgstr "le formulaire de contact doit contenir un sujet"
 
-#: contact/contact.py:67 contact/tests/test_send_contact_log.py:102
+#: contact/contact.py:68 contact/tests/test_send_contact_log.py:102
 #: contact/tests/tests_send_contact_unlog.py:88
 #: contact/tests/tests_send_contact_unlog.py:102
 #: contact/tests/tests_send_contact_unlog.py:109
@@ -46,7 +46,7 @@ msgstr "le formulaire de contact doit contenir un sujet"
 msgid "contact_must_contain_message"
 msgstr "le formulaire de contact doit contenir un message"
 
-#: contact/contact.py:69 contact/tests/tests_send_contact_unlog.py:64
+#: contact/contact.py:70 contact/tests/tests_send_contact_unlog.py:64
 #: contact/tests/tests_send_contact_unlog.py:94
 #: contact/tests/tests_send_contact_unlog.py:101
 #: contact/tests/tests_send_contact_unlog.py:123
@@ -135,8 +135,8 @@ msgstr ""
 
 #: forum/forms/CreateTopic.py:39 forum/forms/CreateTopic.py:43
 #: issues/forms/SubmitIssue.py:17 issues/forms/SubmitIssue.py:21
-#: issues/templates/issues/issue_admin.html:9
-#: issues/templates/issues/issue_user.html:9
+#: issues/templates/issues/issue_admin.html:12
+#: issues/templates/issues/issue_user.html:12
 msgid "title"
 msgstr ""
 
@@ -263,75 +263,108 @@ msgstr ""
 msgid "assign"
 msgstr ""
 
-#: issues/forms/AdminResponseIssue.py:30 issues/models.py:12
-#: issues/templates/issues/issue.html:9
-#: issues/templates/issues/issue_admin.html:10
-#: issues/templates/issues/issue_user.html:10
+#: issues/forms/AdminResponseIssue.py:30 issues/models.py:36
+#: issues/templates/issues/issue.html:13
+#: issues/templates/issues/issue_admin.html:13
+#: issues/templates/issues/issue_user.html:13
 msgid "assign_to"
 msgstr ""
 
 #: issues/forms/AdminResponseIssue.py:35 issues/forms/AdminResponseIssue.py:45
-#: issues/models.py:30 issues/templates/issues/issue_admin.html:13
-#: issues/templates/issues/issue_user.html:13
+#: issues/templates/issues/issue_admin.html:16
+#: issues/templates/issues/issue_user.html:16
 msgid "status"
 msgstr ""
 
-#: issues/forms/AdminResponseIssue.py:37 issues/models.py:28
-#: issues/templates/issues/issue.html:13
+#: issues/forms/AdminResponseIssue.py:37 issues/models.py:51
+#: issues/templates/issues/issue.html:17 issues/tests/tests_urls.py:215
+#: issues/tests/tests_urls.py:246 issues/tests/tests_urls.py:277
 msgid "open"
 msgstr ""
 
-#: issues/forms/AdminResponseIssue.py:38 issues/models.py:29
-#: issues/templates/issues/issue.html:15
+#: issues/forms/AdminResponseIssue.py:38 issues/models.py:52
+#: issues/templates/issues/issue.html:19 issues/tests/tests_urls.py:225
+#: issues/tests/tests_urls.py:256 issues/tests/tests_urls.py:287
 msgid "in_progress"
 msgstr ""
 
-#: issues/forms/AdminResponseIssue.py:39 issues/templates/issues/issue.html:17
+#: issues/forms/AdminResponseIssue.py:39 issues/models.py:53
+#: issues/templates/issues/issue.html:21 issues/tests/tests_urls.py:236
+#: issues/tests/tests_urls.py:267 issues/tests/tests_urls.py:298
 msgid "close"
 msgstr ""
 
 #: issues/forms/AdminResponseIssue.py:50 issues/forms/AdminResponseIssue.py:54
-#: issues/templates/issues/issue_admin_response.html:46
+#: issues/templates/issues/issue_admin_response.html:50
 msgid "answer"
 msgstr ""
 
-#: issues/models.py:17
-msgid "titre"
+#: issues/templates/issues/issue.html:5
+#: issues/templates/issues/issue_admin.html:3
+#: issues/templates/issues/issue_admin_response.html:5
+#: issues/tests/tests_urls.py:120 issues/tests/tests_urls.py:128
+#: issues/tests/tests_urls.py:185 issues/tests/tests_urls.py:348
+#: issues/tests/tests_urls.py:356 issues/tests/tests_urls.py:380
+#: issues/tests/tests_urls.py:388 issues/tests/tests_urls.py:437
+#: issues/tests/tests_urls.py:445 issues/tests/tests_urls.py:469
+#: issues/tests/tests_urls.py:478
+msgid "list_issue_admin"
 msgstr ""
 
-#: issues/templates/issues/issue.html:46
+#: issues/templates/issues/issue.html:50
 msgid "reopen_issue"
 msgstr ""
 
-#: issues/templates/issues/issue_admin.html:3
-#: issues/templates/issues/issue_user.html:3
+#: issues/templates/issues/issue_admin.html:6
+#: issues/templates/issues/issue_user.html:6
+#: issues/templates/issues/send_issue.html:6
 msgid "new_issue"
 msgstr ""
 
-#: issues/templates/issues/issue_admin.html:11
-#: issues/templates/issues/issue_user.html:11
+#: issues/templates/issues/issue_admin.html:14
+#: issues/templates/issues/issue_user.html:14
 msgid "createdate"
 msgstr ""
 
-#: issues/templates/issues/issue_admin.html:12
-#: issues/templates/issues/issue_user.html:12
+#: issues/templates/issues/issue_admin.html:15
+#: issues/templates/issues/issue_user.html:15
 msgid "lastactivity"
 msgstr ""
 
-#: issues/templates/issues/issue_admin.html:32
-#: issues/templates/issues/issue_user.html:32
+#: issues/templates/issues/issue_admin.html:35
+#: issues/templates/issues/issue_user.html:35 issues/tests/tests_urls.py:83
+#: issues/tests/tests_urls.py:93 issues/tests/tests_urls.py:103
 msgid "no_issues"
 msgstr ""
 
-#: issues/templates/issues/send_issue.html:20
+#: issues/templates/issues/issue_user.html:3 issues/tests/tests_urls.py:112
+msgid "list_issue_user"
+msgstr ""
+
+#: issues/templates/issues/send_issue.html:5 issues/tests/tests_urls.py:161
+#: issues/tests/tests_urls.py:214 issues/tests/tests_urls.py:224
+#: issues/tests/tests_urls.py:235 issues/tests/tests_urls.py:245
+#: issues/tests/tests_urls.py:255 issues/tests/tests_urls.py:266
+#: issues/tests/tests_urls.py:276 issues/tests/tests_urls.py:286
+#: issues/tests/tests_urls.py:297
+msgid "list_issue"
+msgstr ""
+
+#: issues/templates/issues/send_issue.html:24
 msgid "submit_issue"
 msgstr ""
 
-#: issues/views.py:79
+#: issues/tests/tests_urls.py:169 issues/tests/tests_urls.py:339
+#: issues/tests/tests_urls.py:371 issues/tests/tests_urls.py:428
+#: issues/tests/tests_urls.py:460
+msgid "no_issue"
+msgstr ""
+
+#: issues/views.py:82
 msgid "save_error"
 msgstr ""
 
-#: issues/views.py:104
+#: issues/views.py:109
 msgid "update_error"
 msgstr ""
 
