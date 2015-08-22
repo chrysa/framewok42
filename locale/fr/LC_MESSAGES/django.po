@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 00:39+0000\n"
+"POT-Creation-Date: 2015-08-22 08:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,139 +85,139 @@ msgstr "accueil"
 
 #: core/templates/core/base.html:68
 msgid "annuaire"
-msgstr ""
+msgstr "anuuaire"
 
 #: core/templates/core/base.html:78 forum/templates/forum/cat.html:5
 #: forum/templates/forum/create_topic.html:5
 #: forum/templates/forum/edit_post.html:5 forum/templates/forum/home.html:5
 #: forum/templates/forum/topic.html:5
 msgid "forum"
-msgstr ""
+msgstr "forum"
 
 #: core/templates/core/base.html:82 issues/forms/SubmitIssue.py:26
 #: issues/forms/SubmitIssue.py:30
 msgid "issue"
-msgstr ""
+msgstr "problème"
 
 #: core/templates/core/base.html:86
 #: generate_logs/templates/logs/display_log.html:2
 msgid "log"
-msgstr ""
+msgstr "log d'action"
 
 #: core/templates/core/base.html:88
 msgid "logout"
-msgstr ""
+msgstr "se déconnecter"
 
 #: core/templates/core/base.html:93 profil/templates/profil/register.html:47
 msgid "register"
-msgstr ""
+msgstr "s'enregistrer"
 
 #: core/templates/core/base.html:99 ldap42/templates/ldap42/loginldap.html:7
 #: profil/templates/profil/login.html:8 profil/templates/profil/login.html:23
 msgid "login"
-msgstr ""
+msgstr "se connecter"
 
 #: core/templates/core/base.html:104 profil/templates/profil/login.html:14
 msgid "login_classic"
-msgstr ""
+msgstr "connection classique"
 
 #: core/templates/core/base.html:107 profil/templates/profil/login.html:16
 msgid "login_ldap"
-msgstr ""
+msgstr "connection LDAP"
 
 #: core/templates/core/base.html:117
 msgid "change_lang"
-msgstr ""
+msgstr "changer la langue"
 
 #: core/templates/core/base.html:122
 msgid "current_lang"
-msgstr ""
+msgstr "language courant"
 
 #: forum/forms/CreateTopic.py:39 forum/forms/CreateTopic.py:43
 #: issues/forms/SubmitIssue.py:17 issues/forms/SubmitIssue.py:21
 #: issues/templates/issues/issue_admin.html:12
 #: issues/templates/issues/issue_user.html:12
 msgid "title"
-msgstr ""
+msgstr "titre"
 
 #: forum/forms/ReplyTopic.py:41
 msgid "reponse"
-msgstr ""
+msgstr "réponse"
 
 #: forum/models.py:29
 msgid "Name"
-msgstr ""
+msgstr "nom"
 
 #: forum/models.py:51
 msgid "categorie_parente"
-msgstr ""
+msgstr "catégorie parente"
 
 #: forum/templates/forum/cat.html:11
 #: forum/templates/forum/create_topic.html:10
 msgid "new_topic"
-msgstr ""
+msgstr "nouveau topic"
 
 #: forum/templates/forum/cat.html:33 forum/templates/forum/cat.html.py:36
 msgid "last_mod"
-msgstr ""
+msgstr "dernière modification"
 
 #: forum/templates/forum/cat.html:33 forum/templates/forum/cat.html.py:36
 #: generate_logs/templates/logs/display_log.html:32
 #: generate_logs/templates/logs/display_log.html:44
 msgid "by"
-msgstr ""
+msgstr "par"
 
 #: forum/templates/forum/cat.html:33 forum/templates/forum/cat.html.py:36
 #: forum/templates/forum/topic.html:24 forum/templates/forum/topic.html:50
 #: forum/templates/forum/topic.html:57
 msgid "at"
-msgstr ""
+msgstr "à"
 
 #: forum/templates/forum/create_topic.html:8
 msgid "edit_topic"
-msgstr ""
+msgstr "éditer le topic"
 
 #: forum/templates/forum/create_topic.html:34
 msgid "create_topic"
-msgstr ""
+msgstr "créer un topic"
 
 #: forum/templates/forum/edit_post.html:7
 #: forum/templates/forum/edit_post.html:21
 msgid "edit_post"
-msgstr ""
+msgstr "éditer un post"
 
 #: forum/templates/forum/home.html:23 forum/tests/tests_cateory.py:85
 #: forum/tests/tests_cateory.py:101
 msgid "no_category"
-msgstr ""
+msgstr "pas de catégories"
 
 #: forum/templates/forum/response.html:8
 msgid "response_topic"
-msgstr ""
+msgstr "réponre au sujet"
 
 #: forum/templates/forum/topic.html:56
 msgid "modify_by"
-msgstr ""
+msgstr "modifié par"
 
 #: forum/tests/tests_posts.py:120 forum/views.py:393
 msgid "post_must_contain_message"
-msgstr ""
+msgstr "un post doit contenir un message"
 
 #: forum/tests/tests_topics.py:101 forum/views.py:170
 msgid "topic_must_contain_title"
-msgstr ""
+msgstr "un sujet doit contenir un titre"
 
 #: forum/tests/tests_topics.py:117 forum/views.py:172
 msgid "topic_must_contain_message"
-msgstr ""
+msgstr "un sujet doit contenir un message"
 
 #: forum/views.py:166
 msgid "save_topic"
-msgstr ""
+msgstr "enregistrer le sujet"
 
 #: forum/views.py:167
 msgid "topic_fail"
-msgstr ""
+msgstr "erreur lors de l'enregistrement du topic"
 
 #: forum/views.py:288
 msgid "thread_fail"
@@ -277,20 +277,20 @@ msgid "status"
 msgstr ""
 
 #: issues/forms/AdminResponseIssue.py:37 issues/models.py:51
-#: issues/templates/issues/issue.html:17 issues/tests/tests_urls.py:215
-#: issues/tests/tests_urls.py:246 issues/tests/tests_urls.py:277
+#: issues/templates/issues/issue.html:17 issues/tests/tests_urls.py:254
+#: issues/tests/tests_urls.py:295 issues/tests/tests_urls.py:336
 msgid "open"
 msgstr ""
 
 #: issues/forms/AdminResponseIssue.py:38 issues/models.py:52
-#: issues/templates/issues/issue.html:19 issues/tests/tests_urls.py:225
-#: issues/tests/tests_urls.py:256 issues/tests/tests_urls.py:287
+#: issues/templates/issues/issue.html:19 issues/tests/tests_urls.py:267
+#: issues/tests/tests_urls.py:308 issues/tests/tests_urls.py:349
 msgid "in_progress"
 msgstr ""
 
 #: issues/forms/AdminResponseIssue.py:39 issues/models.py:53
-#: issues/templates/issues/issue.html:21 issues/tests/tests_urls.py:236
-#: issues/tests/tests_urls.py:267 issues/tests/tests_urls.py:298
+#: issues/templates/issues/issue.html:21 issues/tests/tests_urls.py:282
+#: issues/tests/tests_urls.py:323 issues/tests/tests_urls.py:364
 msgid "close"
 msgstr ""
 
@@ -302,12 +302,11 @@ msgstr ""
 #: issues/templates/issues/issue.html:5
 #: issues/templates/issues/issue_admin.html:3
 #: issues/templates/issues/issue_admin_response.html:5
-#: issues/tests/tests_urls.py:120 issues/tests/tests_urls.py:128
-#: issues/tests/tests_urls.py:185 issues/tests/tests_urls.py:348
-#: issues/tests/tests_urls.py:356 issues/tests/tests_urls.py:380
-#: issues/tests/tests_urls.py:388 issues/tests/tests_urls.py:437
-#: issues/tests/tests_urls.py:445 issues/tests/tests_urls.py:469
-#: issues/tests/tests_urls.py:478
+#: issues/tests/tests_urls.py:137 issues/tests/tests_urls.py:146
+#: issues/tests/tests_urls.py:216 issues/tests/tests_urls.py:426
+#: issues/tests/tests_urls.py:436 issues/tests/tests_urls.py:496
+#: issues/tests/tests_urls.py:506 issues/tests/tests_urls.py:536
+#: issues/tests/tests_urls.py:546
 msgid "list_issue_admin"
 msgstr ""
 
@@ -332,21 +331,21 @@ msgid "lastactivity"
 msgstr ""
 
 #: issues/templates/issues/issue_admin.html:35
-#: issues/templates/issues/issue_user.html:35 issues/tests/tests_urls.py:83
-#: issues/tests/tests_urls.py:93 issues/tests/tests_urls.py:103
+#: issues/templates/issues/issue_user.html:35 issues/tests/tests_urls.py:96
+#: issues/tests/tests_urls.py:107 issues/tests/tests_urls.py:118
 msgid "no_issues"
 msgstr ""
 
-#: issues/templates/issues/issue_user.html:3 issues/tests/tests_urls.py:112
+#: issues/templates/issues/issue_user.html:3 issues/tests/tests_urls.py:128
 msgid "list_issue_user"
 msgstr ""
 
-#: issues/templates/issues/send_issue.html:5 issues/tests/tests_urls.py:161
-#: issues/tests/tests_urls.py:214 issues/tests/tests_urls.py:224
-#: issues/tests/tests_urls.py:235 issues/tests/tests_urls.py:245
-#: issues/tests/tests_urls.py:255 issues/tests/tests_urls.py:266
-#: issues/tests/tests_urls.py:276 issues/tests/tests_urls.py:286
-#: issues/tests/tests_urls.py:297
+#: issues/templates/issues/send_issue.html:5 issues/tests/tests_urls.py:186
+#: issues/tests/tests_urls.py:253 issues/tests/tests_urls.py:266
+#: issues/tests/tests_urls.py:281 issues/tests/tests_urls.py:294
+#: issues/tests/tests_urls.py:307 issues/tests/tests_urls.py:322
+#: issues/tests/tests_urls.py:335 issues/tests/tests_urls.py:348
+#: issues/tests/tests_urls.py:363
 msgid "list_issue"
 msgstr ""
 
@@ -354,9 +353,8 @@ msgstr ""
 msgid "submit_issue"
 msgstr ""
 
-#: issues/tests/tests_urls.py:169 issues/tests/tests_urls.py:339
-#: issues/tests/tests_urls.py:371 issues/tests/tests_urls.py:428
-#: issues/tests/tests_urls.py:460
+#: issues/tests/tests_urls.py:196 issues/tests/tests_urls.py:415
+#: issues/tests/tests_urls.py:485 issues/tests/tests_urls.py:525
 msgid "no_issue"
 msgstr ""
 

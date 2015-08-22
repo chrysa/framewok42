@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 00:39+0000\n"
+"POT-Creation-Date: 2015-08-22 08:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -276,20 +276,20 @@ msgid "status"
 msgstr ""
 
 #: issues/forms/AdminResponseIssue.py:37 issues/models.py:51
-#: issues/templates/issues/issue.html:17 issues/tests/tests_urls.py:215
-#: issues/tests/tests_urls.py:246 issues/tests/tests_urls.py:277
+#: issues/templates/issues/issue.html:17 issues/tests/tests_urls.py:254
+#: issues/tests/tests_urls.py:295 issues/tests/tests_urls.py:336
 msgid "open"
 msgstr ""
 
 #: issues/forms/AdminResponseIssue.py:38 issues/models.py:52
-#: issues/templates/issues/issue.html:19 issues/tests/tests_urls.py:225
-#: issues/tests/tests_urls.py:256 issues/tests/tests_urls.py:287
+#: issues/templates/issues/issue.html:19 issues/tests/tests_urls.py:267
+#: issues/tests/tests_urls.py:308 issues/tests/tests_urls.py:349
 msgid "in_progress"
 msgstr ""
 
 #: issues/forms/AdminResponseIssue.py:39 issues/models.py:53
-#: issues/templates/issues/issue.html:21 issues/tests/tests_urls.py:236
-#: issues/tests/tests_urls.py:267 issues/tests/tests_urls.py:298
+#: issues/templates/issues/issue.html:21 issues/tests/tests_urls.py:282
+#: issues/tests/tests_urls.py:323 issues/tests/tests_urls.py:364
 msgid "close"
 msgstr ""
 
@@ -301,12 +301,11 @@ msgstr ""
 #: issues/templates/issues/issue.html:5
 #: issues/templates/issues/issue_admin.html:3
 #: issues/templates/issues/issue_admin_response.html:5
-#: issues/tests/tests_urls.py:120 issues/tests/tests_urls.py:128
-#: issues/tests/tests_urls.py:185 issues/tests/tests_urls.py:348
-#: issues/tests/tests_urls.py:356 issues/tests/tests_urls.py:380
-#: issues/tests/tests_urls.py:388 issues/tests/tests_urls.py:437
-#: issues/tests/tests_urls.py:445 issues/tests/tests_urls.py:469
-#: issues/tests/tests_urls.py:478
+#: issues/tests/tests_urls.py:137 issues/tests/tests_urls.py:146
+#: issues/tests/tests_urls.py:216 issues/tests/tests_urls.py:426
+#: issues/tests/tests_urls.py:436 issues/tests/tests_urls.py:496
+#: issues/tests/tests_urls.py:506 issues/tests/tests_urls.py:536
+#: issues/tests/tests_urls.py:546
 msgid "list_issue_admin"
 msgstr ""
 
@@ -331,21 +330,21 @@ msgid "lastactivity"
 msgstr ""
 
 #: issues/templates/issues/issue_admin.html:35
-#: issues/templates/issues/issue_user.html:35 issues/tests/tests_urls.py:83
-#: issues/tests/tests_urls.py:93 issues/tests/tests_urls.py:103
+#: issues/templates/issues/issue_user.html:35 issues/tests/tests_urls.py:96
+#: issues/tests/tests_urls.py:107 issues/tests/tests_urls.py:118
 msgid "no_issues"
 msgstr ""
 
-#: issues/templates/issues/issue_user.html:3 issues/tests/tests_urls.py:112
+#: issues/templates/issues/issue_user.html:3 issues/tests/tests_urls.py:128
 msgid "list_issue_user"
 msgstr ""
 
-#: issues/templates/issues/send_issue.html:5 issues/tests/tests_urls.py:161
-#: issues/tests/tests_urls.py:214 issues/tests/tests_urls.py:224
-#: issues/tests/tests_urls.py:235 issues/tests/tests_urls.py:245
-#: issues/tests/tests_urls.py:255 issues/tests/tests_urls.py:266
-#: issues/tests/tests_urls.py:276 issues/tests/tests_urls.py:286
-#: issues/tests/tests_urls.py:297
+#: issues/templates/issues/send_issue.html:5 issues/tests/tests_urls.py:186
+#: issues/tests/tests_urls.py:253 issues/tests/tests_urls.py:266
+#: issues/tests/tests_urls.py:281 issues/tests/tests_urls.py:294
+#: issues/tests/tests_urls.py:307 issues/tests/tests_urls.py:322
+#: issues/tests/tests_urls.py:335 issues/tests/tests_urls.py:348
+#: issues/tests/tests_urls.py:363
 msgid "list_issue"
 msgstr ""
 
@@ -353,9 +352,8 @@ msgstr ""
 msgid "submit_issue"
 msgstr ""
 
-#: issues/tests/tests_urls.py:169 issues/tests/tests_urls.py:339
-#: issues/tests/tests_urls.py:371 issues/tests/tests_urls.py:428
-#: issues/tests/tests_urls.py:460
+#: issues/tests/tests_urls.py:196 issues/tests/tests_urls.py:415
+#: issues/tests/tests_urls.py:485 issues/tests/tests_urls.py:525
 msgid "no_issue"
 msgstr ""
 

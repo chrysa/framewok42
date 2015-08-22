@@ -24,6 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="None" href="index.html" /> 
   </head>
   <body role="document">
@@ -155,10 +156,6 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
-      
-  <dt><a href="forum.html#forum.models.ForumCat.categorie_parente">categorie_parente (forum.models.ForumCat attribute)</a>
-  </dt>
-
       
   <dt><a href="forum.html#forum.models.ForumTopic.CatParent">CatParent (forum.models.ForumTopic attribute)</a>
   </dt>
@@ -801,12 +798,12 @@
   <dt><a href="issues.html#module-issues">issues (module)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="issues.html#module-issues.admin">issues.admin (module)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="issues.forms.html#module-issues.forms">issues.forms (module)</a>
   </dt>
@@ -837,6 +834,18 @@
 
       
   <dt><a href="issues.tests.html#module-issues.tests">issues.tests (module)</a>
+  </dt>
+
+      
+  <dt><a href="issues.tests.html#module-issues.tests.tests_new_issues">issues.tests.tests_new_issues (module)</a>
+  </dt>
+
+      
+  <dt><a href="issues.tests.html#module-issues.tests.tests_reopen_issues">issues.tests.tests_reopen_issues (module)</a>
+  </dt>
+
+      
+  <dt><a href="issues.tests.html#module-issues.tests.tests_response_issues">issues.tests.tests_response_issues (module)</a>
   </dt>
 
       
@@ -1106,6 +1115,12 @@
   </dt>
 
   </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="issues.tests.html#issues.tests.tests_new_issues.NewIssuesTestsLog">NewIssuesTestsLog (class in issues.tests.tests_new_issues)</a>
+  </dt>
+
+  </dl></td>
 </tr></table>
 
 <h2 id="O">O</h2>
@@ -1281,10 +1296,14 @@
   <dt><a href="profil.html#profil.tests.RegisterTests">RegisterTests (class in profil.tests)</a>
   </dt>
 
+      
+  <dt><a href="issues.html#issues.views.reopen_issue">reopen_issue() (in module issues.views)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="issues.html#issues.views.reopen_issue">reopen_issue() (in module issues.views)</a>
+  <dt><a href="issues.tests.html#issues.tests.tests_reopen_issues.ReopenIssuesTestsLog">ReopenIssuesTestsLog (class in issues.tests.tests_reopen_issues)</a>
   </dt>
 
       
@@ -1293,6 +1312,10 @@
 
       
   <dt><a href="issues.html#issues.views.respond_issue">respond_issue() (in module issues.views)</a>
+  </dt>
+
+      
+  <dt><a href="issues.tests.html#issues.tests.tests_response_issues.RespondIssuesTestsLog">RespondIssuesTestsLog (class in issues.tests.tests_response_issues)</a>
   </dt>
 
   </dl></td>
@@ -1361,15 +1384,23 @@
   </dt>
 
         
+  <dt><a href="issues.tests.html#issues.tests.tests_new_issues.NewIssuesTestsLog.setUp">(issues.tests.tests_new_issues.NewIssuesTestsLog method)</a>
+  </dt>
+
+        
+  <dt><a href="issues.tests.html#issues.tests.tests_reopen_issues.ReopenIssuesTestsLog.setUp">(issues.tests.tests_reopen_issues.ReopenIssuesTestsLog method)</a>
+  </dt>
+
+        
+  <dt><a href="issues.tests.html#issues.tests.tests_response_issues.RespondIssuesTestsLog.setUp">(issues.tests.tests_response_issues.RespondIssuesTestsLog method)</a>
+  </dt>
+
+        
   <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlIssuesTestsUnLog.setUp">(issues.tests.tests_urls.UrlIssuesTestsUnLog method)</a>
   </dt>
 
         
   <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlListIssuesTestsLog.setUp">(issues.tests.tests_urls.UrlListIssuesTestsLog method)</a>
-  </dt>
-
-        
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlNewIssuesTestsLog.setUp">(issues.tests.tests_urls.UrlNewIssuesTestsLog method)</a>
   </dt>
 
         
@@ -1715,6 +1746,8 @@
   <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_all_blank">test_send_contact_unlog_all_blank() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_blank_email_message">test_send_contact_unlog_blank_email_message() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
@@ -1723,8 +1756,6 @@
   <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_blank_email_subject">test_send_contact_unlog_blank_email_subject() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="contact.tests.html#contact.tests.tests_send_contact_unlog.ContactUnlogTests.test_send_contact_unlog_blank_mail">test_send_contact_unlog_blank_mail() (contact.tests.tests_send_contact_unlog.ContactUnlogTests method)</a>
   </dt>
@@ -1774,19 +1805,19 @@
   </dt>
 
       
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlRespondIssuesTestsLog.test_url_reopen_invalid_issue_admin_log">test_url_reopen_invalid_issue_admin_log() (issues.tests.tests_urls.UrlRespondIssuesTestsLog method)</a>
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlReopenIssuesTestsLog.test_url_reopen_invalid_issue_admin_log">test_url_reopen_invalid_issue_admin_log() (issues.tests.tests_urls.UrlReopenIssuesTestsLog method)</a>
   </dt>
 
       
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlRespondIssuesTestsLog.test_url_reopen_invalid_issue_staff_log">test_url_reopen_invalid_issue_staff_log() (issues.tests.tests_urls.UrlRespondIssuesTestsLog method)</a>
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlReopenIssuesTestsLog.test_url_reopen_invalid_issue_staff_log">test_url_reopen_invalid_issue_staff_log() (issues.tests.tests_urls.UrlReopenIssuesTestsLog method)</a>
   </dt>
 
       
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlRespondIssuesTestsLog.test_url_reopen_invalid_issue_user_log">test_url_reopen_invalid_issue_user_log() (issues.tests.tests_urls.UrlRespondIssuesTestsLog method)</a>
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlReopenIssuesTestsLog.test_url_reopen_invalid_issue_user_log">test_url_reopen_invalid_issue_user_log() (issues.tests.tests_urls.UrlReopenIssuesTestsLog method)</a>
   </dt>
 
       
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlRespondIssuesTestsLog.test_url_reopen_invalid_issue_wrong_user_log">test_url_reopen_invalid_issue_wrong_user_log() (issues.tests.tests_urls.UrlRespondIssuesTestsLog method)</a>
+  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlReopenIssuesTestsLog.test_url_reopen_invalid_issue_wrong_user_log">test_url_reopen_invalid_issue_wrong_user_log() (issues.tests.tests_urls.UrlReopenIssuesTestsLog method)</a>
   </dt>
 
       
@@ -1807,22 +1838,6 @@
 
       
   <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlReopenIssuesTestsLog.test_url_reopen_issue_wrong_user_log">test_url_reopen_issue_wrong_user_log() (issues.tests.tests_urls.UrlReopenIssuesTestsLog method)</a>
-  </dt>
-
-      
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlReopenIssuesTestsLog.test_url_reopen_wrong_issue_admin_log">test_url_reopen_wrong_issue_admin_log() (issues.tests.tests_urls.UrlReopenIssuesTestsLog method)</a>
-  </dt>
-
-      
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlReopenIssuesTestsLog.test_url_reopen_wrong_issue_staff_log">test_url_reopen_wrong_issue_staff_log() (issues.tests.tests_urls.UrlReopenIssuesTestsLog method)</a>
-  </dt>
-
-      
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlReopenIssuesTestsLog.test_url_reopen_wrong_issue_user_log">test_url_reopen_wrong_issue_user_log() (issues.tests.tests_urls.UrlReopenIssuesTestsLog method)</a>
-  </dt>
-
-      
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlReopenIssuesTestsLog.test_url_reopen_wrong_issue_wrong_user_log">test_url_reopen_wrong_issue_wrong_user_log() (issues.tests.tests_urls.UrlReopenIssuesTestsLog method)</a>
   </dt>
 
       
@@ -1992,10 +2007,6 @@
   </dt>
 
       
-  <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlNewIssuesTestsLog">UrlNewIssuesTestsLog (class in issues.tests.tests_urls)</a>
-  </dt>
-
-      
   <dt><a href="issues.tests.html#issues.tests.tests_urls.UrlReopenIssuesTestsLog">UrlReopenIssuesTestsLog (class in issues.tests.tests_urls)</a>
   </dt>
 
@@ -2099,7 +2110,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, agreau.
-      Last updated on Aug 06, 2015.
+      Last updated on Aug 22, 2015.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

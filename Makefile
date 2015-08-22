@@ -14,7 +14,7 @@ RED = \033[31m
 WHITE = \033[00m
 YELLOW = \033[33m
 
-.PHONY: clean doc fclean install_dev install_prod launch reinstall resettrans static test transall uninstall_dev uninstall_prod validate
+.PHONY: clean doc fclean install_dev install_prod launch reinstall deltrans resettrans static test transall uninstall_dev uninstall_prod validate
 
 .SILENT:
 
@@ -67,11 +67,14 @@ transall:
 	printf '$(BLUE)compilation des fichiers de traduction$(WHITE)\n' 
 	python manage.py compilemessages
 
+deltrans:
+	printf '$(BLUE)suppression des fichiers .mo$(WHITE)\n'
+	find . -name '*.mo' -exec rm -rf {} \; 
+
 resettrans:
 	printf '$(BLUE)suppression des fichiers .po$(WHITE)\n'
 	find . -name '*.po' -exec rm -rf {} \; 
-	printf '$(BLUE)suppression des fichiers .mo$(WHITE)\n'
-	find . -name '*.mo' -exec rm -rf {} \; 
+	make deltrans
 	make transall
 
 test:
@@ -112,6 +115,6 @@ launch: clean install static validate test transall
 	python manage.py runserver --verbosity=$(VERBOSITY) 0.0.0.0:$(PORT)
 	make clean
 
-doc: clean validate static transall test
+doc: deltrans clean validate static test transall
 	printf '$(BLUE)génération de la documentation$(WHITE)\n'
 	python -c "from ressources.gen_doc import gen_doc ; gen_doc()"

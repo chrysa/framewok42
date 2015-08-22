@@ -23,6 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="None" href="index.html" /> 
   </head>
   <body role="document">
@@ -194,9 +195,9 @@
 </dd></dl>
 
 </div>
-<div class="section" id="module-forum.models">
-<span id="forum-models-module"></span><h2>forum.models module<a class="headerlink" href="#module-forum.models" title="Permalink to this headline">¶</a></h2>
-<table class="docutils field-list" frame="void" rules="none">
+<div class="section" id="forum-models-module">
+<h2>forum.models module<a class="headerlink" href="#forum-models-module" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-forum.models"></span><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -233,7 +234,7 @@
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ForumCat object</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">object</p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)">object</a></p>
 </td>
 </tr>
 </tbody>
@@ -249,11 +250,6 @@
 <em class="property">exception </em><code class="descclassname">ForumCat.</code><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#forum.models.ForumCat.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
 </dd></dl>
-
-<dl class="attribute">
-<dt id="forum.models.ForumCat.categorie_parente">
-<code class="descclassname">ForumCat.</code><code class="descname">categorie_parente</code><a class="headerlink" href="#forum.models.ForumCat.categorie_parente" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="attribute">
 <dt id="forum.models.ForumCat.objects">
@@ -276,7 +272,7 @@
 </tr>
 <tr class="field-even field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
 <li><a class="reference internal" href="#forum.models.ForumPost.TopicParent" title="forum.models.ForumPost.TopicParent"><strong>TopicParent</strong></a> &#8211; content the object of the parent topic</li>
-<li><a class="reference internal" href="#forum.models.ForumPost.Autor" title="forum.models.ForumPost.Autor"><strong>Autor</strong></a> &#8211; user object of the autor</li>
+<li><a class="reference internal" href="#forum.models.ForumTopic.Autor" title="forum.models.ForumTopic.Autor"><strong>Autor</strong></a> &#8211; user object of the autor</li>
 <li><strong>Message</strong> &#8211; content of the post</li>
 <li><strong>CreateDate</strong> &#8211; create date of the post</li>
 <li><strong>LastModified</strong> &#8211; last modify date of the post</li>
@@ -286,7 +282,7 @@
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ForumPost object</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">object</p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)">object</a></p>
 </td>
 </tr>
 </tbody>
@@ -356,7 +352,7 @@
 <li><a class="reference internal" href="#forum.models.ForumTopic.CatParent" title="forum.models.ForumTopic.CatParent"><strong>CatParent</strong></a> &#8211; content the object of the parent category</li>
 <li><strong>Title</strong> &#8211; title of topic</li>
 <li><strong>slug</strong> &#8211; access slug of the topic</li>
-<li><a class="reference internal" href="#forum.models.ForumPost.Autor" title="forum.models.ForumPost.Autor"><strong>Autor</strong></a> &#8211; user object of the autor</li>
+<li><a class="reference internal" href="#forum.models.ForumTopic.Autor" title="forum.models.ForumTopic.Autor"><strong>Autor</strong></a> &#8211; user object of the autor</li>
 <li><strong>Message</strong> &#8211; content of the topic</li>
 <li><strong>CreateDate</strong> &#8211; create date of the topic</li>
 <li><strong>LastModified</strong> &#8211; last modify date of the topic</li>
@@ -367,7 +363,7 @@
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">ForumTopic object</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">object</p>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)">object</a></p>
 </td>
 </tr>
 </tbody>
@@ -500,7 +496,7 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>request</strong> (<em>object</em>) &#8211; object contain context of request</li>
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
 <li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
 </ul>
 </td>
@@ -530,7 +526,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>request</strong> (<em>object</em>) &#8211; object contain context of request</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">HTTPResponse</td>
 </tr>
@@ -547,7 +543,7 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>request</strong> (<em>object</em>) &#8211; object contain context of request</li>
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
 <li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
 </ul>
 </td>
@@ -568,7 +564,7 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>request</strong> (<em>object</em>) &#8211; object contain context of request</li>
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
 <li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
 <li><strong>topic</strong> (<em>slug</em>) &#8211; slug of topic</li>
 </ul>
@@ -597,7 +593,7 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>request</strong> (<em>object</em>) &#8211; object contain context of request</li>
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
 <li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
 </ul>
 </td>
@@ -629,7 +625,7 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>request</strong> (<em>object</em>) &#8211; object contain context of request</li>
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
 <li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
 <li><strong>topic</strong> (<em>slug</em>) &#8211; slug of topic</li>
 </ul>
@@ -654,7 +650,7 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>request</strong> (<em>object</em>) &#8211; object contain context of request</li>
+<li><strong>request</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><em>object</em></a>) &#8211; object contain context of request</li>
 <li><strong>cat</strong> (<em>slug</em>) &#8211; slug of categorie</li>
 </ul>
 </td>
@@ -691,7 +687,7 @@
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-forum.admin">forum.admin module</a></li>
-<li><a class="reference internal" href="#module-forum.models">forum.models module</a></li>
+<li><a class="reference internal" href="#forum-models-module">forum.models module</a></li>
 <li><a class="reference internal" href="#module-forum.urls">forum.urls module</a></li>
 <li><a class="reference internal" href="#module-forum.views">forum.views module</a></li>
 <li><a class="reference internal" href="#module-forum">Module contents</a></li>
@@ -737,7 +733,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, agreau.
-      Last updated on Aug 06, 2015.
+      Last updated on Aug 22, 2015.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
