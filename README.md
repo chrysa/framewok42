@@ -21,7 +21,7 @@ plugins
    * 'autoslug' for manage forum's url easier
    * 'bootstrap3' 
    * 'hijack' for the log as functionnality
-   * jquery
+   * 'jquery'
 
 in progress
 =====================
