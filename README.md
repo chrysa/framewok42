@@ -35,4 +35,4 @@ todo
     
 evolution 
 =====================
-upgrade this perso school to group project https://cdn.intra.42.fr/pdf/pdf/188/big-web-project.pdf
+upgrade this project to https://cdn.intra.42.fr/pdf/pdf/188/big-web-project.pdf
