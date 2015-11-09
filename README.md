@@ -32,4 +32,7 @@ todo
 =====================
     rectactoring ldap module with specific backend
     config sphinx
-    upgrade this perso school to group project https://cdn.intra.42.fr/pdf/pdf/188/big-web-project.pdf
+    
+evolution 
+=====================
+upgrade this perso school to group project https://cdn.intra.42.fr/pdf/pdf/188/big-web-project.pdf
